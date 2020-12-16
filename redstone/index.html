@@ -1,0 +1,254 @@
+<html>
+	<head>
+		<title>Topdown Redstone</title>
+		<link rel="stylesheet" href="../style.css">
+		<style>
+			input[type="checkbox"] {
+				position: absolute;
+				opacity: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="game">
+            
+		</div>
+		
+		<!--<button type="button" onclick="update()">Update</button>
+		<button type="button" onclick="render()">Render</button>-->
+		<script>
+var game = document.getElementById("game");
+
+
+var strLevel =
+ "       ...."+
+"#  ... !    "+
+"#  . ..^    "+
+"#  .     ..."+
+"#    .. !   "+
+"#   ! ..o   "+
+"#  .o  .^   "+
+"#?..^   o   "+
+"#   o   ^   "+
+"#?..^   .   "+
+"#       .   "+
+"#  ... !    "+
+"#  . ..^    "+
+"#  .     ..."+
+"#    .. !   "+
+"#   ! ..o   "+
+"#  .o  .^   "+
+"#?..^   o   "+
+"#   o   ^   "+
+"#?..^   .   "+
+"#       .   "+
+"#  ... !    "+
+"#  . ..^    "+
+"#  .     ..."+
+"#    .. !   "+
+"#   ! ..o   "+
+"#  .o  .^   "+
+"#?..^   o   "+
+"#   o   ^   "+
+"#?..^     .."+
+"#        !  "+
+"#       .o  "+
+"#?.......^  "+
+"#        o  "+
+"#?.......^  ";
+//console.log("okay");
+var lvlLines = strLevel.split('#');
+var env = new Array(lvlLines.length);
+//console.log(lvlLines.length);
+for (let y = 0; y < lvlLines.length; y++) {
+	env[y] = new Array(lvlLines[y].length);
+	for (let x = 0; x < lvlLines[y].length; x++) {
+		var element = lvlLines[y].charAt(x);
+		switch (element) {
+			case ' ': env[y][x] = { type: 0, state: 0, pistonDir: -1 }
+			break; case '.': env[y][x] = { type: 1, state: 0 }
+			break; case '!': env[y][x] = { type: 2, state: 1, edit: 0 }
+			break; case '?': env[y][x] = { type: 2, state: 0, edit: 1 }
+			break; case '^': env[y][x] = { type: 3, state: 1, pistonDir: 0 }
+			break; case '>': env[y][x] = { type: 3, state: 1, pistonDir: 1 }
+			break; case 'v': env[y][x] = { type: 3, state: 1, pistonDir: 2 }
+			break; case '<': env[y][x] = { type: 3, state: 1, pistonDir: 3 }
+			break; case 'o': env[y][x] = { type: 4, state: 0 }
+		}
+	}
+}
+
+render();
+
+function render() {
+	let inner = "<code>";
+	for (var y = 0; y < env.length; y++) {
+		for (var x = 0; x < env[y].length; x++) {
+			let c = env[y][x].type;
+			switch (c) {
+				case 0:
+					if (env[y][x].pistonDir == -1) {
+						inner += '<img src="empty.png"/>';
+					} else {
+						inner += '<img src="pistonEnd' + parseInt(env[y][x].pistonDir) +'.png"/>'
+					}
+					
+					break;
+				
+				case 1:
+					inner += env[y][x].state ? '<img src="dust.png"/>' : '<img src="dustInactive.png"/>';
+					break;
+				
+				case 2:
+					if (env[y][x].edit) {
+						inner += 
+						'<input type="checkbox" onchange="toggleCheckbox(this)" name="'+x+'" value="'+y+'"'+(env[y][x].state?' checked':'')+'><img src="'+
+						'lever'+(env[y][x].state ? 1 : 0)+'.png"/>';
+					} else {
+						inner += '<img src="torch.png"/>';
+					}
+					break;
+					
+				case 3:
+					var state = parseInt(env[y][x].state);
+					if (isNaN(state)) state = 1;
+					inner += ('<img src="piston'+state)+parseInt(env[y][x].pistonDir) + '.png"/>';
+					break;
+						
+				case 4:
+					inner+='<img src="block.png"/>';
+					break;
+			}
+		} inner += "<br>";
+	} inner += "</code>";
+	game.innerHTML = inner;
+}
+
+let rsDirY = [-1,0,1,0];
+let rsDirX = [0,1,0,-1];
+
+update();
+
+function update() {
+
+	//console.log('update!');
+
+	for (let y = 0; y < env.length; y++) {
+		for (let x = 0; x < env[y].length; x++) {
+			env[y][x].lastState = env[y][x].state;
+			if (env[y][x].type != 2) { // if not torch
+				env[y][x].state = 0;
+			}
+		}
+	}
+	
+	for (let y = 0; y < env.length; y++) {
+		for (let x = 0; x < env[y].length; x++) {
+			if (env[y][x].type == 2) { // if torch
+				if (env[y][x].state) rsSetNeighboursPower(y, x);
+			}
+		}
+	}
+	
+	for (let y = 0; y < env.length; y++) {
+		for (let x = 0; x < env[y].length; x++) {
+			if (env[y][x].type == 3) { // if piston
+				if (env[y][x].lastState != env[y][x].state) { // if the state has changes
+					if (env[y][x].state) {
+						rsPush(y, x, env[y][x].pistonDir, 1, +1); // push
+					} else {
+						rsPush(y, x, env[y][x].pistonDir, 2, -1); // or retract
+					}
+				}
+			}
+		}
+	}
+	
+	new Promise(r => setTimeout(r, 50)).then(() => {
+		render();
+		if (hasChanged()) update();
+	});
+	
+} // end update
+
+function hasChanged() {
+	for (let y = 0; y < env.length; y++) {
+		for (let x = 0; x < env[y].length; x++) {
+			if (env[y][x].lastState != env[y][x].state) return true;
+		}
+	} return false;
+}
+
+
+
+function rsSetNeighboursPower(y, x) {
+
+	for (var dirIndex = 0; dirIndex < 4; dirIndex++) {
+		var maybeX = x + (rsDirX[dirIndex]);
+		var maybeY = y + (rsDirY[dirIndex]);
+		//console.log((env[y][x].type) + ' at x:' + x + ';y:' + y + '; with ' + dirIndex + ' gifts to x:' + maybeX + ';y:' + maybeY);
+		let withLine = env[maybeY];
+		if (withLine == undefined) continue;
+		var withed = withLine[maybeX];
+		if (withed == undefined) continue;
+		if (withed.state) continue;
+		if (!(withed.type & 1)) continue; // no empty, no torches, no blocks
+		if (withed.type == 3) { // if piston
+			if (withed.pistonDir == (dirIndex + 2) || withed.pistonDir == (dirIndex - 2)) continue; // don't get power from where you are pushing
+		} withed.state = true;
+		if (withed.type == 1) { // if dust
+			rsSetNeighboursPower(maybeY, maybeX);
+		}
+	}
+}
+
+function rsPush(startY, startX, pDir, dist, sign) {
+	//console.log(startY, startX, pDir, dist, sign);
+	var dirX = rsDirX[pDir]; var dirY = rsDirY[pDir];
+	var blockToMoveX = startX + (dirX * dist);
+	var blockToMoveY = startY + (dirY * dist);
+	if (dist == 2) {
+		var onlyY = env[startY + dirY];
+		if (onlyY != undefined) {
+			var bothYX = onlyY[startX + dirX];
+			if (bothYX != undefined) {
+				if (bothYX.type != 0) return; // there something, stop
+			}
+		}
+	}
+	if (blockToMoveX < 0 || blockToMoveY < 0) return;
+	if (blockToMoveY >= env.length) return;
+	if (blockToMoveX >= env[blockToMoveY].length) return;
+	var withed = env[blockToMoveY][blockToMoveX];
+	if (withed.type != 0) {
+		if (sign == 1) {
+			rsPush(blockToMoveY, blockToMoveX, pDir, ((!!(withed.type === 3) && !!withed.state) ? 1 : 0) + 1, sign) // push the one in front of you, if you are an active piston add reach
+			var blockMovedX = blockToMoveX + (dirX * sign);
+			var blockMovedY = blockToMoveY + (dirY * sign);
+			env[blockMovedY][blockMovedX] = env[blockToMoveY][blockToMoveX];
+			env[blockToMoveY][blockToMoveX] = { type: 0, state: 0, pistonDir: pDir };
+		} else {
+			var blockMovedX = blockToMoveX + (dirX * sign);
+			var blockMovedY = blockToMoveY + (dirY * sign);
+			env[blockMovedY][blockMovedX] = env[blockToMoveY][blockToMoveX];
+			var theGoodMan = (!!(withed.type === 3) && !!withed.state);
+			env[blockToMoveY][blockToMoveX] = { type: 0, state: 0, pistonDir: theGoodMan ? pDir : -1 };
+			rsPush(blockToMoveY, blockToMoveX, pDir, (theGoodMan ? 1 : 0) + 1, sign) // push the one in front of you, if you are an active piston add reach
+		}
+	}
+}
+
+function toggleCheckbox(element) {
+	//element.checked = !element.checked;
+	let x = parseInt(element.name);
+	let y = parseInt(element.value);
+	//console.log(x, y);
+	env[y][x].state = element.checked;
+	
+	update();
+	//console.log(element.valueX);
+}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+body {
+	background:#1E1E1E;
+	color:white;
+	font-size:larger;
+	padding: 10px 7% 10px 7%;
+}
+text { font-family: calibri; }
+code, pre { color:lightblue; }
+a { color: darkturquoise; }
+h1 { text-align:center; }
