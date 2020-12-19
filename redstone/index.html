@@ -1,7 +1,8 @@
 <html>
 	<head>
 		<title>Topdown Redstone</title>
-		<link rel="stylesheet" href="../style.css">
+		<link rel="stylesheet" href="../style.css"/>
+		<link rel="icon" type="image/png" href="lever1.png"/>
 		<style>
 			input[type="checkbox"] {
 				position: absolute;
@@ -10,15 +11,9 @@
 		</style>
 	</head>
 	<body>
-		<div id="game">
-            
-		</div>
-		
-		<!--<button type="button" onclick="update()">Update</button>
-		<button type="button" onclick="render()">Render</button>-->
+		<div id="game"/>
 		<script>
 var game = document.getElementById("game");
-
 
 var strLevel =
  "       ...."+
@@ -56,10 +51,8 @@ var strLevel =
 "#?.......^  "+
 "#        o  "+
 "#?.......^  ";
-//console.log("okay");
 var lvlLines = strLevel.split('#');
 var env = new Array(lvlLines.length);
-//console.log(lvlLines.length);
 for (let y = 0; y < lvlLines.length; y++) {
 	env[y] = new Array(lvlLines[y].length);
 	for (let x = 0; x < lvlLines[y].length; x++) {
@@ -110,7 +103,7 @@ function render() {
 					break;
 					
 				case 3:
-					var state = parseInt(env[y][x].state);
+					let state = parseInt(env[y][x].state);
 					if (isNaN(state)) state = 1;
 					inner += ('<img src="piston'+state)+parseInt(env[y][x].pistonDir) + '.png"/>';
 					break;
@@ -131,12 +124,11 @@ update();
 
 function update() {
 
-	//console.log('update!');
 
 	for (let y = 0; y < env.length; y++) {
 		for (let x = 0; x < env[y].length; x++) {
 			env[y][x].lastState = env[y][x].state;
-			if (env[y][x].type != 2) { // if not torch
+			if (env[y][x].type != 2) {
 				env[y][x].state = 0;
 			}
 		}
@@ -164,12 +156,10 @@ function update() {
 		}
 	}
 	
-	new Promise(r => setTimeout(r, 50)).then(() => {
-		render();
-		if (hasChanged()) update();
-	});
+	render();
+	if (hasChanged()) update();
 	
-} // end update
+}
 
 function hasChanged() {
 	for (let y = 0; y < env.length; y++) {
@@ -186,7 +176,6 @@ function rsSetNeighboursPower(y, x) {
 	for (var dirIndex = 0; dirIndex < 4; dirIndex++) {
 		var maybeX = x + (rsDirX[dirIndex]);
 		var maybeY = y + (rsDirY[dirIndex]);
-		//console.log((env[y][x].type) + ' at x:' + x + ';y:' + y + '; with ' + dirIndex + ' gifts to x:' + maybeX + ';y:' + maybeY);
 		let withLine = env[maybeY];
 		if (withLine == undefined) continue;
 		var withed = withLine[maybeX];
@@ -221,32 +210,34 @@ function rsPush(startY, startX, pDir, dist, sign) {
 	if (blockToMoveX >= env[blockToMoveY].length) return;
 	var withed = env[blockToMoveY][blockToMoveX];
 	if (withed.type != 0) {
+		let isActivePiston = (!!(withed.type === 3) && !!withed.state);
 		if (sign == 1) {
-			rsPush(blockToMoveY, blockToMoveX, pDir, ((!!(withed.type === 3) && !!withed.state) ? 1 : 0) + 1, sign) // push the one in front of you, if you are an active piston add reach
-			var blockMovedX = blockToMoveX + (dirX * sign);
-			var blockMovedY = blockToMoveY + (dirY * sign);
-			env[blockMovedY][blockMovedX] = env[blockToMoveY][blockToMoveX];
+			rsPush(blockToMoveY, blockToMoveX, pDir, (isActivePiston ? 1 : 0) + 1, sign);
+		}
+		let blockMovedX = blockToMoveX + (dirX * sign);
+		let blockMovedY = blockToMoveY + (dirY * sign);
+		env[blockMovedY][blockMovedX] = env[blockToMoveY][blockToMoveX];
+		if (sign == 1) {
 			env[blockToMoveY][blockToMoveX] = { type: 0, state: 0, pistonDir: pDir };
 		} else {
-			var blockMovedX = blockToMoveX + (dirX * sign);
-			var blockMovedY = blockToMoveY + (dirY * sign);
-			env[blockMovedY][blockMovedX] = env[blockToMoveY][blockToMoveX];
-			var theGoodMan = (!!(withed.type === 3) && !!withed.state);
-			env[blockToMoveY][blockToMoveX] = { type: 0, state: 0, pistonDir: theGoodMan ? pDir : -1 };
-			rsPush(blockToMoveY, blockToMoveX, pDir, (theGoodMan ? 1 : 0) + 1, sign) // push the one in front of you, if you are an active piston add reach
+			env[blockToMoveY][blockToMoveX] = { type: 0, state: 0, pistonDir: isActivePiston ? pDir : -1 };
+			rsPush(blockToMoveY, blockToMoveX, pDir, (isActivePiston ? 1 : 0) + 1, sign)
 		}
+	} else {
+		if (dist == 2) {
+			if (env[startY + dirY][startX + dirX].type == 0) {
+				env[startY + dirY][startX + dirX].pistonDir = -1;
+			}
+		}
+		else withed.pistonDir = pDir;
 	}
 }
 
 function toggleCheckbox(element) {
-	//element.checked = !element.checked;
 	let x = parseInt(element.name);
 	let y = parseInt(element.value);
-	//console.log(x, y);
 	env[y][x].state = element.checked;
-	
 	update();
-	//console.log(element.valueX);
 }
 			
 		</script>
