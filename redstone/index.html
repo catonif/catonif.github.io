@@ -2,7 +2,7 @@
 	<head>
 		<title>Topdown Redstone</title>
 		<link rel="stylesheet" href="../style.css"/>
-		<link rel="icon" type="image/png" href="lever1.png"/>
+		<link rel="icon" type="image/png" href="img/lever1.png"/>
 		<style>
 			input[type="checkbox"] {
 				position: absolute;
@@ -11,13 +11,32 @@
 		</style>
 	</head>
 	<body>
-		<h2>this is a 8-bit full adder</h2>
+		<h1>Topdown Javascript Redstone</h2>
+		<text>
+			One of the projects I made and I'm proud of is a Nuclear Throne mod, that adds a topdown variant of Minecraft's redstone to the game. I knew it would have been absolutely useless, but it was a fun idea, and interesting to program and optimize. The avaliable pieces are:</br>
+			<ul>
+				<li>dust</li>
+				<li>lever</li>
+				<li>torch</li>
+				<li>block</li>
+				<li>piston</li>
+			</ul>
+		</text>
+			<div id="pieces"></div><br/>
+		<text>
+			The only difference with the NT mod is that torches aren't there, there are just levers switched on.<br/>
+			<br/>
+			Dust is powered by torches and 			
+		</text>
+		
+		
 		<div id="8bFA"></div>
 		<h2>this as an and gate</h2>
 		<div id="andGate"></div>
 		<script src="rs.js"></script>
 		<script>
 			var updaters = [
+				new Updater("pieces", ". ? ! o ^", 0),
 				new Updater("8bFA",
 					 "       ...."+
 					"#  ... !    "+
@@ -54,11 +73,11 @@
 					"#?.......^  "+
 					"#        o  "+
 					"#?.......^  "
-				, 0),
+				, 1),
 				new Updater("andGate",
 					 "  ?  ?  . "+
 					"#  >o>o!   "
-				, 1),
+				, 2),
 			];
 		</script>
 
