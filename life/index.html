@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>1D Life</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<text><a href="/downloads/life.exe">download</a> for windows, it's way faster</text><br/>
+	<button onclick="lifer.start()">start</button>
+	<button id="stepBtn" onclick="lifer.step()">step</button><br/>
+	<text id="r2dlabel">render in 2d </text><input type="checkbox" id="inputRenderIn2D"/><br/>
+	<text id="autoLabel">auto </text><input type="checkbox" id="inputAuto" onchange="autoSet()"/><br/>
+	<text>size </text><input type="number" id="inputSize" value="32"/><br/>
+	<text>neighbour distance </text><input type="number" id="inputNeighDistance" value="1"/><br/>
+	<text>rule </text><input type="text" id="inputRule" onchange="ruleGt()" value="$12"/><br/>
+	<text id="waitLabel">wait </text><input type="number" id="inputWait" value="100"/><br/>
+	<code id="outputElement"></code>
+	<script src="life.js"></script>
+	<script> // GUI QOL
+
+		ruleGt();
+		function ruleGt() {
+			const isGt = inputRule.value == "gt";
+			inputRenderIn2D.checked = inputRenderIn2D.disabled = isGt;
+			
+			document.getElementById("r2dlabel").style.color = isGt ? "gray" : "white";
+		}
+
+		autoSet();
+		function autoSet() {
+			const auto = inputAuto.checked;
+			document.getElementById("waitLabel").style.color = auto ? "white" : "gray";
+			document.getElementById("stepBtn").style.display = auto ? "none" : "inline";
+			inputWait.disabled = !auto;
+		}
+
+	</script>
+</body>
+</html>
