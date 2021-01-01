@@ -23,6 +23,7 @@ class Lifer {
 	grandTour: boolean = true;
 	auto: boolean = false;
 	values: boolean[] = [];
+	//count: number = 0;
 
 	constructor() {}
 
@@ -79,6 +80,7 @@ class Lifer {
 		}
 
 		if (this.grandTour) {
+			//this.count = 1 << (this.values.length);
 			this.grandStep(0);
 		} else {
 			this.fill();
@@ -93,6 +95,7 @@ class Lifer {
 		if (i % (1 << 4) == 0) {
 			let rule: string = (i >> 4).toString(2);
 			const ruleLenght: number = this.neighDistance * 4 + 2;
+			if (rule.length > ruleLenght) return;
 			while (rule.length < ruleLenght) {
 				rule = '0' + rule;
 			}
@@ -101,17 +104,19 @@ class Lifer {
 			this.fill();
 			this.randomize();
 			this.render(true);
-		} else {
-			this.generateNeighboursCount();
-			this.render(false);
-		}
-		if (i < (1 << (this.values.length + 4))) {
 			if (inputAuto.checked) {
 				setTimeout(() => {
 					this.grandStep(i + 1);
 				}, parseInt(inputWait.value));
 			}
+		} else {
+			this.generateNeighboursCount();
+			this.render(false);
+			if (inputAuto.checked) {
+				this.grandStep(i + 1);
+			}
 		}
+
 	}
 
 	public step() : void {

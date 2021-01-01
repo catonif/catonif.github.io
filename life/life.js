@@ -7,6 +7,7 @@ var inputWait = document.getElementById("inputWait");
 var inputAuto = document.getElementById("inputAuto");
 var outputElement = document.getElementById("outputElement");
 var Lifer = /** @class */ (function () {
+    //count: number = 0;
     function Lifer() {
         this.cells = [];
         this.size = 0;
@@ -66,6 +67,7 @@ var Lifer = /** @class */ (function () {
             this.setFromString(rule);
         }
         if (this.grandTour) {
+            //this.count = 1 << (this.values.length);
             this.grandStep(0);
         }
         else {
@@ -81,6 +83,8 @@ var Lifer = /** @class */ (function () {
         if (i % (1 << 4) == 0) {
             var rule = (i >> 4).toString(2);
             var ruleLenght = this.neighDistance * 4 + 2;
+            if (rule.length > ruleLenght)
+                return;
             while (rule.length < ruleLenght) {
                 rule = '0' + rule;
             }
@@ -89,16 +93,17 @@ var Lifer = /** @class */ (function () {
             this.fill();
             this.randomize();
             this.render(true);
-        }
-        else {
-            this.generateNeighboursCount();
-            this.render(false);
-        }
-        if (i < (1 << (this.values.length + 4))) {
             if (inputAuto.checked) {
                 setTimeout(function () {
                     _this.grandStep(i + 1);
                 }, parseInt(inputWait.value));
+            }
+        }
+        else {
+            this.generateNeighboursCount();
+            this.render(false);
+            if (inputAuto.checked) {
+                this.grandStep(i + 1);
             }
         }
     };
