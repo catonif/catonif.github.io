@@ -2,83 +2,36 @@
 	<head>
 		<title>Topdown Redstone</title>
 		<link rel="stylesheet" href="../style.css"/>
-		<style>
-			input[type="checkbox"] {
-				position: absolute;
-				opacity: 0;
-			}
-		</style>
+		<link rel="stylesheet" href="rs.css"/>
 	</head>
 	<body>
-		<h1>Topdown Javascript Redstone</h2>
+		<h1>Topdown TypeScript Redstone</h2>
 		<text>
-			One of the projects I made and I'm proud of is a Nuclear Throne mod, that adds a topdown variant of Minecraft's redstone to the game. I knew it would have been absolutely useless, but it was a fun idea, and interesting to program and optimize. The avaliable pieces are:</br>
+			One of the projects I made and I'm proud of is a Nuclear Throne mod, that adds a topdown variant of Minecraft's redstone to the game. I knew it would have been absolutely useless, but it was a fun idea, interesting to program, optimize and port to TypeScript, which is the version you are currently seeing.<br/>
+			The avaliable pieces are:</br>
 			<ul>
-				<li>dust</li>
-				<li>lever</li>
-				<li>torch</li>
-				<li>block</li>
-				<li>piston</li>
+				<li>dust <img src="img/dust0.png"/></li>
+				<li>lever <div id="lever" style="display: inline;"></div></li>
+				<li>torch <img src="img/torch.png"/></li>
+				<li>block <img src="img/block.png"/></li>
+				<li>piston <img src="img/piston00.png"/></li>
 			</ul>
-		</text>
-			<div id="pieces"></div><br/>
-		<text>
 			The only difference with the NT mod is that torches aren't there, there are just levers switched on.<br/>
 			<br/>
-			Dust is powered by torches and 			
+			Torches, levers and powered dusts power adiacent non-powered dusts and pistons.<br/>
+			When powered, piston push the piece in from of him, and all the pieces behind it, and when it pulls back it also makes all the pieces in line stick.<br/>
+			Blocks are not affected by but can still be pushed by pistons, like all the other pieces.<br/><br/>
+			<div id="pistonTutorial"></div><br/>
+			A piston cannot be powered from the direction that he is supposed to push to.<br/><br/>
+			<div id="pistonTutorial2"></div><br/>
+			Those were the main rules that the simulation follows. There are not many things that it can do, but one of those is an AND gate:<br/><br/>
+			<div id="andGate"></div><br/>
+			And if it can do that, it can also do a calculator.<br/><br/>
+			<div id="4bFA"></div><br/>
+			This one can calculate the sum of two numbers from 0 to 15. It was actually "generated" by the GetFA function in the <a href="index.js">index.js</a> that I just ran on your browser. Just by changing the function's parameter from 4 to 8, the calculator will be able to add together numbers up to 255.
 		</text>
-		
-		
-		<div id="8bFA"></div>
-		<h2>this as an and gate</h2>
-		<div id="andGate"></div>
 		<script src="rs.js"></script>
-		<script>
-			var updaters = [
-				new Updater("pieces", ". ? ! o ^", 0),
-				new Updater("8bFA",
-					 "       ...."+
-					"#  ... !    "+
-					"#  . ..^    "+
-					"#  .     ..."+
-					"#    .. !   "+
-					"#   ! ..o   "+
-					"#  .o  .^   "+
-					"#?..^   o   "+
-					"#   o   ^   "+
-					"#?..^   .   "+
-					"#       .   "+
-					"#  ... !    "+
-					"#  . ..^    "+
-					"#  .     ..."+
-					"#    .. !   "+
-					"#   ! ..o   "+
-					"#  .o  .^   "+
-					"#?..^   o   "+
-					"#   o   ^   "+
-					"#?..^   .   "+
-					"#       .   "+
-					"#  ... !    "+
-					"#  . ..^    "+
-					"#  .     ..."+
-					"#    .. !   "+
-					"#   ! ..o   "+
-					"#  .o  .^   "+
-					"#?..^   o   "+
-					"#   o   ^   "+
-					"#?..^     .."+
-					"#        !  "+
-					"#       .o  "+
-					"#?.......^  "+
-					"#        o  "+
-					"#?.......^  "
-				, 1),
-				new Updater("andGate",
-					 "  ?  ?  . "+
-					"#  >o>o!   "
-				, 2),
-			];
-		</script>
-
+		<script src="index.js"></script>
 	</body>
 </html>
+<footer><br><hr><br><text><a href="..">More of my stuff</a><br>Article by Catonif in 2021<br>Mail me at catonif.dev@gmail.com</text></footer>

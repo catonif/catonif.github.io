@@ -63,21 +63,23 @@ class RsPiece {
 
 }
 
+var updaterIndex: number = 0;
+
 class Updater {
 
     game: HTMLElement;
-    index: number;
+    public index: number;
     strLevel: string;
 
     env: RsPiece[][];
 
-    constructor(fId: string, value: string, index: number) {
+    constructor(fId: string, value: string) {
 
         this.game = document.getElementById(fId);
 
-        this.index = index;
-
         this.strLevel = value;
+
+        this.index = updaterIndex++;
 
         let lvlLines: string[] = this.strLevel.split('#');
 
@@ -94,14 +96,13 @@ class Updater {
     }
 
     render() : void {
-        let inner: string = "<code>";
+        let inner: string = "";
         for (let y: number = 0; y < this.env.length; y++) {
             for (let x: number = 0; x < this.env[y].length; x++) {
                 inner += this.env[y][x].innerString(this.index, x, y);
             }
             inner += "<br>";
         }
-        inner += "</code>";
         this.game.innerHTML = inner;
     }
 

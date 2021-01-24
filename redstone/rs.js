@@ -51,11 +51,12 @@ var RsPiece = /** @class */ (function () {
     };
     return RsPiece;
 }());
+var updaterIndex = 0;
 var Updater = /** @class */ (function () {
-    function Updater(fId, value, index) {
+    function Updater(fId, value) {
         this.game = document.getElementById(fId);
-        this.index = index;
         this.strLevel = value;
+        this.index = updaterIndex++;
         var lvlLines = this.strLevel.split('#');
         this.env = new Array(lvlLines.length);
         for (var y = 0; y < lvlLines.length; y++) {
@@ -67,14 +68,13 @@ var Updater = /** @class */ (function () {
         this.update();
     }
     Updater.prototype.render = function () {
-        var inner = "<code>";
+        var inner = "";
         for (var y = 0; y < this.env.length; y++) {
             for (var x = 0; x < this.env[y].length; x++) {
                 inner += this.env[y][x].innerString(this.index, x, y);
             }
             inner += "<br>";
         }
-        inner += "</code>";
         this.game.innerHTML = inner;
     };
     Updater.prototype.update = function () {
