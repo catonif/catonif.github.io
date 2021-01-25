@@ -162,9 +162,7 @@ class Updater {
             try {
                 withed = this.env[maybeY][maybeX];
                 if (withed == undefined) continue;
-            } catch {
-                continue;
-            }
+            } catch { continue; }
             if (withed.state) continue;
             if (!(withed.type & 1)) continue; // no empty, no torches, no blocks
             if (withed.type == RsType.Piston) {

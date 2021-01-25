@@ -1,6 +1,6 @@
-const faStart = "       ....#  ... !#  . ..^#  .     ...#    .. !#   ! ..o#  .o  .^   ";
-const faCountinue = "#?..^   o#   o   ^#?..^   .#       .#  ... !#  . ..^#  .     ...#    .. !#   ! ..o#  .o  .^   ";
-const faEnd = "#?..^   o#   o   ^#?..^     ..#        !#       .o#?.......^#        o#?.......^  ";
+const faStart = "       ....#  ... !#  . ..^#  .     ...#    .. !#   ! ..o#  .o  .^";
+const faCountinue = "#?..^   o#   o   ^#?..^   .#       .#  ... !#  . ..^#  .     ...#    .. !#   ! ..o#  .o  .^";
+const faEnd = "#?..^   o#   o   ^#?..^     ..#        !#       .o#?.......^#        o#?.......^";
 
 function GetFA(bitCount) {
     let fa = faStart;

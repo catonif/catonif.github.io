@@ -1,12 +1,12 @@
 body {
 	background:#1E1E1E;
-	color:white;
-	font-size:larger;
+	color: #DCDCDC;
 	padding: 10px 7% 10px 7%;
 }
 
-text {
+body, text {
 	font-family: calibri;
+	font-size:20px;
 }
 
 code, pre {
@@ -46,4 +46,11 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
 	background: #DCDCDC;
 	border-radius: 3px;
+}
+
+input[type="number"], input[type="text"] {
+	width: 64px;
+	background-color: #333;
+	color: #DCDCDC;
+	border-width: 0;
 }

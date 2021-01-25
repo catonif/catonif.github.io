@@ -25,3 +25,9 @@ function pressed(what: number) : void {
 	bar.value = (wrong / (correct + wrong)).toString();
 	count.innerHTML = (correct + wrong).toString();
 }
+
+function what() : boolean {
+	return (future & 1) != 0;
+}
+
+console.log("Hello! Type what() to know what button the script thinks you are going to push next.\nCheck out more of my stuff at https://catonif.github.io");
