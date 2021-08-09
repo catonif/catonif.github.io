@@ -1,7 +1,5 @@
 % 1D Life
 
-{{stylesheet}{../style.css}}
-
 [Download](https://github.com/catonif/1dlife/releases/tag/1.0.0) for Windows, it's way faster  
 [More of my stuff](https://catonif.github.io/)
 
@@ -18,8 +16,6 @@
 ```
 ```
 {#outputElement}
-
-{{script}{life.js}}
 
 <script>
 
