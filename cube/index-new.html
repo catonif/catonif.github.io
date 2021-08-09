@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cube Generation</title>
+<style>/*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #272822;
+  color: #ddd;
+}
+
+.hljs-tag,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-strong,
+.hljs-name {
+  color: #f92672;
+}
+
+.hljs-code {
+  color: #66d9ef;
+}
+
+.hljs-class .hljs-title {
+  color: white;
+}
+
+.hljs-attribute,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-link {
+  color: #bf79db;
+}
+
+.hljs-string,
+.hljs-bullet,
+.hljs-subst,
+.hljs-title,
+.hljs-section,
+.hljs-emphasis,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #a6e22e;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-selector-id {
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h1>How to Generate a Cube's vertices and tris</h1>
+<p>If you google how to generate vertices and tris of a cube the tutorials that come up probably teach you put in the code matrices with constant values which are actually the three dimensional coordinates of the vertices and the indices of the vertices in the array.<br>
+For example <a href="http://ilkinulas.github.io/development/unity/2016/04/30/cube-mesh-in-unity3d.html">this</a> is the first explaination that comes up if I google <a href="https://www.google.com/search?q=how+to+generate+cube's+vertices+and+tris">how to generate cube's vertices and tris</a>, and all the other relevant results say the same thing. Hard coding constant values, even if fast, isn't too elegant. So this is what I came up with.</p>
+<h2>Vertices</h2>
+<p>How can I dispose the vertices in a way that they are generetable? Well, we have 8 vertices, and every vertices has three dimensions. If we take the center of the cube as absolute zero (x: 0, y: 0, z: 0) all the vertices of the cube will have for each dimension or <code>size / 2</code> or <code>-size / 2</code>. So, every vert has 3 values and each one can have one of 2 values, the number of possble verts is 2<sup>3</sup> which is 8, so to get the verts we need to generate are actually all the combinations possible. to do that, there is a counter that goes from 0 to 7 in binary, with the most relevant bit being X, the least relevant Z and the middle Y:</p>
+<pre class="hljs"><code><span class="hljs-number">000</span>, <span class="hljs-number">001</span>, <span class="hljs-number">010</span>, <span class="hljs-number">011</span>, <span class="hljs-number">100</span>, <span class="hljs-number">101</span>, <span class="hljs-number">110</span>, <span class="hljs-number">111</span>
+</code></pre>
+<p>By replacing the 0 with <code>size / 2</code> and the 1 with <code>-size / 2</code> we end up with the vertices that we need.</p>
+<p>This is the C# code that generates that</p>
+<pre class="hljs"><code><span class="hljs-comment">// verts was defined previously</span>
+<span class="hljs-comment">// size and startPos are the parameters of the function</span>
+<span class="hljs-comment">// Coord3 is my class for 3 dimensional point</span>
+<span class="hljs-built_in">int</span> l = size / <span class="hljs-number">2</span>;
+verts = <span class="hljs-keyword">new</span> Coord3[<span class="hljs-number">8</span>];
+<span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">8</span>; i++) {
+    verts[i] = <span class="hljs-keyword">new</span> Coord3(
+        (i &amp; <span class="hljs-number">4</span>) != <span class="hljs-number">0</span> ? l : -l,
+        (i &amp; <span class="hljs-number">2</span>) != <span class="hljs-number">0</span> ? l : -l,
+        (i &amp; <span class="hljs-number">1</span>) != <span class="hljs-number">0</span> ? l : -l) + startPos;
+}
+</code></pre>
+<p>This means that the index of a vertex is also its position, which will come really helpful.</p>
+<h2>Tris</h2>
+<p>We need to slice the quads of the cube into tris, and the first solution to do that is probably to slice 4 faces in the same direction and the other two in a way or another. This is pretty irregular and still not elegant to generate. Instead we can use the slices made by using two equilateral triangles.<br>
+<img src="cubeImage.png" alt=""><br>
+This cube opened in a T shape looks like this:</p>
+<pre class="hljs"><code>|---|---|---|
+| \ | \ | / |
+|---|---|---|
+    | \ |
+    |---|
+    | / |
+    |---|
+    | / |
+    |---|
+</code></pre>
+<p>Three faces that make one of the triangles are the three faces with positive axis, and the other triangle has the the other three faces with negative faces. (capital letter means positive)</p>
+<pre class="hljs"><code>|---|---|---|
+| Z | x | z |
+|---|---|---|
+    | Y |
+    |---|
+    | X |
+    |---|
+    | y |
+    |---|
+</code></pre>
+<p>and the indices of the vertices are</p>
+<pre class="hljs"><code>2---6---7---3
+| Z | x | z |
+0---4---5---1
+    | Y |
+    0---1
+    | X |
+    2---3
+    | y |
+    6---7
+</code></pre>
+<p>The faces are now sliced, but there needs to be an order for the tris, and for every tris, an order for the vertices, so I came up with this:</p>
+<pre class="hljs"><code>start <span class="hljs-comment">// 6 faces, 12 tris</span>
+	starting from positive triangle <span class="hljs-comment">// 3 faces, 6 tris</span>
+	starting from x axis <span class="hljs-comment">// 1 face, 2 tris</span>
+		the tris inside the triangle <span class="hljs-comment">// 1 tris, 3 vertices</span>
+		the <span class="hljs-number">90</span>° vertex
+		continuing clockwise
+		the other tris on the same face
+	y axis
+	z axis
+	negative triangle
+end
+</code></pre>
+<p>Doing this by hand led to this:</p>
+<pre class="hljs"><code>X <span class="hljs-number">012</span> <span class="hljs-number">321</span>
+Y <span class="hljs-number">041</span> <span class="hljs-number">514</span>
+Z <span class="hljs-number">024</span> <span class="hljs-number">642</span>
+x <span class="hljs-number">756</span> <span class="hljs-number">465</span>
+y <span class="hljs-number">763</span> <span class="hljs-number">236</span>
+z <span class="hljs-number">735</span> <span class="hljs-number">153</span>
+</code></pre>
+<p>The first thing to note, is that the negative faces are just the positive faces but with a bitwise not operator applied and the 2nd and 3rd vertices swapped.<br>
+Example:</p>
+<pre class="hljs"><code>X <span class="hljs-number">012</span> (<span class="hljs-number">000</span>, <span class="hljs-number">001</span>, <span class="hljs-number">010</span>); <span class="hljs-number">321</span> (<span class="hljs-number">011</span>, <span class="hljs-number">010</span>, <span class="hljs-number">001</span>)
+x <span class="hljs-number">756</span> (<span class="hljs-number">111</span>, <span class="hljs-number">101</span>, <span class="hljs-number">110</span>); <span class="hljs-number">465</span> (<span class="hljs-number">100</span>, <span class="hljs-number">110</span>, <span class="hljs-number">101</span>)
+</code></pre>
+<p>We can remove the negative faces from the list and for all the vertices remaining, we add another vertex which is (~v.x, ~v.z, ~v.y).<br>
+We are left with 6 constant tris:</p>
+<pre class="hljs"><code>X <span class="hljs-number">012</span> <span class="hljs-number">321</span>
+Y <span class="hljs-number">041</span> <span class="hljs-number">512</span>
+Z <span class="hljs-number">024</span> <span class="hljs-number">642</span>
+</code></pre>
+<p>As you may notice, the second tris of a face has for X the sum of Y and Z of the other tris in the same face, and Z and Y are the same, but inverted (v.y + v.z, v.z, v.y).<br>
+So now the ones that are left are</p>
+<pre class="hljs"><code>X <span class="hljs-number">012</span>
+Z <span class="hljs-number">024</span>
+Y <span class="hljs-number">041</span>
+</code></pre>
+<p>which in binary are</p>
+<pre class="hljs"><code>X <span class="hljs-number">000</span>, <span class="hljs-number">001</span>, <span class="hljs-number">010</span>
+Z <span class="hljs-number">000</span>, <span class="hljs-number">010</span>, <span class="hljs-number">100</span>
+Y <span class="hljs-number">000</span>, <span class="hljs-number">100</span>, <span class="hljs-number">001</span>
+</code></pre>
+<p>So to calculate even these three tris we can run a counter that goes from 0 to 2, (number of dimensions - 1), and for the X just put 0, for the Y <code>1 &lt;&lt; counter</code>, and for the Z, <code>Y &lt;&lt; 1</code>, but when it reaches 8, it loops back to 1.</p>
+<p>All this code is C# is:</p>
+<pre class="hljs"><code>Coord3[] verts;
+
+Tris[] tris;
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">CubeShape</span>(<span class="hljs-params">Coord3 startPos, <span class="hljs-built_in">int</span> size</span>)</span> {
+    <span class="hljs-built_in">int</span> l = size / <span class="hljs-number">2</span>;
+    verts = <span class="hljs-keyword">new</span> Coord3[<span class="hljs-number">8</span>];
+    <span class="hljs-comment">// generating verts</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">8</span>; i++) { <span class="hljs-comment">// with a counter from 0 to 7</span>
+        verts[i] = <span class="hljs-keyword">new</span> Coord3(
+            (i &amp; <span class="hljs-number">4</span>) != <span class="hljs-number">0</span> ? l : -l, <span class="hljs-comment">// x is the most relevant bit</span>
+            (i &amp; <span class="hljs-number">2</span>) != <span class="hljs-number">0</span> ? l : -l, <span class="hljs-comment">// y is the middle one</span>
+            (i &amp; <span class="hljs-number">1</span>) != <span class="hljs-number">0</span> ? l : -l) <span class="hljs-comment">// z is the least relevant</span>
+                + startPos; <span class="hljs-comment">// offset of the cube</span>
+    }
+
+    <span class="hljs-comment">// this is here just because AddRange doesn&#x27;t use params</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">AddTris</span>(<span class="hljs-params"><span class="hljs-keyword">params</span> <span class="hljs-built_in">int</span>[] a</span>)</span> =&gt; inds.AddRange(a);
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) {
+        <span class="hljs-built_in">int</span> v1 = <span class="hljs-number">1</span> &lt;&lt; i, v2 = v1 == <span class="hljs-number">4</span> ? <span class="hljs-number">1</span> : v1 &lt;&lt; <span class="hljs-number">1</span>;
+        AddTris(<span class="hljs-number">0</span>, v1, v2); <span class="hljs-comment">// add the 3 initial tris with bitwise left shift</span>
+    }
+
+    <span class="hljs-comment">// v0 is the sum of the two. inverted v2 and v1 for clockwise.</span>
+    <span class="hljs-built_in">int</span> c = inds.Count;
+    <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; c; i += <span class="hljs-number">3</span>) <span class="hljs-comment">// loops the 3 tris just made</span>
+        AddTris(inds[i + <span class="hljs-number">1</span>] + inds[i + <span class="hljs-number">2</span>], inds[i + <span class="hljs-number">2</span>], inds[i + <span class="hljs-number">1</span>]);
+
+    <span class="hljs-comment">// all of the v&#x27;s are bitwise not&#x27;d. inverted v2 and v1 for clockwise.</span>
+    c = inds.Count;
+    <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; c; i += <span class="hljs-number">3</span>) <span class="hljs-comment">// loops the 6 tris just made</span>
+        AddTris(<span class="hljs-number">7</span> - inds[i], <span class="hljs-number">7</span> - inds[i + <span class="hljs-number">2</span>], <span class="hljs-number">7</span> - inds[i + <span class="hljs-number">1</span>]);
+}
+</code></pre>
+<p>This snippet was updated the February 6th 2021, which is the reason why it's different from the one you might have seen on <a href="https://stackoverflow.com/questions/13953476/elegant-way-the-find-the-vertices-of-a-cube/65306627#65306627">Stack Overflow</a>.</p>
+<p><strong>NOTE</strong>:<br>
+This solution isn't really helpful for anyone, it is slower than just writing down the constant values and pretty unclear at first glance. Looking back at it, it is not even too elegant. But this was a fun little piece of code that I wrote in about 2-3 hours (and then some more in 2021, lol), and wanted to share it, since I couldnt find anything like this on the Internet.</p>
+<hr>
+<p><a href="..">More of my stuff</a><br>
+Article by Catonif in 2020 and edited in 2021<br>
+Mail me at catonif.dev@gmail.com<br>
+Page's theme: Monokai Classic</p>
+</body>

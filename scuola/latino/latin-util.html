@@ -1,0 +1,260 @@
+<!--
+	scritto direttamente in HTML da Catoni, sì, so' io buongiorno
+	se si è interessati si può guardare un po' in giro per degli esempi su come fare delle tabelle farbuffe in HTML
+	prego
+-->
+
+<style>
+table {
+	border-collapse: collapse;
+	display: inline;
+}
+
+th, td{
+	border: 1px black solid;
+	padding: 4px;
+	text-align: center;
+	width: 25;
+}
+
+body {
+	font-variant-ligatures: discretionary-ligatures;
+}
+
+div.block {
+	display: flow-root;
+}
+
+div.inline {
+	float: left;
+	margin-right: 20px;
+}
+
+h2 {
+	margin-top: 25px;
+	margin-bottom: 0px;
+}
+
+</style>
+
+<h1>Verbi</h1>
+
+<div class="block">
+
+	<h2>Indicativo</h2>
+
+	<div class="inline"><h3>Presente</h3>
+
+		<table>
+			<tr><th>1</th><th>2</th><th>3a</th><th>3p</th><th>4</th><th>a</th><th>p</th></tr>
+			<tr>
+				<td>*</td>
+				<td rowspan="3">ĕ</td>
+				<td colspan="2">*</td>
+				<td rowspan="5">ĭ</td>
+				<td>ō</td><td>ōr</td>
+			</tr>
+			<tr>
+				<td rowspan="5">a</td>
+				<!---->
+				<td>ĭ</td><td>e</td>
+				<!---->
+				<td>s</td><td>ris</td>
+			</tr>
+			<tr>
+				<!---->
+				<!---->
+				<td colspan="2" rowspan="3">ĭ</td>
+				<!---->
+				<td>t</td><td>tur</td>
+			</tr>
+			<tr>
+				<td rowspan="3">ē</td>
+				<td>mus</td><td>mur</td></tr>
+			<tr><td>tis</td><td>mĭni</td></tr>
+			<tr>
+				<!---->
+				<!---->
+				<td colspan="2">u</td>
+				<td>ĭu</td>
+				<td>nt</td><td>ntur</td>
+			</tr>
+		</table>
+
+		<table>
+			<tr><th>sum</th></tr>
+			<tr><td>sum</td></tr>
+			<tr><td>es</td></tr>
+			<tr><td>est</td></tr>
+			<tr><td>sumus</td></tr>
+			<tr><td>estis</td></tr>
+			<tr><td>sunt</td></tr>
+		</table>
+
+	</div>
+
+	<div class="inline"><h3>Imperfetto</h3>
+
+		<table>
+			<tr><th>1</th><th>2</th><th>3</th><th>4</th><th>a</th><th>p</th></tr>
+			<tr>
+				<td rowspan="6">ā</td>
+				<td colspan="2" rowspan="6">ē</td>
+				<td rowspan="6">iē</td>
+				<td>bam</td><td>bar</td>
+			</tr>
+			<tr><td>bas</td><td>baris</td></tr>
+			<tr><td>bat</td><td>batur</td></tr>
+			<tr><td>bāmus</td><td>bamur</td></tr>
+			<tr><td>bātis</td><td>bamĭni</td></tr>
+			<tr><td>bant</td><td>bantur</td></tr>
+		</table>
+
+		<table>
+			<tr><th>sum</th></tr>
+			<tr><td>eram</td></tr>
+			<tr><td>eras</td></tr>
+			<tr><td>erat</td></tr>
+			<tr><td>eramus</td></tr>
+			<tr><td>eratis</td></tr>
+			<tr><td>erant</td></tr>
+		</table>
+
+	</div>
+
+	<div class="inline"><h3>Futuro semplice</h3>
+
+		<table>
+			<tr><th>1</th><th>2</th><th>a</th><th>p</th></tr>
+			<tr>
+				<td rowspan="6">ā</td>
+				<td rowspan="6">ē</td>
+				<td>bo</td><td>bor</td>
+			</tr>
+			<tr><td>bis</td><td>bĕris</td></tr>
+			<tr><td>bit</td><td>bĭtur</td></tr>
+			<tr><td>bĭmus</td><td>bĭmur</td></tr>
+			<tr><td>bĭtis</td><td>bimĭni</td></tr>
+			<tr><td>bunt</td><td>būntur</td></tr>
+		</table>
+
+		<table>
+			<tr><th>3</th><th>4</th><th>a</th><th>p</th></tr>
+			<tr>
+				<td rowspan="6">*</td>
+				<td rowspan="6">ĭ</td>
+				<td>am</td><td>ar</td>
+			</tr>
+			<tr><td>es</td><td>eris</td></tr>
+			<tr><td>et</td><td>etur</td></tr>
+			<tr><td>emus</td><td>emur</td></tr>
+			<tr><td>etis</td><td>emĭni</td></tr>
+			<tr><td>ent</td><td>entur</td></tr>
+		</table>
+
+		<table>
+			<tr><th>sum</th></tr>
+			<tr><td>ero</td></tr>
+			<tr><td>eris</td></tr>
+			<tr><td>erit</td></tr>
+			<tr><td>erimus</td></tr>
+			<tr><td>eritis</td></tr>
+			<tr><td>erunt</td></tr>
+		</table>
+
+	</div>
+
+	<div class="inline"><h3>Perfetto</h3>
+		<table>
+			<tr><td>ī</td></tr>
+			<tr><td>īstī</td></tr>
+			<tr><td>it</td></tr>
+			<tr><td>ĭmus</td></tr>
+			<tr><td>īstis</td></tr>
+			<tr><td>ērunt</td></tr>
+		</table>
+	</div>
+
+</div>
+
+<div class="block"><h2>Imperativo</h2>
+
+	<div class="inline"><h3>Presente</h3>
+		<table>
+			<tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>a</th><th>p</th></tr>
+			<tr><th>2sg</th><td rowspan="2">a</td><td rowspan="2">e</td><td>e</td><td rowspan="2">i</td><td>*</td><td>re</td></tr>
+			<tr><th>2pl</th><td>i</td><td>te</td><td>mini</td></tr>
+		</table>
+
+		<table>
+			<tr><th>sum</th></tr>
+			<tr><td>es</td></tr>
+			<tr><td>este</td></tr>
+		</table>
+	</div>
+
+	<div class="inline"><h3>Futuro</h3>
+		<table>
+			<tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>a</th><th>p</th></tr>
+			<tr>
+				<th>2sg/3sg</th>
+				<td rowspan="3">a</td>
+				<td rowspan="3">e</td>
+				<td rowspan="2" colspan="2">i</td>
+				<td>to</td><td>tor</td>
+			</tr>
+			<tr><th>2pl</th><td>tote</td><td>minor</td></tr>
+			<tr><th>3pl</th><td>u</td><td>iu</td><td>nto</td><td>ntor</td></tr>
+		</table>
+
+		<table>
+			<tr><th>sum</th></tr>
+			<tr><td>esto</td></tr>
+			<tr><td>estote</td></tr>
+			<tr><td>sunto</td></tr>
+		</table>
+	</div>
+
+</div>
+
+<div class="block">
+
+	<h2>Infinito</h2>
+	<h3>Presente</h3>
+	<table>
+		<tr><th>1</th><th>2</th><th>3a</th><th>3p</th><th>4</th><th>a</th><th>p</th></tr>
+		<tr><td>ār</td><td>ēr</td><td>ĕr</td><td>*</td><td>īr</td><td>e</td><td>i</td></tr>
+	</table>
+
+</div>
+
+<h1>Sostantivi</h1>
+<table>
+	<tr><th colspan="2">1 decl</th></tr>
+	<tr><td>ă</td><td>ae</td></tr>
+	<tr><td>ae</td><td>arum</td></tr>
+	<tr><td>ae</td><td>is</td></tr>
+	<tr><td>am</td><td>as</td></tr>
+	<tr><td>ă</td><td>ae</td></tr>
+	<tr><td>ā</td><td>is</td></tr>
+</table>
+
+<table>
+	<tr><th colspan="4">2 decl</th></tr>
+	<tr><td>us</td><td>um</td><td>i</td><td>a</td></tr>
+	<tr><td colspan="2">i</td><td colspan="2">orum</td></tr>
+	<tr><td colspan="2">ō</td><td colspan="2">is</td></tr>
+	<tr><td colspan="2">um</td><td>os</td><td>a</td></tr>
+	<tr><td colspan="2">e</td><td>i</td><td>a</td></tr>
+	<tr><td colspan="2">ō</td><td colspan="2">is</td></tr>
+</table>
+
+<table>
+	<tr><th colspan="4">3 decl</th></tr>
+	<tr><td colspan="2">*</td><td>es</td><td>[ĭ]a</td></tr>
+	<tr><td colspan="2">is</td><td colspan="2">[ĭ]um</td></tr>
+	<tr><td colspan="2">ī</td><td colspan="2">ĭbus</td></tr>
+	<tr><td>em</td><td>*</td><td>es</td><td>[ĭ]a</td></tr>
+	<tr><td colspan="2">*</td><td>es</td><td>[ĭ]a</td></tr>
+	<tr><td>ē</td><td>ē/ī</td><td colspan="2">ĭbus</td></tr>
+</table>

@@ -1,0 +1,17 @@
+[
+	{
+		"input": "cube.md",
+		"output": "../cube/index-new.html",
+		"title": "Cube Generation",
+		"hls": "monokai",
+		"plugins": ["sup"],
+		"breaks": true
+	},
+	{
+		"input": "home.md",
+		"output": "../index-new.html",
+		"title": "Catonif",
+		"styles": ["style.css"],
+		"breaks": true
+	}
+]
