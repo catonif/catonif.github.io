@@ -1,8 +1,12 @@
+
 <!--
-	scritto direttamente in HTML da Catoni, sì, so' io buongiorno
+	scritto direttamente in HTML da Catoni, buongiorno
 	se si è interessati si può guardare un po' in giro per degli esempi su come fare delle tabelle farbuffe in HTML
+	sono tutte belle indentate
 	prego
 -->
+
+<head>
 
 <style>
 table {
@@ -10,11 +14,11 @@ table {
 	display: inline;
 }
 
-th, td{
+th, td {
 	border: 1px black solid;
-	padding: 4px;
 	text-align: center;
-	width: 25;
+	width: fit-content;
+	padding: 2px 7px 2px 7px;
 }
 
 body {
@@ -35,52 +39,109 @@ h2 {
 	margin-bottom: 0px;
 }
 
+td:empty {
+	border: none;
+}
+
 </style>
 
+</head>
+
+<body>
+
+<i>gli appunti bbelli di Catoni<br>viene usato </i>ï<i> per indicare </i>e<i> se prima di </i>r<i> e a fine parola, </i>i<i> altrimenti</i>
+
 <h1>Verbi</h1>
+
+<div class="block">
+	<h2>Schema del Verbo</h2>
+	<ul>
+		<li><b>Tema</b> (<b>T</b>): parte invariabile, informazioni sul significato</li>
+		<li><b>Vocale tematica</b> (<b>VT</b>): dipende dalla coniugazione, potrebbe non esserci</li>
+		<li><b>Suffisso temporale</b> (<b>ST</b>): caratterizza alcuni tempi (<i>e.g.</i>: imperfetto)</li>
+		<li><b>Desinenze personali</b> (<b>DP</b>): informazioni sul persona e altri tempi (<i>e.g.</i>: presente)</li>
+	</ul>
+</div>
+
+<div class="block">
+
+	<h2>Temi</h2>
+
+	<ul>
+		<li><b>tema del presente</b>: dal 1º lemma del paradigma, tojendo:<ul>
+			<li>1C, 3C, 4C: -o</li>
+			<li>2C: -eo</li>
+		</ul></li>
+		<li><b>tema del perfetto</b>: dal 3º lemma del paradigma, tojendo -i</li>
+		<li><b>tema del supino</b>: dal 4º lemma del paradigma, tojendo -um</li>
+	</ul>
+
+</div>
+
+<div class="block">
+	
+	<h2>Desinenze Personali</h2>
+
+	<div class="inline"><h3>Presente</h3>
+		<table>
+			<tr><td colspan="2"></td><th>att</th><th>pass</th></tr>
+			<tr><th rowspan="3">sg</th><th>1</th><td>m <b>/</b> o *</td><td>r <b>/</b> or *</td></tr>
+			<tr><th>2</th><td>s</td>  <td>ris</td></tr>
+			<tr><th>3</th><td>t</td>  <td>tur</td></tr>
+			<tr><th rowspan="3">pl</th><th>1</th><td>mus</td><td>mur</td></tr>
+			<tr><th>2</th><td>tis</td><td>mini</td></tr>
+			<tr><th>3</th><td>nt</td> <td>ntur</td></tr>
+			<tr><td colspan="10">* se finisce per vocale<br>o consonante</td></tr>
+		</table>
+	</div>
+
+	<div class="inline"><h3>Perfetto</h3>
+		<table>
+			<tr><th rowspan="3">sg</th><th>1</th><td>i</td></tr>
+			<tr><th>2</th><td>isti</td></tr>
+			<tr><th>3</th><td>it</td></tr>
+			<tr><th rowspan="3">pl</th><th>1</th><td>imus</td></tr>
+			<tr><th>2</th><td>istis</td></tr>
+			<tr><th>3</th><td>erunt</td></tr>
+		</table>
+	</div>
+
+	<div class="inline"><h3>Imperativo presente</h3>
+		<table>
+			<tr><td colspan="2"></td><th>att</th><th>pass</th></tr>
+			<tr><th>sg</th><th rowspan="2">2</th><td>-</td><td>re</td></tr>
+			<tr><th>pl</th><td>te</td><td>mini</td></tr>
+		</table>
+	</div>
+
+	<div class="inline"><h3>Imperativo futuro</h3>
+		<table>
+			<tr><td colspan="2"></td><th>att</th><th>pass</th></tr>
+			<tr><th rowspan="2">sg</th><th>2</th><td rowspan="2">to</td><td rowspan="2">tor</td></tr>
+			<tr><th>3</th></tr>
+			<tr><th rowspan="2">pl</th><th>2</th><td>tote</td><td>minor</td></tr>
+			<tr><th>3</th><td>nto</td><td>ntor</td></tr>
+		</table>
+	</div>
+	
+</div>
+
 
 <div class="block">
 
 	<h2>Indicativo</h2>
 
 	<div class="inline"><h3>Presente</h3>
-
+		
 		<table>
-			<tr><th>1</th><th>2</th><th>3a</th><th>3p</th><th>4</th><th>a</th><th>p</th></tr>
-			<tr>
-				<td>*</td>
-				<td rowspan="3">ĕ</td>
-				<td colspan="2">*</td>
-				<td rowspan="5">ĭ</td>
-				<td>ō</td><td>ōr</td>
-			</tr>
-			<tr>
-				<td rowspan="5">a</td>
-				<!---->
-				<td>ĭ</td><td>e</td>
-				<!---->
-				<td>s</td><td>ris</td>
-			</tr>
-			<tr>
-				<!---->
-				<!---->
-				<td colspan="2" rowspan="3">ĭ</td>
-				<!---->
-				<td>t</td><td>tur</td>
-			</tr>
-			<tr>
-				<td rowspan="3">ē</td>
-				<td>mus</td><td>mur</td></tr>
-			<tr><td>tis</td><td>mĭni</td></tr>
-			<tr>
-				<!---->
-				<!---->
-				<td colspan="2">u</td>
-				<td>ĭu</td>
-				<td>nt</td><td>ntur</td>
-			</tr>
+			<tr><td rowspan="2"></td><th colspan="4">VT</th></tr>
+			<tr><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+			<tr><th>1sg</th><td>-</td><td rowspan="3">e</td><td colspan="2">-</td></tr>
+			<tr><th>resto</th><td rowspan="2">a</td><td rowspan="1">ï</td><td>-</td></tr>
+			<tr><th>3pl</th><td colspan="2">u</td></tr>
+			<tr><td colspan="10">T: presente<br>DP: presente-o</td></tr>
 		</table>
-
+		
 		<table>
 			<tr><th>sum</th></tr>
 			<tr><td>sum</td></tr>
@@ -96,83 +157,50 @@ h2 {
 	<div class="inline"><h3>Imperfetto</h3>
 
 		<table>
-			<tr><th>1</th><th>2</th><th>3</th><th>4</th><th>a</th><th>p</th></tr>
+			<tr><th colspan="4">VT</th><th rowspan="2">ST</th><th rowspan="2">sum</th></tr>
+			<tr><th>1</th><th>2</th><th>3</th><th>4</th></tr>
 			<tr>
-				<td rowspan="6">ā</td>
-				<td colspan="2" rowspan="6">ē</td>
-				<td rowspan="6">iē</td>
-				<td>bam</td><td>bar</td>
+				<td>a</td>
+				<td colspan="3">e</td>
+				<td>ba</td>
+				<td>era-</td>
 			</tr>
-			<tr><td>bas</td><td>baris</td></tr>
-			<tr><td>bat</td><td>batur</td></tr>
-			<tr><td>bāmus</td><td>bamur</td></tr>
-			<tr><td>bātis</td><td>bamĭni</td></tr>
-			<tr><td>bant</td><td>bantur</td></tr>
+			<tr><td colspan="10">T: present<br>DP: presente-m</td></tr>
 		</table>
-
-		<table>
-			<tr><th>sum</th></tr>
-			<tr><td>eram</td></tr>
-			<tr><td>eras</td></tr>
-			<tr><td>erat</td></tr>
-			<tr><td>eramus</td></tr>
-			<tr><td>eratis</td></tr>
-			<tr><td>erant</td></tr>
-		</table>
-
+		
 	</div>
 
 	<div class="inline"><h3>Futuro semplice</h3>
 
 		<table>
-			<tr><th>1</th><th>2</th><th>a</th><th>p</th></tr>
+			<tr><td rowspan="2"></td><th colspan="2">VT</th><th rowspan="2">ST</th><th rowspan="2">sum</th></tr>
+			<tr><th>1</th><th>2</th></tr>
 			<tr>
-				<td rowspan="6">ā</td>
-				<td rowspan="6">ē</td>
-				<td>bo</td><td>bor</td>
+				<th>1sg</th>
+				<td rowspan="3">a</td>
+				<td rowspan="3">e</td>
+				<td>b</td>
+				<td>er</td>
 			</tr>
-			<tr><td>bis</td><td>bĕris</td></tr>
-			<tr><td>bit</td><td>bĭtur</td></tr>
-			<tr><td>bĭmus</td><td>bĭmur</td></tr>
-			<tr><td>bĭtis</td><td>bimĭni</td></tr>
-			<tr><td>bunt</td><td>būntur</td></tr>
+			<tr><th>resto</th><td>bï</td><td rowspan="2">eri</td></tr>
+			<tr><th>3pl</th><td>bu</td></tr>
+			<tr><td colspan="10">T: presente<br>DP: presente-o</td></tr>
 		</table>
 
 		<table>
-			<tr><th>3</th><th>4</th><th>a</th><th>p</th></tr>
+			<tr><td></td><th>ST</th></tr>
 			<tr>
-				<td rowspan="6">*</td>
-				<td rowspan="6">ĭ</td>
-				<td>am</td><td>ar</td>
+				<th>1sg</th>
+				<td>a</td>
 			</tr>
-			<tr><td>es</td><td>eris</td></tr>
-			<tr><td>et</td><td>etur</td></tr>
-			<tr><td>emus</td><td>emur</td></tr>
-			<tr><td>etis</td><td>emĭni</td></tr>
-			<tr><td>ent</td><td>entur</td></tr>
-		</table>
-
-		<table>
-			<tr><th>sum</th></tr>
-			<tr><td>ero</td></tr>
-			<tr><td>eris</td></tr>
-			<tr><td>erit</td></tr>
-			<tr><td>erimus</td></tr>
-			<tr><td>eritis</td></tr>
-			<tr><td>erunt</td></tr>
+			<tr><th>resto</th><td>e</td></tr>
+			<tr><td colspan="10">T: presente<br>VT: nessuna<br>DP: presente</td></tr>
 		</table>
 
 	</div>
 
 	<div class="inline"><h3>Perfetto</h3>
-		<table>
-			<tr><td>ī</td></tr>
-			<tr><td>īstī</td></tr>
-			<tr><td>it</td></tr>
-			<tr><td>ĭmus</td></tr>
-			<tr><td>īstis</td></tr>
-			<tr><td>ērunt</td></tr>
-		</table>
+		<table><tr><td>T: perfetto<br>DP: perfetto</td></tr></table>
 	</div>
 
 </div>
@@ -181,38 +209,35 @@ h2 {
 
 	<div class="inline"><h3>Presente</h3>
 		<table>
-			<tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>a</th><th>p</th></tr>
-			<tr><th>2sg</th><td rowspan="2">a</td><td rowspan="2">e</td><td>e</td><td rowspan="2">i</td><td>*</td><td>re</td></tr>
-			<tr><th>2pl</th><td>i</td><td>te</td><td>mini</td></tr>
-		</table>
-
-		<table>
-			<tr><th>sum</th></tr>
-			<tr><td>es</td></tr>
-			<tr><td>este</td></tr>
+			<tr><th colspan="4">VT</th><th rowspan="2">sum</th></tr>
+			<tr><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+			<tr>
+				<td>a</td>
+				<td>e</td>
+				<td>ï</td>
+				<td>-</td>
+				<td>es</td>
+			</tr>
+			<tr><td colspan="10">T: presente<br>DP: imperativo presente</td></tr>
 		</table>
 	</div>
 
 	<div class="inline"><h3>Futuro</h3>
 		<table>
-			<tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>a</th><th>p</th></tr>
+			<tr><td rowspan="2"></td><th colspan="4">VT</th><th rowspan="2">sum</th></tr>
+			<tr><th>1</th><th>2</th><th>3</th><th>4</th></tr>
 			<tr>
-				<th>2sg/3sg</th>
-				<td rowspan="3">a</td>
-				<td rowspan="3">e</td>
-				<td rowspan="2" colspan="2">i</td>
-				<td>to</td><td>tor</td>
+				<th>resto</th>
+				<td rowspan="2">a</td>
+				<td rowspan="2">e</td>
+				<td>ï</td>
+				<td>-</td>
+				<td>es</td>
 			</tr>
-			<tr><th>2pl</th><td>tote</td><td>minor</td></tr>
-			<tr><th>3pl</th><td>u</td><td>iu</td><td>nto</td><td>ntor</td></tr>
+			<tr><th>3pl</th><td colspan="2">u</td><td>su</td></tr>
+			<tr><td colspan="10">T: presente<br>DP: imperativo futuro</td></tr>
 		</table>
 
-		<table>
-			<tr><th>sum</th></tr>
-			<tr><td>esto</td></tr>
-			<tr><td>estote</td></tr>
-			<tr><td>sunto</td></tr>
-		</table>
 	</div>
 
 </div>
@@ -222,39 +247,47 @@ h2 {
 	<h2>Infinito</h2>
 	<h3>Presente</h3>
 	<table>
-		<tr><th>1</th><th>2</th><th>3a</th><th>3p</th><th>4</th><th>a</th><th>p</th></tr>
-		<tr><td>ār</td><td>ēr</td><td>ĕr</td><td>*</td><td>īr</td><td>e</td><td>i</td></tr>
+		<tr><td></td><th>1</th><th>2</th><th>3</th><th>4</th><th>sum</th></tr>
+		<tr><th>att</th><td>are</td><td>ēre</td><td>ĕre</td><td>re</td><td>esse</td></tr>
+		<tr><th>pass</th><td>ari</td><td>eri</td><td>i</td><td>ri</td><td><b>/</b></td></tr>
+		<tr><td colspan="10">T: presente</td></tr>
 	</table>
 
 </div>
 
+<!--
+
 <h1>Sostantivi</h1>
 <table>
 	<tr><th colspan="2">1 decl</th></tr>
-	<tr><td>ă</td><td>ae</td></tr>
+	<tr><td>a</td><td>ae</td></tr>
 	<tr><td>ae</td><td>arum</td></tr>
 	<tr><td>ae</td><td>is</td></tr>
 	<tr><td>am</td><td>as</td></tr>
-	<tr><td>ă</td><td>ae</td></tr>
-	<tr><td>ā</td><td>is</td></tr>
+	<tr><td>a</td><td>ae</td></tr>
+	<tr><td>a</td><td>is</td></tr>
 </table>
 
 <table>
 	<tr><th colspan="4">2 decl</th></tr>
 	<tr><td>us</td><td>um</td><td>i</td><td>a</td></tr>
 	<tr><td colspan="2">i</td><td colspan="2">orum</td></tr>
-	<tr><td colspan="2">ō</td><td colspan="2">is</td></tr>
+	<tr><td colspan="2">o</td><td colspan="2">is</td></tr>
 	<tr><td colspan="2">um</td><td>os</td><td>a</td></tr>
 	<tr><td>e</td><td>um</td><td>i</td><td>a</td></tr>
-	<tr><td colspan="2">ō</td><td colspan="2">is</td></tr>
+	<tr><td colspan="2">o</td><td colspan="2">is</td></tr>
 </table>
 
 <table>
 	<tr><th colspan="4">3 decl</th></tr>
-	<tr><td colspan="2">*</td><td>es</td><td>[ĭ]a</td></tr>
-	<tr><td colspan="2">is</td><td colspan="2">[ĭ]um</td></tr>
-	<tr><td colspan="2">ī</td><td colspan="2">ĭbus</td></tr>
-	<tr><td>em</td><td>*</td><td>es</td><td>[ĭ]a</td></tr>
-	<tr><td colspan="2">*</td><td>es</td><td>[ĭ]a</td></tr>
-	<tr><td>ē</td><td>ē/ī</td><td colspan="2">ĭbus</td></tr>
+	<tr><td colspan="2">-</td><td>es</td><td>[i]a</td></tr>
+	<tr><td colspan="2">is</td><td colspan="2">[i]um</td></tr>
+	<tr><td colspan="2">i</td><td colspan="2">ibus</td></tr>
+	<tr><td>em</td><td>-</td><td>es</td><td>[i]a</td></tr>
+	<tr><td colspan="2">-</td><td>es</td><td>[i]a</td></tr>
+	<tr><td>e</td><td>e/i</td><td colspan="2">ibus</td></tr>
 </table>
+
+-->
+
+</body>

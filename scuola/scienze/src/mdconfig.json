@@ -1,0 +1,22 @@
+[
+	{
+		"input": "./index.md",
+		"output": "../index.html"
+	},
+	{
+		"input": "./materia.md",
+		"output": "../materia.html",
+		"inlineStyle": "table{border-collapse:collapse;}th,td{padding-left:10px;padding-right:10px;border:1px black solid;}"
+	},
+	{
+		"input": "./deriv.md",
+		"output": "../deriv.html",
+		"inlineStyle": "table{border-collapse:collapse;}th,td{padding-left:10px;padding-right:10px;border:1px black solid;}",
+		"plugins": ["multimd-table", "sup"]
+	},
+	{
+		"input": "./meas.md",
+		"output": "../meas.html",
+		"plugins": ["multimd-table", "sup", "sub"]
+	}
+]
