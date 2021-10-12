@@ -1,22 +1,36 @@
 [
 	{
 		"input": "./index.md",
-		"output": "../index.html"
+		"output": "../index.html",
+		"force": true,
+		"ignore": true
 	},
 	{
 		"input": "./materia.md",
 		"output": "../materia.html",
-		"inlineStyle": "table{border-collapse:collapse;}th,td{padding-left:10px;padding-right:10px;border:1px black solid;}"
+		"inlineStyle": "table{border-collapse:collapse;}th,td{padding-left:10px;padding-right:10px;border:1px black solid;}",
+		"force": true,
+		"ignore": true
 	},
 	{
 		"input": "./deriv.md",
 		"output": "../deriv.html",
 		"inlineStyle": "table{border-collapse:collapse;}th,td{padding-left:10px;padding-right:10px;border:1px black solid;}",
-		"plugins": ["multimd-table", "sup"]
+		"plugins": ["multimd-table", "sup"],
+		"force": true,
+		"ignore": true
 	},
 	{
 		"input": "./meas.md",
 		"output": "../meas.html",
-		"plugins": ["multimd-table", "sup", "sub"]
+		"plugins": ["multimd-table", "sup", "sub"],
+		"force": true,
+		"ignore": true
+	},
+	{
+		"input": "./oi.md",
+		"plugins": ["multimd-table", "sup", "sub", "texmath"],
+		"inlineStyle": "table{border-collapse:collapse;}th,td{padding-left:10px;padding-right:10px;border:1px black solid;}p,h1,h2,h3,ul,ol,li{padding-top:0;border-top:0;margin-top:0;padding-bottom:0;border-bottom:0;margin-bottom:0}",
+		"force": true, "breaks": true
 	}
 ]
