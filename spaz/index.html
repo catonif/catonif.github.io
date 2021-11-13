@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <head>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,9 +41,30 @@
 			font-weight: normal;
 		}
 		.daodejing { font-size: 20px; }
+		p.text {
+			width: 50%;
+			margin-left: 25%;
+			font-size: 20px;
+			color: #f1e2e2;
+		}
+		button {
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 15px;
+		}
 	</style>
 
 	<title>Catoni - Spazio</title>
+
+	<script>
+		function buttonClick() {
+			const elems = document.getElementsByClassName('text');
+			for (let x in elems) {
+				if (elems[x].style == undefined) continue;
+				elems[x].style.display = (elems[x].style.display == 'none') ? 'block' : 'none';
+			}
+			document.getElementsByTagName('button')[0].innerHTML = (elems[0].style.display == 'none' ? 'Mostra' : 'Nascondi') + ' spiegazioni';
+		}
+	</script>
 
 </head>
 
@@ -67,6 +90,11 @@
 				<span class="down">86 &times; 54 m (3357 m&sup2;)</span>
 			</div>
 		</div-->
+		<p class="text">
+			Nell&rsquo;architettura romana si sviluppò il concetto di spazio architettonico, ovvero lo spazio vuoto dentro o fuori un&rsquo;architettura.
+			La sua forma e posizione faceva anch&rsquo;essa parte dell&rsquo;architettura.
+			Un esempio può essere nel Pantheon, dentro il quale c&rsquo;è uno spazio vuoto perfettamente sferico, che aggiunge al tempio un ulteriore senso di imponenza.
+		</p>
 	</div>
 
 	<hr>
@@ -84,6 +112,10 @@
 			L&rsquo;essere costituisce l&rsquo;oggetto<br>
 			e lo spazio l&rsquo;utilità.<br>
 		</p>
+		<p class="text">
+			Questo è l&rsquo;undicesimo capitolo dell&rsquo;antico libro alla base del Taoismo.
+			Conclude che ciò che esiste, ovvero la materia, costituisce l&rsquo;oggetto, ma lo spazio vuoto coinvolto è ciò che rende l&rsquo;oggetto effettivamente utile.
+		</p>
 	</div>
 
 	<hr>
@@ -92,6 +124,12 @@
 		<h3>Concetto di Ma <span class="hanxi">間</span></h3>
 		<h4>lingua e cultura Giapponese</h4>
 		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hasegawa_Tohaku_-_Pine_Trees_%28Sh%C5%8Drin-zu_by%C5%8Dbu%29_-_left_hand_screen.jpg/800px-Hasegawa_Tohaku_-_Pine_Trees_%28Sh%C5%8Drin-zu_by%C5%8Dbu%29_-_left_hand_screen.jpg" title="Pini tra il Ma">
+		<p class="text">
+			La parola Ma, in giapponese, fa parte del registro di tutti i giorni, significando semplicemente &ldquo;intervallo&rdquo; o &ldquo;distanza&rdquo;.
+			In ambiente artistico invece si riferisce al concetto di spazio vuoto tra le cose.
+			In questo paravento illustrato sono disegnati dei pini nella nebbia, ma il vero protagonista del disegno è appunto il Ma.
+			La scarsa e sfocata presenza dei pini, che aumenta sempre di più in lontananza, aiuta appunto a far comprendere l&rsquo;ampiezza e grandiosità del vuoto tra le cose.
+		</p>
 	</div>
 	
 	<hr>
@@ -103,5 +141,7 @@
 	</div>
 
 	<hr>
+
+	<button onclick="buttonClick()">Nascondi spiegazioni</button>
 
 </body>
