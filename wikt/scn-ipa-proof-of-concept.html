@@ -1,0 +1,175 @@
+
+<title>scn IPA proof of concept</title>
+
+<ul>
+	<li>change input and see output</li>
+	<li>general rules at <a href="https://en.wiktionary.org/wiki/User:Catonif/scn-IPA">en.wikt : Catonif/scn-IPA</a></li>
+	<li>for disambiguation<ul>
+		<li>⟨<i>çi</i>⟩ for <code>/ç/</code> rather than ⟨<i>ci</i>⟩ <code>/tʃ/</code></li>
+		<li>⟨<i>s.tr</i>⟩ for <code>/sʈɽ/</code> rather than ⟨<i>str</i>⟩ <code>/ʂʂɽ/</code></li>
+		<li>⟨<i>d.d</i>⟩ for <code>/dd/</code> rather than ⟨<i>dd</i>⟩ <code>/ɖɖ/</code></li>
+		<li>⟨<i>s.c</i>⟩ for <code>/stʃ/</code> rather than ⟨<i>sc</i>⟩ <code>/ʃʃ/</code> (before ⟨<i>i e</i>⟩)</li>
+		<li>a dot ⟨.⟩ between unstressed ⟨<i>i u</i>⟩ and a following vowel for <code>/ɪ ʊ/</code> rather than <code>/j w/</code></li>
+	</ul>
+</ul>
+
+<b>input:</b> <input type="text" id="name" name="name" oninput="baba(this.value)"> <span id="finalOutput"></span>
+<div id="output"></div>
+
+<script>
+
+	const output = document.getElementById("output");
+	const finalOutput = document.getElementById("finalOutput");
+	
+	const chng = [
+		{ "desc": "for easier usage",
+			"regs": [
+				[/[àá]/g, 'a`'], [/[èé]/g, 'e`'], [/[ìí]/g, 'i`'], [/[òó]/g, 'o`'], [/[ùú]/g, 'u`'], [/[\u0300\u0301]/g, '`'],
+				[/â/g, 'a^'], [/ê/g, 'e^'], [/î/g, 'i^'], [/ô/g, 'o^'], [/û/g, 'u^'], [/\u0302/g, '^'],
+				[/\^/g, ''], // still ambiguous wether this is relevant or not, going to ignore it for now
+				[/([^aeiou])(?=\1)/g, '*'],
+				[/[nm](?=[^aeiou])/g, 'n'],
+			]
+		},
+		{ "desc": "add accents on plain words",
+			"condition": _ => !/`/.test(_) && _.match(/[aeiou]/g)?.length > 1,
+			"regs": [ [/(?<=[aeiou])(?=[^aeiou]*?i?[aeiou][^aeiou]*?($| ))/, '`'] ]
+		},
+		{ "desc": "the <i>scauzu</i> problem", "regs": [ [/(?<=a`?u)z/g, 'ts'] ] },
+		{ "desc": "the <i>ɖɖ</i> sound", "regs": [ [/\*d/g, '\*D'], [/d\.d/g, '\*d'] ] },
+		{ "desc": "the <i>ɲɲ</i> sound", "regs": [ [/gn/g, 'N'], [/g\.n/g, 'gn'] ] },
+		{ "desc": "velars",
+			"regs": [
+				[/[qk]/g, 'C'],
+				[/[cg](?=[^ie])/g, _ => _.toUpperCase() ],
+				[/(?<=[CG])h/g, '']
+			]
+		},
+		{ "desc": "the <i>ʃʃ</i> sound", "regs": [ [/sc/g, 'S'], [/s\.c/g, 'sc'] ] },
+		{ "desc": "the <i>ʎʎ</i> sound (only regional)", "regs": [ [/Gl(?=i)/g, 'L'], [/G\.l/g, 'Gl'] ] },
+		{ "desc": "always geminate",
+			"regs": [
+				[/(^| )r(?=[aeiou])|\*r/g, '*R'],
+				[/(?<=[aeiou]`?|^)(?=[bgzZNSL])/g, '*']
+			]
+		},
+		{ "desc": "hyphenation",
+			"regs": [
+				[/(?<=[rlns*])(?![aeiou]|$)/g, '-'],
+				[/^(?=[^\-]*?[aeiou])/g, '-'],
+				[/([aeiou]`?)(?=[^\-]*?[aeiou])/g, '$1-']
+			]
+		},
+		{ "desc": "semi vowels",
+			"regs": [
+				[/[iu]-(?=[aeiou])/g, _ => _[0].toUpperCase()],
+				[/(?<=[iu]-)\.(?=[aeiou])/g, ''],
+				[/(?<=[cgSL])I/g, '']
+			]
+		},
+		{ "desc": "the <i>ʂʂɽ</i> sound", "regs": [ [/s-tr/g, '*-sr'], [/s-\.tr/g, 's-tr'] ] }
+	
+	];
+	
+	const ipa = [
+	
+		{ "desc": "sandhi", "condition": _ => / /.test(_), "regs": [
+			[/\*(?= ?[rlns*]-)/g, ''], [/(?<=[rlns*] ?)\*-/g, '-'], [/\* -/g, ' *-'],
+			[/(?<=[aeiou]`?) (?=[rlns*]-)/g, 'W'],
+			[/([rlns]) ([-])([aeiou])/g, '$2$1W$3']
+		] },
+		{ "desc": "<i>jj</i> and <i>vv</i> → <i>ɟɟ</i> and <i>bb</i>", "regs": [
+			[/(?<=[\*n] ?-)j/g, 'GI'],
+			[/(?<=\* ?-)v/g, 'b']
+		] },
+		{
+			"desc": "IPA <i>r</i> consonants",
+			"condition": _ => /r/i.test(_),
+			"regs": [
+				[/tr/g, 'ʈɽ'], [/dr/g, 'ɖɽ'], [/sr/g, 'ʂɽ'],
+				[/r/g, 'ɾ'], [/R/g, 'r'] // alternative: comment this line and just lowercase R, so that [ɾ rr] are always /r rr/
+			]
+		},
+		{
+			"desc": "IPA for <i>c</i> and <i>g</i>",
+			"condition": _ => /[gc]/i.test(_),
+			"regs": [
+				[/c/g, 'tʃ'], [/g/g, 'dʒ'],
+				[/CI/g, 'c'], [/GI/g, 'ɟ'], // alternative: comment this line so that [c ɟ] are always /kj ɡj/
+				[/C/g, 'k'], [/G/g, 'ɡ'],
+			]
+		},
+		{
+			"desc": "IPA more symbols",
+			"regs": [
+				[/D/g, 'ɖ'], [/z/g, 'ts'], [/Z/g, 'dz'], [/N/g, 'ɲ'], [/L/g, 'ʎ'],
+				[/S/g, 'ʃ'], [/çI/g, 'ç'],
+				[/I/g, 'j'], [/U/g, 'w'],
+				[/n(?= ?\-[pb])/g, 'm']
+			]
+		},
+		{
+			"desc": "IPA refinement",
+			"regs": [
+				[/\*(?=-(.))/g, '$1'],
+				[/-(?=[^` W\-]*?`)/g, "'"], [/'(?=[^ W\']*?')/g, ","],
+				[/(?<= |^)-/g, ''], [/(?<=^[^aeiou])-/g, ''],
+				[/e/g, 'ɛ'], [/o/g, 'ɔ'],
+				[/i(?!`)/g, 'ɪ'], [/u(?!`)/g, 'ʊ'], // alternative: comment this line so that [ɪ ʊ] are always /i u/
+				[/`/g, ''],
+				[/'/g, 'ˈ'], [/,/g, 'ˌ'], [/-/g, '.'], [/\*/g, 'ˣ'], [/W/g, '‿'],
+				[/\.+/g, '.']
+			]
+		}
+	
+	]
+	
+	function baba(str) {
+		str = str.toLowerCase();
+		output.innerHTML = '';
+		let end = '';
+		finalOutput.innerHTML = '';
+		if (str.length == 0) return;
+		if (!/ /.test(str)) {
+			let bubu = transformWord(str, chng);
+			let bubu2 = transformWord(bubu[0], ipa);
+			output.innerHTML += '<ul>' + bubu[1] + bubu2[1] + '</ul>';
+			end = bubu2[0];
+		} else {
+			const words = str.split(/ /g);
+			const outWords = [];
+			for (let i = 0; i < words.length; i++) {
+				if (words[i].length == 0) continue;
+				let bubu = transformWord(words[i], chng);
+				output.innerHTML += '<ul>' + bubu[1] + '</ul><hr>';
+				outWords.push(bubu[0]);
+			}
+			const final = transformWord(outWords.join(' '), ipa);
+			output.innerHTML += '<ul>' + final[1] + '</ul>';
+			end = final[0];
+		}
+		if (end.replace(/ /g, '') != '') finalOutput.innerHTML = '→ <code>/' + end + '/</code>';
+	}
+	
+	function transformWord (str, changes) {
+		let out = '';
+		if (str == '') return;
+		for (let iChange = 0; iChange < changes.length; iChange ++) {
+			let lStr = str;
+			let cChange = changes[iChange];
+			if (cChange.condition) if (!cChange.condition(str)) continue;
+			console.log(cChange.desc);
+			for (let iReg = 0; iReg < cChange.regs.length; iReg ++) {
+				let cReg = cChange.regs[iReg];
+				console.log(str, cReg, '→', str.replace(cReg[0], cReg[1])); // enable this for a quite verbose log
+				str = str.replace(cReg[0], cReg[1]);
+			}
+			if (str != lStr) out += '<li><b>' + cChange.desc + ':</b> <code>/' + str + '/</code></li>';
+		}
+		return [ str, out == '' ? '<li><b>remains the same:</b> <code>/' + str + '/</code></li>' : out ];
+	}
+	
+	// const test = "arfabetu fonèticu ntirnaziunali";
+	// document.getElementById("name").value = test; baba(test);
+	
+</script>
