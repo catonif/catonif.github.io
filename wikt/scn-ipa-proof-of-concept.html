@@ -45,12 +45,13 @@
 				[/(?<=[CG])h/g, '']
 			]
 		},
+		{ "desc": "the <i>ŋŋ</i> sound", "regs": [ [/nG/g, 'ŋ'], [/n\.G/g, 'nG'] ] },
 		{ "desc": "the <i>ʃʃ</i> sound", "regs": [ [/sc/g, 'S'], [/s\.c/g, 'sc'] ] },
 		{ "desc": "the <i>ʎʎ</i> sound (only regional)", "regs": [ [/Gl(?=i)/g, 'L'], [/G\.l/g, 'Gl'] ] },
 		{ "desc": "always geminate",
 			"regs": [
 				[/(^| )r(?=[aeiou])|\*r/g, '*R'],
-				[/(?<=[aeiou]`?|^)(?=[bgzZNSL])/g, '*']
+				[/(?<=[aeiou]`?|^)(?=[bgzZNSLŋ])/g, '*']
 			]
 		},
 		{ "desc": "hyphenation",
@@ -105,7 +106,9 @@
 				[/D/g, 'ɖ'], [/z/g, 'ts'], [/Z/g, 'dz'], [/N/g, 'ɲ'], [/L/g, 'ʎ'],
 				[/S/g, 'ʃ'], [/çI/g, 'ç'],
 				[/I/g, 'j'], [/U/g, 'w'],
-				[/n(?= ?\-[pb])/g, 'm']
+				[/n(?= ?\-[pb])/g, 'm'],
+				[/n(?= ?\-[cɟ])/g, 'ɲ'],
+				[/n(?= ?\-[kg])/g, 'ŋ']
 			]
 		},
 		{

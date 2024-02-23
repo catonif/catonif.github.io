@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Elbasan script keyboard</title>
+<style>
+	.Elba {
+		font-family: "Noto Sans Elbasan";
+	}
+</style>
+</head>
+<body>
+<h1>Elbasan script keyboard</h1>
+<textarea type="text" oninput="dothing(this)" class="Elba" style="width:100%;height: 100px;"></textarea><br>
+See the Wikipedia articles <a href="https://en.wikipedia.org/wiki/Elbasan_alphabet">Elbasan alphabet</a> and <a href="https://en.wikipedia.org/wiki/Elbasan_Gospel_Manuscript">Elbasan Gospel Manuscript</a> for clarification, and <a href="http://www.albanianliterature.net/authors/authors_early/gregory_of_durres/index.html">Robert Elsie's site</a> for scans, translit and translations of the manuscript. If the characters appear as boxes, I suggest to install the <a href="https://fonts.google.com/noto/specimen/Noto+Sans+Elbasan">Noto Sans Elbasan</a> font.<br>
+Type in the box and it will convert the letters into the script. Differently from modern orthography, type ⟨n=⟩ for <span class="Elba">𐔔</span>, ⟨gh⟩ for <span class="Elba">𐔥</span>, ⟨kh⟩ for <span class="Elba">𐔧</span>, ⟨gh=⟩ for <span class="Elba">𐔦</span>. Please double-check the converted outcome with the manuscript scans, since it is not guaranteed to be accurate, e.g. ⟨nd⟩ is sometimes <span class="Elba">𐔅</span>, sometimes <span class="Elba">𐔓𐔄</span> and sometimes <span class="Elba">𐔔𐔄</span>.<br>
+<script>
+	function dothing(element) {
+		element.value = element.value
+	
+			.toLowerCase()
+	
+			// LETTERS
+			.replace(/a/g, "𐔀")
+			.replace(/b/g, "𐔁")
+			.replace(/c/g, "𐔂")
+			.replace(/ç/g, "𐔃")
+			.replace(/d/g, "𐔄")
+			.replace(/e/g, "𐔇")
+			.replace(/ë/g, "𐔈")
+			.replace(/f/g, "𐔉")
+			.replace(/g/g, "𐔊")
+			.replace(/h/g, "𐔌")
+			.replace(/i/g, "𐔍")
+			.replace(/j/g, "𐔎")
+			.replace(/k/g, "𐔏")
+			.replace(/l/g, "𐔐")
+			.replace(/m/g, "𐔒")
+			.replace(/n/g, "𐔓")
+			.replace(/o/g, "𐔖")
+			.replace(/p/g, "𐔗")
+			.replace(/q/g, "𐔘")
+			.replace(/r/g, "𐔙")
+			.replace(/s/g, "𐔛")
+			.replace(/t/g, "𐔝")
+			.replace(/u/g, "𐔟")
+			.replace(/v/g, "𐔠")
+			.replace(/x/g, "𐔡")
+			.replace(/y/g, "𐔢")
+			.replace(/z/g, "𐔣")
+	
+			// DIAGRAPHS
+			.replace(/𐔐𐔐/g, "𐔑") // ll
+			.replace(/𐔙𐔙/g, "𐔚") // rr
+			.replace(/𐔓𐔄/g, "𐔅") // nd
+			.replace(/𐔊𐔎/g, "𐔋") // gj
+			.replace(/𐔄𐔌/g, "𐔆") // dh
+			.replace(/𐔛𐔌/g, "𐔜") // sh
+			.replace(/𐔝𐔌/g, "𐔞") // th
+			.replace(/𐔣𐔌/g, "𐔤") // zh
+			.replace(/𐔡𐔌/g, "𐔃") // xh = ç
+			.replace(/𐔓=/g, "𐔔") // ñ
+			.replace(/𐔓𐔎/g, "𐔕") // nj
+	
+			// GREEK SOUNDS
+			.replace(/𐔊𐔌/g, "𐔥") // gh
+			.replace(/ğ/g, "𐔥") // ğ = gh
+			.replace(/𐔥=/g, "𐔦") // gh=
+			.replace(/𐔏𐔌/g, "𐔧") // kh
+			.replace(/χ/g, "𐔧") // χ = kh
+	}
+</script>
+</body>
+<footer><hr>By Catonif, February 2024. <a href="..">Homepage</a>.</footer>
