@@ -1,0 +1,247 @@
+<html>
+<head>
+	<title>Gioco delle due amazzoni</title>
+	<style>
+		h2 {
+			text-align: center;
+		}
+
+		td {
+			width: 2em;
+			height: 2em;
+			border: black solid 2px;
+			text-align: center;
+		}
+
+		td.tile_valid { background-color: #ddd; }
+		td.tile_invalid { background-color: #888; }
+		td.tile_active { background-color: #0c0; }
+		td.tile_inactive { background-color: #aaa; }
+		td.tile_valid:hover { background-color: #fff; }
+		td.tile_arrow { background-color: #c00; }
+
+		table {
+			border-collapse: collapse;
+		}
+
+		.center {
+			margin: auto;
+			width: fit-content;
+		}
+
+		input.number {
+			width: 4em;
+		}
+
+		hr {
+			margin: 1em;
+		}
+	</style>
+</head>
+<body>
+	<h2 style="text-align: center">GIOCO DELLE DUE AMAZZONI</h2>
+	<div class="center" style="margin-bottom: 1em;">
+		Dimensioni tabella: <input type="number" id="table_width_input" class="number" min="2" max="15" value="6"/> x <input type="number" id="table_height_input" class="number" min="2" max="15" value="6"/> <button type="button" onclick="restore()">ripristina</button>
+	</div>
+	<table id="game_table" class="center"></table>
+	<div class="center" id="log_match" style="margin-top: 1em;"></div>
+	<hr>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Vincent_Willem_van_Gogh_138.jpg" style="width:150; display:block" alt="La sedia di Vincent" class="center">
+	<p class="center" style="margin-top: 1em;"><i>La sedia di Vincent</i>, van Gogh, 1888</p>
+	<hr>
+	<p class="center">July 2024</p>
+	<script>
+
+// TODO: algoritmo contro cui si può giocare
+
+// elementi HTML
+var game_table = document.getElementById("game_table"),
+	table_height_input = document.getElementById("table_height_input"),
+	table_width_input = document.getElementById("table_width_input"),
+	log_match = document.getElementById("log_match");
+
+// variabili di gioco
+var game, // tabella contenente tutte le caselle sotto forma di numeri
+	table_height, table_width, // dimensioni della tabella
+	whose_turn, // indice giocatore attivo
+	do_move, // fase attuale. true = movimento, false = freccia
+	players; // le due coordinate dei giocatori
+
+// tipi di casella
+const TILE_INVALID = -2; // non cliccabile
+const TILE_VALID = -1; // cliccabile
+const TILE_PLAYER_A = 0; // del primo giocatore
+const TILE_PLAYER_B = 1; // del secondo giocatore
+const TILE_ARROW = 3; // occupata da freccia
+
+// stringa della coordinata a mo' degli scacchi
+function display_coord(x, y) {
+	return String.fromCharCode(97 + y) + (x + 1);
+}
+
+// inizializzazione, chiamato dal bottone ripristina
+function restore() {
+
+	// ridimensiona la tabella a dimensioni ragionevoli
+	if (table_height_input.value < 2) table_height_input.value = 2;
+	if (table_width_input.value < 2) table_width_input.value = 2;
+	if (table_height_input.value > 15) table_height_input.value = 15;
+	if (table_width_input.value > 15) table_width_input.value = 15;
+
+	table_height = table_height_input.value;
+	table_width = table_width_input.value;
+
+	// piazza i giocatori in angoli opposti
+	// TODO: preferibilmente customizzabile da input
+	players = [
+		{ x: table_width - 1, y: 0 },
+		{ x: 0, y: table_height - 1 },
+	];
+
+	// prima riga del log, dimensioni tabella e posizione giocatori
+	log_match.innerHTML =
+		table_width + " x " + table_height + ": "
+		+ display_coord(players[0].x, players[0].y)
+		+ ", " + display_coord(players[1].x, players[1].y);
+
+	// crea la tabella vuota
+	game = {}
+	for (let x = 0; x < table_width; x++) {
+		game[x] = {};
+		for (let y = 0; y < table_height; y++) {
+			game[x][y] = TILE_INVALID;
+		}
+	}
+
+	// posiziona i giocatori
+	game[players[0].x][players[0].y] = TILE_PLAYER_A;
+	game[players[1].x][players[1].y] = TILE_PLAYER_B;
+
+	// resetta i valori di partita
+	whose_turn = 0; do_move = true;
+
+	display_table();
+}
+
+// aggiorna la tabella a schermo con la variabile di gioco
+function display_table() {
+
+	get_valid_places();
+
+	let table_innerHTML = "";
+	for (let y = 0; y < table_height; y++) {
+		table_innerHTML += "<tr>";
+		for (let x = 0; x < table_width; x++) {
+			// TODO: brutto agli occhi
+			table_innerHTML += '<td onclick="box_click(' + x + ',' + y + ')" class="tile_';
+			let current_box = game[x][y];
+			switch (current_box) {
+				case TILE_PLAYER_A:
+				case TILE_PLAYER_B:
+					if (current_box == whose_turn) table_innerHTML += "active";
+					else table_innerHTML += "inactive";
+					table_innerHTML += '">' + (["A", "B"])[current_box];
+					break;
+				case TILE_ARROW:
+					// TODO: sarebbe carino se la freccia fosse orientata
+					// nella direzione scagliata
+					table_innerHTML += 'arrow">X';
+					break;
+				case TILE_VALID: table_innerHTML += 'valid">'; break;
+				case TILE_INVALID: table_innerHTML += 'invalid">'; break;
+			}
+			table_innerHTML += "</td>";
+		}
+		table_innerHTML += "</tr>";
+	}
+
+	// riversa la stringa ottenuta nell'elemento HTML
+	game_table.innerHTML = table_innerHTML;
+}
+
+// chiamato per ogni clic su le caselle
+function box_click(x, y) {
+
+	if (game[x][y] == TILE_VALID) {
+		// ignora i clic su caselle che non siano cliccabili
+
+		if (do_move) { // fase di movimento
+
+			// svuota la casella attuale del giocatore attivo
+			game[players[whose_turn].x][players[whose_turn].y] = TILE_INVALID;
+
+			// imposta le nuovi coordinate del giocatore attivo
+			players[whose_turn] = { x: x, y: y };
+			game[x][y] = whose_turn;
+
+			log_match.innerHTML += "<br>";
+
+		} else { // fase di scagliamento freccia
+			
+			// imposta la casella cliccata come freccia
+			game[x][y] = TILE_ARROW;
+			
+			// passa il turno
+			whose_turn = 1 - whose_turn;
+
+			log_match.innerHTML += " ";
+		}
+
+		log_match.innerHTML += display_coord(x, y);
+		do_move = !do_move; // cambia fase
+		display_table();
+	}
+}
+
+// individua tutte le caselle cliccabili
+function get_valid_places() {
+
+	// isola le coordinate di partenza del giocatore attivo
+	// leggermente più veloce per il discorso della biblioteca
+	let start_x = players[whose_turn].x;
+	let start_y = players[whose_turn].y;
+
+	// resetta ogni casella cliccabile dal turno precedente
+	for (let x = 0; x < table_width; x++) {
+		for (let y = 0; y < table_height; y++) {
+			if (game[x][y] == TILE_VALID) {
+				game[x][y] = TILE_INVALID;
+			}
+		}
+	}
+
+	// booleana che controlla se c'è almeno una mossa possibile
+	let has_lost = true;
+
+	// da un offset iniziale rende cliccabili tutte le caselle nella stessa
+	// direzione fino a che non inceppa in qualcosa di invalicabile
+	function direction(off_x, off_y) {
+		for (let x = start_x + off_x, y = start_y + off_y; // coordinate iniziali
+			x >= 0 && y >= 0 && x < table_width && y < table_height // finché non esce dalla tabella
+			&& game[x][y] == TILE_INVALID; // continua per caselle vuote
+			x += off_x, y += off_y // continua secondo l'offset
+		) {
+			game[x][y] = TILE_VALID; // casella cliccabile
+			has_lost = false; // c'è almeno una mossa
+		}
+	}
+
+	// manda sonde offset in tutte e otto le direzioni
+	for (let off_x = -1; off_x <= 1; off_x++) {
+		for (let off_y = -1; off_y <= 1; off_y++) {
+			if (off_x != 0 || off_y != 0) { // ignora la direzione nulla (0, 0)
+				direction(off_x, off_y);
+			}
+		}
+	}
+
+	// grezza implementazione per la fine del gioco
+	if (has_lost) log_match.innerHTML += " #";
+
+}
+
+restore();
+
+	</script>
+</body>
+</html>
