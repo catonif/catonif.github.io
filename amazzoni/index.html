@@ -31,7 +31,7 @@
 		}
 
 		input.number {
-			width: 4em;
+			width: 3em;
 		}
 
 		hr {
@@ -42,7 +42,7 @@
 <body>
 	<h2 style="text-align: center">GIOCO DELLE DUE AMAZZONI</h2>
 	<div class="center" style="margin-bottom: 1em;">
-		Dimensioni tabella: <input type="number" id="table_width_input" class="number" min="2" max="15" value="6"/> x <input type="number" id="table_height_input" class="number" min="2" max="15" value="6"/> <button type="button" onclick="restore()">ripristina</button>
+		Dimensioni: <input type="number" id="table_width_input" class="number" min="2" max="15" value="6"/> x <input type="number" id="table_height_input" class="number" min="2" max="15" value="6"/> <button type="button" onclick="restore()">ripristina</button>
 	</div>
 	<table id="game_table" class="center"></table>
 	<div class="center" id="log_match" style="margin-top: 1em;"></div>
@@ -64,7 +64,7 @@ var game_table = document.getElementById("game_table"),
 // variabili di gioco
 var game, // tabella contenente tutte le caselle sotto forma di numeri
 	table_height, table_width, // dimensioni della tabella
-	whose_turn, // indice giocatore attivo
+	active_player, // indice giocatore attivo
 	do_move, // fase attuale. true = movimento, false = freccia
 	players; // le due coordinate dei giocatori
 
@@ -119,7 +119,7 @@ function restore() {
 	game[players[1].x][players[1].y] = TILE_PLAYER_B;
 
 	// resetta i valori di partita
-	whose_turn = 0; do_move = true;
+	active_player = 0; do_move = true;
 
 	display_table();
 }
@@ -139,7 +139,7 @@ function display_table() {
 			switch (current_box) {
 				case TILE_PLAYER_A:
 				case TILE_PLAYER_B:
-					if (current_box == whose_turn) table_innerHTML += "active";
+					if (current_box == active_player) table_innerHTML += "active";
 					else table_innerHTML += "inactive";
 					table_innerHTML += '">' + (["A", "B"])[current_box];
 					break;
@@ -169,11 +169,11 @@ function box_click(x, y) {
 		if (do_move) { // fase di movimento
 
 			// svuota la casella attuale del giocatore attivo
-			game[players[whose_turn].x][players[whose_turn].y] = TILE_INVALID;
+			game[players[active_player].x][players[active_player].y] = TILE_INVALID;
 
 			// imposta le nuovi coordinate del giocatore attivo
-			players[whose_turn] = { x: x, y: y };
-			game[x][y] = whose_turn;
+			players[active_player] = { x: x, y: y };
+			game[x][y] = active_player;
 
 			log_match.innerHTML += "<br>";
 
@@ -183,7 +183,7 @@ function box_click(x, y) {
 			game[x][y] = TILE_ARROW;
 			
 			// passa il turno
-			whose_turn = 1 - whose_turn;
+			active_player = 1 - active_player;
 
 			log_match.innerHTML += " ";
 		}
@@ -199,8 +199,8 @@ function get_valid_places() {
 
 	// isola le coordinate di partenza del giocatore attivo
 	// leggermente più veloce per il discorso della biblioteca
-	let start_x = players[whose_turn].x;
-	let start_y = players[whose_turn].y;
+	let start_x = players[active_player].x;
+	let start_y = players[active_player].y;
 
 	// resetta ogni casella cliccabile dal turno precedente
 	for (let x = 0; x < table_width; x++) {
