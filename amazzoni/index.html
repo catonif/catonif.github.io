@@ -41,8 +41,10 @@
 </head>
 <body>
 	<h2 style="text-align: center">GIOCO DELLE DUE AMAZZONI</h2>
-	<div class="center" style="margin-bottom: 1em;">
-		Dimensioni: <input type="number" id="table_width_input" class="number" min="2" max="15" value="6"/> x <input type="number" id="table_height_input" class="number" min="2" max="15" value="6"/> <button type="button" onclick="restore()">ripristina</button>
+	<div class="center" style="margin-bottom: 1em; text-align: center;">
+		Dimensioni: <input type="number" id="table_width_input" class="number" min="2" max="15" value="9"/> x <input type="number" id="table_height_input" class="number" min="2" max="15" value="7"/><br>
+		Distanza dai bordi: <input type="number" id="player_offset_input" class="number" min="0" max="3" value="1"><br>
+		<button type="button" onclick="restore()">ripristina</button>
 	</div>
 	<table id="game_table" class="center"></table>
 	<div class="center" id="log_match" style="margin-top: 1em;"></div>
@@ -59,6 +61,7 @@
 var game_table = document.getElementById("game_table"),
 	table_height_input = document.getElementById("table_height_input"),
 	table_width_input = document.getElementById("table_width_input"),
+	player_offset_input = document.getElementById("player_offset_input"),
 	log_match = document.getElementById("log_match");
 
 // variabili di gioco
@@ -92,11 +95,18 @@ function restore() {
 	table_height = table_height_input.value;
 	table_width = table_width_input.value;
 
+	// ottieni la distanza dai bordi, ma aggiustala per avere senso nel contesto della tabella
+	let player_offset = parseInt(player_offset_input.value);
+	while (
+		Math.floor(table_height / 2) <= player_offset
+		|| Math.floor(table_width / 2) <= player_offset
+	) player_offset--;
+	player_offset_input.value = player_offset;
+
 	// piazza i giocatori in angoli opposti
-	// TODO: preferibilmente customizzabile da input
 	players = [
-		{ x: table_width - 1, y: 0 },
-		{ x: 0, y: table_height - 1 },
+		{ x: table_width - 1 - player_offset, y: player_offset },
+		{ x: player_offset, y: table_height - 1 - player_offset },
 	];
 
 	// prima riga del log, dimensioni tabella e posizione giocatori
