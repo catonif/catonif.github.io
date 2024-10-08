@@ -1,0 +1,714 @@
+<html>
+<head>
+<style id="text-style">
+.text {
+	color: #fff;
+}
+</style>
+<style>
+
+table, tbody {
+	width: 100%;
+	height: 100%;
+}
+
+button {
+	width: 100%;
+	height: 100%;
+	background: none;
+	border: none;
+}
+
+.text {
+	font-size: 3em;
+	font-family: serif;
+	font-weight: bold;
+}
+
+button:active {
+	background: #fff3;
+}
+
+tr {
+	width: 100%;
+	height: 50%;
+}
+
+td {
+	width: 50%;
+	height: 50%;
+}
+
+body {
+	margin: 0;
+}
+
+div.info {
+	text-align: center;
+	width: 100%;
+	font-size: 2em;
+	position: absolute;
+}
+
+div#score { top: 0; }
+div#signature { bottom: 0; }
+
+</style>
+</head>
+<body>
+<div id="quiz">
+	<div class="text info" id="score">score: 0</div>
+	<table><tbody>
+		<tr>
+			<td><button id="b0" onclick="new_colour(0)" class="text">Colore 1</button></td>
+			<td><button id="b1" onclick="new_colour(1)" class="text">Colore 2</button></td>
+		</tr>
+		<tr>
+			<td><button id="b2" onclick="new_colour(2)" class="text">Colore 3</button></td>
+			<td><button id="b3" onclick="new_colour(3)" class="text">Colore 4</button></td>
+		</tr>
+	</tbody></table>
+	<div class="text info" id="signature">by catonif, october 2024</div>
+</div>
+<script>
+
+// https://stackoverflow.com/a/3943023/112731
+function get_text_colour(hex) {
+	return (
+		parseInt(hex.slice(0, 2), 16) * 0.299 // red
+		+ parseInt(hex.slice(2, 4), 16) * 0.587 // green
+		+ parseInt(hex.slice(4, 6), 16) * 0.114 // blue
+	) > 186 ? '#000' : '#fff';
+}
+
+let correct_index
+
+// https://www.color-meanings.com/list-of-colors-names-hex-codes/
+let colour_list = [
+	[ // REDS
+		{ name: "red", hex: "d0312d" },
+		{ name: "cherry red", hex: "990f02" },
+		{ name: "rose", hex: "e3242b" },
+		{ name: "jam", hex: "60100b" },
+		{ name: "merlot", hex: "541e1b" },
+		{ name: "garnet", hex: "610c04" },
+		{ name: "crimson", hex: "b90e0a" },
+		{ name: "ruby", hex: "900603" },
+		{ name: "scarlet", hex: "900d09" },
+		{ name: "wine", hex: "4e0707" },
+		{ name: "brick", hex: "7e2811" },
+		{ name: "apple", hex: "a91b0d" },
+		{ name: "mahogany", hex: "420c09" },
+		{ name: "blood", hex: "710c04" },
+		{ name: "sangria red", hex: "5e1916" },
+		{ name: "berry", hex: "7a1712" },
+		{ name: "currant", hex: "680c07" },
+		{ name: "blush red", hex: "bc544b" },
+		{ name: "candy", hex: "d21404" },
+		{ name: "lipstick", hex: "9b1003" },
+		{ name: "carmine", hex: "960018" },
+		{ name: "persian red", hex: "ca3433" },
+		{ name: "vermilion", hex: "7e191b" },
+		{ name: "imperial red", hex: "ed2939" },
+		{ name: "indian red", hex: "cd5c5c" },
+		{ name: "chili red", hex: "c21807" },
+		{ name: "maroon", hex: "800000" },
+		{ name: "fire brick", hex: "b22222" },
+		{ name: "desire", hex: "ea3c53" },
+		{ name: "raspberry", hex: "d21f3c" },
+		{ name: "candy apple", hex: "ff0800" },
+		{ name: "hibiscus", hex: "b43757" },
+		{ name: "u.s. flag", hex: "bf0a30" },
+		{ name: "ferrari", hex: "ff2800" },
+		{ name: "burgundy", hex: "8d021f" },
+		{ name: "dark red", hex: "8b0000" },
+		{ name: "prismatic red", hex: "d03d33" },
+		{ name: "49ers red", hex: "aa0000" },
+		{ name: "cardinals red", hex: "bd2031" },
+		{ name: "ajax red", hex: "d2122e" },
+		{ name: "alabama crimson", hex: "9e1b32" },
+		{ name: "alizarin crimson", hex: "e32636" },
+		{ name: "amaranth red", hex: "f4364c" },
+		{ name: "american rose", hex: "ff033e" },
+		{ name: "angels red", hex: "ba0021" },
+		{ name: "arsenal red", hex: "db0007" },
+		{ name: "auburn red", hex: "a52a2a" },
+		{ name: "bu scarlet", hex: "cc0000" },
+		{ name: "bills red", hex: "c60c30" },
+		{ name: "bittersweet shimmer", hex: "bf4f51" },
+	], [ // ORANGES
+		{ name: "orange", hex: "ed7014" },
+		{ name: "tangerine", hex: "fa8128" },
+		{ name: "merigold", hex: "fcae1e" },
+		{ name: "cider", hex: "b56727" },
+		{ name: "rust", hex: "8d4004" },
+		{ name: "ginger", hex: "be5504" },
+		{ name: "tiger", hex: "fc6a03" },
+		{ name: "fire", hex: "dd571c" },
+		{ name: "bronze", hex: "b2560d" },
+		{ name: "cantaloupe", hex: "fda172" },
+		{ name: "apricot", hex: "ed820e" },
+		{ name: "clay", hex: "80400b" },
+		{ name: "honey", hex: "ec9706" },
+		{ name: "carrot", hex: "ed7117" },
+		{ name: "squash", hex: "c95b0c" },
+		{ name: "spice", hex: "7a3803" },
+		{ name: "marmalade", hex: "d16002" },
+		{ name: "amber", hex: "893101" },
+		{ name: "sandstone", hex: "d67229" },
+		{ name: "yam", hex: "cc5801" },
+		{ name: "tangelo", hex: "fc4c02" },
+		{ name: "flame", hex: "e34a27" },
+		{ name: "fulvous", hex: "e68000" },
+		{ name: "dark orange", hex: "ff8c00" },
+		{ name: "vivid orange", hex: "ff5e0e" },
+		{ name: "orange-red", hex: "ff4500" },
+		{ name: "metallic orange", hex: "e26310" },
+		{ name: "pumpkin", hex: "f5761a" },
+		{ name: "smashed pumpkin", hex: "fd673a" },
+		{ name: "international orange", hex: "ff4f00" },
+		{ name: "spanish orange", hex: "f06105" },
+		{ name: "princeton orange", hex: "ff8f00" },
+		{ name: "deep saffron", hex: "ffa52c" },
+		{ name: "alloy orange", hex: "c35214" },
+		{ name: "halloween orange", hex: "ee5921" },
+		{ name: "gamboge", hex: "e89611" },
+		{ name: "medium vermilion", hex: "cf5b2e" },
+		{ name: "pastel orange", hex: "feba4f" },
+		{ name: "philippine orange", hex: "f26e01" },
+		{ name: "royal orange", hex: "ff9944" },
+		{ name: "coral", hex: "ff7f50" },
+		{ name: "dark coral", hex: "d75341" },
+		{ name: "cadmium orange", hex: "e6812f" },
+		{ name: "rajah", hex: "faba5f" },
+		{ name: "mango tango", hex: "fb8842" },
+		{ name: "orange peel", hex: "ff9f00" },
+		{ name: "vivid tangelo", hex: "ec7625" },
+		{ name: "persimmon", hex: "ec5800" },
+		{ name: "browns orange", hex: "ff3c00" },
+		{ name: "burnt orange", hex: "cc5500" },
+	], [ // YELLOWS
+		{ name: "tan", hex: "e6dbac" },
+		{ name: "beige", hex: "eedc9a" },
+		{ name: "macaroon", hex: "f9e076" },
+		{ name: "hazel wood", hex: "c9bb8e" },
+		{ name: "granola", hex: "d6b85a" },
+		{ name: "oat", hex: "dfc98a" },
+		{ name: "egg nog", hex: "fae29c" },
+		{ name: "fawn", hex: "c8a951" },
+		{ name: "sugar cookie", hex: "f3eaaf" },
+		{ name: "sand", hex: "d8b863" },
+		{ name: "sepia", hex: "e3b778" },
+		{ name: "latte", hex: "e7c27d" },
+		{ name: "oyster", hex: "dcd7a0" },
+		{ name: "biscotti", hex: "e3c565" },
+		{ name: "parmesan", hex: "fde992" },
+		{ name: "hazelnut", hex: "bda55d" },
+		{ name: "sandcastle", hex: "dac17c" },
+		{ name: "buttermilk", hex: "fdefb2" },
+		{ name: "sand dollar", hex: "ede8ba" },
+		{ name: "shortbread", hex: "fbe790" },
+		{ name: "citrine", hex: "e4d00a" },
+		{ name: "flax", hex: "eedc82" },
+		{ name: "xanthic", hex: "eeed09" },
+		{ name: "sunshine yellow", hex: "fffd37" },
+		{ name: "canary yellow", hex: "ffef00" },
+		{ name: "lemon yellow", hex: "fdff00" },
+		{ name: "pale goldenrod", hex: "eee8aa" },
+		{ name: "light khaki", hex: "f0e68c" },
+		{ name: "clover lime", hex: "fce883" },
+		{ name: "royal yellow", hex: "fada5e" },
+		{ name: "gold", hex: "ffd700" },
+		{ name: "safety yellow", hex: "eed202" },
+		{ name: "laguna", hex: "f8e473" },
+		{ name: "bright yellow", hex: "fffd01" },
+		{ name: "greenish yellow", hex: "eeea62" },
+		{ name: "sunflower", hex: "ffda03" },
+		{ name: "bumblebee", hex: "fce205" },
+		{ name: "butter", hex: "fffd74" },
+		{ name: "yellow tan", hex: "ffe36e" },
+		{ name: "banana", hex: "ffe135" },
+		{ name: "tuscany", hex: "fcd12a" },
+		{ name: "dijon", hex: "c49102" },
+		{ name: "mustard", hex: "fedc56" },
+		{ name: "maximum yellow", hex: "fafa37" },
+		{ name: "mellow yellow", hex: "f8de7e" },
+		{ name: "unmellow yellow", hex: "ffff66" },
+		{ name: "lemon curry", hex: "cca01d" },
+		{ name: "aureolin", hex: "fdee00" },
+		{ name: "electric yellow", hex: "ffff33" },
+		{ name: "pastel yellow", hex: "fffe71" },
+	], [ // GREENS
+		{ name: "green", hex: "3cb043" },
+		{ name: "chartreuse", hex: "b0fc38" },
+		{ name: "juniper", hex: "3a5311" },
+		{ name: "sage", hex: "728c69" },
+		{ name: "lime", hex: "aef359" },
+		{ name: "fern", hex: "5dbb63" },
+		{ name: "olive", hex: "98bf64" },
+		{ name: "emerald", hex: "028a0f" },
+		{ name: "pear", hex: "74b72e" },
+		{ name: "moss", hex: "466d1d" },
+		{ name: "shamrock", hex: "03ac13" },
+		{ name: "seafoam", hex: "3ded97" },
+		{ name: "pine", hex: "234f1e" },
+		{ name: "parakeet", hex: "03c04a" },
+		{ name: "mint", hex: "99edc3" },
+		{ name: "seaweed", hex: "354a21" },
+		{ name: "pickle", hex: "597d35" },
+		{ name: "pistachio", hex: "b2d3c2" },
+		{ name: "basil", hex: "32612d" },
+		{ name: "crocodile", hex: "607d3b" },
+		{ name: "amazon", hex: "3b7a57" },
+		{ name: "avocado", hex: "568203" },
+		{ name: "celadon", hex: "ace1af" },
+		{ name: "forest green", hex: "0b6623" },
+		{ name: "hunter green", hex: "3f704d" },
+		{ name: "artichoke green", hex: "8f9779" },
+		{ name: "jungle green", hex: "29ab87" },
+		{ name: "tropical rainforest", hex: "00755e" },
+		{ name: "persian green", hex: "00a693" },
+		{ name: "sea green", hex: "2e8b57" },
+		{ name: "jade green", hex: "00a86b" },
+		{ name: "laurel green", hex: "a9ba9d" },
+		{ name: "army green", hex: "4b5320" },
+		{ name: "kelly green", hex: "4cbb17" },
+		{ name: "paris green", hex: "50c878" },
+		{ name: "pakistan green", hex: "006600" },
+		{ name: "spring", hex: "00f0a8" },
+		{ name: "chateau", hex: "48a860" },
+		{ name: "swamp", hex: "a8c090" },
+		{ name: "mantis", hex: "74c365" },
+		{ name: "fun", hex: "007848" },
+		{ name: "viridian", hex: "609078" },
+		{ name: "reseda green", hex: "6c7c59" },
+		{ name: "verdun", hex: "487800" },
+		{ name: "castleton green", hex: "00563b" },
+		{ name: "bottle green", hex: "006a4e" },
+		{ name: "cadmium green", hex: "006b3c" },
+		{ name: "camouflage green", hex: "78866b" },
+		{ name: "dollar bill", hex: "85bb65" },
+		{ name: "inchworm", hex: "b2ec5d" },
+	], [ // BLUES
+		{ name: "blue", hex: "3944bc" },
+		{ name: "slate", hex: "757c88" },
+		{ name: "sky", hex: "63c5da" },
+		{ name: "navy", hex: "0a1172" },
+		{ name: "indigo", hex: "281e5d" },
+		{ name: "cobalt", hex: "1338be" },
+		{ name: "teal", hex: "48aaad" },
+		{ name: "ocean", hex: "016064" },
+		{ name: "peacock", hex: "022d36" },
+		{ name: "azure", hex: "1520a6" },
+		{ name: "cerulean", hex: "0492c2" },
+		{ name: "lapis", hex: "2832c2" },
+		{ name: "spruce", hex: "2c3e4c" },
+		{ name: "stone", hex: "59788e" },
+		{ name: "aegean", hex: "1f456e" },
+		{ name: "blueberry", hex: "241571" },
+		{ name: "denim", hex: "151e3d" },
+		{ name: "admiral", hex: "051094" },
+		{ name: "sapphire", hex: "52b2bf" },
+		{ name: "arctic", hex: "82eefd" },
+		{ name: "turquoise", hex: "40e0d0" },
+		{ name: "steel", hex: "4682b4" },
+		{ name: "b’dazzled", hex: "2e5894" },
+		{ name: "powder blue", hex: "b0e0e6" },
+		{ name: "us air force academy blue", hex: "004f98" },
+		{ name: "baby blue", hex: "89cff0" },
+		{ name: "beau blue", hex: "bcd4e6" },
+		{ name: "little boy blue", hex: "6ca0dc" },
+		{ name: "tiffany blue", hex: "81d8d0" },
+		{ name: "carolina blue", hex: "4b9cd3" },
+		{ name: "turkish blue", hex: "4f97a3" },
+		{ name: "maya blue", hex: "73c2fb" },
+		{ name: "cornflower blue", hex: "6495ed" },
+		{ name: "blue sapphire", hex: "126180" },
+		{ name: "egyptian blue", hex: "1034a6" },
+		{ name: "yale blue", hex: "00356b" },
+		{ name: "space cadet", hex: "1d2951" },
+		{ name: "imperial blue", hex: "005a92" },
+		{ name: "ruddy blue", hex: "76abdf" },
+		{ name: "air superiority blue", hex: "72a0c1" },
+		{ name: "aquamarine blue", hex: "6bcae2" },
+		{ name: "argentina blue", hex: "6cb4ee" },
+		{ name: "astros navy", hex: "002d62" },
+		{ name: "bayern blue", hex: "0066b2" },
+		{ name: "berry blue", hex: "4f86f7" },
+		{ name: "blue yonder", hex: "5072a7" },
+		{ name: "bleu de france", hex: "318ce7" },
+		{ name: "blue-gray", hex: "6699cc" },
+		{ name: "boeing blue", hex: "0039a6" },
+		{ name: "braves navy", hex: "13274f" },
+	], [ // PURPLES
+		{ name: "purple", hex: "a32cc4" },
+		{ name: "mauve", hex: "7a4988" },
+		{ name: "dark violet", hex: "710193" },
+		{ name: "boysenberry", hex: "630436" },
+		{ name: "electric lavender", hex: "e39ff6" },
+		{ name: "plum", hex: "601a35" },
+		{ name: "strong magenta", hex: "a1045a" },
+		{ name: "deep lilac", hex: "b65fcf" },
+		{ name: "grape", hex: "663046" },
+		{ name: "royal periwinkle", hex: "be93d4" },
+		{ name: "sangria purple", hex: "4d0f28" },
+		{ name: "eggplant", hex: "311432" },
+		{ name: "jazzberry jam", hex: "67032f" },
+		{ name: "iris", hex: "9867c5" },
+		{ name: "heather", hex: "9e7bb5" },
+		{ name: "amethyst", hex: "a45ee5" },
+		{ name: "raisin", hex: "290916" },
+		{ name: "medium orchid", hex: "af69ef" },
+		{ name: "dark mulberry", hex: "4c0121" },
+		{ name: "deep wine", hex: "2c041c" },
+		{ name: "thistle", hex: "d8bfd8" },
+		{ name: "orchid", hex: "da70d6" },
+		{ name: "electric violet", hex: "8f00ff" },
+		{ name: "medium purple", hex: "9370db" },
+		{ name: "dark orchid", hex: "9932cc" },
+		{ name: "dark magenta", hex: "8b008b" },
+		{ name: "veronica", hex: "a020f0" },
+		{ name: "heliotrope", hex: "df73ff" },
+		{ name: "purpureus", hex: "9a4eae" },
+		{ name: "northwestern purple", hex: "4e2a84" },
+		{ name: "ksu purple", hex: "512888" },
+		{ name: "pomp and power", hex: "86608e" },
+		{ name: "mardi gras", hex: "880085" },
+		{ name: "eminence", hex: "6c3082" },
+		{ name: "pansy purple", hex: "78184a" },
+		{ name: "palatinate", hex: "72246c" },
+		{ name: "dark purple", hex: "301934" },
+		{ name: "byzantium", hex: "702963" },
+		{ name: "english violet", hex: "563c5c" },
+		{ name: "affair", hex: "6f4685" },
+		{ name: "long distance", hex: "6f456e" },
+		{ name: "prince charming", hex: "493f5e" },
+		{ name: "lipstick stain", hex: "8e4785" },
+		{ name: "pompadour", hex: "720058" },
+		{ name: "grape color", hex: "6f2da8" },
+		{ name: "pizza edge", hex: "9a2ca0" },
+		{ name: "tyrian purple", hex: "66023c" },
+		{ name: "ultra violet", hex: "645394" },
+		{ name: "electric purple", hex: "bf00ff" },
+		{ name: "studio", hex: "7851a9" },
+	], [ // PINKS
+		{ name: "pink", hex: "f699cd" },
+		{ name: "rose", hex: "fc94af" },
+		{ name: "french fuchsia", hex: "fc46aa" },
+		{ name: "punch", hex: "f25278" },
+		{ name: "blush pink", hex: "fec5e5" },
+		{ name: "watermelon", hex: "fe7f9c" },
+		{ name: "flamingo", hex: "fda4ba" },
+		{ name: "rouge", hex: "f26b8a" },
+		{ name: "light salmon", hex: "fdab9f" },
+		{ name: "coral pink", hex: "fe7d6a" },
+		{ name: "peach", hex: "fc9483" },
+		{ name: "strawberry", hex: "fc4c4e" },
+		{ name: "rosewood", hex: "9e4244" },
+		{ name: "lemonade", hex: "fcbacb" },
+		{ name: "taffy", hex: "fa86c4" },
+		{ name: "bubblegum", hex: "fd5da8" },
+		{ name: "ballet slipper", hex: "f79ac0" },
+		{ name: "lemonade crepe", hex: "f2b8c6" },
+		{ name: "magenta process", hex: "e11584" },
+		{ name: "hot pink", hex: "ff1694" },
+		{ name: "amaranth pink", hex: "e52b50" },
+		{ name: "razzmatazz", hex: "e3256b" },
+		{ name: "carnation", hex: "ffa6c9" },
+		{ name: "salmon", hex: "ff9999" },
+		{ name: "light pink", hex: "ffb6c1" },
+		{ name: "pastel pink", hex: "ffd1dc" },
+		{ name: "cherry blossom", hex: "ffb7c5" },
+		{ name: "baby pink", hex: "f4c2c2" },
+		{ name: "dark pink", hex: "e75480" },
+		{ name: "bright pink", hex: "ff007f" },
+		{ name: "neon pink", hex: "ff6ec7" },
+		{ name: "magenta", hex: "ff00ff" },
+		{ name: "tulip pink", hex: "ff8e8e" },
+		{ name: "piggy pink", hex: "fddde6" },
+		{ name: "cotton candy", hex: "ffbcd9" },
+		{ name: "cameo pink", hex: "efbbcc" },
+		{ name: "french pink", hex: "f64a8a" },
+		{ name: "persian pink", hex: "f77fbe" },
+		{ name: "candy pink", hex: "e4717a" },
+		{ name: "cherry pink", hex: "de3163" },
+		{ name: "dark terra cotta", hex: "cc4e5c" },
+		{ name: "deep pink", hex: "ff1493" },
+		{ name: "dust storm", hex: "e5ccc9" },
+		{ name: "nadeshiko pink", hex: "f6adc6" },
+		{ name: "wild strawberry", hex: "ff43a4" },
+		{ name: "rubine red", hex: "d10056" },
+		{ name: "hollywood cerise", hex: "f400a1" },
+		{ name: "mexican pink", hex: "e4007c" },
+		{ name: "steel pink", hex: "cc3366" },
+		{ name: "rose bonbon", hex: "f9429e" },
+	], [ // BROWNS
+		{ name: "brown oil", hex: "231709" },
+		{ name: "roasted coffee", hex: "4b371c" },
+		{ name: "mocha", hex: "3c280d" },
+		{ name: "peanut brown", hex: "795c34" },
+		{ name: "carob", hex: "362511" },
+		{ name: "hickory", hex: "371d10" },
+		{ name: "wood", hex: "3f301d" },
+		{ name: "pecan", hex: "4a2511" },
+		{ name: "walnut", hex: "432616" },
+		{ name: "caramel", hex: "65350f" },
+		{ name: "gingerbread", hex: "5e2c04" },
+		{ name: "syrup", hex: "481f01" },
+		{ name: "dark chocolate", hex: "2e1503" },
+		{ name: "tortilla", hex: "9a7b4f" },
+		{ name: "umber", hex: "352315" },
+		{ name: "tawny", hex: "80471c" },
+		{ name: "brunette", hex: "3b1e08" },
+		{ name: "cinnamon brown", hex: "652a0e" },
+		{ name: "penny", hex: "532915" },
+		{ name: "cedar brown", hex: "4a3728" },
+		{ name: "beaver", hex: "9f8170" },
+		{ name: "bistre", hex: "3d2b1f" },
+		{ name: "bole", hex: "79443b" },
+		{ name: "burnt umber", hex: "8a3324" },
+		{ name: "cafe au lait", hex: "a67b5b" },
+		{ name: "cafe noir", hex: "4b3621" },
+		{ name: "coffee", hex: "6f4e37" },
+		{ name: "deep coffee", hex: "704241" },
+		{ name: "copper", hex: "b87333" },
+		{ name: "dark brown", hex: "654321" },
+		{ name: "taupe", hex: "483c32" },
+		{ name: "ecru", hex: "c2b280" },
+		{ name: "golden brown", hex: "996515" },
+		{ name: "khaki", hex: "c3b091" },
+		{ name: "ochre", hex: "cc7722" },
+		{ name: "light brown", hex: "b5651d" },
+		{ name: "saddle brown", hex: "8b4513" },
+		{ name: "russet", hex: "80461b" },
+		{ name: "sienna", hex: "a0522d" },
+		{ name: "antique brass", hex: "cd9575" },
+		{ name: "burlywood", hex: "deb887" },
+		{ name: "peru", hex: "cd853f" },
+		{ name: "tumbleweed", hex: "deaa88" },
+		{ name: "dark vanilla", hex: "d1bea8" },
+		{ name: "wood brown", hex: "c19a6b" },
+		{ name: "chamoisee", hex: "a0785a" },
+		{ name: "deer", hex: "ba8759" },
+		{ name: "dirt", hex: "9b7653" },
+		{ name: "coconut", hex: "965a3e" },
+		{ name: "windsor tan", hex: "a75502" },
+	], [ // BLACKS
+		{ name: "black", hex: "000000" },
+		{ name: "ebony", hex: "080402" },
+		{ name: "crow", hex: "0d0907" },
+		{ name: "charcoal", hex: "28231d" },
+		{ name: "midnight", hex: "040406" },
+		{ name: "ink", hex: "070504" },
+		{ name: "raven", hex: "050301" },
+		{ name: "oil", hex: "050100" },
+		{ name: "grease", hex: "0a0806" },
+		{ name: "onyx", hex: "030104" },
+		{ name: "pitch", hex: "030001" },
+		{ name: "soot", hex: "160d08" },
+		{ name: "sable", hex: "060606" },
+		{ name: "jet black", hex: "030303" },
+		{ name: "coal", hex: "0c0908" },
+		{ name: "metal", hex: "0e0c0a" },
+		{ name: "obsidian", hex: "020403" },
+		{ name: "jade", hex: "000302" },
+		{ name: "spider", hex: "040200" },
+		{ name: "leather", hex: "0b0705" },
+		{ name: "asphalt", hex: "0c0404" },
+		{ name: "licorice", hex: "1a1110" },
+		{ name: "night", hex: "0c090a" },
+		{ name: "charleston green", hex: "232b2b" },
+		{ name: "dark jungle green", hex: "1a2421" },
+		{ name: "eerie black", hex: "1b1b1b" },
+		{ name: "raisin black", hex: "242124" },
+		{ name: "smoky black", hex: "100c08" },
+		{ name: "black rock", hex: "010127" },
+		{ name: "neutral black", hex: "0b0b0b" },
+		{ name: "black denim", hex: "191c27" },
+		{ name: "vampire black", hex: "0f0404" },
+		{ name: "cool black", hex: "151922" },
+		{ name: "frost black", hex: "191c20" },
+		{ name: "power black", hex: "0e0c01" },
+		{ name: "premium black", hex: "100e09" },
+		{ name: "black magic", hex: "0b0510" },
+		{ name: "alien black", hex: "1a2228" },
+		{ name: "black chocolate", hex: "1b1811" },
+		{ name: "gothic grape", hex: "120321" },
+		{ name: "metropolis", hex: "1a1a1a" },
+		{ name: "night shadow", hex: "1c1c1c" },
+		{ name: "dark raisin", hex: "1a0f0f" },
+		{ name: "tea bag", hex: "161311" },
+		{ name: "tech black", hex: "0d0e0e" },
+		{ name: "dull black", hex: "161616" },
+		{ name: "dark black", hex: "010203" },
+		{ name: "natural black", hex: "07000b" },
+		{ name: "retro black", hex: "1f201f" },
+		{ name: "deep black", hex: "050203" },
+	], [ // GREYS
+		{ name: "gray", hex: "808080" },
+		{ name: "shadow", hex: "373737" },
+		{ name: "graphite", hex: "594d5b" },
+		{ name: "iron", hex: "322d31" },
+		{ name: "pewter", hex: "696880" },
+		{ name: "cloud", hex: "c5c6d0" },
+		{ name: "silver", hex: "adadc9" },
+		{ name: "smoke", hex: "59515e" },
+		{ name: "dark slate", hex: "3e3d53" },
+		{ name: "anchor", hex: "41424c" },
+		{ name: "ash", hex: "564c4d" },
+		{ name: "porpoise", hex: "4d4c5c" },
+		{ name: "dove", hex: "7c6e7f" },
+		{ name: "fog", hex: "655967" },
+		{ name: "flint", hex: "7f7d9c" },
+		{ name: "charcoal gray", hex: "232023" },
+		{ name: "pebble", hex: "333333" },
+		{ name: "lead", hex: "3f3f4e" },
+		{ name: "coin", hex: "9897a9" },
+		{ name: "fossil", hex: "787276" },
+		{ name: "arsenic", hex: "3b444b" },
+		{ name: "nevada", hex: "666a6d" },
+		{ name: "scorpion", hex: "5e5e5e" },
+		{ name: "battleship gray", hex: "848482" },
+		{ name: "carbon gray", hex: "625d5d" },
+		{ name: "davy’s gray", hex: "555555" },
+		{ name: "dim gray", hex: "696969" },
+		{ name: "gray cloud", hex: "b6b6b4" },
+		{ name: "gray dolphin", hex: "5c5858" },
+		{ name: "gray wolf", hex: "504a4b" },
+		{ name: "gunmetal", hex: "2a3439" },
+		{ name: "marengo", hex: "4c5866" },
+		{ name: "medium gray", hex: "bebebe" },
+		{ name: "nickel", hex: "727472" },
+		{ name: "stone gray", hex: "928e85" },
+		{ name: "outer space", hex: "414a4c" },
+		{ name: "rocket metallic", hex: "8a7f8d" },
+		{ name: "silver chalice", hex: "acacac" },
+		{ name: "smokey gray", hex: "726e6d" },
+		{ name: "sonic gray", hex: "757575" },
+		{ name: "spanish gray", hex: "989898" },
+		{ name: "taupe gray", hex: "8b8589" },
+		{ name: "vampire gray", hex: "565051" },
+		{ name: "x11 gray", hex: "bbbcb6" },
+		{ name: "dark silver", hex: "746d69" },
+		{ name: "pastel gray", hex: "cccdc6" },
+		{ name: "misty gray", hex: "bcc2c2" },
+		{ name: "vintage gray", hex: "989692" },
+		{ name: "zombie gray", hex: "63645e" },
+		{ name: "perfect gray", hex: "a1a1a1" },
+	], [ // WHITES
+		{ name: "white", hex: "ffffff" },
+		{ name: "pearl", hex: "fbfcf8" },
+		{ name: "alabaster", hex: "fef9f3" },
+		{ name: "snow", hex: "f5fefd" },
+		{ name: "pale ivory", hex: "fdf6e4" },
+		{ name: "cream", hex: "fffada" },
+		{ name: "eggshell", hex: "fff9e3" },
+		{ name: "cotton", hex: "fbfbf9" },
+		{ name: "chiffon", hex: "fbfaf2" },
+		{ name: "pink salt", hex: "f8eeec" },
+		{ name: "lace", hex: "f8f2ed" },
+		{ name: "coconut milk", hex: "fff1e6" },
+		{ name: "linen", hex: "f3ead3" },
+		{ name: "bone", hex: "e7decc" },
+		{ name: "daisy", hex: "fafafa" },
+		{ name: "powder", hex: "fbfcfa" },
+		{ name: "frost", hex: "ecfbfc" },
+		{ name: "porcelain", hex: "fffefc" },
+		{ name: "parchment", hex: "fbf5df" },
+		{ name: "rice", hex: "faf5ef" },
+		{ name: "seashell", hex: "fff5ee" },
+		{ name: "peppermint", hex: "f1f9ec" },
+		{ name: "milk", hex: "fdfff5" },
+		{ name: "ghost white", hex: "f8f8ff" },
+		{ name: "white smoke", hex: "f5f5f5" },
+		{ name: "baby powder", hex: "fefefa" },
+		{ name: "ivory", hex: "fffff0" },
+		{ name: "floral white", hex: "fffaf0" },
+		{ name: "link white", hex: "ecf3f9" },
+		{ name: "rose white", hex: "fffafa" },
+		{ name: "vista white", hex: "fdfcfa" },
+		{ name: "snow drift", hex: "f8fbf8" },
+		{ name: "island spice", hex: "fffcec" },
+		{ name: "soft peach", hex: "f6f1f4" },
+		{ name: "harp", hex: "ebf5f0" },
+		{ name: "cough mixture", hex: "f6f4f1" },
+		{ name: "cup cake", hex: "ebf6f7" },
+		{ name: "magnolia", hex: "f8f4ff" },
+		{ name: "anti-flash white", hex: "f2f3f4" },
+		{ name: "cascading white", hex: "f7f5f6" },
+		{ name: "cotton ball", hex: "f2f7fd" },
+		{ name: "photon white", hex: "f8f8e8" },
+		{ name: "white heat", hex: "fdf9ef" },
+		{ name: "whitewash", hex: "fefffc" },
+		{ name: "shadow white", hex: "eef1ea" },
+		{ name: "acoustic white", hex: "efece1" },
+		{ name: "aircraft white", hex: "edf2f8" },
+		{ name: "ceramic", hex: "fcfff9" },
+		{ name: "bright white", hex: "f4f5f0" },
+		{ name: "brilliant white", hex: "edf1fe" },
+	],
+];
+
+let quiz = document.getElementById("quiz");
+
+let buttons = [
+	document.getElementById("b0"),
+	document.getElementById("b1"),
+	document.getElementById("b2"),
+	document.getElementById("b3"),
+];
+
+let score_value = 0;
+
+let text_style = document.getElementById("text-style");
+let score_div = document.getElementById("score");
+
+async function new_colour(input) {
+	if (correct_index != null) {
+		// check if answer was correct or not
+		let sleep_time = 1000
+		if (correct_index == input) {
+			buttons[correct_index].innerHTML += "<br>😊";
+			score_value++;
+		} else {
+			buttons[correct_index].innerHTML += "<br>😡";
+			buttons[input].innerHTML += "<br>😳";
+			score_value = score_value <= 0 ? 0 : score_value - 1;
+			sleep_time = 2000;
+		}
+		buttons.forEach(x => x.disabled = true);
+		score_div.innerHTML = "score: " + score_value;
+		await new Promise(r => setTimeout(r, sleep_time));
+		buttons.forEach(x => x.disabled = false);
+	}
+	let already_taken = []
+	// get random colour
+	let group_list = colour_list[Math.floor(Math.random() * colour_list.length)];
+	let new_colour_index = Math.floor(Math.random() * group_list.length);
+	let new_colour = group_list[new_colour_index];
+	already_taken[new_colour_index] = true;
+	correct_index = Math.floor(Math.random() * 4);
+	buttons[correct_index].innerHTML = new_colour.name;
+	for (let button_index = 0; button_index < buttons.length; button_index++) {
+		if (button_index != correct_index) {
+			// get a new random index, different from the previous
+			let wrong_index;
+			do wrong_index = Math.floor(Math.random() * group_list.length);
+			while (already_taken[wrong_index]);
+			// set it as taken
+			already_taken[wrong_index] = true;
+			// give its name to the button
+			buttons[button_index].innerHTML = group_list[wrong_index].name;
+		}
+	}
+	// sets the background colour
+	quiz.style = "background:#" + new_colour.hex;
+	// fixes colour for button text
+	text_style.innerHTML = ".text{color:" + get_text_colour(new_colour.hex) + "}";
+}
+
+new_colour();
+
+</script>
+</body>
+</html>
