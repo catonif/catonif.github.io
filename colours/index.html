@@ -25,10 +25,6 @@ button {
 	font-weight: bold;
 }
 
-button:active {
-	background: #fff3;
-}
-
 tr {
 	width: 100%;
 	height: 50%;
@@ -52,6 +48,14 @@ div.info {
 
 div#score { top: 0; }
 div#signature { bottom: 0; }
+
+button, td {
+	padding: 0;
+}
+
+table {
+	border-spacing: 0;
+}
 
 </style>
 </head>
@@ -666,7 +670,7 @@ let score_div = document.getElementById("score");
 async function new_colour(input) {
 	if (correct_index != null) {
 		// check if answer was correct or not
-		let sleep_time = 1000
+		let sleep_time = 2000
 		if (correct_index == input) {
 			buttons[correct_index].innerHTML += "<br>😊";
 			score_value++;
@@ -674,12 +678,18 @@ async function new_colour(input) {
 			buttons[correct_index].innerHTML += "<br>😡";
 			buttons[input].innerHTML += "<br>😳";
 			score_value = score_value <= 0 ? 0 : score_value - 1;
-			sleep_time = 2000;
+			sleep_time = 3000;
 		}
-		buttons.forEach(x => x.disabled = true);
+		buttons.forEach(x => {
+			x.style = "background:#" + x.colour_hex
+			x.disabled = true
+		});
 		score_div.innerHTML = "score: " + score_value;
 		await new Promise(r => setTimeout(r, sleep_time));
-		buttons.forEach(x => x.disabled = false);
+		buttons.forEach(x => {
+			x.style = null
+			x.disabled = false
+		});
 	}
 	let already_taken = []
 	// get random colour
@@ -688,7 +698,11 @@ async function new_colour(input) {
 	let new_colour = group_list[new_colour_index];
 	already_taken[new_colour_index] = true;
 	correct_index = Math.floor(Math.random() * 4);
-	buttons[correct_index].innerHTML = new_colour.name;
+	function set_colour(button, colour) {
+		button.innerHTML = colour.name;
+		button.colour_hex = colour.hex;
+	}
+	set_colour(buttons[correct_index], new_colour);
 	for (let button_index = 0; button_index < buttons.length; button_index++) {
 		if (button_index != correct_index) {
 			// get a new random index, different from the previous
@@ -698,7 +712,7 @@ async function new_colour(input) {
 			// set it as taken
 			already_taken[wrong_index] = true;
 			// give its name to the button
-			buttons[button_index].innerHTML = group_list[wrong_index].name;
+			set_colour(buttons[button_index], group_list[wrong_index]);
 		}
 	}
 	// sets the background colour
