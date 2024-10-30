@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Linear B keyboard</title>
+<style>
+
+.Linb {
+	font-family: "Aegean", "Noto Sans Linear B";
+	font-size: 120%;
+}
+
+table, td {
+	text-align: center;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+td {
+	width: 10%;
+}
+
+</style>
+</head>
+<body onload="load_table()">
+<h1>Linear B keyboard</h1>
+<textarea type="text" oninput="dothing(this)" class="Linb" style="width:100%; height: 100px;" autofocus></textarea><br>
+<p>This is a Linear B keyboard. Note the following points:
+<ul>
+	<li>For every symbol you can write the ID preceded by an asterisk *, e.g. <i>*8</i> for <span class="Linb">𐀀</span>, <i>*22</i> for <span class="Linb">𐁒</span>, etc.</li>
+	<li>For syllabograms you can write the syllable in lower case, e.g. <i>ka</i> for <span class="Linb">𐀏</span>, <i>a3</i> or <i>ai</i> for <span class="Linb">𐁁</span>, etc.</li>
+	<li>For logograms you can write their traditional upper case abbreviation if it was codified somewhere, e.g. <i>TUN</i> for <span class="Linb">𐂪</span>, <i>M</i> for <span class="Linb">𐄸</span>, etc.</li>
+	<li>The Unicode name (stripped of its spaces and hyphens) was also taken whenever present as a possible alias, e.g. <i>WHEEL</i> for <span class="Linb">𐃏</span>, alongside <i>ROTA</i>.</li>
+	<li>In sources italic upper case is used for syllabograms employed as logograms, here they are to be spelled always in lower case.</li>
+	<li>Monograms may be spelled both in lower case and in upper case without any syllable separators, e.g. <i>kapo</i> or <i>KAPO</i> for <span class="Linb">𐂓</span>, etc.</li>
+	<li>Numbers will be converted automatically, e.g. <i>2</i> for <span class="Linb">𐄈</span>, <i>24</i> for <span class="Linb">𐄑𐄊</span>, <i>2630</i> for <span class="Linb">𐄣𐄞𐄒</span>, etc.</li>
+	<li>These inputs must be followed by the pressing of dash or space in order to be converted. Any following whitespace character will also work.</li>
+	<li>Use the comma , for the word divider <span class="Linb">𐄀</span>. Also use the brackets [[ ]] and &lt; &gt; for <span class="Linb">⟦ ⟧</span> and <span class="Linb">⟨ ⟩</span> respectively.</li>
+	<li>This keyboard is limited by the character present in Unicode. A number of ideograms, especially combinations, are missing from it.</li>
+	<li>Please use this only to transcribe existing Linear B inscriptions and not to make up original ones. Misinformation is fast to spread and hard to extinguish.</li>
+</ul>
+If you are seeing boxes instead of symbols please install the font Aegean or Noto Sans Linear B. The symbols supported by Unicode are the following:</p>
+<table style="margin:1em"><tbody id="symbols-table"></tbody></table>
+<script>
+
+let symbols = [
+	{ value: "𐀅", id:   "1", lc: "da" },
+	{ value: "𐀫", id:   "2", lc: "ro" },
+	{ value: "𐀞", id:   "3", lc: "pa" },
+	{ value: "𐀳", id:   "4", lc: "te" },
+	{ value: "𐀵", id:   "5", lc: "to" },
+	{ value: "𐀙", id:   "6", lc: "na" },
+	{ value: "𐀇", id:   "7", lc: "di" },
+	{ value: "𐀀", id:   "8", lc: "a" },
+	{ value: "𐀮", id:   "9", lc: "se" },
+	{ value: "𐀄", id:  "10", lc: "u" },
+	{ value: "𐀡", id:  "11", lc: "po" },
+	{ value: "𐀰", id:  "12", lc: "so" },
+	{ value: "𐀕", id:  "13", lc: "me" },
+	{ value: "𐀈", id:  "14", lc: "do" },
+	{ value: "𐀗", id:  "15", lc: "mo" },
+	{ value: "𐀣", id:  "16", lc: "qa" },
+	{ value: "𐀼", id:  "17", lc: "za" },
+	{ value: "𐁐", id:  "18" },
+	{ value: "𐁑", id:  "19" },
+	{ value: "𐀿", id:  "20", lc: "zo" },
+	{ value: "𐀥", id:  "21", lc: "qi" },
+	{ value: "𐁒", id:  "22" },
+	{ value: "𐀘", id:  "23", lc: "mu" },
+	{ value: "𐀚", id:  "24", lc: "ne" },
+	{ value: "𐁀", id:  "25", lc: ["a2", "ha"] },
+	{ value: "𐀬", id:  "26", lc: "ru" },
+	{ value: "𐀩", id:  "27", lc: "re" },
+	{ value: "𐀂", id:  "28", lc: "i" },
+	{ value: "𐁆", id:  "29", lc: ["pu2", "phu"] },
+	{ value: "𐀛", id:  "30", lc: "ni" },
+	{ value: "𐀭", id:  "31", lc: "sa" },
+	{ value: "𐀦", id:  "32", lc: "qo" },
+	{ value: "𐁉", id:  "33", lc: ["ra3", "rai"] },
+	{ value: "𐁓", id: ["34", "35"] },
+	{ value: "𐀍", id:  "36", lc: "jo" },
+	{ value: "𐀴", id:  "37", lc: "ti" },
+	{ value: "𐀁", id:  "38", lc: "e" },
+	{ value: "𐀠", id:  "39", lc: "pi" },
+	{ value: "𐀹", id:  "40", lc: "wi" },
+	{ value: "𐀯", id:  "41", lc: "si" },
+	{ value: "𐀺", id:  "42", lc: "wo" },
+	{ value: "𐁁", id:  "43", lc: ["a3", "ai"] },
+	{ value: "𐀐", id:  "44", lc: "ke" },
+	{ value: "𐀆", id:  "45", lc: "de" },
+	{ value: "𐀋", id:  "46", lc: "je" },
+	{ value: "𐁔", id:  "47" },
+	{ value: "𐁅", id:  "48", lc: "nwa" },
+	{ value: "𐁕", id:  "49" },
+	{ value: "𐀢", id:  "50", lc: "pu" },
+	{ value: "𐀉", id:  "51", lc: "du" },
+	{ value: "𐀜", id:  "52", lc: "no" },
+	{ value: "𐀪", id:  "53", lc: "ri" },
+	{ value: "𐀷", id:  "54", lc: "wa" },
+	{ value: "𐀝", id:  "55", lc: "nu" },
+	{ value: "𐁖", id:  "56" },
+	{ value: "𐀊", id:  "57", lc: "ja" },
+	{ value: "𐀱", id:  "58", lc: "su" },
+	{ value: "𐀲", id:  "59", lc: "ta" },
+	{ value: "𐀨", id:  "60", lc: "ra" },
+	{ value: "𐀃", id:  "61", lc: "o" },
+	{ value: "𐁇", id:  "62", lc: "pte" },
+	{ value: "𐁗", id:  "63" },
+	{ value: "𐁘", id:  "64" },
+	{ value: "𐀎", id:  "65", lc: "ju" },
+	{ value: "𐁋", id:  "66", lc: ["ta2", "tya"] },
+	{ value: "𐀑", id:  "67", lc: "ki" },
+	{ value: "𐁊", id:  "68", lc: ["ro2", "ryo"] },
+	{ value: "𐀶", id:  "69", lc: "tu" },
+	{ value: "𐀒", id:  "70", lc: "ko" },
+	{ value: "𐁃", id:  "71", lc: "dwe" },
+	{ value: "𐀟", id:  "72", lc: "pe" },
+	{ value: "𐀖", id:  "73", lc: "mi" },
+	{ value: "𐀽", id:  "74", lc: "ze" },
+	{ value: "𐀸", id:  "75", lc: "we" },
+	{ value: "𐁈", id:  "76", lc: ["ra2", "rya"] },
+	{ value: "𐀏", id:  "77", lc: "ka" },
+	{ value: "𐀤", id:  "78", lc: "qe" },
+	{ value: "𐁙", id:  "79" },
+	{ value: "𐀔", id:  "80", lc: "ma" },
+	{ value: "𐀓", id:  "81", lc: "ku" },
+	{ value: "𐁚", id:  "82" },
+	{ value: "𐁛", id:  "83" },
+	// *84
+	{ value: "𐁂", id:  "85", lc: "au" },
+	{ value: "𐁜", id:  "86" },
+	{ value: "𐁌", id:  "87", lc: "twe" },
+	// *88
+	{ value: "𐁝", id:  "89" },
+	{ value: "𐁄", id:  "90", lc: "dwo" },
+	{ value: "𐁍", id:  "91", lc: "two" },
+	{ value: "𐂀", id: ["100", "101"], uc: ["VIR", "MAN"] },
+	{ value: "𐂁", id: ["102", "103"], uc: ["MUL", "WOMAN"] },
+	{ value: "𐂂", id: "104", uc: ["CERV", "DEER"] },
+	{ value: "𐂃", id: "105", uc: ["EQU", "EQUID"] },
+	{ value: "𐂄", id: "105f", uc: ["EQU:f", "MARE"] },
+	{ value: "𐂅", id: "105m", uc: ["EQU:m", "STALLION"] },
+	{ value: "𐀥", id: "106", uc: "OVIS" }, // same as *21
+	{ value: "𐂆", id: "106f", uc: ["OVIS:f", "EWE"] },
+	{ value: "𐂇", id: "106m", uc: ["OVIS:m", "RAM"] },
+	{ value: "𐁒", id: "107", uc: "CAP" }, // same as *22
+	{ value: "𐂈", id: "107f", uc: ["CAP:f", "SHEGOAT"] },
+	{ value: "𐂉", id: "107m", uc: ["CAP:m", "HEGOAT"] },
+	{ value: "𐁂", id: "108", uc: "SUS" }, // same as *85
+	{ value: "𐂊", id: "108f", uc: ["SUS:f", "SOW"] },
+	{ value: "𐂋", id: "108m", uc: ["SUS:m", "BOAR"] },
+	{ value: "𐀘", id: "109", uc: "BOS" }, // same as *23
+	{ value: "𐂌", id: "109f", uc: ["BOS:f", "COW"] },
+	{ value: "𐂍", id: "109m", uc: ["BOS:m", "BULL"] },
+	{ value: "𐄿", id: "110", uc: "Z" },
+	{ value: "𐄾", id: "111", uc: "V" },
+	{ value: "𐄼", id: "112", uc: "T" },
+	{ value: "𐄽", id: "113", uc: "S" },
+	{ value: "𐄻", id: "114", uc: "Q" },
+	{ value: "𐄺", id: "115", uc: "P" },
+	{ value: "𐄹", id: "116", uc: "N" },
+	{ value: "𐄸", id: "117", uc: "M" },
+	{ value: "𐄷", id: "118", uc: "L" },
+	// *119
+	{ value: "𐂎", id: "120", uc: ["GRA", "WHEAT"] },
+	{ value: "𐂏", id: "121", uc: ["HORD", "BARLEY"] },
+	{ value: "𐂐", id: "122", uc: ["OLIV", "OLIVE"] },
+	{ value: "𐂑", id: "123", uc: ["AROM", "SPICE"] },
+	{ value: "𐂒", id: ["124", "125"], uc: ["CYP", "PYC", "CYPERUS"] },
+	// *126
+	{ value: "𐂓", id: "127", lc: "kapo", uc: "KAPO" },
+	{ value: "𐂔", id: "128", lc: "kanako", uc: "KANAKO" },
+	{ value: "𐀎", id: "129", uc: "FAR" }, // same as *65
+	{ value: "𐂕", id: "130", uc: ["OLE", "OIL"] },
+	{ value: "𐂖", id: "131", uc: ["VIN", "WINE"] },
+	{ value: "𐂗", id: "132" },
+	{ value: "𐂘", id: "133", lc: "arepa", uc: "AREPA" },
+	// *134
+	{ value: "𐂙", id: "135", lc: "meri", uc: "MERI" },
+	{ value: "𐂚", id: "140", uc: ["AES", "COPPER"] },
+	{ value: "𐂛", id: "141", uc: ["AUR", "GOLD"] },
+	{ value: "𐂜", id: "142" },
+	// *143
+	{ value: "𐁉", id: "144", uc: ["CROC"] },
+	{ value: "𐂝", id: "145", uc: ["LANA", "WOOL"] },
+	{ value: "𐂞", id: "146" },
+	// *147, *148, *149
+	{ value: "𐂟", id: "150" },
+	{ value: "𐂠", id: "151", uc: ["CORN", "HORN"] },
+	{ value: "𐂡", id: "152" },
+	{ value: "𐂢", id: "153" },
+	{ value: "𐂣", id: "154" },
+	{ value: "𐃞", id: "155", vas: true },
+	{ value: "𐂤", id: "156", lc: "turo2", uc: "TURO2" },
+	{ value: "𐂥", id: "157" },
+	{ value: "𐂦", id: "158" },
+	{ value: "𐂧", id: "159", uc: ["TELA", "CLOTH"] },
+	{ value: "𐂨", id: "160" },
+	{ value: "𐂩", id: "161" },
+	{ value: "𐂪", id: "162", uc: ["TUN", "GARMENT"] },
+	{ value: "𐂫", id: "163", uc: ["ARM", "ARMOUR"] },
+	{ value: "𐂬", id: "164" },
+	{ value: "𐂭", id: "165" },
+	{ value: "𐂮", id: "166" },
+	{ value: "𐂯", id: "167" },
+	{ value: "𐂰", id: "168" },
+	{ value: "𐂱", id: "169" },
+	{ value: "𐂲", id: "170" },
+	{ value: "𐂳", id: "171" },
+	{ value: "𐂴", id: "172" },
+	{ value: "𐂵", id: "173", uc: ["LUNA", "MONTH"] },
+	{ value: "𐂶", id: "174" },
+	// *175
+	{ value: "𐂷", id: "176", uc: ["ARB", "TREE"] },
+	{ value: "𐂸", id: "177" },
+	{ value: "𐂹", id: "178" },
+	{ value: "𐂺", id: "179" },
+	{ value: "𐂻", id: "180" },
+	{ value: "𐂼", id: "181" },
+	{ value: "𐂽", id: "182" },
+	{ value: "𐂾", id: "183" },
+	{ value: "𐂿", id: "184" },
+	{ value: "𐃀", id: "185" },
+	// *186, *187, *188
+	{ value: "𐃁", id: "189" },
+	{ value: "𐃂", id: "190" },
+	{ value: "𐃃", id: "191", uc: ["GAL", "HELMET"] },
+	{ value: "𐃟", id: "200", vas: true },
+	{ value: "𐃠", id: "201", vas: true },
+	{ value: "𐃡", id: "202", vas: true },
+	{ value: "𐃢", id: "203", vas: true },
+	{ value: "𐃣", id: "204", vas: true },
+	{ value: "𐃤", id: "205", vas: true },
+	{ value: "𐃥", id: "206", vas: true },
+	{ value: "𐃦", id: "207", vas: true },
+	{ value: "𐃧", id: "208", vas: true },
+	{ value: "𐃨", id: "209", vas: true, uc: "AMPH" },
+	{ value: "𐃩", id: "210", vas: true },
+	{ value: "𐃪", id: "211", vas: true },
+	{ value: "𐃫", id: "212", vas: true },
+	{ value: "𐃬", id: "213", vas: true },
+	{ value: "𐃭", id: "214", vas: true },
+	{ value: "𐃮", id: "215", vas: true },
+	{ value: "𐃯", id: "216", vas: true },
+	{ value: "𐃰", id: "217", vas: true },
+	{ value: "𐃱", id: "218", vas: true },
+	{ value: "𐃲", id: "219", vas: true },
+	{ value: "𐃄", id: "220", uc: "FOOTSTOOL" },
+	{ value: "𐃳", id: "221", vas: true },
+	{ value: "𐃴", id: "222", vas: true },
+	{ value: "𐃅", id: "225", uc: ["ALV", "BATHTUB"] },
+	{ value: "𐃵", id: "226", vas: true },
+	{ value: "𐃶", id: "227", vas: true },
+	{ value: "𐃷", id: "228", vas: true },
+	{ value: "𐃸", id: "229", vas: true },
+	{ value: "𐃆", id: "230", uc: ["HAS", "SPEAR"] },
+	{ value: "𐃇", id: "231", uc: ["SAG", "ARROW"] },
+	{ value: "𐃈", id: "232" },
+	{ value: "𐃉", id: "233", uc: ["PUG", "SWORD"] },
+	{ value: "𐃊", id: "234" },
+	// *235
+	{ value: "𐃋", id: "236", uc: "GUP" },
+	// *237, *238, *239
+	{ value: "𐃌", id: "240", uc: ["BIG", "WHEELEDCHARIOT"] },
+	{ value: "𐃍", id: "241", uc: ["CUR", "CHARIOT"] },
+	{ value: "𐃎", id: "242", uc: ["CAPS", "CHARIOTFRAME"] },
+	{ value: "𐃏", id: "243", uc: ["ROTA", "WHEEL"] },
+	// *244, variant of *243 ?
+	{ value: "𐃐", id: "245" },
+	{ value: "𐃑", id: "246" },
+	{ value: "𐃒", id: "247", lc: "dipte", uc: "DIPTE" },
+	{ value: "𐃓", id: "248" },
+	{ value: "𐃔", id: "249" },
+	{ value: "𐃹", id: "250", vas: true },
+	{ value: "𐃕", id: "251" },
+	{ value: "𐃖", id: "252" },
+	{ value: "𐃗", id: "253" },
+	{ value: "𐃘", id: "254", uc: ["JAC", "DART"] },
+	{ value: "𐃙", id: "255" },
+	{ value: "𐃚", id: "256" },
+	{ value: "𐃛", id: "257" },
+	{ value: "𐃜", id: "258" },
+	{ value: "𐃝", id: "259" },
+	{ value: "𐃺", id: "305", vas: true },
+];
+
+let digit_symbols = {
+	[0]: "",
+	[1]: "𐄇",
+	[2]: "𐄈",
+	[3]: "𐄉",
+	[4]: "𐄊",
+	[5]: "𐄋",
+	[6]: "𐄌",
+	[7]: "𐄍",
+	[8]: "𐄎",
+	[9]: "𐄏",
+	[10]: "𐄐",
+	[20]: "𐄑",
+	[30]: "𐄒",
+	[40]: "𐄓",
+	[50]: "𐄔",
+	[60]: "𐄕",
+	[70]: "𐄖",
+	[80]: "𐄗",
+	[90]: "𐄘",
+	[100]: "𐄙",
+	[200]: "𐄚",
+	[300]: "𐄛",
+	[400]: "𐄜",
+	[500]: "𐄝",
+	[600]: "𐄞",
+	[700]: "𐄟",
+	[800]: "𐄠",
+	[900]: "𐄡",
+	[1000]: "𐄢",
+	[2000]: "𐄣",
+	[3000]: "𐄤",
+	[4000]: "𐄥",
+	[5000]: "𐄦",
+	[6000]: "𐄧",
+	[7000]: "𐄨",
+	[8000]: "𐄩",
+	[9000]: "𐄪",
+	[10000]: "𐄫",
+	[20000]: "𐄬",
+	[30000]: "𐄭",
+	[40000]: "𐄮",
+	[50000]: "𐄯",
+	[60000]: "𐄰",
+	[70000]: "𐄱",
+	[80000]: "𐄲",
+	[90000]: "𐄳",
+}
+
+let value_from_id = {};
+let value_from_uc = {};
+let value_from_vas = {};
+let value_from_lc = {};
+
+function add_to_table(value_from_x, x, value) {
+	if (typeof x == "string") value_from_x[x] = value;
+	else x.forEach(y => value_from_x[y] = value);
+}
+
+symbols.forEach(function (x) {
+	add_to_table(value_from_id, x.id, x.value);
+	if (x.lc) add_to_table(value_from_lc, x.lc, x.value);
+	if (x.uc) add_to_table(value_from_uc, x.uc, x.value);
+});
+
+function give_if_have(value_from_x) {
+	return function (match, a) {
+		let r = value_from_x[a];
+		if (r == undefined) return match;
+		return r;
+	}
+}
+
+function dothing(element) {
+	element.value = element.value
+		.replace(/\*0*(\d+[mf]?)(?:[\- ]|(?=\s))/g, give_if_have(value_from_id))
+		.replace(/([A-Z][A-Z\d]*(?:\:[mf])?)(?:[\- ]|(?=\s))/g, give_if_have(value_from_uc))
+		.replace(/([a-z]+\d?)(?:[\- ]|(?=\s))/g, give_if_have(value_from_lc))
+		.replace(/(\d+)(?:[\- ]|(?=\s))/g, function (match, a) {
+			let i = parseInt(a);
+			if (i < 1 || i > 99999) return match;
+			let digits = [
+				i - i % 10000,
+				i % 10000 - i % 1000,
+				i % 1000 - i % 100,
+				i % 100 - i % 10,
+				i % 10
+			];
+			let str = "";
+			digits.forEach(digit => str += digit_symbols[digit]);
+			return str;
+		})
+		.replace(/,/g, "𐄀").replace(/;/g, "𐄁")
+		.replace(/\[\[/g, "⟦").replace(/\]\]/g, "⟧")
+		.replace(/\</g, "⟨").replace(/\>/g, "⟩")
+}
+
+function load_table() {
+	let str = "<tr>";
+	let td_index = 0;
+	function add_to_str(x, asterisk) {
+		if (x == undefined) return;
+		let initial = "<i>"; let final = "</i><br>";
+		if (asterisk) initial += "*"
+		if (typeof x == "string") str += initial + x + final;
+		else x.forEach(y => str += initial + y + final);
+	}
+	symbols.forEach(symbol => {
+		if (td_index > 7) {
+			td_index = 0;
+			str += "</tr><tr>"
+		}
+		str += '<td><span class="Linb">' + symbol.value + "</span><br>";
+		add_to_str(symbol.id, true);
+		add_to_str(symbol.lc);
+		add_to_str(symbol.uc);
+		str += "</td>"
+		td_index++;
+	});
+	document.getElementById("symbols-table").innerHTML = str + "</tr>";
+}
+
+</script>
+</body>
+<footer><hr>By Catonif, October 2024. <a href="..">Homepage</a>. catonif.dev@gmail.com</footer>
