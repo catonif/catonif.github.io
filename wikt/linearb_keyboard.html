@@ -43,6 +43,7 @@ If you are seeing boxes instead of symbols please install the font Aegean or Not
 <script>
 
 let symbols = [
+	/* SYLLABOGRAMS */
 	{ value: "𐀅", id:   "1", lc: "da" },
 	{ value: "𐀫", id:   "2", lc: "ro" },
 	{ value: "𐀞", id:   "3", lc: "pa" },
@@ -133,6 +134,7 @@ let symbols = [
 	{ value: "𐁝", id:  "89" },
 	{ value: "𐁄", id:  "90", lc: "dwo" },
 	{ value: "𐁍", id:  "91", lc: "two" },
+	/* IDEOGRAMS */
 	{ value: "𐂀", id: ["100", "101"], uc: ["VIR", "MAN"] },
 	{ value: "𐂁", id: ["102", "103"], uc: ["MUL", "WOMAN"] },
 	{ value: "𐂂", id: "104", uc: ["CERV", "DEER"] },
@@ -160,7 +162,6 @@ let symbols = [
 	{ value: "𐄹", id: "116", uc: "N" },
 	{ value: "𐄸", id: "117", uc: "M" },
 	{ value: "𐄷", id: "118", uc: "L" },
-	// *119
 	{ value: "𐂎", id: "120", uc: ["GRA", "WHEAT"] },
 	{ value: "𐂏", id: "121", uc: ["HORD", "BARLEY"] },
 	{ value: "𐂐", id: "122", uc: ["OLIV", "OLIVE"] },
@@ -180,7 +181,7 @@ let symbols = [
 	{ value: "𐂛", id: "141", uc: ["AUR", "GOLD"] },
 	{ value: "𐂜", id: "142" },
 	// *143
-	{ value: "𐁉", id: "144", uc: ["CROC"] },
+	{ value: "𐁉", id: "144", uc: "CROC" },
 	{ value: "𐂝", id: "145", uc: ["LANA", "WOOL"] },
 	{ value: "𐂞", id: "146" },
 	// *147, *148, *149
@@ -281,6 +282,7 @@ let symbols = [
 	{ value: "𐃜", id: "258" },
 	{ value: "𐃝", id: "259" },
 	{ value: "𐃺", id: "305", vas: true },
+
 ];
 
 let digit_symbols = {
@@ -357,6 +359,10 @@ function give_if_have(value_from_x) {
 }
 
 function dothing(element) {
+	// Set values to keep cursor still.
+	let previous_cursor_position = element.selectionStart;
+	let previous_textarea_length = element.value.length;
+	// Do replacements.
 	element.value = element.value
 		.replace(/\*0*(\d+[mf]?)(?:[\- ]|(?=\s))/g, give_if_have(value_from_id))
 		.replace(/([A-Z][A-Z\d]*(?:\:[mf])?)(?:[\- ]|(?=\s))/g, give_if_have(value_from_uc))
@@ -378,6 +384,8 @@ function dothing(element) {
 		.replace(/,/g, "𐄀").replace(/;/g, "𐄁")
 		.replace(/\[\[/g, "⟦").replace(/\]\]/g, "⟧")
 		.replace(/\</g, "⟨").replace(/\>/g, "⟩")
+	// Keep cursor still.
+	element.selectionEnd = element.selectionStart = previous_cursor_position + element.value.length - previous_textarea_length;
 }
 
 function load_table() {
