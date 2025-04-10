@@ -40,6 +40,7 @@ td {
 </ul>
 If you are seeing boxes instead of symbols please install the font Aegean or Noto Sans Linear B. The symbols supported by Unicode are the following:</p>
 <table style="margin:1em"><tbody id="symbols-table"></tbody></table>
+<hr>For Linear A inscriptions, use the <a href="lineara_keyboard.html">Linear A keyboard</a>.
 <script>
 
 let symbols = [
@@ -336,7 +337,6 @@ let digit_symbols = {
 
 let value_from_id = {};
 let value_from_uc = {};
-let value_from_vas = {};
 let value_from_lc = {};
 
 function add_to_table(value_from_x, x, value) {
@@ -364,10 +364,10 @@ function dothing(element) {
 	let previous_textarea_length = element.value.length;
 	// Do replacements.
 	element.value = element.value
-		.replace(/\*0*(\d+[mf]?)(?:[\- ]|(?=\s))/g, give_if_have(value_from_id))
-		.replace(/([A-Z][A-Z\d]*(?:\:[mf])?)(?:[\- ]|(?=\s))/g, give_if_have(value_from_uc))
-		.replace(/([a-z]+\d?)(?:[\- ]|(?=\s))/g, give_if_have(value_from_lc))
-		.replace(/(\d+)(?:[\- ]|(?=\s))/g, function (match, a) {
+		.replace(/\*0*(\d+[mf]?)(?:[\- ]|(?=[,\s]))/g, give_if_have(value_from_id))
+		.replace(/([A-Z][A-Z\d]*(?:\:[mf])?)(?:[\- ]|(?=[,\s]))/g, give_if_have(value_from_uc))
+		.replace(/([a-z]+\d?)(?:[\- ]|(?=[,\s]))/g, give_if_have(value_from_lc))
+		.replace(/(\d+)(?:[\- ]|(?=[,\s]))/g, function (match, a) {
 			let i = parseInt(a);
 			if (i < 1 || i > 99999) return match;
 			let digits = [
@@ -391,9 +391,9 @@ function dothing(element) {
 function load_table() {
 	let str = "<tr>";
 	let td_index = 0;
-	function add_to_str(x, asterisk) {
+	function add_to_str(x, asterisk, add_str) {
 		if (x == undefined) return;
-		let initial = "<i>"; let final = "</i><br>";
+		let initial = "<i>"; let final = (add_str || "") + "</i><br>";
 		if (asterisk) initial += "*"
 		if (typeof x == "string") str += initial + x + final;
 		else x.forEach(y => str += initial + y + final);
@@ -404,7 +404,7 @@ function load_table() {
 			str += "</tr><tr>"
 		}
 		str += '<td><span class="Linb">' + symbol.value + "</span><br>";
-		add_to_str(symbol.id, true);
+		add_to_str(symbol.id, true, symbol.vas ? "<sup>VAS</sup>" : null);
 		add_to_str(symbol.lc);
 		add_to_str(symbol.uc);
 		str += "</td>"

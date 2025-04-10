@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Linear A keyboard</title>
+<style>
+
+.Lina {
+	font-family: "Aegean", "Noto Sans Linear A";
+	font-size: 120%;
+}
+
+table {
+	width: 90%;
+}
+
+table, td {
+	text-align: center;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+</style>
+</head>
+<body onload="load_table()">
+<h1>Linear A keyboard</h1>
+<textarea type="text" oninput="dothing(this)" class="Lina" style="width:100%; height: 100px;" spellcheck="false" autofocus></textarea><br>
+<p>This is an online Linear A keyboard, the undeciphered script used to write Minoan. Note the following points:
+<ul>
+	<li>For every symbol you can write the ID, e.g. <i>8</i> for <span class="Lina">𐘇</span>, <i>22</i> for <span class="Lina">𐘒</span>, etc. The preceding asterisk is not required though it works as well.</li>
+	<li>For proposed recognised syllabograms you can write the syllable, e.g. <i>ka</i> for <span class="Lina">𐘾</span>, alongside <i>77</i>, etc.</li>
+	<li>The Unicode name preceded by <i>u</i> was also taken whenever present as a possible alias, e.g. <i>ux</i> for <span class="Lina">𐝎</span>, <i>ueyyy</i> for <span class="Lina">𐝔</span>, etc.</li>
+	<li>Numerals must be preceded by a <i>n</i> and will be converted automatically, e.g. <i>n2</i> for <span class="Lina">𐄈</span>, <i>n24</i> for <span class="Lina">𐄑𐄊</span>, <i>n2630</i> for <span class="Lina">𐄣𐄞𐄒</span>, etc.</li>
+	<li>These inputs must be followed by the pressing of dash or space in order to be converted. Any following whitespace character will also work.</li>
+	<li>Use the comma , for the word divider <span class="Lina">𐄀</span>. Also use the brackets [[ ]] and &lt; &gt; for <span class="Lina">⟦ ⟧</span> and <span class="Lina">⟨ ⟩</span> respectively.</li>
+	<li>This keyboard is limited by the character present in Unicode. A number of ideograms, especially combinations, are missing from it.</li>
+	<li>Please use this only to transcribe existing Linear A inscriptions and not to make up original ones. Misinformation is fast to spread and hard to extinguish.</li>
+</ul>
+If you are seeing boxes instead of symbols please install the font Aegean or Noto Sans Linear A. The symbols supported by Unicode are the following:</p>
+<table style="margin:1em"><tbody id="symbols-table"></tbody></table>
+<hr>For Linear B inscriptions, use the <a href="linearb_keyboard.html">Linear B keyboard</a>.
+<script>
+
+let symbols = [
+	{ value: "𐘀", id: "1", tr: "da", type: "ab" },
+	{ value: "𐘁", id: "2", tr: "ro", type: "ab" },
+	{ value: "𐘂", id: "3", tr: "pa", type: "ab" },
+	{ value: "𐘃", id: "4", tr: "te", type: "ab" },
+	{ value: "𐘄", id: "5", tr: "to", type: "ab" },
+	{ value: "𐘅", id: "6", tr: "na", type: "ab" },
+	{ value: "𐘆", id: "7", tr: "di", type: "ab" },
+	{ value: "𐘇", id: "8", tr: "a", type: "ab" },
+	{ value: "𐘈", id: "9", tr: "se", type: "ab" },
+	{ value: "𐘉", id: "10", tr: "u", type: "ab" },
+	{ value: "𐘊", id: "11", tr: "po", type: "ab" },
+	{ value: "𐘋", id: "13", tr: "me", type: "ab" },
+	{ value: "𐘌", id: "16", tr: "qa", type: "ab" },
+	{ value: "𐘍", id: "17", tr: "za", type: "ab" },
+	{ value: "𐘎", id: "20", tr: "zo", type: "ab" },
+	{ value: "𐘏", id: "21", tr: "qi", type: "ab" },
+	{ value: "𐘐", id: "21f", type: "ab" },
+	{ value: "𐘑", id: "21m", type: "ab" },
+	{ value: "𐘒", id: "22", type: "ab" },
+	{ value: "𐘓", id: "22f", type: "ab" },
+	{ value: "𐘔", id: "22m", type: "ab" },
+	{ value: "𐘕", id: "23", tr: "mu", type: "ab" },
+	{ value: "𐘖", id: "23m", type: "ab" },
+	{ value: "𐘗", id: "24", tr: "ne", type: "ab" },
+	{ value: "𐘘", id: "26", tr: "ru", type: "ab" },
+	{ value: "𐘙", id: "27", tr: "re", type: "ab" },
+	{ value: "𐘚", id: "28", tr: ["i", "no"], type: "ab" },
+	{ value: "𐘛", id: "28b", type: "a" },
+	{ value: "𐘜", id: "29", type: "ab" },
+	{ value: "𐘝", id: "30", tr: "ni", type: "ab" },
+	{ value: "𐘞", id: "31", tr: "sa", type: "ab" },
+	{ value: "𐘟", id: "34", type: "ab" },
+	{ value: "𐘠", id: "37", tr: "ti", type: "ab" },
+	{ value: "𐘡", id: "38", tr: "e", type: "ab" },
+	{ value: "𐘢", id: "39", tr: "pi", type: "ab" },
+	{ value: "𐘣", id: "40", tr: "wi", type: "ab" },
+	{ value: "𐘤", id: "41", tr: "si", type: "ab" },
+	{ value: "𐘥", id: "44", tr: "ke", type: "ab" },
+	{ value: "𐘦", id: "45", tr: "de", type: "ab" },
+	{ value: "𐘧", id: "46", tr: "je", type: "ab" },
+	{ value: "𐘨", id: "47", type: "ab" },
+	{ value: "𐘩", id: "48", type: "ab" },
+	{ value: "𐘪", id: "49", type: "ab" },
+	{ value: "𐘫", id: "50", tr: "pu", type: "ab" },
+	{ value: "𐘬", id: "51", tr: "du", type: "ab" },
+	{ value: "𐘭", id: "53", tr: "ri", type: "ab" },
+	{ value: "𐘮", id: "54", tr: "wa", type: "ab" },
+	{ value: "𐘯", id: "55", tr: "nu", type: "ab" },
+	{ value: "𐘰", id: "56", type: "ab" },
+	{ value: "𐘱", id: "57", tr: "ja", type: "ab" },
+	{ value: "𐘲", id: "58", tr: "su", type: "ab" },
+	{ value: "𐘳", id: "59", tr: "ta", type: "ab" },
+	{ value: "𐘴", id: "60", tr: "ra", type: "ab" },
+	{ value: "𐘵", id: "61", tr: "o", type: "ab" },
+	{ value: "𐘶", id: "65", type: "ab" },
+	{ value: "𐘷", id: "66", type: "ab" },
+	{ value: "𐘸", id: "67", tr: "ki", type: "ab" },
+	{ value: "𐘹", id: "69", tr: "tu", type: "ab" },
+	{ value: "𐘺", id: "70", tr: "ko", type: "ab" },
+	{ value: "𐘻", id: "73", tr: "mi", type: "ab" },
+	{ value: "𐘼", id: "74", tr: "ze", type: "ab" },
+	{ value: "𐘽", id: "76", type: "ab" },
+	{ value: "𐘾", id: "77", tr: "ka", type: "ab" },
+	{ value: "𐘿", id: "78", tr: "qe", type: "ab" },
+	{ value: "𐙀", id: "79", tr: ["do", "zu"], type: "ab" },
+	{ value: "𐙁", id: "80", tr: "ma", type: "ab" },
+	{ value: "𐙂", id: "81", tr: "ku", type: "ab" },
+	{ value: "𐙃", id: "82", type: "ab" },
+	{ value: "𐙄", id: "85", type: "ab" },
+	{ value: "𐙅", id: "86", type: "ab" },
+	{ value: "𐙆", id: "87", type: "ab" },
+	{ value: "𐙇", id: ["100", "101", "102"], type: "a" },
+	{ value: "𐙈", id: "118", type: "ab" },
+	{ value: "𐙉", id: "120", type: "ab" },
+	{ value: "𐙊", id: "120b", type: "a" },
+	{ value: "𐙋", id: "122", type: "ab" },
+	{ value: "𐙌", id: "123", type: "ab" },
+	{ value: "𐙍", id: "131a", type: "ab" },
+	{ value: "𐙎", id: "131b", type: "ab" },
+	{ value: "𐙏", id: "131c", type: "a" },
+	{ value: "𐙐", id: "164", type: "ab" },
+	{ value: "𐙑", id: "171", type: "ab" },
+	{ value: "𐙒", id: "180", type: "ab" },
+	{ value: "𐙓", id: "188", type: "ab" },
+	{ value: "𐙔", id: "191", type: "ab" },
+	{ value: "𐙕", id: "301", type: "a" },
+	{ value: "𐙖", id: "302", type: "a" },
+	{ value: "𐙗", id: "303", tr: "mo", type: "a" },
+	{ value: "𐙘", id: "304", type: "a" },
+	{ value: "𐙙", id: "305", type: "a" },
+	{ value: "𐙚", id: "306", type: "a" },
+	{ value: "𐙛", id: "307", type: "a" },
+	{ value: "𐙜", id: "308", type: "a" },
+	{ value: "𐙝", id: "309a", type: "a" },
+	{ value: "𐙞", id: "309b", type: "a" },
+	{ value: "𐙟", id: "309c", type: "a" },
+	{ value: "𐙠", id: "310", type: "a" },
+	{ value: "𐙡", id: "311", type: "a" },
+	{ value: "𐙢", id: "312", type: "a" },
+	{ value: "𐙣", id: "313a", type: "a" },
+	{ value: "𐙤", id: "313b", type: "a" },
+	{ value: "𐙥", id: "313c", type: "a" },
+	{ value: "𐙦", id: "314", type: "a" },
+	{ value: "𐙧", id: "315", type: "a" },
+	{ value: "𐙨", id: "316", type: "a" },
+	{ value: "𐙩", id: "317", type: "a" },
+	{ value: "𐙪", id: "318", type: "a" },
+	{ value: "𐙫", id: "319", type: "a" },
+	{ value: "𐙬", id: "320", type: "a" },
+	{ value: "𐙭", id: "321", type: "a" },
+	{ value: "𐙮", id: "322", type: "a" },
+	{ value: "𐙯", id: "323", type: "a" },
+	{ value: "𐙰", id: "324", type: "a" },
+	{ value: "𐙱", id: "325", type: "a" },
+	{ value: "𐙲", id: "326", type: "a" },
+	{ value: "𐙳", id: "327", type: "a" },
+	{ value: "𐙴", id: "328", type: "a" },
+	{ value: "𐙵", id: "329", type: "a" },
+	{ value: "𐙶", id: "330", type: "a" },
+	{ value: "𐙷", id: "331", type: "a" },
+	{ value: "𐙸", id: "332", type: "a" },
+	{ value: "𐙹", id: "333", type: "a" },
+	{ value: "𐙺", id: "334", type: "a" },
+	{ value: "𐙻", id: "335", type: "a" },
+	{ value: "𐙼", id: "336", type: "a" },
+	{ value: "𐙽", id: "337", type: "a" },
+	{ value: "𐙾", id: "338", type: "a" },
+	{ value: "𐙿", id: "339", type: "a" },
+	{ value: "𐚀", id: "340", type: "a" },
+	{ value: "𐚁", id: "341", type: "a" },
+	{ value: "𐚂", id: "342", type: "a" },
+	{ value: "𐚃", id: "343", type: "a" },
+	{ value: "𐚄", id: "344", type: "a" },
+	{ value: "𐚅", id: "345", type: "a" },
+	{ value: "𐚆", id: "346", type: "a" },
+	{ value: "𐚇", id: "347", type: "a" },
+	{ value: "𐚈", id: "348", type: "a" },
+	{ value: "𐚉", id: "349", type: "a" },
+	{ value: "𐚊", id: "350", type: "a" },
+	{ value: "𐚋", id: "351", type: "a" },
+	{ value: "𐚌", id: "352", type: "a" },
+	{ value: "𐚍", id: "353", type: "a" },
+	{ value: "𐚎", id: "354", type: "a" },
+	{ value: "𐚏", id: "355", type: "a" },
+	{ value: "𐚐", id: "356", type: "a" },
+	{ value: "𐚑", id: "357", type: "a" },
+	{ value: "𐚒", id: "358", type: "a" },
+	{ value: "𐚓", id: "359", type: "a" },
+	{ value: "𐚔", id: "360", type: "a" },
+	{ value: "𐚕", id: "361", type: "a" },
+	{ value: "𐚖", id: "362", type: "a" },
+	{ value: "𐚗", id: "363", type: "a" },
+	{ value: "𐚘", id: "364", type: "a" },
+	{ value: "𐚙", id: "365", type: "a" },
+	{ value: "𐚚", id: "366", type: "a" },
+	{ value: "𐚛", id: "367", type: "a" },
+	{ value: "𐚜", id: "368", type: "a" },
+	{ value: "𐚝", id: "369", type: "a" },
+	{ value: "𐚞", id: "370", type: "a" },
+	{ value: "𐚟", id: "371", type: "a" },
+	{ value: "𐚠", id: "400", vas: true, type: "a" },
+	{ value: "𐚡", id: "401", vas: true, type: "a" },
+	{ value: "𐚢", id: "402", vas: true, type: "a" },
+	{ value: "𐚣", id: "403", vas: true, type: "a" },
+	{ value: "𐚤", id: "404", vas: true, type: "a" },
+	{ value: "𐚥", id: "405", vas: true, type: "a" },
+	{ value: "𐚦", id: "406", vas: true, type: "a" },
+	{ value: "𐚧", id: "407", vas: true, type: "a" },
+	{ value: "𐚨", id: "408", vas: true, type: "a" },
+	{ value: "𐚩", id: "409", vas: true, type: "a" },
+	{ value: "𐚪", id: "410", vas: true, type: "a" },
+	{ value: "𐚫", id: "411", vas: true, type: "a" },
+	{ value: "𐚬", id: "412", vas: true, type: "a" },
+	{ value: "𐚭", id: "413", vas: true, type: "a" },
+	{ value: "𐚮", id: "414", vas: true, type: "a" },
+	{ value: "𐚯", id: "415", vas: true, type: "a" },
+	{ value: "𐚰", id: "416", vas: true, type: "a" },
+	{ value: "𐚱", id: "417", vas: true, type: "a" },
+	{ value: "𐚲", id: "418", vas: true, type: "a" },
+	{ value: "𐚳", id: "501", type: "a" },
+	{ value: "𐚴", id: "502", type: "a" },
+	{ value: "𐚵", id: "503", type: "a" },
+	{ value: "𐚶", id: "504", type: "a" },
+	{ value: "𐚷", id: "505", type: "a" },
+	{ value: "𐚸", id: "506", type: "a" },
+	{ value: "𐚹", id: "508", type: "a" },
+	{ value: "𐚺", id: "509", type: "a" },
+	{ value: "𐚻", id: "510", type: "a" },
+	{ value: "𐚼", id: "511", type: "a" },
+	{ value: "𐚽", id: "512", type: "a" },
+	{ value: "𐚾", id: "513", type: "a" },
+	{ value: "𐚿", id: "515", type: "a" },
+	{ value: "𐛀", id: "516", type: "a" },
+	{ value: "𐛁", id: "520", type: "a" },
+	{ value: "𐛂", id: "521", type: "a" },
+	{ value: "𐛃", id: "523", type: "a" },
+	{ value: "𐛄", id: "524", type: "a" },
+	{ value: "𐛅", id: "525", type: "a" },
+	{ value: "𐛆", id: "526", type: "a" },
+	{ value: "𐛇", id: "527", type: "a" },
+	{ value: "𐛈", id: "528", type: "a" },
+	{ value: "𐛉", id: "529", type: "a" },
+	{ value: "𐛊", id: "530", type: "a" },
+	{ value: "𐛋", id: "531", type: "a" },
+	{ value: "𐛌", id: "532", type: "a" },
+	{ value: "𐛍", id: "534", type: "a" },
+	{ value: "𐛎", id: "535", type: "a" },
+	{ value: "𐛏", id: "536", type: "a" },
+	{ value: "𐛐", id: "537", type: "a" },
+	{ value: "𐛑", id: "538", type: "a" },
+	{ value: "𐛒", id: "539", type: "a" },
+	{ value: "𐛓", id: "540", type: "a" },
+	{ value: "𐛔", id: "541", type: "a" },
+	{ value: "𐛕", id: "542", type: "a" },
+	{ value: "𐛖", id: "545", type: "a" },
+	{ value: "𐛗", id: "547", type: "a" },
+	{ value: "𐛘", id: "548", type: "a" },
+	{ value: "𐛙", id: "549", type: "a" },
+	{ value: "𐛚", id: "550", type: "a" },
+	{ value: "𐛛", id: "551", type: "a" },
+	{ value: "𐛜", id: "552", type: "a" },
+	{ value: "𐛝", id: "553", type: "a" },
+	{ value: "𐛞", id: "554", type: "a" },
+	{ value: "𐛟", id: "555", type: "a" },
+	{ value: "𐛠", id: "556", type: "a" },
+	{ value: "𐛡", id: "557", type: "a" },
+	{ value: "𐛢", id: "559", type: "a" },
+	{ value: "𐛣", id: "563", type: "a" },
+	{ value: "𐛤", id: "564", type: "a" },
+	{ value: "𐛥", id: "565", type: "a" },
+	{ value: "𐛦", id: "566", type: "a" },
+	{ value: "𐛧", id: "568", type: "a" },
+	{ value: "𐛨", id: "569", type: "a" },
+	{ value: "𐛩", id: "570", type: "a" },
+	{ value: "𐛪", id: "571", type: "a" },
+	{ value: "𐛫", id: "572", type: "a" },
+	{ value: "𐛬", id: "573", type: "a" },
+	{ value: "𐛭", id: "574", type: "a" },
+	{ value: "𐛮", id: "575", type: "a" },
+	{ value: "𐛯", id: "576", type: "a" },
+	{ value: "𐛰", id: "577", type: "a" },
+	{ value: "𐛱", id: "578", type: "a" },
+	{ value: "𐛲", id: "579", type: "a" },
+	{ value: "𐛳", id: "580", type: "a" },
+	{ value: "𐛴", id: "581", type: "a" },
+	{ value: "𐛵", id: "582", type: "a" },
+	{ value: "𐛶", id: "583", type: "a" },
+	{ value: "𐛷", id: "584", type: "a" },
+	{ value: "𐛸", id: "585", type: "a" },
+	{ value: "𐛹", id: "586", type: "a" },
+	{ value: "𐛺", id: "587", type: "a" },
+	{ value: "𐛻", id: "588", type: "a" },
+	{ value: "𐛼", id: "589", type: "a" },
+	{ value: "𐛽", id: "591", type: "a" },
+	{ value: "𐛾", id: "592", type: "a" },
+	{ value: "𐛿", id: "594", type: "a" },
+	{ value: "𐜀", id: "595", type: "a" },
+	{ value: "𐜁", id: "596", type: "a" },
+	{ value: "𐜂", id: "598", type: "a" },
+	{ value: "𐜃", id: "600", type: "a" },
+	{ value: "𐜄", id: "601", type: "a" },
+	{ value: "𐜅", id: "602", type: "a" },
+	{ value: "𐜆", id: "603", type: "a" },
+	{ value: "𐜇", id: "604", type: "a" },
+	{ value: "𐜈", id: "606", type: "a" },
+	{ value: "𐜉", id: "608", type: "a" },
+	{ value: "𐜊", id: "609", type: "a" },
+	{ value: "𐜋", id: "610", type: "a" },
+	{ value: "𐜌", id: "611", type: "a" },
+	{ value: "𐜍", id: "612", type: "a" },
+	{ value: "𐜎", id: "613", type: "a" },
+	{ value: "𐜏", id: "614", type: "a" },
+	{ value: "𐜐", id: "615", type: "a" },
+	{ value: "𐜑", id: "616", type: "a" },
+	{ value: "𐜒", id: "617", type: "a" },
+	{ value: "𐜓", id: "618", type: "a" },
+	{ value: "𐜔", id: "619", type: "a" },
+	{ value: "𐜕", id: "620", type: "a" },
+	{ value: "𐜖", id: "621", type: "a" },
+	{ value: "𐜗", id: "622", type: "a" },
+	{ value: "𐜘", id: "623", type: "a" },
+	{ value: "𐜙", id: "624", type: "a" },
+	{ value: "𐜚", id: "626", type: "a" },
+	{ value: "𐜛", id: "627", type: "a" },
+	{ value: "𐜜", id: "628", type: "a" },
+	{ value: "𐜝", id: "629", type: "a" },
+	{ value: "𐜞", id: "634", type: "a" },
+	{ value: "𐜟", id: "637", type: "a" },
+	{ value: "𐜠", id: "638", type: "a" },
+	{ value: "𐜡", id: "640", type: "a" },
+	{ value: "𐜢", id: "642", type: "a" },
+	{ value: "𐜣", id: "643", type: "a" },
+	{ value: "𐜤", id: "644", type: "a" },
+	{ value: "𐜥", id: "645", type: "a" },
+	{ value: "𐜦", id: "646", type: "a" },
+	{ value: "𐜧", id: "648", type: "a" },
+	{ value: "𐜨", id: "649", type: "a" },
+	{ value: "𐜩", id: "651", type: "a" },
+	{ value: "𐜪", id: "652", type: "a" },
+	{ value: "𐜫", id: "653", type: "a" },
+	{ value: "𐜬", id: "654", type: "a" },
+	{ value: "𐜭", id: "655", type: "a" },
+	{ value: "𐜮", id: "656", type: "a" },
+	{ value: "𐜯", id: "657", type: "a" },
+	{ value: "𐜰", id: "658", type: "a" },
+	{ value: "𐜱", id: "659", type: "a" },
+	{ value: "𐜲", id: "660", type: "a" },
+	{ value: "𐜳", id: "661", type: "a" },
+	{ value: "𐜴", id: "662", type: "a" },
+	{ value: "𐜵", id: "663", type: "a" },
+	{ value: "𐜶", id: "664", type: "a" },
+	{ value: "𐝀", id: "701", uni: "a", type: "a" },
+	{ value: "𐝁", id: "702", uni: "b", type: "a" },
+	{ value: "𐝂", id: "703", uni: "d", type: "a" },
+	{ value: "𐝃", id: "704", uni: "e", type: "a" },
+	{ value: "𐝄", id: "705", uni: "f", type: "a" },
+	{ value: "𐝅", id: "706", uni: "h", type: "a" },
+	{ value: "𐝆", id: "707", uni: "j", type: "a" },
+	{ value: "𐝇", id: "708", uni: "k", type: "a" },
+	{ value: "𐝈", id: "709", uni: "l", type: "a" },
+	{ value: "𐝉", id: "709/2", uni: "l2", type: "a" },
+	{ value: "𐝊", id: "709/3", uni: "l3", type: "a" },
+	{ value: "𐝋", id: "709/4", uni: "l4", type: "a" },
+	{ value: "𐝌", id: "709/6", uni: "l6", type: "a" },
+	{ value: "𐝍", id: "710", uni: "w", type: "a" },
+	{ value: "𐝎", id: "711", uni: "x", type: "a" },
+	{ value: "𐝏", id: "712", uni: "y", type: "a" },
+	{ value: "𐝐", id: "713", uni: "omega", type: "a" },
+	{ value: "𐝑", id: "714", uni: "abb", type: "a" },
+	{ value: "𐝒", id: "715", uni: "bb", type: "a" },
+	{ value: "𐝓", id: "717", uni: "dd", type: "a" },
+	{ value: "𐝔", id: "726", uni: "eyyy", type: "a" },
+	{ value: "𐝕", id: "732", uni: "je", type: "a" },
+	{ value: "𐝠", id: "800", type: "a" },
+	{ value: "𐝡", id: "801", type: "a" },
+	{ value: "𐝢", id: "802", type: "a" },
+	{ value: "𐝣", id: "803", type: "a" },
+	{ value: "𐝤", id: "804", type: "a" },
+	{ value: "𐝥", id: "805", type: "a" },
+	{ value: "𐝦", id: "806", type: "a" },
+	{ value: "𐝧", id: "807", type: "a" },
+];
+
+let digit_symbols = {
+	[0]: "",
+	[1]: "𐄇",
+	[2]: "𐄈",
+	[3]: "𐄉",
+	[4]: "𐄊",
+	[5]: "𐄋",
+	[6]: "𐄌",
+	[7]: "𐄍",
+	[8]: "𐄎",
+	[9]: "𐄏",
+	[10]: "𐄐",
+	[20]: "𐄑",
+	[30]: "𐄒",
+	[40]: "𐄓",
+	[50]: "𐄔",
+	[60]: "𐄕",
+	[70]: "𐄖",
+	[80]: "𐄗",
+	[90]: "𐄘",
+	[100]: "𐄙",
+	[200]: "𐄚",
+	[300]: "𐄛",
+	[400]: "𐄜",
+	[500]: "𐄝",
+	[600]: "𐄞",
+	[700]: "𐄟",
+	[800]: "𐄠",
+	[900]: "𐄡",
+	[1000]: "𐄢",
+	[2000]: "𐄣",
+	[3000]: "𐄤",
+	[4000]: "𐄥",
+	[5000]: "𐄦",
+	[6000]: "𐄧",
+	[7000]: "𐄨",
+	[8000]: "𐄩",
+	[9000]: "𐄪",
+	[10000]: "𐄫",
+	[20000]: "𐄬",
+	[30000]: "𐄭",
+	[40000]: "𐄮",
+	[50000]: "𐄯",
+	[60000]: "𐄰",
+	[70000]: "𐄱",
+	[80000]: "𐄲",
+	[90000]: "𐄳",
+}
+
+let value_from_id = {};
+let value_from_tr = {};
+let value_from_uni = {};
+
+function add_to_table(value_from_x, x, value) {
+	if (typeof x == "string") value_from_x[x] = value;
+	else x.forEach(y => value_from_x[y] = value);
+}
+
+symbols.forEach(function (x) {
+	add_to_table(value_from_id, x.id, x.value);
+	if (x.tr) add_to_table(value_from_tr, x.tr, x.value);
+	if (x.uni) add_to_table(value_from_tr, "u" + x.uni, x.value);
+});
+
+function give_if_have(value_from_x) {
+	return function (match, a) {
+		let r = value_from_x[a];
+		if (r == undefined) return match;
+		return r;
+	}
+}
+
+function dothing(element) {
+	// Set values to keep cursor still.
+	let previous_cursor_position = element.selectionStart;
+	let previous_textarea_length = element.value.length;
+	// Do replacements.
+	element.value = element.value
+		.toLowerCase()
+		.replace(/n(\d+)(?:[\- ]|(?=[,\s]))/g, function (match, a) {
+			let i = parseInt(a);
+			if (i < 1 || i > 99999) return match;
+			let digits = [
+				i - i % 10000,
+				i % 10000 - i % 1000,
+				i % 1000 - i % 100,
+				i % 100 - i % 10,
+				i % 10
+			];
+			let str = "";
+			digits.forEach(digit => str += digit_symbols[digit]);
+			return str;
+		})
+		.replace(/([a-z][a-z0-9\-]*)(?:[\- ]|(?=[,\s]))/g, give_if_have(value_from_tr))
+		.replace(/\*?0*([\d/]+[bmf]?)(?:[\- ]|(?=[,\s]))/g, give_if_have(value_from_id))
+		.replace(/,/g, "𐄀").replace(/;/g, "𐄁")
+		.replace(/\[\[/g, "⟦").replace(/\]\]/g, "⟧")
+		.replace(/\</g, "⟨").replace(/\>/g, "⟩")
+	// Keep cursor still.
+	element.selectionEnd = element.selectionStart = previous_cursor_position + element.value.length - previous_textarea_length;
+}
+
+function load_table() {
+	let str = "<tr>";
+	let td_index = 0;
+	function add_to_str(x, initial, final) {
+		if (x == undefined) return;
+		if (initial == "u") x = x.toUpperCase();
+		initial = "<i>" + (initial || "");
+		final = (final || "") + "</i><br>";
+		if (typeof x == "string") str += initial + x + final;
+		else x.forEach(y => str += initial + y + final);
+	}
+	symbols.forEach(symbol => {
+		if (td_index > 7) {
+			td_index = 0;
+			str += "</tr><tr>"
+		}
+		str += '<td><span class="Lina">' + symbol.value + "</span><br>";
+		add_to_str(symbol.id, "*", symbol.vas ? "<sup>VAS</sup>" : null);
+		add_to_str(symbol.tr);
+		add_to_str(symbol.uni, "u");
+		str += "</td>"
+		td_index++;
+	});
+	document.getElementById("symbols-table").innerHTML = str + "</tr>";
+}
+
+</script>
+</body>
+<footer><hr>By Catonif, April 2025. <a href="..">Homepage</a>. catonif.dev@gmail.com</footer>
