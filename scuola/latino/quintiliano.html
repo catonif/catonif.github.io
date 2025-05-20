@@ -1,0 +1,141 @@
+<html>
+<head>
+<style>
+.latin { font-style: italic; }
+.selected { background-color: aquamarine; }
+body, td {
+	font-size: 200%;
+}
+td {
+	padding: 2em;
+}
+ul {
+	padding-left: 3em;
+}
+</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td id="latin" class="latin"></td>
+			<td id="trad"></td>
+		</tr>
+	</table>
+	<ul id="notes"></ul>
+<script>
+function format_span(id, txt) {
+	return `<span onclick="clicktext('` + id + `')" name="` + id + `">` + txt + `</span>`
+}
+// original text
+var latin = "Sed nobis iam paulatim adcrescere puer et1 exire de_gremio et2 discere serio incipiat. Hoc:loco igitur potissimum loco tractanda quaestio est:tractanda, utilius-ne sit domi atque intra_privatos studentem continere, an frequentiae_scholarum et3 velut publicatis_praeceptoribus tradere.";
+document.getElementById("latin").innerHTML = latin.replace(/[A-z0-9:]+/g, (str) => format_span(
+	str.replace(/^.+:/, ""), str.replace(/:.+$/, "").replace(/\d/g, "").replace(/_/g, " ")
+)).replace(/-/g, "");
+// translated text
+var data = [
+	["Ma", "Sed"],
+	["ormai", "iam"],
+	"il",
+	["nostro", "nobis"],
+	["fanciullo", "puer"],
+	["cominci", "incipiat"],
+	["poco a poco", "paulatim"],
+	"a",
+	["crescere", "adcrescere"],
+	["e", "et1"],
+	"a",
+	["uscire", "exire"],
+	["dal grembo [della nutrice]", "de_gremio"],
+	["e", "et2"],
+	"ad",
+	["imparare", "discere"],
+	["davvero", "serio"],
+	".",
+	["A questo punto", "loco"],
+	["è", "tractanda"],
+	["dunque", "igitur"],
+	["necessario", "tractanda"],
+	["soprattutto", "potissimum"],
+	["affrontare", "tractanda"],
+	"la",
+	["questione", "quaestio"],
+	["se", "ne"],
+	["sia", "sit"],
+	["più utile", "utilius"],
+	["trattenere", "continere"],
+	"l'",
+	["allievo", "studentem"],
+	["a casa", "domi"],
+	["e", "atque"],
+	["tra [insegnanti] privati", "intra_privatos"],
+	["oppure", "an"],
+	["affidar", "tradere"],
+	"-lo",
+	["alle scuole affollate", "frequentiae_scholarum"],
+	["e", "et3"],
+	",",
+	["per esempio", "velut"],
+	",",
+	["agli insegnanti pubblici", "publicatis_praeceptoribus"],
+	".",
+];
+var trad = ""
+for (let i = 0; i < data.length; i++) {
+	const e = data[i];
+	var space = (i == 0 || e == "." || e == ",") ? "" : " "
+	switch (typeof e) {
+		case "string":
+			trad += space + e
+			break;
+		case "object":
+			trad += space + format_span(e[1], e[0])
+			break;
+	}
+}
+document.getElementById("trad").innerHTML = trad.replace(/l' /g, "l'").replace(/ -/g, "")
+// notes
+let notes_ul = document.getElementById("notes")
+let notes = {
+	"nobis": "dativo etico, come se fosse {noster puer}",
+	"incipiat": ["congiuntivo esortativo", "regge {adcrescere}, {exire} e {discere}"],
+	"paulatim": "avverbio in {-atim} da {paulus} “poco”",
+	"adcrescere": "infinitiva retta da {incipiat}",
+	"exire": "infinitiva retta da {incipiat}",
+	"discere": "infinitiva retta da {incipiat}",
+	"tractanda": "perifrastica passiva",
+	"utilius": "comparativo relativo di {utilis}",
+	"ne": "suffisso che si mette sulla prima parola di una domanda",
+	"sit": "interrogativa indiretta disgiuntiva: introduce due scelte possibili",
+	"domi": "locativo di {domus}",
+	"intra_privatos": "“tra [maestri] privati”, implicito {[praeceptores] privatos}, che segue",
+	"tradere": "sottinteso sempre lo {studentem}, per cui si traduce “affidarlo”",
+	"frequentiae_scholarum": [
+		"“all’affollamento delle scuole” sta per “alle scuole affollate”",
+		"il concetto concreto viene espresso con una parola che si riferisce a una sua qualità astratta"
+	],
+	"publicatis_praeceptoribus": [
+		"da notare {publicatus}, cioè letteralmente “reso pubblico, confiscato” più che “pubblico”",
+		"il verbo {publico} ha anche accezioni negative come “prostituire”"
+	],
+}
+// onclick text
+function clicktext(clicked_id) {
+	let selected_stuff = document.getElementsByClassName("selected");
+	while (selected_stuff.length > 0) {
+		selected_stuff[0].className = "";
+	}
+	let clicked_stuff = document.getElementsByName(clicked_id);
+	for (let i = 0; i < clicked_stuff.length; i++) {
+		const element = clicked_stuff[i];
+		element.className = "selected";
+	}
+	notes_ul.innerHTML = ""
+	let clicked_note = notes[clicked_id]
+	if (typeof clicked_note == "string") clicked_note = [clicked_note];
+	clicked_note.forEach(e => {
+		notes_ul.innerHTML += "<li>" + e.replace(/\{/g, `<span class="latin">`).replace(/\}/g, `</span>`) + "</li>"
+	});
+}
+</script>
+</body>
+</html>

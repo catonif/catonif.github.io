@@ -19,6 +19,13 @@ table, td {
 	border-collapse: collapse;
 }
 
+.symbol-type-ab {
+	background-color: lightcyan;
+}
+
+.symbol-type-a {
+	background-color: lightyellow;
+}
 </style>
 </head>
 <body onload="load_table()">
@@ -35,7 +42,7 @@ table, td {
 	<li>This keyboard is limited by the character present in Unicode. A number of ideograms, especially combinations, are missing from it.</li>
 	<li>Please use this only to transcribe existing Linear A inscriptions and not to make up original ones. Misinformation is fast to spread and hard to extinguish.</li>
 </ul>
-If you are seeing boxes instead of symbols please install the font Aegean or Noto Sans Linear A. The symbols supported by Unicode are the following:</p>
+If you are seeing boxes instead of symbols please install the font Aegean or Noto Sans Linear A. The symbols supported by Unicode are the following (the <span class="symbol-type-ab">cyan</span> symbols are shared with Linear B, the <span class="symbol-type-a">yellow</span> symbols are specific to Linear A):</p>
 <table style="margin:1em"><tbody id="symbols-table"></tbody></table>
 <hr>For Linear B inscriptions, use the <a href="linearb_keyboard.html">Linear B keyboard</a>.
 <script>
@@ -502,7 +509,7 @@ function load_table() {
 			td_index = 0;
 			str += "</tr><tr>"
 		}
-		str += '<td><span class="Lina">' + symbol.value + "</span><br>";
+		str += '<td class="symbol-type-' + symbol.type + '"><span class="Lina">' + symbol.value + "</span><br>";
 		add_to_str(symbol.id, "*", symbol.vas ? "<sup>VAS</sup>" : null);
 		add_to_str(symbol.tr);
 		add_to_str(symbol.uni, "u");
