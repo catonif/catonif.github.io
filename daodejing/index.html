@@ -1,0 +1,290 @@
+<head>
+<title>Daodejing 01</title>
+<style>
+/* FONTS */
+.hn { font-family: "Noto Serif TC", serif }
+body { font-family: "Gentium Plus", "Gentium", serif }
+
+/* TEXT */
+.oc, .mc, .py {
+	color: gray;
+}
+.py, .tr {
+	font-style: italic;
+}
+
+/* SIZING */
+table {
+	border-collapse: collapse;
+}
+
+.hn > td {
+	font-size: 300%;
+}
+
+.oc > td, .mc > td, .py > td {
+	text-align: center;
+}
+
+.mc > td {
+	vertical-align: bottom;
+}
+
+.num {
+	vertical-align: top;
+	padding: 20px;
+}
+
+.eng {
+	vertical-align: top;
+	padding: 20px;
+}
+
+.tr {
+	font-size: 150%;
+}
+
+h2 {
+	margin-bottom: 0;
+}
+
+/* SELECTION */
+.selected {
+	background-color: #8fd;
+}
+
+.nt .selected {
+	background-color: #ffa;
+}
+
+.cb:hover:not(.selected) {
+	background-color: #dff;
+}
+
+.selected.cb:hover {
+	background-color: #afe;
+}
+</style>
+</head>
+<body>
+<h2><i>Dàodéjīng</i> 01</h2>
+Install the fonts Gentium Plus and Noto Serif Traditional Chinese.<br>
+The Old and Middle Chinese reconstructed pronunciations follow Zhenzhang (2003), apud Wiktionary. The language of Laozi is probably not well reflected by either, but should roughly fall in between.<br>
+Try clicking on a word!
+<hr>
+<table><tbody id="output"></tbody></table>
+<script>
+
+let daodejing = `
+道可道，
+非常道。
+名可名，
+非常名。
+無名天_地之始。
+有名萬_物之母。
+故常無欲，
+以觀其妙。
+常有欲，
+以觀其徼。
+此兩者同出，
+而異名，
+同謂之玄。
+玄_之_又_玄，
+眾妙之門。
+`
+
+let translation = {
+	1: [
+		"The way:道 that_can_be:可 told:道, is not:非 the eternal:常 way:道.",
+		"The line is a play on words based on the polysemy of {道}, meaning both “way” and “to say, to utter”. Alternative translation for the first line however are also “a path fit for travel” or “a path that can be trodden”."
+	],
+	3: [
+		"Names:名 that_can_be:可 called:名, are not:非 eternal:常 names:名.",
+		"Structural parallel to the previous statement, with {名} also having both a nominal and a verbal meaning, usually “name” and “to be called, to describe”. However some translations  the two as “concept” and “to conceive” respectively to better convey the meaning implied.",
+	],
+	5: [
+		"Without:無 a name:名 is the beginning:始 of:之 the universe:天地.",
+		"The expression {天地} is a compound of {天} “Heaven” and {地} “Earth”. The two characters {無 名}, literally “without a name”, have also be translated as “is inconceivable”, cf. the notes for the previous lines."
+	],
+	6: [
+		"With:有 a name:名 is the mother:母 of:之 all_things:萬物.",
+		"The expression {萬物} is a compound of {萬} “ten thousands, a myriad” and {物} “things”. These lines indicate that although the starting time, i.e. {始}, of the universe cannot be conceived, i.e. given a name, we can conceive the primary cause, i.e. {母}, of everything that followed."
+	],
+	7: [
+		"Therefore:故, always:常 without:無 desire:欲, in_order_to:以 contemplate:觀 its:其 mystery:妙.",
+		"For {以} I preferred the translation “in order to”, although I also found “accordingly” or “so”. The term {妙} means literally “subtle, mysterious, profound” or also “marvelous, ingenious”. Here it stands describe the underlying mysterious and profound essence of all things."
+	],
+	9: [
+		"Always:常 with:有 desire:欲, in_order_to:以 contemplate:觀 its:其 surface:徼.",
+		"On a strong antithesis to the previous statement, {徼} literally means “border, frontier”."
+	],
+	11: [
+		"These:此 two:兩 arising:出 together:同, yet:而 different:異 in name:名, together:同 call:謂 them:之 profound:玄.",
+		"{者} is a topicaliser used after a term to mark a pause before its definition. {玄} is otherwise seen translated as “mysterious” or “dark”. I avoided the first to maintain the distinction from translations of {妙} and the second to avoid the preceived negative connotation."
+	],
+	14: [
+		"Extremely_profound:玄之又玄 is the gate:門 of:之 all:眾 mysteries:妙.",
+		"The expression {玄之又玄} from here entered common speech and is still used to mean “extremely profound”, which is the translation I chose here, as it is difficult to give the proper literal translation, various attempts being “the deep of deeps”, “the obscure of the obscure”, “the mystery of mysteries”."
+	],
+}
+
+// “”
+
+let readings = {
+	道: ["dào", "l'uːʔ", "dɑuX"],
+	可: ["kě", "kʰaːlʔ", "kʰɑX"],
+	非: ["fēi", "pɯl", "pʉi"],
+	常: ["cháng", "djaŋ", "d͡ʑɨɐŋ"],
+	名: ["míng", "meŋ", "miᴇŋ"],
+	無: ["wú", "ma", "mɨo"],
+	天: ["tiān", "qʰl'iːn", "tʰen"],
+	地: ["dì", "l'els", "diɪH"],
+	之: ["zhī", "tjɯ", "t͡ɕɨ"],
+	始: ["shǐ", "hljɯʔ", "ɕɨX"],
+	有: ["yǒu", "ɢʷɯʔ", "ɦɨuX"],
+	萬: ["wàn", "mlans", "mʉɐnH"],
+	物: ["wù", "mɯd", "mɨut̚"],
+	母: ["mǔ", "mɯʔ", "məuX"],
+	故: ["gù", "kaːs", "kuH"],
+	欲: ["yù", "loɡ", "jɨok̚"],
+	以: ["yǐ", "lɯʔ", "jɨX"],
+	觀: ["guān", "koːn", "kuɑn"],
+	其: ["qí", "ɡɯ", "ɡɨ"],
+	妙: ["miào", "mews", "miᴇuH"],
+	徼: ["jiào", "kleːwɢs", "keuH"],
+	此: ["cǐ", "sʰeʔ", "t͡sʰiᴇX"],
+	兩: ["liǎng", "raŋʔ", "lɨɐŋX"],
+	者: ["zhě", "tjaːʔ", "t͡ɕiaX"],
+	同: ["tóng", "doːŋ", "duŋ"],
+	出: ["chū", "kʰljud", "t͡ɕʰiuɪt̚"],
+	而: ["ér", "njɯ", "ȵɨ"],
+	異: ["yì", "lɯɡs", "jɨH"],
+	謂: ["wèi", "ɢuds", "ɦʉiH"],
+	玄: ["xuán", "ɡʷeːn", "ɦwen"],
+	又: ["yòu", "ɢʷɯs", "ɦɨuH"],
+	眾: ["zhòng", "tjuŋs", "t͡ɕɨuŋH"],
+	門: ["mén", "mɯːn", "muən"],
+}
+
+let output_table = document.getElementById("output")
+let output_translation = document.getElementById("translation")
+
+let hn_tr, oc_tr, mc_tr, py_tr
+hn_tr = oc_tr = mc_tr = py_tr = ""
+
+let chapter = 1
+let line = 1
+let current_translation = 1
+
+function format_num(num) {
+	return num < 10 ? '0' + num : num
+}
+
+let count = {}
+
+let transl_rowspans = {}
+{
+	let line_count = daodejing.match(/\n/g).length
+	let prev_i = 1
+	for (let i = 1; i < line_count; i++) {
+		if (translation[i]) {
+			transl_rowspans[i] = 1;
+			prev_i = i;
+		} else {
+			transl_rowspans[prev_i]++;
+		}
+	}
+}
+
+function get_char(i) {
+	let ret = daodejing.charAt(i)
+	if (daodejing.charAt(i + 1) == '_') {
+		daodejing = daodejing.slice(0, i + 1) + daodejing.slice(i + 2)
+		ret += get_char(i + 1)
+	}
+	return ret;
+}
+
+let pre_id, keep_pre_id
+for (let i = 1; i < daodejing.length; i++) {
+	const char = daodejing.charAt(i)
+	if (char == '\n') {
+		let translation_str = ``
+		if (translation[line]) {
+			let local_count = {};
+			translation_str = `<td class="eng" rowspan="` + (transl_rowspans[line] ?? 1) + `"><span class="tr">` + translation[line][0].replace(
+				/([^ ,.:]+)\:([^ ,.:0-9]+)([0-9]*)/g,
+				function (_, local_transl, local_char, local_index) {
+					local_count[local_char] ??= 0
+					let identifier = chapter + `-` + line + `-` + local_char + `-` + (local_index != '' ? local_index : local_count[local_char]++)
+					return `<span class="cb" name="` + identifier + `" onclick="clickedtext('` + identifier + `')">` + local_transl.replace(/_/g, ' ') + `</span>`
+				}
+			) + `</span><hr><span class="nt">` + (translation[line][1]??"").replace(
+				/\{(.+?)\}/g,
+				function (_, captured) {
+					return `<span class="hn">`
+						+ captured.replace(/([^ ]+) */g, (_, e) =>
+							`<span name="` + chapter + `-` + line + `-` + e + `">` + e + `</span>`
+						) + `</span> <span class="py">`
+						+ captured.replace(/[^ ]/g, e => readings[e]?.[0] ?? e) + `</span>`
+				}
+			) + `</span></td>`
+		}
+		output_table.innerHTML += 
+			`<tr><td class="num">` + format_num(chapter) + `.` + format_num(line) +
+			`</td><td><table><tr class="hn">` + hn_tr +
+			`</tr><tr class="oc">` + oc_tr +
+			`</tr><tr class="mc">` + mc_tr +
+			`</tr><tr class="py">` + py_tr +
+			`</tr></table></td>` + (translation_str ?? ``) + `</tr>`
+		hn_tr = oc_tr = mc_tr = py_tr = ""
+		if (translation[++line]) {
+			count = {};
+			current_translation = line;
+		}
+	} else {
+		if (char.match(/[^，。]/)) {
+			let id
+			if (pre_id) {
+				id = pre_id;
+				if (--keep_pre_id == 0) pre_id = undefined;
+			} else {
+				let id_char = get_char(i)
+				count[id_char] ??= 0;
+				id = chapter + `-` + current_translation + `-` + id_char + `-` + count[id_char]++
+				if (id_char.length > 1) {
+					pre_id = id;
+					keep_pre_id = id_char.length - 1
+				}
+			}
+			hn_tr += `<td class="cb" name="` + id + `" onclick="clickedtext('` + id + `')">` + char + `</td>`
+			let char_reading = readings[char]
+			oc_tr += `<td>` + (char_reading?.[1] ?? "?")
+					.replace(/ɯ/, 'ə')
+					.replace(/'/g, '’')
+				+ `</td>`
+			mc_tr += `<td>` + (char_reading?.[2] ?? "?")
+					.replace(/([HX])$/, '<sup>$1</sup>')
+					.replace(/\u0361/, ""),
+				+ `</td>`
+			py_tr += `<td>` + (char_reading?.[0] ?? "?") + `</td>`
+		} else {
+			hn_tr += `<td>` + char + `</td>`
+			oc_tr += `<td></td>`
+			mc_tr += `<td></td>`
+			py_tr += `<td></td>`
+		}
+	}
+}
+
+function clickedtext(identifier) {
+	let selected_things = document.getElementsByClassName("selected");
+	let identified_things = document.getElementsByName(identifier);
+	let identified_things_notes = document.getElementsByName(identifier.replace(/\-\d+$/, ""));
+	while (selected_things.length > 0) selected_things[0].className = selected_things[0].className.replace(/ *selected/, "");
+	for (let i = 0; i < identified_things.length; i++) identified_things[i].className += " selected";
+	for (let i = 0; i < identified_things_notes.length; i++) identified_things_notes[i].className += " selected";
+}
+
+</script>
+</body>
