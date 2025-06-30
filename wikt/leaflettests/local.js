@@ -117,7 +117,9 @@ for (let i = 0; i < mapData.length; i++) {
 	// retrieve data from Wikidata
 	if (element.type == "ExternalData") {
 		fetchPromises.push(
-			fetch(`https://maps.wikimedia.org/${element.service}?getgeojson=1&ids=${element.ids}`)
+			// fetch(`https://maps.wikimedia.org/${element.service}?getgeojson=1&ids=${element.ids}`)
+			// cannot fetch maps.wikimedia.org due to CORS policy, so I moved the data to this domain
+			fetch(`./${element.service}/${element.ids}.json`)
 				.then(res => res.json())
 				.then(geoJSON => {
 					geoJSON = geoJSON.features[0]; // simplify by getting rid of FeatureCollections
