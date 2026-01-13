@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Persian keyboard</title>
+<style>
+
+:root {
+	--arab_font: "Noto Naskh Arabic"
+}
+
+.input {
+	font-style: italic;
+	color: blue;
+}
+
+.Arab {
+	font-family: var(--arab_font);
+	direction: rtl;
+}
+
+table, td {
+	text-align: center;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.unused {
+	color: gray;
+}
+
+.key {
+	white-space: nowrap;
+}
+
+h1 {
+	margin: 0;
+}
+
+</style>
+</head>
+<body onload="loadtable()">
+<h1>Persian keyboard</h1>
+This is an online Persian keyboard for Italian keyboard layout.
+<textarea type="text" id="input" oninput="dothing(this)" class="Arab" style="width:100%; height: 100px;" spellcheck="false" autofocus></textarea><br>
+<input type="button" onclick="navigator.clipboard.writeText(textinput.value)" value="copy"/> —
+<input type="button" onclick="textinput.value = ''" value="clear"/> —
+font: <input type="text" value="Noto Naskh Arabic" oninput="set_font(this.value)"/> —
+<hr>
+<table id="keyboardlayout"></table>
+<script>
+
+const textinput = document.getElementById("input")
+
+const root_props = document.querySelector(":root")
+function set_font(name) {
+	root_props.style.setProperty("--arab_font", name)
+}
+
+const convert = {
+	////
+	q: 'ض', Q: '\u064E', // fatha
+	w: 'ص', W: '\u064B', // fathatan
+	e: 'ث', E: '\u0650', // kasra
+	r: 'ق', R: '\u064D', // kasratan
+	t: 'ف', T: '\u064F', // damma
+	y: 'غ', Y: '\u064C', // dammatan
+	u: 'ع', U: '\u0651', // shadda
+	i: 'ه', I: '\u0652', // sukun
+	o: 'خ',
+	p: 'ح',
+	["è"]: 'ج', ["é"]: 'چ',
+	["+"]: 'چ',
+	////
+	a: 'ش', A: '\u0670', // sup alif
+	s: 'س', S: '\u0656', // sub alif
+	d: 'ی', D: 'ئ',
+	f: 'ب', F: 'پ',
+	g: 'ل',
+	h: 'ا', H: 'آ',
+	j: 'ت', J: 'أ',
+	k: 'ن', K: 'إ',
+	l: 'م', L: 'ٱ',
+	["ò"]: 'ك', ["ç"]: 'ڭ',
+	["à"]: 'گ',
+	["ù"]: 'ڭ',
+	////
+	z: 'ظ',
+	x: 'ط',
+	c: 'ذ',
+	v: 'د', V: 'ء',
+	b: 'ز', B: 'ژ',
+	n: 'ر',
+	m: 'و', M: 'ؤ',
+}
+
+function dothing(element) {
+	// Set values to keep cursor still.
+	let previous_cursor_position = element.selectionStart;
+	let previous_textarea_length = element.value.length;
+	// Do replacements.
+	let str = element.value
+	str = str.replace(/[A-zè+òàùéç]/g, x => convert[x] ?? x)
+	element.value = str;
+	// Keep cursor still.
+	element.selectionEnd = element.selectionStart = previous_cursor_position + element.value.length - previous_textarea_length;
+}
+
+function loadtable() {
+	let str = "";
+	const itlayout = [
+		{ lowercase: "qwertyuiopè+", uppercase: "QWERTYUIOPé*" },
+		{ lowercase: "asdfghjklòàù", uppercase: "ASDFGHJKLç°§" },
+		{ lowercase: "zxcvbnm", uppercase: "ZXCVBNM" },
+	];
+	function str_thing(char) {
+		let convert_char = convert[char]
+		if (convert_char) {
+			if (/[\u064B-\u0670]/.test(convert_char)) convert_char = "◌" + convert_char
+			return "<span class=input>" + char + "</span> <span class=Arab>" + convert_char + "</span>";
+		} else {
+			return '<span class="input unused">' + char + "</span>"
+		}
+	}
+	for (let i = 0; i < itlayout.length; i++) {
+		str += "<tr>";
+		if (i > 0) {
+			str += "<td colspan=" + i + "></td>"
+		}
+		for (let j = 0; j < itlayout[i].lowercase.length; j++) {
+			const lowercase_char = itlayout[i].lowercase.charAt(j);
+			const uppercase_char = itlayout[i].uppercase.charAt(j);
+			str += "<td class=key colspan=2>" + str_thing(uppercase_char) + "<br>" + str_thing(lowercase_char) + "</td>";
+		}
+		str += "</tr>";
+	}
+	document.getElementById("keyboardlayout").innerHTML = str;
+}
+
+</script>
+</body>
+<footer><hr>By Catonif, September 2025. <a href="..">Homepage</a>. catonif.dev@gmail.com</footer>

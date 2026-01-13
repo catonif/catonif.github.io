@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Polytonic Greek keyboard</title>
+<style>
+
+:root {
+	--greek_font: "Gentium Plus"
+}
+
+.input {
+	font-style: italic;
+	color: blue;
+}
+
+.Grek {
+	font-family: var(--greek_font);
+}
+
+table, td {
+	text-align: center;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.unused {
+	color: gray;
+}
+
+.key {
+	white-space: nowrap;
+}
+
+h1 {
+	margin: 0;
+}
+
+</style>
+</head>
+<body onload="loadtable()">
+<h1>Polytonic Greek keyboard</h1>
+This is an online polytonic Greek keyboard for Italian keyboard layout.
+<textarea type="text" id="input" oninput="dothing(this)" class="Grek" style="width:100%; height: 100px;" spellcheck="false" autofocus></textarea><br>
+<input type="button" onclick="navigator.clipboard.writeText(textinput.value.normalize('NFC'))" value="copy"/> —
+<input type="button" onclick="textinput.value = textinput.value.normalize('NFC')" value="to NFC"/> —
+<input type="button" onclick="textinput.value = textinput.value.normalize('NFD')" value="to NFD"/> —
+<input type="button" onclick="textinput.value = ''" value="clear"/> —
+font: <input type="text" value="Gentium Plus" oninput="set_font(this.value)"/> —
+auto NFC: <input type="checkbox" oninput="do_nfc = !do_nfc"/><br>
+<hr>
+<table id="keyboardlayout"></table>
+The letter <span class="input">q</span> gives <span class="Grek">· ⁖ ⁘</span> if pressed the right amount of times. The apostrophe <span class="input">'</span> can similarly yield the numerical symbols <span class="Grek">ʹ ͵</span> when typed multiple times. Diacritics are encoded as combining by default, because I think it eases the editing process (i.e. backspacing only removes one diacritic, and I often get them wrong). If you disagree, tick the checkbox. The copy button always normalises to NFC the text that is copied into the clipboard anyways. Typing a diacritic twice makes it full space instead of combining. I recommend the font Gentium Plus, or Gentium. If you have to deal with macrons and breves then I suggest SBL Greek. If you want this to work offline you can simply download the HTML.
+<script>
+
+const textinput = document.getElementById("input")
+
+const root_props = document.querySelector(":root")
+function set_font(name) {
+	root_props.style.setProperty("--greek_font", name)
+}
+
+let do_nfc = false
+
+const convert = {
+	q: "·",
+	w: "ς", W: "Σ",
+	e: "ε", E: "Ε",
+	r: "ρ", R: "Ρ",
+	t: "τ", T: "Τ",
+	y: "υ", Y: "Υ",
+	u: "θ", U: "Θ",
+	i: "ι", I: "Ι",
+	o: "ο", O: "Ο",
+	p: "π", P: "Π",
+	a: "α", A: "Α",
+	s: "σ", S: "Σ",
+	d: "δ", D: "Δ",
+	f: "φ", F: "Φ",
+	g: "γ", G: "Γ",
+	h: "η", H: "Η",
+	j: "ξ", J: "Ξ",
+	k: "κ", K: "Κ",
+	l: "λ", L: "Λ",
+	z: "ζ", Z: "Ζ",
+	x: "χ", X: "Χ",
+	c: "ψ", C: "Ψ",
+	v: "ω", V: "Ω",
+	b: "β", B: "Β",
+	n: "ν", N: "Ν",
+	m: "μ", M: "Μ",
+	["ò"]: "\u0301", // acute (οξεία)
+	["à"]: "\u0300", // grave (βαρεία)
+	["ù"]: "\u0342", // circumflex (περισπωμένη)
+	["ç"]: "\u0308", // diaeresis (διαλυτικά)
+	["è"]: "\u0313", // smooth breathing (ψιλή)
+	["+"]: "\u0314", // rough breathing (δασεία)
+	["°"]: "\u0345", // iota subscript (υπογεγραμμένη)
+	["é"]: "\u0306", // breve (βραχύ)
+	["*"]: "\u0304", // macron (μακρόν)
+	["§"]: "\u032F", // semi-vowel mark
+	// secret
+	["ì"]: "ϳ", // greek yot, U+03F3
+}
+
+function dothing(element) {
+	// Set values to keep cursor still.
+	let previous_cursor_position = element.selectionStart;
+	let previous_textarea_length = element.value.length;
+	// Do replacements.
+	let str = element.value
+	str = str
+		.replace(/[A-zòàùè+ç°é*§ì]/g, x => convert[x] ?? x)
+		.replace(/''/g, "ʹ") // numeral sign
+		.replace(/ʹ'/g, "͵") // lower numeral sign
+		.replace(/··/g, "⁖") // three dots
+		.replace(/⁖·/g, "⁘") // four dots
+		.replace(/([\u0300-\u0345])\1/g, (_, y) => ({
+			["\u0301"]: "´",
+			["\u0300"]: "`",
+			["\u0342"]: "῀",
+			["\u0313"]: "᾽", // actually a κορωνίς (0x1FBD) instead of the ψιλή (0x1FBD)
+			["\u0314"]: "῾",
+			["\u0345"]: "ͺ",
+			["\u0306"]: "˘",
+			["\u0304"]: "¯",
+		})[y] ?? y)
+	if (do_nfc) str = str.normalize("NFD");
+	str = str
+		.replace(/([\u0301\u0300\u0342])([\u0308\u0313\u0314])/g, "$2$1")
+		.replace(/(\u0345)([\u0301\u0300\u0342\u0308\u0313\u0314]+)/g, "$2$1")
+	if (do_nfc) str = str.normalize("NFC");
+	element.value = str;
+	// Keep cursor still.
+	element.selectionEnd = element.selectionStart = previous_cursor_position + element.value.length - previous_textarea_length;
+}
+
+function loadtable() {
+	let str = "";
+	const itlayout = [
+		{ lowercase: "qwertyuiopè+", uppercase: "QWERTYUIOPé*" },
+		{ lowercase: "asdfghjklòàù", uppercase: "ASDFGHJKLç°§" },
+		{ lowercase: "zxcvbnm", uppercase: "ZXCVBNM" },
+	];
+	function str_thing(char) {
+		let convert_char = convert[char]
+		if (convert_char) {
+			if (/[\u0300-\u0345]/.test(convert_char)) convert_char = "◌" + convert_char
+			return "<span class=input>" + char + "</span> <span class=Grek>" + convert_char + "</span>";
+		} else {
+			return '<span class="input unused">' + char + "</span>"
+		}
+	}
+	for (let i = 0; i < itlayout.length; i++) {
+		str += "<tr>";
+		if (i > 0) {
+			str += "<td colspan=" + i + "></td>"
+		}
+		for (let j = 0; j < itlayout[i].lowercase.length; j++) {
+			const lowercase_char = itlayout[i].lowercase.charAt(j);
+			const uppercase_char = itlayout[i].uppercase.charAt(j);
+			str += "<td class=key colspan=2>" + str_thing(uppercase_char) + "<br>" + str_thing(lowercase_char) + "</td>";
+		}
+		str += "</tr>";
+	}
+	document.getElementById("keyboardlayout").innerHTML = str;
+}
+
+</script>
+</body>
+<footer><hr>By Catonif, August 2025. <a href="..">Homepage</a>. catonif.dev@gmail.com</footer>

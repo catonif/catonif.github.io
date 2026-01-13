@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Circle Repulsion Demo</title>
+<style>
+canvas { display: block; }
+</style>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+<div id="ui">
+	Repulsion coefficient: <input id="alpha_input" type="range" min="0" max="0.90" step="0.01" value="0.5" onchange="update()" oninput="update()"> <span id="alpha_span"></span><br>
+	Number of points: <input id="count_input" type="number" min="1" max="10000"> <button onclick="initialiseCircles()">Randomise!</button><br>
+	Radius: <input id="radius_input" type="range" min="1" max="20" step="0.01" onchange="update()" oninput="update()"> <span id="radius_span"></span>
+</div>
+
+<script>
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+const count_input = document.getElementById("count_input");
+
+const alpha_input = document.getElementById("alpha_input");
+const alpha_span = document.getElementById("alpha_span");
+
+const radius_input = document.getElementById("radius_input");
+const radius_span = document.getElementById("radius_span");
+
+const WIDTH = 500;
+const HEIGHT = 500;
+const ITERATIONS = 2;
+const DT = 0.2;
+
+const DEFAULT_ALPHA = 0.9;
+alpha_input.value = DEFAULT_ALPHA;
+
+const DEFAULT_RADIUS = 6;
+radius_input.value = DEFAULT_RADIUS;
+
+const DEFAULT_N = 200;
+count_input.value = DEFAULT_N;
+
+var circles;
+
+function getRandomColor() {
+	return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16).padStart(6, '0');
+}
+
+function initialiseCircles() {
+	circles = [];
+	let number = count_input.value;
+	for (let i = 0; i < number; i++) {
+		const x = Math.random() * WIDTH;
+		const y = Math.random() * HEIGHT;
+		circles.push({
+			x, y,
+			// Initial position where the anchor is.
+			x0: x, y0: y,
+			// Velocity coordinates.
+			vx: 0, vy: 0,
+			color: getRandomColor()
+		});
+	}
+	update();
+}
+
+initialiseCircles();
+
+// Builds and returns a grid map for optimisation, only check
+// the circles in neighbouring cells.
+function buildGrid(cell_size) {
+	const grid = new Map();
+	for (const circle of circles) {
+		const cell_x = Math.floor(circle.x / cell_size);
+		const cell_y = Math.floor(circle.y / cell_size);
+		const map_key = cell_x + "," + cell_y;
+		if (!grid.has(map_key)) grid.set(map_key, []);
+		grid.get(map_key).push(circle);
+	}
+	return grid;
+}
+
+function repulse(alpha, radius) {
+
+	const repulsion_coefficient = alpha;
+	const anchor_coeffient = 1 - alpha;
+
+	const cell_size = radius * 2;
+	const grid = buildGrid(cell_size);
+
+	for (const circle of circles) {
+
+		let force_x = 0, force_y = 0;
+
+		const cell_x = Math.floor(circle.x / cell_size);
+		const cell_y = Math.floor(circle.y / cell_size);
+
+		// Check the eight neighbouring grid cells.
+		for (let d_cell_x = -1; d_cell_x <= 1; d_cell_x++) {
+			for (let d_cell_y = -1; d_cell_y <= 1; d_cell_y++) {
+
+				const key = (cell_x + d_cell_x) + "," + (cell_y + d_cell_y);
+				const neigh_cell = grid.get(key);
+				// Skip cell if empty.
+				if (!neigh_cell) continue;
+
+				for (const neigh_circle of neigh_cell) {
+					// Do not repulse oneself.
+					if (neigh_circle === circle) continue;
+					// Distance from neighbouring circle.
+					const dist_x = circle.x - neigh_circle.x;
+					const dist_y = circle.y - neigh_circle.y;
+					// Distance hypotenuse.
+					const dist = Math.hypot(dist_x, dist_y);
+					// Overlap depth.
+					const overlap = 2 * radius - dist;
+					// Apply the repulsion force.
+					if (overlap > 0) {
+						force_x += (dist_x / dist) * overlap * repulsion_coefficient;
+						force_y += (dist_y / dist) * overlap * repulsion_coefficient;
+					}
+				}
+			}
+		}
+
+		// Apply the anchor force.
+		force_x += (circle.x0 - circle.x) * anchor_coeffient;
+		force_y += (circle.y0 - circle.y) * anchor_coeffient;
+
+		// Apply the forces' accelerations as velocities.
+		circle.vx = (circle.vx + force_x * DT) * 0.8;
+		circle.vy = (circle.vy + force_y * DT) * 0.8;
+	}
+
+	// Apply velocities after all claculations have been done.
+	for (const circle of circles) {
+		circle.x += circle.vx;
+		circle.y += circle.vy;
+	}
+}
+
+canvas.width = WIDTH;
+canvas.height = HEIGHT;
+
+function render(radius) {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	for (const c of circles) {
+		ctx.beginPath();
+		ctx.arc(c.x, c.y, radius, 0, Math.PI * 2);
+		ctx.fillStyle = c.color;
+		ctx.fill();
+	}
+}
+
+function update() {
+	const alpha = parseFloat(alpha_input.value);
+	alpha_span.innerHTML = alpha;
+
+	const radius = parseFloat(radius_input.value);
+	radius_span.innerHTML = radius;
+
+	for (let i = 0; i < ITERATIONS; i++) {
+		repulse(alpha, radius);
+	}
+
+	render(radius);
+}
+
+update();
+</script>
+
+</body>
+</html>
