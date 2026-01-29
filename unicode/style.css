@@ -1,0 +1,17 @@
+img {
+	width: 5em;
+	height: 5em;
+}
+
+table, td, th {
+	border: 1px solid black;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td, th {
+	text-align: center;
+	padding: 0.5em;
+}
