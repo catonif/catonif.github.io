@@ -4,7 +4,7 @@
 </head>
 <body>
 <h1>Catholic alphabet</h1>
-I present forms from various works written in the Catholic alphabet. That's how I personally call it, I'm unaware of how it's usually labelled by scholars. The works are
+I present forms from various works written in the Catholic alphabet, also known as Old Shkodran. The works are
 <ul>
 	<li>Gjon Buzuku (1555), <i>Meshari</i>, manuscript in the Vatican Library</li>
 	<li>Pjetër Budi (1618), <i>Dottrina Christiana</i>, Rome: B. Zannetti</li>
@@ -14,12 +14,12 @@ I present forms from various works written in the Catholic alphabet. That's how 
 	<li>A letter from the elders of Gashi directed to the Pope (1689)</li>
 	<li><i>Kuvendi i Arbënit</i> (1706), Rome: Propaganda Fide</li>
 	<li>Giuseppe Guagliata (1856), <i>Dottrina e Kërshten</i>, Rome: Propaganda Fide</li>
-	<li>Vincenzo Basil (1873), <i>Rruga e Parrisit</i>, Rome: Propaganda Fide</li>
+	<li>Vincenzo Basile (1873), <i>Rruga e Parrisit</i>, Rome: Propaganda Fide</li>
 	<li>Giacomo Jungg (1887), <i>Kulshedra e shpirtit</i>, Shkodër</li>
 	<li><i>Pesmdhet biseda t' Shejtit sh' Leonard prej Porto Maurizio</i> (1900), Shkodër: Typ. Immacolatae Concept. B. M. V.</li>
 	<li><i>Smuetorja e Austri-Hungaris</i> (1904), Shkodër</li>
 </ul>
-They all use more or less the same orthography, with the exception of Buzuku, which has more symbols (see below) and doesn't use Italian digraphs. The letter ⟨λ⟩ is introduced by Bogdani, earlier works use ⟨l⟩ or ⟨ll⟩. The first work to show casing variants for these letters is the <i>Kuvendi</i>.
+They all use more or less the same orthography, with the exception of Buzuku, which has more symbols (see below) and doesn't use Italian digraphs. The letter ⟨λ⟩ is introduced by Bogdani, earlier works use ⟨l⟩ or ⟨ll⟩. The first work to show casing variants for these letters is the <i>Kuvendi</i>. The reason why some letters forms are not in the table is for linguistical reasons, not typographical, <i>y</i> and <i>ll</i> are very rare word-initially, so I couldn't find them in the works.
 <h2>Table with comparisons</h2>
 <table>
 	<tr>
@@ -173,7 +173,29 @@ They all use more or less the same orthography, with the exception of Buzuku, wh
 </table>
 <h2>Remarks on encoding</h2>
 <img src="img/sanbasile-zeta.png" style="float:right">
-We can encode <i>ll</i> as Greek Λ λ, <i>y</i> as Latin Ȣ ȣ, and <i>z</i> as Latin Ɛ ɛ, but while <i>dh</i> is currently often transcribed as Greek Ξ ξ, that's a pretty long stretch both semantically and visually. I propose the addition of the codepoints <small>LATIN SMALL LETTER OLD ALBANIAN DH</small> and its counterpart <small>LATIN CAPITAL LETTER OLD ALBANIAN DH</small>. I also dislike using a character called <small>OPEN E</small> for the sound <i>z</i>, so I would have also suggested <small>LATIN SMALL/CAPITAL LETTER OLD ALBANIAN Z</small>. Although publishing houses used their existing woodcut of the Greek epsilon, the letter most likely descends from a cursive form of ζ. The image you can see on the right, for example, is how ζ is written in the 1834 manuscript <i>Dottrina a Krështe</i> from San Basile (not Catholic script, merely a Latin with Greek letters).
+We can encode <i>ll</i> as Greek Λ λ, <i>y</i> as Latin Ȣ ȣ, and <i>z</i> as Latin Ɛ ɛ, but while <i>dh</i> is currently often transcribed as Greek Ξ ξ, that's a pretty long stretch both semantically and visually. I propose the addition of new codepoints for it. The codepoint of the <small>OPEN E</small> is also semantically unrelated to the Albanian symbol for <i>z</i>, and although publishing houses used their existing woodcut of the Greek epsilon, the letter most likely descends from a cursive form of ζ. The image you can see on the right, for example, is how ζ is written in the 1834 manuscript <i>Dottrina a Krështe</i> from San Basile (not Catholic script, merely Latin with Greek letters). There follows a list of the proposed codepoints, although having <i>z</i> is not as important as <i>dh</i> is.
+<table>
+	<tr>
+		<th>image</th>
+		<th>possible name</th>
+	</tr>
+	<tr>
+		<td><img src="img/cath/1887-jungg/dh-lc.png"></td>
+		<td>LATIN SMALL LETTER OLD ALBANIAN DH</td>
+	</tr>
+	<tr>
+		<td><img src="img/cath/1887-jungg/dh-uc.png"></td>
+		<td>LATIN CAPITAL LETTER OLD ALBANIAN DH</td>
+	</tr>
+	<tr>
+		<td><img src="img/cath/1887-jungg/z-lc.png"></td>
+		<td>LATIN SMALL LETTER OLD ALBANIAN Z</td>
+	</tr>
+	<tr>
+		<td><img src="img/cath/1887-jungg/z-uc.png"></td>
+		<td>LATIN CAPITAL LETTER OLD ALBANIAN Z</td>
+	</tr>
+</table>
 <h2>Additional characters used by Buzuku (1555).</h2>
 <table>
 	<tr>
@@ -193,6 +215,15 @@ We can encode <i>ll</i> as Greek Λ λ, <i>y</i> as Latin Ȣ ȣ, and <i>z</i> as
 		<td>Latin Ʒ.</td>
 	</tr>
 </table>
+<h2>Secondary sources</h2>
+<ul>
+	<li>
+		Stavro Skendi (1960), <i>History of the Albanian Alphabet: A Case of Complex Cultural and Political Development</i>, in <i>Südost-Forschungen, 29</i>, Munich, p. 264f.:
+		<blockquote>
+			But Buzuku's alphabet does not seem to have had followers, for in Pjetër Budi's (1566–1623) works, as for instance in the <i>Christian Doctrine</i> (1618), we meet a different script, although founded on the Latin one. Budi's alphabet, with slight changes, was employed in the <i>Dictionary</i> (1635) by Frang Bardhi and in <i>Cuneus Prophetarum</i> (1685) by Pjetër Bogdani. It was preserved until the outset of the 20th century by the Jesuit priests of Shkodër, who continued to publish in it. This system is usually called "the Alphabet of the Ancient Writers of the North", for it was used by them; it is also referred to at times as "the Catholic Alphabet", because only the Catholic part of the Albanian population wrote in it. It remained, however, restricted to the province of Shkodër.
+		</blockquote>
+	</li>
+</ul>
 <hr>
-See also the <a href="stambolli.html">Stambolli alphabet</a> proposal.
+See also the <a href="frasheri.html">Frashëri alphabet</a> proposal.
 </body>

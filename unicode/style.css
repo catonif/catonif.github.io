@@ -3,12 +3,13 @@ img {
 	height: 5em;
 }
 
-table, td, th {
+table, td, th, img {
 	border: 1px solid black;
 }
 
 table {
 	border-collapse: collapse;
+	margin-top: 0.5em;
 }
 
 td, th {
