@@ -1,32 +1,66 @@
 <head>
 <title>Frashëri alphabet</title>
 <link rel="stylesheet" href="style.css">
+<style>
+	.latin, .casing-yes {
+		background-color: lightgreen;
+	}
+
+	.latin-c {
+		background-color: lightyellow;
+	}
+
+	.greek {
+		background-color: lightblue;
+	}
+
+	.frash, .casing-no {
+		background-color: lightcoral;
+	}
+</style>
 </head>
 <body>
 <h1>Frashëri alphabet</h1>
-The examples of the Frashëri alphabet, also known as Istanbul alphabet or Constantinople alphabet, are taken from Benusi, Gasper (1890) <i>Abetare e gjuhësë shqip</i>, Bucharest: Dituri. It is very uniform accross publications so I did not present images from other sources, as this one seemed complete by itself. Alongside the Frashëri alphabet I give examples of an earlier alphebet used in the 16-page document <i>Kanonizmë. Shoqërisë të shtypur shkronja Shqip</i> (1879), Constantinople: A. Zelici. Among the signatories of the document there is also Sami Frashëri, who later created the Frashëri alphabet. It's given here for completeness, it should not be taken to heavily into consideration since it's merely a 16-page document. The focus of this and encoding proposal is only meant for Frashëri, with all the literature that was writen in it. See frasheri_works.yml.
+<h2>History</h2>
+<p>
+	The Frashëri alphabet was by far the most used alphabet from 1886 up to at least 1908 (see § Secondary sources), and continued being in use until 1913. This was the time of the <i>Rilindja</i> (Albanian National Awakening) and of the collapse of the Ottoman Empire. There have been written countless works in the script (see <a href="frasheri_works.yml">nonexhaustive list</a>), some of which are first editions of staple works of Albanian literature, by various different authors, including of course the brothers <a href="https://en.wikipedia.org/wiki/Sami_Frashëri">Sami</a> and <a href="https://en.wikipedia.org/wiki/Naim_Frashëri">Naim Frashëri</a>, two of the most influential figures of the Albanian National Awakening, who devised the script, as well as notable figures of <a href="https://en.wikipedia.org/wiki/Jani_Vreto">Jani Vreto</a>, <a href="https://en.wikipedia.org/wiki/Papa_Kristo_Negovani">Kristo Negovani</a>, <a href="https://en.wikipedia.org/wiki/Mihal_Grameno">Mihal Grameno</a>, <a href="https://en.wikipedia.org/wiki/Gjerasim_Qiriazi">Gjerasim Qiriazi</a>, <a href="https://en.wikipedia.org/wiki/Pashko_Vasa">Pashko Vasa</a>, <a href="https://en.wikipedia.org/wiki/Spiro_Dine">Spiro Dine</a>, <a href="https://en.wikipedia.org/wiki/Thanas_Floqi">Thanas Floqi</a>, <a href="https://en.wikipedia.org/wiki/Mithat_Frashëri">Mithat Frashëri</a>, <a href="https://en.wikipedia.org/wiki/Kristo_Dako">Kristo Dako</a> and <a href="https://en.wikipedia.org/wiki/Lef_Nosi">Lef Nosi</a>, among others. Take for example <i>Shqipëria. Ç'ka qenë, ç'është e ç'do të bëhetë?</i> (1899) which became the manifesto of the <i>Rilindja</i>, or <i>Valët e Detit</i> (1908), at its time the longest book ever printed in Albanian (856 pages). There were multiple publishing houses around the Balkans who printed in this script (see below).
+</p>
+<p>
+	The alphabet is also known as <i>Istanbul</i> (Elsie 2010), <i>Constantinople</i> (Skendi 1960) or <i>Stamboul</i> (Trix 1999). Here we prefer the name <i>Frashëri</i> (Skendi 1960, Rrota 1936), the name of its inventor, to avoid possible confusion with the Turkish language. It's also a fact that aside from the initial pamphlet, only a couple more documents were printed in Istanbul, while the vast majority was printed in Bucharest, Sofia, Thessaloniki and Korçë, hence making the label Istanbul not great at describing the geographic distribution of its printing presses either.
+</p>
+<h2>Variations</h2>
+<p>
+	There seem to have existed two variants to the classic orthography in which most literature was written in. In the 16-page pamphplet <i>Kanonizmë e Shoqërisë të shtypur shkronja Shqip</i> (1879), Constantinople: A. Zelici, which announces the foundation of the Society wich printed the script, an earlier for of the alphabet is used. It's a rudimentary form and quite different from the form of the alphabet that was later used and spread out from 1886 on. The differences are the use of Greek capital letters for <i>dh</i> and <i>sh</i>, a different letter for lowercase <i>gj</i>, the looptail g for <i>g</i>, capital Ɛ for <i>e</i> and capital E for <i>ë</i>.  It's given here for completeness, it should not be taken to heavily into consideration since it's merely a 16-page document.
+</p>
+<p>
+	After the Congress of Manastir (1908), which adopted the Frashëri alphabet as the official alphabet of Albania, alongside Bashkimi, the Greek forms for <i>p</i> and <i>rr</i> where ditched in favour of their modern Latin equivalents, and the glyphs lowercase glyphs for <i>e</i> and <i>ë</i> switched roles. Aside from this there is no variation in the glyphs used in the any of the works used from 1886 to 1913.
+</p>
+<p>
+	The examples images for the classic orthography are taken from Gasper Benusi (1890), <i>Abetare e gjuhësë shqip</i>, Bucharest: Dituri. In the section below with the recap I also present forms from Jani Vreto (1886), <i>Mirëvetija</i>, Bucharest: Drita. The images for the late orthography are from Lef Nosi (1911), <i>Abetare për shkolla fillore meshkujsh e femnash</i>, Manastir: Tregëtare Nërkombëtare.
+</p>
 <h2>Comparison table and proposal</h2>
 <table>
 	<tr>
 		<th rowspan="2">modern orthography</th>
-		<th colspan="2">Frashëri (1886–1913)</th>
-		<th rowspan="2">current possible Frashëri encodings</th>
-		<th rowspan="2">Kanonizëm (1879)</th>
-		<th rowspan="2">current possible Kanonizëm encodings</th>
-		<th rowspan="2">Frashëri proposed encoding</th>
+		<th rowspan="2">early (1879)</th>
+		<th colspan="2">classic (1886–1908)</th>
+		<th colspan="2">late (1908–1913)</th>
+		<th rowspan="2">current possible encodings</th>
+		<th rowspan="2">proposed encoding (1886–1908)</th>
 	</tr>
 	<tr>
+		<th>print</th>
+		<th>cursive</th>
 		<th>print</th>
 		<th>cursive</th>
 	</tr>
 	<tr>
 		<td>dh</td>
-		<td><img src="img/frash/benusi/dh-lc.png"></td>
-		<td><img src="img/frash/benusi/dh-lc-cs.png"></td>
-		<td>
-			Greek δ, acceptable.
-		</td>
-		<td><img src="img/kano/dh-lc.png"></td>
+		<td><img src="img/frash/1879-kanonizme/dh-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/dh-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/dh-lc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/dh-lc.png"></td>
+		<td><img src="img/frash/1911-nosi/dh-lc-cs.png"></td>
 		<td>
 			Greek δ.
 		</td>
@@ -36,116 +70,103 @@ The examples of the Frashëri alphabet, also known as Istanbul alphabet or Const
 	</tr>
 	<tr>
 		<td>Dh</td>
-		<td><img src="img/frash/benusi/dh-uc.png"></td>
-		<td><img src="img/frash/benusi/dh-uc-cs.png"></td>
+		<td><img src="img/frash/1879-kanonizme/dh-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/dh-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/dh-uc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/dh-uc.png"></td>
+		<td><img src="img/frash/1911-nosi/dh-uc-cs.png"></td>
 		<td>
-			Greek Δ, semantically acceptable, visually misleading.<br>
-			Cyrillic Б, visually perfect, semantically terrible.<br>
-			Latin Ƌ, semantically not too bad but its mirrored.
-		</td>
-		<td><img src="img/kano/dh-uc.png"></td>
-		<td>
-			Greek Δ.
+			Greek Δ visually misleading, but good for early.
+			Cyrillic Б, semantically terrible.
+			Latin Ƌ, mirrored.
 		</td>
 	</tr>
 	<tr>
 		<td>e</td>
-		<td><img src="img/frash/benusi/e-lc.png"></td>
-		<td><img src="img/frash/benusi/e-lc-cs.png"></td>
+		<td><img src="img/frash/1879-kanonizme/e-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/e-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/e-lc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/e-lc.png"></td>
+		<td><img src="img/frash/1911-nosi/e-lc-cs.png"></td>
 		<td>
-			Latin ɛ, correct script, incorrect casing.<br>
-			Greek ε, incorrect script, correct casing.
-		</td>
-		<td><img src="img/kano/e-lc.png"></td>
-		<td>
-			Latin ɛ.
+			Greek ε and Latin ɛ.
 		</td>
 		<td rowspan="2">
-			I would keep either keep Greek Ε ε or Latin ɛ and Latin E. There are pros and cons for both Greek and Latin so I'm still unsure.
+			I would keep either keep Greek Ε ε for the classic, and Latin Ɛ ɛ for the early script, and Latin E e for the late.
 		</td>
 	</tr>
 	<tr>
 		<td>E</td>
-		<td><img src="img/frash/benusi/e-uc.png"></td>
-		<td><img src="img/frash/benusi/e-uc-cs.png"></td>
+		<td><img src="img/frash/1879-kanonizme/e-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/e-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/e-uc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/e-uc.png"></td>
+		<td><img src="img/frash/1911-nosi/e-uc-cs.png"></td>
 		<td>
-			Latin E, correct script, incorrect casing.<br>
-			Greek Ε, incorrect script, correct casing.
-		</td>
-		<td><img src="img/kano/e-uc.png"></td>
-		<td>
-			Latin Ɛ.
+			Latin E and Greek Ε, as above.
 		</td>
 	</tr>
 	<tr>
 		<td>ë</td>
-		<td><img src="img/frash/benusi/ë-lc.png"></td>
-		<td><img src="img/frash/benusi/ë-lc-cs.png"></td>
+		<td><img src="img/frash/1879-kanonizme/ë-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/ë-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/ë-lc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/ë-lc.png"></td>
+		<td><img src="img/frash/1911-nosi/ë-lc-cs.png"></td>
 		<td>
-			Latin e.
-		</td>
-		<td><img src="img/kano/ë-lc.png"></td>
-		<td>
-			Latin e.
+			Latin e. For late Latin ɛ.
 		</td>
 		<td rowspan="2">
-			I propose we create <small>LATIN CAPITAL LETTER FRASHERI SCHWA</small>, while the lowercase schwa keeps Latin e.
+			I propose we create <small>LATIN CAPITAL LETTER FRASHERI SCHWA</small> to be used in classic and late, while the lowercase schwa keeps Latin e for classic and early, and ɛ for late.
 		</td>
 	</tr>
 	<tr>
 		<td>Ë</td>
-		<td><img src="img/frash/benusi/ë-uc.png"></td>
-		<td><img src="img/frash/benusi/ë-uc-cs.png"></td>
+		<td><img src="img/frash/1879-kanonizme/ë-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/ë-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/ë-uc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/ë-uc.png"></td>
+		<td><img src="img/frash/1911-nosi/ë-uc-cs.png"></td>
 		<td>
-			None, Pluto ♇ and Georgian Ⴒ resemble it.<br>
-			Ə semantically and visually yucky, anachronism.
-		</td>
-		<td><img src="img/kano/ë-uc.png"></td>
-		<td>
-			Latin E.
+			None, Pluto ♇ and Georgian Ⴒ resemble it.
 		</td>
 	</tr>
 	<tr>
 		<td>g</td>
-		<td><img src="img/frash/benusi/g-lc.png"></td>
-		<td><img src="img/frash/benusi/g-lc-cs.png"></td>
+		<td><img src="img/frash/1879-kanonizme/g-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/g-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/g-lc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/g-lc.png"></td>
+		<td><img src="img/frash/1911-nosi/g-lc-cs.png"></td>
 		<td>
-			Latin script ɡ, correct visually, bad casing.<br>
-			Latin normal g, dangerous considering <i>gj</i>.
-		</td>
-		<td><img src="img/kano/g-lc.png"></td>
-		<td>
-			Latin g.
+			Latin script ɡ, correct visually, bad casing.
+			Latin normal g, dangerous considering <i>gj</i>, but good for early.
 		</td>
 		<td rowspan="2">
-			I would use script ɡ and capital G.
+			I would use script ɡ and capital G. Early gets normal g.
 		</td>
 	</tr>
 	<tr>
 		<td>G</td>
-		<td><img src="img/frash/benusi/g-uc.png"></td>
-		<td><img src="img/frash/benusi/g-uc-cs.png"></td>
-		<td>
-			Latin normal G, possibly bad casing.<br>
-			Latin script Ɡ, terrible visually.
-		</td>
 		<td>—</td>
+		<td><img src="img/frash/1890-benusi/g-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/g-uc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/g-uc.png"></td>
+		<td><img src="img/frash/1911-nosi/g-uc-cs.png"></td>
 		<td>
-			Presumably Latin G.
+			Latin normal G, since Latin script Ɡ is terrible visually.
 		</td>
 	</tr>
 	<tr>
 		<td>gj</td>
-		<td><img src="img/frash/benusi/gj-lc.png"></td>
-		<td><img src="img/frash/benusi/gj-lc-cs.png"></td>
+		<td><img src="img/frash/1879-kanonizme/gj-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/gj-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/gj-lc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/gj-lc.png"></td>
+		<td><img src="img/frash/1911-nosi/gj-lc-cs.png"></td>
 		<td>
-			Latin normal g, dangerous, currently no way to be specific about the loop.<br>
-			Greek γ, visually misleading, semantically acceptable.
-		</td>
-		<td><img src="img/kano/gj-lc.png"></td>
-		<td>
-			Latin ſ, visually perfect, semantically terrible.<br>
-			Greek γ, visually misleading, semantically acceptable.
+			Currently no way to be explicit about the loop of Latin g.
+			Greek γ for any stage, visually misleading, semantically acceptable.
 		</td>
 		<td rowspan="2">
 			I propose we create <small>LATIN SMALL LETTER LOOPTAIL G</small>, which in the end would probably prove itself useful not just for Frashëri. I know looptail g was used for /ɣ/ in early IPA, and having a way to make that explicit would surely help. The capital letter would use Greek Γ.
@@ -153,51 +174,44 @@ The examples of the Frashëri alphabet, also known as Istanbul alphabet or Const
 	</tr>
 	<tr>
 		<td>Gj</td>
-		<td><img src="img/frash/benusi/gj-uc.png"></td>
-		<td><img src="img/frash/benusi/gj-uc-cs.png"></td>
-		<td>
-			Greek Γ.
-		</td>
-		<td><img src="img/kano/gj-uc.png"></td>
+		<td><img src="img/frash/1879-kanonizme/gj-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/gj-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/gj-uc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/gj-uc.png"></td>
+		<td><img src="img/frash/1911-nosi/gj-uc-cs.png"></td>
 		<td>
 			Greek Γ.
 		</td>
 	</tr>
 	<tr>
 		<td>ll</td>
-		<td><img src="img/frash/benusi/ll-lc.png"></td>
-		<td><img src="img/frash/benusi/ll-lc-cs.png"></td>
-		<td>
-			Greek λ.
-		</td>
-		<td><img src="img/kano/ll-lc.png"></td>
-		<td>
-			Greek λ.
+		<td><img src="img/frash/1879-kanonizme/ll-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/ll-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/ll-lc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/ll-lc.png"></td>
+		<td><img src="img/frash/1911-nosi/ll-lc-cs.png"></td>
+		<td rowspan="2">
+			Greek Λ λ.
 		</td>
 		<td rowspan="2">—</td>
 	</tr>
 	<tr>
 		<td>Ll</td>
-		<td><img src="img/frash/benusi/ll-uc.png"></td>
-		<td><img src="img/frash/benusi/ll-uc-cs.png"></td>
-		<td>
-			Greek Λ.
-		</td>
 		<td>—</td>
-		<td>
-			Presumably Greek Λ.
-		</td>
+		<td><img src="img/frash/1890-benusi/ll-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/ll-uc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/ll-uc.png"></td>
+		<td><img src="img/frash/1911-nosi/ll-uc-cs.png"></td>
 	</tr>
 	<tr>
 		<td>nj</td>
-		<td><img src="img/frash/benusi/nj-lc.png"></td>
-		<td><img src="img/frash/benusi/nj-lc-cs.png"></td>
+		<td><img src="img/frash/1879-kanonizme/nj-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/nj-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/nj-lc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/nj-lc.png"></td>
+		<td><img src="img/frash/1911-nosi/nj-lc-cs.png"></td>
 		<td>
 			Latin ƞ.
-		</td>
-		<td><img src="img/kano/nj-lc.png"></td>
-		<td rowspan="2">
-			See left.
 		</td>
 		<td rowspan="2">
 			I propose creating <small>LATIN CAPITAL LETTER MIRRORED N</small> and using ƞ for lowercase.
@@ -205,160 +219,152 @@ The examples of the Frashëri alphabet, also known as Istanbul alphabet or Const
 	</tr>
 	<tr>
 		<td>Nj</td>
-		<td><img src="img/frash/benusi/nj-uc.png"></td>
-		<td><img src="img/frash/benusi/nj-uc-cs.png"></td>
+		<td><img src="img/frash/1879-kanonizme/nj-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/nj-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/nj-uc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/nj-uc.png"></td>
+		<td><img src="img/frash/1911-nosi/nj-uc-cs.png"></td>
 		<td>
-			Latin Ƞ for casing, bad for display.<br>
-			Cyrillic И bad semantics.<br>
+			Latin Ƞ based on lowercase.
+			Cyrillic И bad semantics.
 		</td>
-		<td><img src="img/kano/nj-uc.png"></td>
 	</tr>
 	<tr>
 		<td>p</td>
-		<td><img src="img/frash/benusi/p-lc.png"></td>
-		<td><img src="img/frash/benusi/p-lc-cs.png"></td>
-		<td>
-			Greek π semantically acceptable, visually misleading.<br>
-			Latin p semantically acceptable, visually misleading.<br>
-			and very confusing considering <i>rr</i>.
-		</td>
-		<td><img src="img/kano/p-lc.png"></td>
+		<td><img src="img/frash/1879-kanonizme/p-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/p-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/p-lc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/p-lc.png"></td>
+		<td><img src="img/frash/1911-nosi/p-lc-cs.png"></td>
 		<td rowspan="2">
-			See left.
+			Greek Π π.
+			Latin P p is confusing given <i>rr</i>, but good for late.
 		</td>
 		<td rowspan="2">
-			We would benefit from some research. If that form is found elsewhere with other meanings, then we create <small>LATIN SMALL LETTER OPEN P</small>, and use Greek Π. If it isn't, then we can call it <small>LATIN SMALL LETTER FRASHERI P</small> and either use Greek Π or <small>create LATIN CAPITAL LETTER FRASHERI P</small> for symmetry.
+			We would benefit from some research. If that form is found elsewhere with other meanings, then we create <small>LATIN SMALL LETTER OPEN P</small>. If it isn't, then we can call it <small>LATIN SMALL LETTER FRASHERI P</small>. The capital form uses Greek Π.
 		</td>
 	</tr>
 	<tr>
 		<td>P</td>
-		<td><img src="img/frash/benusi/p-uc.png"></td>
-		<td><img src="img/frash/benusi/p-uc-cs.png"></td>
-		<td>
-			Greek Π.
-		</td>
-		<td><img src="img/kano/p-uc.png"></td>
+		<td><img src="img/frash/1879-kanonizme/p-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/p-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/p-uc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/p-uc.png"></td>
+		<td><img src="img/frash/1911-nosi/p-uc-cs.png"></td>
 	</tr>
 	<tr>
 		<td>rr</td>
-		<td><img src="img/frash/benusi/rr-lc.png"></td>
-		<td><img src="img/frash/benusi/rr-lc-cs.png"></td>
-		<td>
-			Latin p, visually and casing perfect, semantically dangerous.<br>
-			Greek ρ, visually slightly worse, semantically better.
-		</td>
-		<td><img src="img/kano/rr-lc.png"></td>
+		<td><img src="img/frash/1879-kanonizme/rr-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/rr-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/rr-lc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/rr-lc.png"></td>
+		<td><img src="img/frash/1911-nosi/rr-lc-cs.png"></td>
 		<td rowspan="2">
-			See left.
+			Greek Ρ ρ.
 		</td>
 		<td rowspan="2">
-			I would use use Greek Ρ ρ.
+			—
 		</td>
 	</tr>
 	<tr>
 		<td>Rr</td>
-		<td><img src="img/frash/benusi/rr-uc.png"></td>
-		<td><img src="img/frash/benusi/rr-uc-cs.png"></td>
-		<td>
-			Latin P or Greek Ρ, as above.
-		</td>
 		<td>—</td>
+		<td><img src="img/frash/1890-benusi/rr-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/rr-uc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/rr-uc.png"></td>
+		<td><img src="img/frash/1911-nosi/rr-uc-cs.png"></td>
 	</tr>
 	<tr>
 		<td>sh</td>
-		<td><img src="img/frash/benusi/sh-lc.png"></td>
-		<td><img src="img/frash/benusi/sh-lc-cs.png"></td>
-		<td>
-			Greek σ.
-		</td>
-		<td><img src="img/kano/sh-lc.png"></td>
+		<td><img src="img/frash/1879-kanonizme/sh-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/sh-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/sh-lc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/sh-lc.png"></td>
+		<td><img src="img/frash/1911-nosi/sh-lc-cs.png"></td>
 		<td>
 			Greek σ.
 		</td>
 		<td rowspan="2">
-			I propose we create <small>LATIN SMALL LETTER FRASHERI SH</small> and <small>LATIN CAPITAL LETTER FRASHERI SH</small> or equivalent. We could minimise it to one symbol if we propose <small>GREEK CAPITAL LETTER SMALL SIGMA</small>, but asking for a Greek character for it to be used exclusively in a non-Greek script doesn't sound great, and arguably it doesn't really look like that. It also resembles the Fraktur capital s, but putting that in the name would be misleading.
+			I propose we create <small>LATIN SMALL LETTER FRASHERI SH</small> and <small>LATIN CAPITAL LETTER FRASHERI SH</small> or equivalent. The lowercase form resembles the Fraktur capital S.
 		</td>
 	</tr>
 	<tr>
 		<td>Sh</td>
-		<td><img src="img/frash/benusi/sh-uc.png"></td>
-		<td><img src="img/frash/benusi/sh-uc-cs.png"></td>
+		<td><img src="img/frash/1879-kanonizme/sh-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/sh-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/sh-uc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/sh-uc.png"></td>
+		<td><img src="img/frash/1911-nosi/sh-uc-cs.png"></td>
 		<td>
-			Greek Σ but misleading.
-		</td>
-		<td><img src="img/kano/sh-uc.png"></td>
-		<td>
-			Greek Σ.
+			Greek Σ, visually misleading, good for early.
 		</td>
 	</tr>
 	<tr>
 		<td>th</td>
-		<td><img src="img/frash/benusi/th-lc.png"></td>
-		<td><img src="img/frash/benusi/th-lc-cs.png"></td>
+		<td><img src="img/frash/1879-kanonizme/th-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/th-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/th-lc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/th-lc.png"></td>
+		<td><img src="img/frash/1911-nosi/th-lc-cs.png"></td>
 		<td>
-			Greek θ acceptable given it may be its origin.<br>
-			Latin ƌ semantically and visually mediocre, bad casing.
-		</td>
-		<td><img src="img/kano/th-lc.png"></td>
-		<td rowspan="2">
-			See left.
+			Greek θ acceptable.<br>
+			Latin ƌ semantically and visually mediocre.
 		</td>
 		<td rowspan="2">
-			I would say, like for <i>p</i> above, we need to check if other people have ever used it. Then it's either <small>LATIN SMALL LETTER D WITH INWARD HOOK</small> or <small>LATIN SMALL LETTER FRASHERI TH</small>. I'm hesitant to use Greek θ for the lowercase form, since it looks pretty different from its print form, and would lose the symmetry it had with <i>dh</i>. If the authors really had perceived it as a form of theta, they would have just used the woodcut they had for theta, but they actually used a rotated single story ɡ, like they did for <i>dh</i>. Anyone looking at the symbol would associate it with d with a rightward hook, probably nobody would think of theta.
+			I would say, like for <i>p</i> above, we need to check if other people have ever used it. Then it's either <small>LATIN SMALL LETTER D WITH INWARD HOOK</small> or <small>LATIN SMALL LETTER FRASHERI TH</small>. I'm hesitant to use Greek θ for the lowercase form, despite its handwritten appearence, since it looks pretty different from its print form, and would lose the symmetry it had with <i>dh</i>. If the authors really had perceived it as a form of theta, they would have just used the woodcut they had for theta, but they actually used a rotated single story ɡ, like they did for <i>dh</i>. Anyone looking at the symbol would associate it with d with a rightward hook, probably nobody would think of theta.
 		</td>
 	</tr>
 	<tr>
 		<td>Th</td>
-		<td><img src="img/frash/benusi/th-uc.png"></td>
-		<td><img src="img/frash/benusi/th-uc-cs.png"></td>
-		<td>
-			Greek Θ as above.
-		</td>
 		<td>—</td>
+		<td><img src="img/frash/1890-benusi/th-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/th-uc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/th-uc.png"></td>
+		<td><img src="img/frash/1911-nosi/th-uc-cs.png"></td>
+		<td>
+			Greek Θ.
+		</td>
 	</tr>
 	<tr>
 		<td>xh</td>
-		<td><img src="img/frash/benusi/xh-lc.png"></td>
-		<td><img src="img/frash/benusi/xh-lc-cs.png"></td>
+		<td><img src="img/frash/1879-kanonizme/xh-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/xh-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/xh-lc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/xh-lc.png"></td>
+		<td><img src="img/frash/1911-nosi/xh-lc-cs.png"></td>
 		<td rowspan="2">
-			None.<br>
-			Perhaps Latin X̧ x̧ or some other combining diacritic.
-		</td>
-		<td><img src="img/kano/xh-lc.png"></td>
-		<td rowspan="2">
-			See left.
+			None, but bendable to Latin X̧ x̧ or X̦ x̦, like for late.
 		</td>
 		<td rowspan="2">
-			I propose we create <small>LATIN SMALL LETTER FRASHERI XH</small> and <small>LATIN CAPITAL LETTER FRASHERI XH</small>.
+			I propose we create <small>LATIN SMALL LETTER FRASHERI XH</small> and <small>LATIN CAPITAL LETTER FRASHERI XH</small> for the form in early and classic.
 		</td>
 	</tr>
 	<tr>
 		<td>Xh</td>
-		<td><img src="img/frash/benusi/xh-uc.png"></td>
-		<td><img src="img/frash/benusi/xh-uc-cs.png"></td>
-		<td><img src="img/kano/xh-uc.png"></td>
+		<td><img src="img/frash/1879-kanonizme/xh-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/xh-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/xh-uc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/xh-uc.png"></td>
+		<td><img src="img/frash/1911-nosi/xh-uc-cs.png"></td>
 	</tr>
 	<tr>
 		<td>zh</td>
-		<td><img src="img/frash/benusi/zh-lc.png"></td>
-		<td><img src="img/frash/benusi/zh-lc-cs.png"></td>
-		<td>
-			Combined Latin z̧.<br>
-			Latin ʒ.
-		</td>
-		<td colspan="2" rowspan="2">—</td>
+		<td rowspan="2">—</td>
+		<td><img src="img/frash/1890-benusi/zh-lc.png"></td>
+		<td><img src="img/frash/1890-benusi/zh-lc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/zh-lc.png"></td>
+		<td><img src="img/frash/1911-nosi/zh-lc-cs.png"></td>
 		<td rowspan="2">
-			Although I would love to have <small>LATIN SMALL LETTER Z WITH CEDILLA</small>, I have been informed by Nicolas that Unicode doesn't like doing these things anymore. I can manage with just the combining cedilla.
+			Combined Latin Z̧ z̧ or Z̦ z̦.
 		</td>
+		<td rowspan="2">—</td>
 	</tr>
 	<tr>
 		<td>Zh</td>
-		<td><img src="img/frash/benusi/zh-uc.png"></td>
-		<td><img src="img/frash/benusi/zh-uc-cs.png"></td>
-		<td>
-			Combined Latin Z̧.<br>
-			Latin Ʒ.
-		</td>
+		<td><img src="img/frash/1890-benusi/zh-uc.png"></td>
+		<td><img src="img/frash/1890-benusi/zh-uc-cs.png"></td>
+		<td><img src="img/frash/1911-nosi/zh-uc.png"></td>
+		<td><img src="img/frash/1911-nosi/zh-uc-cs.png"></td>
 	</tr>
 </table>
 <h2>Recap, proposed new codepoints (11)</h2>
@@ -369,68 +375,246 @@ The examples of the Frashëri alphabet, also known as Istanbul alphabet or Const
 		<th>possible general name</th>
 	</tr>
 	<tr>
-		<td><img src="img/frash/benusi/dh-lc.png"></td>
+		<td>
+			<img src="img/frash/1890-benusi/dh-lc.png">
+			<img src="img/frash/1886-vreto/dh-lc.png">
+			<img src="img/frash/1911-nosi/dh-lc.png">
+		</td>
 		<td>LATIN SMALL LETTER FRASHERI DH</td>
 		<td>LATIN SMALL LETTER D WITH LOOP</td>
 	</tr>
 	<tr>
-		<td><img src="img/frash/benusi/dh-uc.png"></td>
+		<td>
+			<img src="img/frash/1890-benusi/dh-uc.png">
+			<img src="img/frash/1886-vreto/dh-uc.png">
+			<img src="img/frash/1911-nosi/dh-uc.png">
+		</td>
 		<td>LATIN CAPITAL LETTER FRASHERI DH</td>
 		<td>—</td>
 	</tr>
 	<tr>
-		<td><img src="img/frash/benusi/ë-uc.png"></td>
+		<td>
+			<img src="img/frash/1890-benusi/ë-uc.png">
+			<img src="img/frash/1886-vreto/ë-uc.png">
+			<img src="img/frash/1911-nosi/ë-uc.png">
+		</td>
 		<td>LATIN CAPITAL LETTER FRASHERI SCHWA</td>
 		<td>—</td>
 	</tr>
 	<tr>
-		<td><img src="img/frash/benusi/gj-lc.png"></td>
+		<td>
+			<img src="img/frash/1890-benusi/gj-lc.png">
+			<img src="img/frash/1886-vreto/gj-lc.png">
+			<img src="img/frash/1911-nosi/gj-lc.png">
+		</td>
 		<td>LATIN SMALL LETTER FRASHERI GJ</td>
 		<td>LATIN SMALL LETTER LOOPTAIL G</td>
 	</tr>
 	<tr>
-		<td><img src="img/frash/benusi/nj-uc.png"></td>
+		<td>
+			<img src="img/frash/1890-benusi/nj-uc.png">
+			<img src="img/frash/1886-vreto/nj-uc.png">
+			<img src="img/frash/1911-nosi/nj-uc.png">
+		</td>
 		<td>LATIN CAPITAL LETTER FRASHERI NJ</td>
 		<td>LATIN CAPITAL LETTER MIRRORED N</td>
 	</tr>
 	<tr>
-		<td><img src="img/frash/benusi/p-lc.png"></td>
+		<td>
+			<img src="img/frash/1890-benusi/p-lc.png">
+			<img src="img/frash/1886-vreto/p-lc.png">
+		</td>
 		<td>LATIN SMALL LETTER FRASHERI P</td>
 		<td>LATIN SMALL LETTER OPEN P</td>
 	</tr>
 	<tr>
-		<td><img src="img/frash/benusi/sh-lc.png"></td>
+		<td>
+			<img src="img/frash/1890-benusi/sh-lc.png">
+			<img src="img/frash/1886-vreto/sh-lc.png">
+			<img src="img/frash/1911-nosi/sh-lc.png">
+		</td>
 		<td>LATIN SMALL LETTER FRASHERI SH</td>
 		<td>—</td>
 	</tr>
 	<tr>
-		<td><img src="img/frash/benusi/sh-uc.png"></td>
+		<td>
+			<img src="img/frash/1890-benusi/sh-uc.png">
+			<img src="img/frash/1886-vreto/sh-uc.png">
+			<img src="img/frash/1911-nosi/sh-uc.png">
+		</td>
 		<td>LATIN CAPITAL LETTER FRASHERI SH</td>
 		<td>—</td>
 	</tr>
 	<tr>
-		<td><img src="img/frash/benusi/th-lc.png"></td>
+		<td>
+			<img src="img/frash/1890-benusi/th-lc.png">
+			<img src="img/frash/1886-vreto/th-lc.png">
+			<img src="img/frash/1911-nosi/th-lc.png">
+		</td>
 		<td>LATIN SMALL LETTER FRASHERI TH</td>
 		<td>LATIN SMALL LETTER D WITH RIGHTWARD HOOK</td>
 	</tr>
 	<tr>
-		<td><img src="img/frash/benusi/xh-lc.png"></td>
+		<td>
+			<img src="img/frash/1890-benusi/xh-lc.png">
+			<img src="img/frash/1886-vreto/xh-lc.png">
+		</td>
 		<td>LATIN SMALL LETTER FRASHERI XH</td>
 		<td>—</td>
 	</tr>
 	<tr>
-		<td><img src="img/frash/benusi/xh-uc.png"></td>
+		<td>
+			<img src="img/frash/1890-benusi/xh-uc.png">
+			<img src="img/frash/1886-vreto/xh-uc.png">
+		</td>
 		<td>LATIN CAPITAL LETTER FRASHERI XH</td>
 		<td>—</td>
+	</tr>
+</table>
+<h2>Outcome</h2>
+This is about the classic (1886–1908). The colours mean <span class="latin">basic Latin</span>, <span class="latin-c">non-basic but already encoded Latin</span>, <span class="greek">Greek</span>, <span class="frash">to be encoded</span>.
+<table>
+	<tr>
+		<th>lower</th>
+		<td class="latin">a</td>
+		<td class="latin">b</td>
+		<td class="latin">c</td>
+		<td class="latin-c">ç</td>
+		<td class="latin">d</td>
+		<td class="frash">dh</td>
+		<td class="greek">e</td>
+		<td class="latin">ë</td>
+		<td class="latin">f</td>
+		<td class="latin-c">g</td>
+		<td class="frash">gj</td>
+		<td class="latin">h</td>
+		<td class="latin">i</td>
+		<td class="latin">j</td>
+		<td class="latin">k</td>
+		<td class="latin">l</td>
+		<td class="greek">ll</td>
+		<td class="latin">m</td>
+	</tr>
+	<tr>
+		<th>upper</th>
+		<td class="latin">A</td>
+		<td class="latin">B</td>
+		<td class="latin">C</td>
+		<td class="latin-c">Ç</td>
+		<td class="latin">D</td>
+		<td class="frash">Dh</td>
+		<td class="greek">E</td>
+		<td class="frash">Ë</td>
+		<td class="latin">F</td>
+		<td class="latin">G</td>
+		<td class="greek">Gj</td>
+		<td class="latin">H</td>
+		<td class="latin">I</td>
+		<td class="latin">J</td>
+		<td class="latin">K</td>
+		<td class="latin">L</td>
+		<td class="greek">Ll</td>
+		<td class="latin">M</td>
+	</tr>
+	<tr>
+		<th>casing</th>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-no">X</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-no">X</td>
+		<td class="casing-no">X</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+	</tr>
+	<tr>
+		<th>lower</th>
+		<td class="latin">n</td>
+		<td class="latin-c">nj</td>
+		<td class="latin">o</td>
+		<td class="frash">p</td>
+		<td class="latin">q</td>
+		<td class="latin">r</td>
+		<td class="greek">rr</td>
+		<td class="latin">s</td>
+		<td class="frash">sh</td>
+		<td class="latin">t</td>
+		<td class="frash">th</td>
+		<td class="latin">u</td>
+		<td class="latin">v</td>
+		<td class="latin">x</td>
+		<td class="frash">xh</td>
+		<td class="latin">y</td>
+		<td class="latin">z</td>
+		<td class="latin-c">zh</td>
+	</tr>
+	<tr>
+		<th>upper</th>
+		<td class="latin">N</td>
+		<td class="frash">Nj</td>
+		<td class="latin">O</td>
+		<td class="greek">P</td>
+		<td class="latin">Q</td>
+		<td class="latin">R</td>
+		<td class="greek">Rr</td>
+		<td class="latin">S</td>
+		<td class="frash">Sh</td>
+		<td class="latin">T</td>
+		<td class="greek">Th</td>
+		<td class="latin">U</td>
+		<td class="latin">V</td>
+		<td class="latin">X</td>
+		<td class="frash">Xh</td>
+		<td class="latin">Y</td>
+		<td class="latin">Z</td>
+		<td class="latin-c">Zh</td>
+	</tr>
+	<tr>
+		<th>casing</th>
+		<td class="casing-yes">V</td>
+		<td class="casing-no">X</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-no">X</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-no">X</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
+		<td class="casing-yes">V</td>
 	</tr>
 </table>
 <h2>Secondary sources</h2>
 <ul>
 	<li>
-		Stavro Skendi (1960), <i>History of the Albanian Alphabet: A Case of Complex Cultural and Political Development</i>, in <i>Südost-Forschungen, 29</i>, Munich, p. 270f.:
+		Stavro Skendi (1960), <i>History of the Albanian Alphabet: A Case of Complex Cultural and Political Development</i>, in <i>Südost-Forschungen</i> <b>29</b>, Munich, p. 270f.:
 		<blockquote>
 			[A] cultural-educational society, called the Society for Albanian Publications, was constituted in 1879 in Constantinople with the aim of promoting publications in the Albanian language. At the head of it were the two brothers Frashëri, Sami (known in Turkey as Şemseddin Sami Bey) and Naim, the latter the apostle-poet of Albanian nationalism, assisted by prominent Albanians of the Orthodox and Catholic faiths. This society devised an Albanian alphabet based on Latin characters some Greek letters, like ð (th in father) and θ (th in breath) — Sami and Naim had studied in the Greek gymnasium of Janina — and some independent ones, like h (gj), ceated by Sami himself for particular Albanian sounds. Adopting the principle of one letter for each sound, this alphabet was linguistically well-founded. It was called "the Constantinople Alphabet" or "the Frashëriot Alphabet" because of the Frashëri brothers. In it the society published its organ <i>Drita</i>, an Albanian ABC and primer and several textbooks.<br>
 			The Constantinople alphabet was adopted by various publications of the Albanian colonies — in Bulgaria, Rumania, and elsewhere — and by a large part of Albania proper. The reports of the Austrian consuls in Albania advise that by 1905 the Constantinople alphabet was used by the major part of the population, Orthodox as wel as Moslem, which lived in the south, and had extended northward beyond Durrës, as far as Dibër and the region south of Prizren.
+		</blockquote>
+	</li>
+	<li>
+		Frances Trix (1999), <i>The Stamboul alphabet of Shemseddin Sami Bey: precursor to Turkish script reform</i>, in <i>Int. J. Middle East Stud.</i> <b>31</b>, 255:
+		<blockquote>
+			This "Stamboul Alphabet" was designed by Shemseddin Sami Bey and, unlike Ahunzade's proposal, was immediately acted upon and subsequently adopted by the new Albanian presses in Bucharest and Sofia, from which it spread through southern and central Albanian lands, all still under Ottoman rule.<br>
+			The Stamboul alphabet for Albanian thereby became the only Latin-based alphabet adopted by a largely Muslim people in the Ottoman Empire; it predated Atatürk's promulgation in 1928 of a Roman script for Turkish by almost fifty years. The Stamboul alphabet was remarkable for the period in which it was introduced, but it was also notable for its inclusion of Greek and Cyrillic characters among the more numerous standard Latin ones.
 		</blockquote>
 	</li>
 	<li>

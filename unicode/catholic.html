@@ -19,7 +19,7 @@ I present forms from various works written in the Catholic alphabet, also known 
 	<li><i>Pesmdhet biseda t' Shejtit sh' Leonard prej Porto Maurizio</i> (1900), Shkodër: Typ. Immacolatae Concept. B. M. V.</li>
 	<li><i>Smuetorja e Austri-Hungaris</i> (1904), Shkodër</li>
 </ul>
-They all use more or less the same orthography, with the exception of Buzuku, which has more symbols (see below) and doesn't use Italian digraphs. The letter ⟨λ⟩ is introduced by Bogdani, earlier works use ⟨l⟩ or ⟨ll⟩. The first work to show casing variants for these letters is the <i>Kuvendi</i>. The reason why some letters forms are not in the table is for linguistical reasons, not typographical, <i>y</i> and <i>ll</i> are very rare word-initially, so I couldn't find them in the works.
+Buzuku's (1555) orthography cannot be categorised as Catholic alphabet, as unlike the others it doesn't use Italian digraphs and has some more symbols. However the Catholic alphabet inherited its letters from this northern Albanian tradition (of which no other work aside from Buzuku survives), so from an encoding perspective they are treated together. The later works use more or less the same orthography, with varying choices on how to spell <i>ë</i> (always however a relatively basic Latin character already in Unicode, hence not treated here). The letter ⟨λ⟩ is introduced by Bogdani (1685), earlier works use ⟨l⟩ or ⟨ll⟩. The first work to show casing variants for these letters is the <i>Kuvendi</i> (1706). The reason why some letters forms are not in the table is for linguistical reasons, not typographical, <i>y</i> and <i>ll</i> are very rare word-initially, so I couldn't find them in the works.
 <h2>Table with comparisons</h2>
 <table>
 	<tr>
@@ -171,31 +171,6 @@ They all use more or less the same orthography, with the exception of Buzuku, wh
 		<td>—</td>
 	</tr>
 </table>
-<h2>Remarks on encoding</h2>
-<img src="img/sanbasile-zeta.png" style="float:right">
-We can encode <i>ll</i> as Greek Λ λ, <i>y</i> as Latin Ȣ ȣ, and <i>z</i> as Latin Ɛ ɛ, but while <i>dh</i> is currently often transcribed as Greek Ξ ξ, that's a pretty long stretch both semantically and visually. I propose the addition of new codepoints for it. The codepoint of the <small>OPEN E</small> is also semantically unrelated to the Albanian symbol for <i>z</i>, and although publishing houses used their existing woodcut of the Greek epsilon, the letter most likely descends from a cursive form of ζ. The image you can see on the right, for example, is how ζ is written in the 1834 manuscript <i>Dottrina a Krështe</i> from San Basile (not Catholic script, merely Latin with Greek letters). There follows a list of the proposed codepoints, although having <i>z</i> is not as important as <i>dh</i> is.
-<table>
-	<tr>
-		<th>image</th>
-		<th>possible name</th>
-	</tr>
-	<tr>
-		<td><img src="img/cath/1887-jungg/dh-lc.png"></td>
-		<td>LATIN SMALL LETTER OLD ALBANIAN DH</td>
-	</tr>
-	<tr>
-		<td><img src="img/cath/1887-jungg/dh-uc.png"></td>
-		<td>LATIN CAPITAL LETTER OLD ALBANIAN DH</td>
-	</tr>
-	<tr>
-		<td><img src="img/cath/1887-jungg/z-lc.png"></td>
-		<td>LATIN SMALL LETTER OLD ALBANIAN Z</td>
-	</tr>
-	<tr>
-		<td><img src="img/cath/1887-jungg/z-uc.png"></td>
-		<td>LATIN CAPITAL LETTER OLD ALBANIAN Z</td>
-	</tr>
-</table>
 <h2>Additional characters used by Buzuku (1555).</h2>
 <table>
 	<tr>
@@ -213,6 +188,23 @@ We can encode <i>ll</i> as Greek Λ λ, <i>y</i> as Latin Ȣ ȣ, and <i>z</i> as
 	<tr>
 		<td><img src="img/cath/1555-buzuku/x-uc.png"></td>
 		<td>Latin Ʒ.</td>
+	</tr>
+</table>
+<h2>Remarks on encoding</h2>
+We can encode <i>ll</i> as Greek Λ λ, <i>y</i> as Latin Ȣ ȣ, and <i>z</i> as Latin Ɛ ɛ, but while <i>dh</i> is currently often transcribed as Greek Ξ ξ, that's a pretty long stretch both semantically and visually. I propose the addition of new codepoints for it. I also propose to add annotation to the existing <small>LATIN SMALL LETTER OPEN E</small> and its capital form mentioning its use as Albanian <i>z</i>.
+<h3>New codepoints</h3>
+<table>
+	<tr>
+		<th>image</th>
+		<th>possible name</th>
+	</tr>
+	<tr>
+		<td><img src="img/cath/1887-jungg/dh-lc.png"></td>
+		<td>LATIN SMALL LETTER OLD ALBANIAN DH</td>
+	</tr>
+	<tr>
+		<td><img src="img/cath/1887-jungg/dh-uc.png"></td>
+		<td>LATIN CAPITAL LETTER OLD ALBANIAN DH</td>
 	</tr>
 </table>
 <h2>Secondary sources</h2>
