@@ -16,3 +16,7 @@ td, th {
 	text-align: center;
 	padding: 0.5em;
 }
+
+body {
+	font-family: "Gentium Plus", "Gentium", serif;
+}
