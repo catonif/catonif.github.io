@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Vithkuqi script keyboard</title>
+<style>
+.Elba {
+	font-family: "Noto Serif Vithkuqi";
+}
+</style>
+</head>
+<body>
+<h1>Elbasan script keyboard</h1>
+<textarea type="text" oninput="dothing(this)" class="Elba" style="width:100%;height: 100px;" spellcheck="false" autofocus></textarea><br>
+See the Wikipedia articles <a href="https://en.wikipedia.org/wiki/Elbasan_alphabet">Elbasan alphabet</a> and <a href="https://en.wikipedia.org/wiki/Elbasan_Gospel_Manuscript">Elbasan Gospel Manuscript</a> for clarification, and <a href="http://www.albanianliterature.net/authors/authors_early/gregory_of_durres/index.html">Robert Elsie's site</a> for scans, translit and translations of the manuscript. If the characters appear as boxes, I suggest to install the <a href="https://fonts.google.com/noto/specimen/Noto+Sans+Elbasan">Noto Sans Elbasan</a> font.<br>
+Type in the box and it will convert the letters into the script. Differently from modern orthography, type ⟨n=⟩ for <span class="Elba">𐔔</span>, ⟨gh⟩ for <span class="Elba">𐔥</span>, ⟨kh⟩ for <span class="Elba">𐔧</span>, ⟨gh=⟩ for <span class="Elba">𐔦</span>. Please double-check the converted outcome with the manuscript scans, since it is not guaranteed to be accurate, e.g. ⟨nd⟩ is sometimes <span class="Elba">𐔅</span>, sometimes <span class="Elba">𐔓𐔄</span> and sometimes <span class="Elba">𐔔𐔄</span>.<br>
+<script>
+
+function dothing(element) {
+	element.value = element.value
+
+		.replace(/'/g, '’')
+
+		.replace(/𐖵h/g, '𐖶')
+		.replace(/𐖎[Hh]/g, '𐖏')
+		.replace(/𐖙b/g, '𐖘')
+		.replace(/𐕲[Bb]/g, '𐕱')
+		.replace(/𐖜h/g, '𐖝')
+		.replace(/𐕵[Hh]/g, '𐕶')
+		.replace(/𐖣h/g, '𐖤')
+		.replace(/𐕼[Hh]/g, '𐕽')
+		.replace(/𐖥e/g, '𐖦')
+		.replace(/𐕾[Ee]/g, '𐕿')
+		.replace(/𐖩l/g, '𐖪')
+		.replace(/𐖂[Ll]/g, '𐖃')
+		.replace(/𐖬j/g, '𐖭')
+		.replace(/𐖅[Jj]/g, '𐖆')
+		.replace(/𐖌[Hh]/g, '𐖍')
+		.replace(/𐖳h/g, '𐖴')
+		
+		.replace(/a/g, '𐖗')
+		.replace(/A/g, '𐕰')
+		.replace(/b/g, '𐖙')
+		.replace(/B/g, '𐕲')
+		.replace(/c/g, '𐖚')
+		.replace(/C/g, '𐕳')
+		.replace(/ç/g, '𐖛')
+		.replace(/Ç/g, '𐕴')
+		.replace(/d/g, '𐖜')
+		.replace(/D/g, '𐕵')
+		.replace(/e/g, '𐖞')
+		.replace(/E/g, '𐕷')
+		.replace(/ë/g, '𐖟')
+		.replace(/𐖟=/g, '𐕸')
+		.replace(/Ë/g, '𐕸')
+		.replace(/f/g, '𐖠')
+		.replace(/F/g, '𐕹')
+		.replace(/g/g, '𐖡')
+		.replace(/G/g, '𐕺')
+		.replace(/h/g, '𐖣')
+		.replace(/H/g, '𐕼')
+		.replace(/i/g, '𐖥')
+		.replace(/I/g, '𐕾')
+		.replace(/j/g, '𐖧')
+		.replace(/J/g, '𐖀')
+		.replace(/k/g, '𐖨')
+		.replace(/K/g, '𐖁')
+		.replace(/l/g, '𐖩')
+		.replace(/L/g, '𐖂')
+		.replace(/m/g, '𐖫')
+		.replace(/M/g, '𐖄')
+		.replace(/n/g, '𐖬')
+		.replace(/N/g, '𐖅')
+		.replace(/o/g, '𐖮')
+		.replace(/O/g, '𐖇')
+		.replace(/p/g, '𐖯')
+		.replace(/P/g, '𐖈')
+		.replace(/q/g, '𐖰')
+		.replace(/Q/g, '𐖉')
+		.replace(/r/g, '𐖱')
+		.replace(/R/g, '𐖊')
+		.replace(/s/g, '𐖳')
+		.replace(/S/g, '𐖌')
+		.replace(/t/g, '𐖵')
+		.replace(/T/g, '𐖎')
+		.replace(/u/g, '𐖷')
+		.replace(/U/g, '𐖐')
+		.replace(/v/g, '𐖸')
+		.replace(/V/g, '𐖑')
+		.replace(/x/g, '𐖹')
+		.replace(/X/g, '𐖒')
+		.replace(/y/g, '𐖻')
+		.replace(/Y/g, '𐖔')
+		.replace(/z/g, '𐖼')
+		.replace(/Z/g, '𐖕')
+}
+</script>
+</body>
+<footer><hr>By Catonif, January 2026. <a href="..">Homepage</a>. catonif.dev@gmail.com</footer>

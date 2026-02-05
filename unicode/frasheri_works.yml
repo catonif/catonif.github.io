@@ -73,6 +73,14 @@
 - title: Komiteti i shqiptarëve për lirin' e Shqipërisë
   year: 1888
 
+- title: Abetare e gjuhësë shqip
+  year: 1888
+  author: Sami Frashëri
+  publisher: Dituri
+  location: Bucharest
+  unishk: 737
+  pages: 80
+
 - title: Radhuashkrojë
   author: Jani Vreto
   publisher: Dituri
@@ -273,6 +281,14 @@
   location: Korçë
   year: 1909
 
+- title: Abetare e gjuhësë shqip
+  author: Sami Frashëri
+  location: Constantinople
+  publisher: Rufeja
+  year: 1909
+  pages: 62
+  unishk: 738
+
 - title: Abetare gegënisht
   year: 1910
   edition: 4
@@ -314,6 +330,7 @@
   publisher: Tregëtare Nërkombëtare
   location: Elbasan, Manastir
   year: 1911
+  unishk: 741
 
 - title: Jete-shkrimi i Konstandin Kristoforidhit
   author: Simon Shuteriqi

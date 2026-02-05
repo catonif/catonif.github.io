@@ -1,0 +1,2782 @@
+[
+	{
+		"title": "Meshari",
+		"author": "Gjon Buzuku",
+		"year": 1555,
+		"type": "manuscript",
+		"pages": 200,
+		"script": "latin-catholic",
+		"lect": "gheg",
+		"add-langs": "la",
+		"link": {
+			"bksh": "antikua1!HASH69c1"
+		}
+	},
+	{
+		"title": "Dottrina Christiana",
+		"author": "Lekë Matranga",
+		"og-author": "Ledesma",
+		"editions": [
+			{
+				"year": 1592,
+				"location": "Rome",
+				"publisher": "A. Facciotti",
+				"full-title": [
+					{
+						"lang": "sq",
+						"text": "EMBSVAME E CHRÆSTERÆ\nBææra per tæ Vrtænæ Atæ Lædeſmæ ſciochiæriet Ieſuſit.\nE prierræ lætireiet mbæ gluchæ tæ arbæreſciæ pær Lecæ Matrægnæ Imbſuam i Cullegit Græc tæ Romæſæ.\n"
+					},
+					{
+						"lang": "it",
+						"text": "DOTTRINA CHRISTIANA\nComposta dal Reuerendo P. Dottor Ledeſma della Compagnia di Giesù.\nTradotta di lingua Italiana nell'Albaneſe per Luca Matranga alumno del Collegio Greco, in Roma.\n"
+					}
+				],
+				"pages": 28,
+				"link": {
+					"ws": "Embsuame e Chræsteræ (1592).djvu"
+				}
+			},
+			{
+				"type": "manuscript",
+				"name": "ms Barb. lat. 3454",
+				"pages": 174,
+				"link": {
+					"url": "https://digi.vatlib.it/view/MSS_Barb.lat.3454"
+				}
+			}
+		],
+		"add-langs": "it",
+		"lect": "tosk-sicily-piana",
+		"script": "latin"
+	},
+	{
+		"title": "Dottrina Cristiana",
+		"author": "Pjetër Budi",
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"editions": [
+			{
+				"edition": 1,
+				"year": 1618,
+				"pages": 229,
+				"link": {
+					"bksh": "antikua1!HASH012c"
+				}
+			},
+			{
+				"edition": 2,
+				"year": 1636,
+				"pages": 288,
+				"link": {
+					"bksh": "antikua1!HASH0182!ab09ae18"
+				}
+			},
+			{
+				"edition": 3,
+				"year": 1664,
+				"pages": 288,
+				"link": {
+					"bksh": "antikua1!HASH0eb1"
+				}
+			},
+			{
+				"edition": 4,
+				"year": 1868,
+				"pages": 206,
+				"link": {
+					"bksh": "libra112!HASH0184",
+					"gb": "OC9WAAAAcAAJ"
+				}
+			}
+		],
+		"add-langs": [
+			"la",
+			"it"
+		],
+		"script": "latin-catholic",
+		"religion": "christian-catholic",
+		"lect": "gheg"
+	},
+	{
+		"title": "Speculum confessionis",
+		"author": "Pjetër Budi",
+		"og-author": "Emerio de Bonis",
+		"year": 1621,
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"pages": 408,
+		"full-title": [
+			{
+				"lang": "la",
+				"text": "SPECVLVM\nCONFESSIONIS\nIn Epyroticam linguam à PETRO BVDI\nEpiſcopo Sapatenſe, & Sarda-\nnenſe tranſlatum:\nSANCTISSIMI DOMINI NOSTRI\nGREGORII XV.\nLiberalitate typis datum.\n"
+			},
+			{
+				"lang": "sq",
+				"text": "PASECHȢRA.\nETREFȢEMIT\nE Atit Emerio de Bonis meſaa tyera cafsce ſciu-\nme tefruytuoſcime teſcpijrtit, ꝑndimete giuhu-\nſe Arbeneſce, e achie maatepere ꝑtatȣnet chiſya-\nne te ɛote mendegiuom giuhu nze tyera lete-\nraſc, nkξξȣem giuheze letine mbegiuhu Tar-\nbeneſce ɛotit Dom Pietre Budit prey Gurize\nbardξe, Vpeſckepize Sadrimeſe.\n"
+			},
+			{
+				"lang": "it",
+				"text": "SPECCHIO DI CONFESSIONE\ndel P. Emirio de Bonis, con alcuni diſcorſi ſpi-\nrituali vtiliſsimi à quelli che non intendono\naltra lingua, che la materna Albaneſe. Tra-\ndotti nella medeſima lingua da Monſignor\nPietro Budi Veſcouo Sapatenſe, e Saranenſe.\n"
+			}
+		],
+		"add-langs": [
+			"la",
+			"it"
+		],
+		"script": "latin-catholic",
+		"religion": "christian-catholic",
+		"lect": "gheg",
+		"link": {
+			"gb": "bPsyiJ9FSb8C",
+			"bksh": "antikua1!HASH016b"
+		}
+	},
+	{
+		"title": "Rituale romanum",
+		"author": "Pjetër Budi",
+		"year": 1621,
+		"location": "Rome",
+		"publisher": "B. Zannetti",
+		"pages": 374,
+		"full-title": {
+			"lang": "sq",
+			"text": "RITVALE\nROMANVM\nIn Epyroticam linguam à PETRO BVDI\nEpiſcopo Sapatenſe, & Sarda-\nnenſe translatum:\nSANCTISSIMI DOMINI NOSTRI\nGREGORII XV.\nLiberalitate typis datum.\n"
+		},
+		"script": "latin-catholic",
+		"religion": "christian-catholic",
+		"lect": "gheg",
+		"link": {
+			"bksh": "antikua1!HASHae44",
+			"gb": "uaPDzYVUiMcC"
+		}
+	},
+	{
+		"title": "Dictionarium",
+		"author": "Frang Bardhi",
+		"year": 1635,
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"full-title": {
+			"lang": "la",
+			"text": "DICTIONARIVM\nLATINO EPIROTICVM\nVna\nCum nonnullis vſitatioribus\nloquendi formulis.\nPer\nR. D. FRANCSISCVM BLANCHVM\nEpirotam Coll. de Propag. Fide Alumnum.\n"
+		},
+		"pages": 222,
+		"lect": "gheg",
+		"religion": "christian-catholic",
+		"script": "latin-catholic",
+		"link": {
+			"bksh": "antikua1!HASH01d9",
+			"gb": "PJP7gP1p-JAC"
+		}
+	},
+	{
+		"title": "Cuneus Prophetarum",
+		"author": "Pjetër Bogdani",
+		"editions": [
+			{
+				"edition": 1,
+				"year": 1685,
+				"location": "Padova",
+				"publisher": "Tipografia del Seminario",
+				"volumes": [
+					{
+						"volume": 1,
+						"full-title": {
+							"lang": "la",
+							"text": "CVNEVS\nPROPHETARVM\nDE\nCHRISTO\nSALVATORE MVNDI,\nET EIVS EVANGELICA VERITATE,\nITALICE, ET EPIROTICE CONTEXTA,\nEt in duas Partes diuiſa\nA PETRO BOGDANO\nMACEDONE\nSACR. CONGR. DE PROP. FIDE ALVMNO.\nPhiloſophiæ, & Sacræ Theologiæ Doctore, olim\nEpiſcopo Scodrenſi; & Adminiſtratore\nAntibarenſi; nunc verò\nARCHIEPISCOPO SCVPORVM\nAC TOTIVS\nREGNI REVIÆ\nADMINISTRATORE.\nPARS PRIMA.\n"
+						},
+						"pages": 182,
+						"link": {
+							"bksh": "antikua1!HASH01a2",
+							"gb": [
+								"KPZDAAAAcAAJ",
+								"BZ1qtllYrcEC"
+							]
+						}
+					},
+					{
+						"volume": 2,
+						"full-title": {
+							"lang": "la",
+							"text": "DE VITA\nIESV CHRISTI\nSALVATORIS MVNDI,\nET EIVS EVANGELICA VERITATE,\nITALICE, ET EPIROTICE CONTEXTA,\nEt in duas Partes diuiſa\nA PETRO BOGDANO\nMACEDONE\nSACR. CONGR. DE PROP. FIDE ALVMNO.\nPhiloſophiæ, & Sacræ Theologiæ Doctore, olim\nEpiſcopo Scodrenſi, & Adminiſtratore\nAntibarenſi; nunc verò\nARCHIEPISCOPO SCVPORVM\nAC TOTIVS\nREGNI SERVIÆ\nADMINISTRATORE.\nPARS SECVNDA.\n"
+						},
+						"pages": 162,
+						"link": {
+							"bksh": "antikua1!HASH01d9",
+							"gb": [
+								"wpvP8PWkv_QC",
+								"BZ1qtllYrcEC"
+							]
+						}
+					}
+				]
+			},
+			{
+				"edition": 2,
+				"location": "Venice",
+				"publisher": "G. Albrizzì",
+				"year": 1691,
+				"volumes": [
+					{
+						"volume": 1,
+						"pages": 182,
+						"full-title": {
+							"lang": "it",
+							"text": "L'INFALLIBILE VERITÀ\nDELLA CATTOLICA FEDE,\nDIMOSTRATA SINO ALL'EVIDENZA\nad ogni qualità di Perſone;\nCAVATA DALL'ALTO FONTE DELLE DIVINE\nSCRITTURE,\nPER OPERA DI MONSIGNOR\nPIERO BOGDANO\nARCIVESCOVO DI SCOPIA,\nEt Amministratore di tutto il Regno di Servia, Dottor di Filoſofia,\ne Sacra Teologia,\nIN CUI TRATTANDOSI\nDELLA NULLITÀ DELLE TRE PRIMARIE SETTE\nEbrea, Maomettana, e Pagana, ſi ſtabiliſce l'unità della noſtra Fede ſotto il Romano\nPontefice, confutandoſi con l'Antiche Ereſie, le Moderne di Lutero, Calvi-\nno, e ſuoi ſeguaci; s'abbatte lo Sciſma de Greci, e ſi eſtirpa\nl'Incredulità degli Ateiſti.\nOPERA UTILISSIMA\nAd ogni ſtato di perſone\nEBREE, MAOMETTANE, E PAGANE PER CONOSCERE\nl'errore in cui vivono. Neceſſaria à Greci, ed à chiunque vive ſotto il Giogo\nTurcheſco, per ſaper come ben vivere. Dilettevole à Cattolici per\nconfermarſi nella Santa Fede,\nSpiegata in due Copioſe lingua Italiana, e Schiava; adornata\ncon molte Figure in Rame.\nET IN DUE PARTI DIVISA."
+						},
+						"link": {
+							"bksh": "antikua1!HASH018c",
+							"gb": ["2gyYVr8rCVEC", "6H5lAAAAcAAJ"]
+						}
+					},
+					{
+						"volume": 2,
+						"pages": 162,
+						"full-title": {
+							"lang": "sq",
+							"text": "L'INFALLIBILE VERITÀ\nDELLA CATTOLICA FEDE,\nDIMOSTRATA\nNella Vita di\nGESV CHRISTO\nE nella Dichiaratione del ſuo\nSANTO EVANGELO\nPER OPERA DI MONSIGNOR\nPIETRO BOGDANO\nARCIVESCOVO DI SCOPIA,\nEt Amminiſtratore di tutto il Regno di Servia, Dottor di Filoſofia,\ne Sacra Teologia,\nPARTE SECONDA."
+						},
+						"link": {
+							"bksh": "antikua1!HASH018c",
+							"gb": ["xmQ82ZbcyOgC", "MREkVjOaNRkC"]
+						}
+					}
+				]
+			},
+			{
+				"edition": 3,
+				"location": "Venice",
+				"publisher": "G. Albrizzì",
+				"year": 1702,
+				"volumes": [
+					{
+						"volume": 2,
+						"pages": 202,
+						"full-title": {
+							"lang": "it",
+							"text": "L'INFALLIBILE VERITÀ\nDELLA CATTOLICA FEDE,\nDIMOSTRATA\nNella Vita di\nGESV CHRISTO\nE nella Dichiaratione del ſuo\nSANTO EVANGELO\nPER OPERA DI MONSIGNOR\nPIETRO BOGDANO\nARCIVESCOVO DI SCOPIA,\nEt Amminiſtratore di tutto il Regno di Servia, Dottor di Filoſofia,\ne Sacra Theologia,\nParte SECONDA."
+						},
+						"link": {
+							"gb": "NHAjqBLSJ_YC"
+						}
+					}
+				]
+			}
+		],
+		"add-langs": [
+			"it",
+			"la",
+			"he",
+			"ar"
+		],
+		"lect": "gheg",
+		"script": "latin-catholic"
+	},
+	{
+		"title": "Dittionario italiano–albanese",
+		"author": "Francesco Maria da Lecce",
+		"year": 1702,
+		"lect": "gheg",
+		"script": "latin",
+		"add-langs": "it"
+	},
+	{
+		"title": "Kuvendi i Arbënit",
+		"author": false,
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"editions": [
+			{
+				"edition": 1,
+				"year": 1706,
+				"pages": 115,
+				"link": {
+					"bksh": "antikua1!HASH1b8d"
+				}
+			},
+			{
+				"edition": 2,
+				"year": 1743,
+				"pages": 46,
+				"link": {
+					"bksh": "antikua1!HASH01a6!cf0165d0"
+				}
+			},
+			{
+				"edition": 3,
+				"year": 1868,
+				"pages": 166,
+				"link": {
+					"bksh": ["libra1!HASH01f8!34bd7717", "libra112!HASH01d4"]
+				}
+			}
+		],
+		"add-langs": [
+			"it",
+			"la"
+		],
+		"religion": "christian-catholic",
+		"script": "latin-catholic",
+		"lect": "gheg"
+	},
+	{
+		"title": "Osservazioni grammaticali nella lingua albanese",
+		"author": "Francesco Maria da Lecce",
+		"year": 1716,
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"pages": 228,
+		"full-title": {
+			"lang": "it",
+			"text": "OSSERVAZIONI\nGRAMMATICALI\nNella Lingua Albaneſe\nDEL P. FRANCESCO MARIA DA LECCE\nMIN. OSS. RIF.\nEſperfetto Apoſtolico delle Miſſioni di Macedonia.\nDEDICATE\nAGLI EMINENTISS. E REVERENDISSIMI\nSIGNORI\nCARDINALI\nDella Sagra Congregazione di\nPropaganda Fede.\n"
+		},
+		"add-langs": "it",
+		"genre": "linguistic",
+		"script": "latin-catholic",
+		"link": {
+			"gb": "CMwGAAAAQAAJ"
+		}
+	},
+	{
+		"title": "Breve compendio della dottrina cristiana",
+		"author": "Gjon Nikollë Kazazi",
+		"year": 1743,
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"full-title": [
+			{
+				"lang": "it",
+				"text": "BREVE COMPENDIO\nDELLA\nDOTTRINA\nCRISTIANA\nTradotta in lingua Albaneſe per\nl'utilità, e iſtruzione de Fan-\nciulil di quella Nazione\nDa un Nazionale del Regno di Servia\nAlunno della S. Congregazione.\n"
+			}
+		],
+		"pages": 46,
+		"script": "latin-catholic",
+		"religion": "christian-catholic",
+		"add-langs": [
+			"it",
+			"la"
+		],
+		"link": {
+			"bksh": "antikua1!HASH01a6!cf0165d0",
+			"gb": "ELUCAAAAQAAJ",
+			"ws": "Breve compendio della dottrina cristiana.djvu"
+		},
+		"lect": "gheg"
+	},
+	{
+		"title": "Elbasan Gospel manuscript",
+		"author": "anonymous",
+		"year": 1761,
+		"lect": "gheg-elbasan",
+		"pages": 61,
+		"script": "elbasan",
+		"religion": "christian-orthodox",
+		"link": {
+			"ws": "Anonimi i Elbasanit.djvu"
+		}
+	},
+	{
+		"title": "Gjella e S. Mëris Virgjër",
+		"author": "Giulio Variboba",
+		"year": 1762,
+		"script": "latin",
+		"location": "Rome",
+		"full-title": {
+			"lang": "sq",
+			"text": "GHIELLA\nE\nS. MⱯRIIS\nVIRGHⱯR\nScruar mbɐ viers Arbɐriſt caa gnɐ Prift puru i\nArbɐres pɐr ndeert aſaj Regin e par ſpaſs\ntɐ atire divotrave, cia ſɐ duan tɐ chɐn-\ndognɐn chɐnch' namurije; ma duan\ntɐ jeen chɐnch' Spirituaal. mbɐ\ntrij manerɐs: mbɐ Calimeer,\nmbɐ canghiell' e mbɐ gn'\natɐr ſort chɐndimmi Lɐ-\ntiſt: VERGINE BELLA."
+		},
+		"pages": 36,
+		"lect": "tosk-calabria-sangiorgio",
+		"religion": "christian-catholic",
+		"link": {
+			"bksh": "antikua1!HASH0cf4"
+		}
+	},
+	{
+		"title": "Protopeiria",
+		"author": "Theodoros Kavalliotis",
+		"year": 1770,
+		"location": "Venice",
+		"publisher": "A. Bortoli",
+		"lect": "tosk-moscopole",
+		"religion": "christian-orthodox",
+		"script": "greek",
+		"pages": 94,
+		"add-langs": [ "el", "rup" ],
+		"genre": "linguistic",
+		"link": {
+			"bksh": "antikua1!HASH01a6!d30165c8",
+			"url": "https://www.vlahoi.net/vlahiki-glossa/protopeiria-kavallioti"
+		}
+	},
+	{
+		"title": "Tetraglosson",
+		"author": "Dhanil Voskopojari",
+		"year": 1802,
+		"add-langs": [ "el", "rup", "mk" ],
+		"genre": "linguistic",
+		"pages": 100,
+		"script": "greek",
+		"religion": "christian-orthodox",
+		"link": {
+			"ws": "Eisagogiki-Didaskalia.pdf"
+		}
+	},
+	{
+		"title": "Dhjatë e re",
+		"author": "Vangjel Meksi",
+		"editions": [
+			{
+				"edition": 1,
+				"year": 1827,
+				"location": "Corfu",
+				"publisher": "Diokiseos",
+				"pages": 839,
+				"link": {
+					"gb": "Z80GAAAAQAAJ"
+				}
+			},
+			{
+				"edition": 2,
+				"year": 1858,
+				"location": "Athens",
+				"publisher": "Ch. Nicholaidis Filadelfeus",
+				"pages": 843,
+				"link": {
+					"bksh": "libra112!HASH017f"
+				}
+			}
+		],
+		"script": "greek",
+		"religion": "christian-orthodox",
+		"add-langs": "el",
+		"lect": "tosk"
+	},
+	{
+		"title": "Memoria della lingua albanese",
+		"author": "Giueppe Crispi",
+		"year": 1831,
+		"location": "Palermo",
+		"publisher": "L. Dato",
+		"add-langs": "it",
+		"link": {
+			"gb": "IccGAAAAQAAJ"
+		}
+	},
+	{
+		"title": "Catechismo di San Basile",
+		"author": "Bonifacio Tamburi",
+		"year": 1834,
+		"full-title": {
+			"lang": "sq",
+			"text": "DOT-\nTRINAA A\nCRSCTEⱯ DⱯR\nRUAR CA GLIⱯ GLI-\nTISCISTA DⱯ AR-\nBRISTCA CA GNJⱯ\nPRIVTⱯ ARBRESCⱯ\nPⱯR GHINTIA E\nSCIⱯN VASILIT\n"
+		},
+		"type": "manuscript",
+		"link": {
+			"ws": "Catechismo di San Basile (1834).djvu"
+		}
+	},
+	{
+		"title": "Canti di Milosao",
+		"author": "Girolamo de Rada",
+		"editions": [
+			{
+				"edition": 1,
+				"year": 1836,
+				"location": "Naples",
+				"publisher": "Guttemberg",
+				"pages": 96,
+				"link": {
+					"bksh": "libra1!HASH6714",
+					"gb": "tGJlAAAAcAAJ",
+					"ws": "Index:Canti di Milosao.djvu"
+				}
+			},
+			{
+				"edition": 2,
+				"year": 1847,
+				"location": "Naples",
+				"publisher": "Fibreno"
+			}
+		],
+		"script": "latin-greek",
+		"add-langs": "it",
+		"dialects": "tosk-calabria-macchia"
+	},
+	{
+		"title": "Canti di Serafina Thopia",
+		"author": "Girolamo de Rada",
+		"year": 1843,
+		"location": "Naples",
+		"publisher": "D. Capasso",
+		"link": {
+			"gb": "rWJlAAAAcAAJ"
+		},
+		"lect": "tosk-calabria-macchia"
+	},
+	{
+		"title": "Procheiron alvanikon alfavitarion",
+		"author": "Naum Veqilharxhi",
+		"pages": 8,
+		"year": 1844,
+		"script": "vithkuqi",
+		"add-langs": "el",
+		"religion": "christian-orthodox",
+		"link": {
+			"bksh": "libra040!HASH015e",
+			"ws": "Veqilharxhi - Procheiron (1844).djvu"
+		},
+		"lect": "tosk-vithkuq"
+	},
+	{
+		"title": "Dottrina Cristiana",
+		"author": "Giuseppe Guagliata",
+		"og-author": "Bellarmine",
+		"editions": [
+			{
+				"edition": 1,
+				"year": 1845,
+				"link": {
+					"gb": [
+						"HLUCAAAAQAAJ",
+						"XUhXAAAAcAAJ"
+					]
+				}
+			},
+			{
+				"edition": 2,
+				"year": 1856,
+				"pages": 288,
+				"link": {
+					"bksh": "libra1!HASH014d",
+					"gb": "po8_AAAAcAAJ"
+				}
+			},
+			{
+				"edition": 3,
+				"year": 1873,
+				"link": {
+					"gb": "9mAHeZKgkokC"
+				}
+			}
+		],
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"script": "latin-catholic",
+		"religion": "christian-catholic",
+		"add-langs": "it",
+		"lect": "gheg"
+	},
+	{
+		"title": "Ruga e parrisit. Calzuem kërshtenven Arbnīs",
+		"author": "Vincenzo Basile",
+		"editions": [
+			{
+				"edition": 1,
+				"year": 1845,
+				"full-title": {
+					"lang": "sq",
+					"text": "RUGA E PARRISIT\nCALZUEM KERSCTÈNVET ARBNIIS\nPER P. VINCÈNZIT BASILE\nT' SCIOCHNÌET JESUS.\n"
+				},
+				"link": {
+					"gb": "TwBPAAAAcAAJ"
+				}
+			},
+			{
+				"edition": 2,
+				"year": 1873,
+				"pages": 119,
+				"link": {
+					"bksh": "libra112!HASH0125"
+				}
+			}
+		],
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"script": "latin-catholic",
+		"religion": "christian-catholic",
+		"lect": "gheg-shkodër"
+	},
+	{
+		"title": "Poesie albanesi 2",
+		"author": "Girolamo de Rada",
+		"year": 1847,
+		"location": "Naples",
+		"publisher": "Fibreno",
+		"lect": "tosk-calabria-macchia",
+		"link": {
+			"gb": "ahF6ljvB1UEC"
+		}
+	},
+	{
+		"title": "Noctes pelasgicae",
+		"author": "Karl Reinhold",
+		"volumes": [
+			{
+				"volume": 1,
+				"year": 1855,
+				"location": "Athens",
+				"publisher": "Sophoclis Garbola",
+				"link": {
+					"gb": "YyxGAAAAcAAJ"
+				}
+			},
+			{
+				"volume": 2,
+				"year": 1856,
+				"location": "Athens",
+				"type": "manuscript"
+			}
+		],
+		"lect": "tosk-southgreece"
+	},
+	{
+		"title": "Udha e shejtës kryq e tjera pun' t' divoçme",
+		"author": "(nji frat t' shejtit ish' Franzeshkut)",
+		"year": 1862,
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"link": {
+			"gb": "NogDzjkq440C"
+		},
+		"lect": "gheg-shkodër",
+		"religion": "christian-catholic",
+		"script": "latin-catholic"
+	},
+	{
+		"title": "Jezu krishti n' zemër t' meshtarit",
+		"author": "Enjëll Radojet",
+		"year": 1862,
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"full-title": {
+			"lang": "sq",
+			"text": "JEƐU CRISCTI\nN' ƐEMER T' MESCTAARIT\nKUITIME T' SCPIRTIT\nCI DO T' KEET MESCTAARI PER GIΞΞZILEN DIT T'MŌIT\nKΞΞȢE SC-CIȢP' PREI\nD. ÈIGNΛ RADOJET\nPRIFT I DIECES' I SCODRS\n"
+		},
+		"link": {
+			"gb": "srwi4N2zdpcC"
+		}
+	},
+	{
+		"title": "Confessione pratica",
+		"author": "Bonaventura da Francavilla",
+		"year": 1863,
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"full-title": {
+			"lang": "it",
+			"text": "CONFESSIONE PRATICA\nITALICO-EPIROTICA\nPER USO\nDE' NOVELLI MISSIONARII DI EPIRO\nSCRITTA\nDAL P. B. D. F.\nMIN. OSS. DELL'ALMA PROVINCIA DI S. BERNARDINO\nEX-MISSIONARIO APOSTOLICO.\n"
+		},
+		"lect": "gheg",
+		"religion": "christian-catholic",
+		"script": "latin-catholic",
+		"link": {
+			"onb": "107003FF"
+		}
+	},
+	{
+		"title": "Moj' i majit shugurum zois bekueme",
+		"author": "Gaetano Bruschi",
+		"year": 1864,
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"full-title": {
+			"lang": "sq",
+			"text": "MOJ' I MAJIT\nSCIUGURUM ƐOIS BEKÙEME\nDIVOZIÒN\nJ DIFTUUM SCCIȢPTARVET\nPREI P. GAITANIT BRUSCHI\nJ SCIOCNIIS JEƐUS\nMiescter n' Collèg t' Sccȣpniis\nNnen Hȣcem t' Scêitit At Pap\nn' Sckoder.\n"
+		},
+		"link": {
+			"gb": ["xeoIAuwOpi8C", "_7RgAAAAcAAJ"]
+		},
+		"genre": "religious"
+	},
+	{
+		"title": "Bulgarian-Albanian lexicon of Hilandar",
+		"name": "ms. Hilandar 775",
+		"type": "manuscript",
+		"author": "Arkadii",
+		"year": 1864,
+		"add-langs": "bg",
+		"link": {
+			"gb": "dorshkri!HASH01bc"
+		},
+		"genre": "linguistic"
+	},
+	{
+		"title": "Katër ungjilat e zotit ndë gjuhë gegënishte",
+		"author": "Konstantin Kristoforidhi",
+		"location": "Istanbul",
+		"publisher": "A. H. Boyagian",
+		"editions": [
+			{
+				"edition": 1,
+				"year": 1866,
+				"pages": 420,
+				"link": {
+					"bksh": "libra112!HASH0157"
+				}
+			},
+			{
+				"edition": 2,
+				"year": 1872,
+				"pages": 288,
+				"link": {
+					"bksh": "libra112!HASH8b45"
+				}
+			}
+		],
+		"script": "latin-kristoforidhi",
+		"religion": "christian-protestant",
+		"lect": "gheg",
+		"genre": "religious"
+	},
+	{
+		"title": "Abetar shqip",
+		"author": "Konstantin Kristoforidhi",
+		"year": 1866,
+		"location": "(Istanbul)",
+		"publisher": "(A. H. Boyagian)",
+		"pages": 33,
+		"script": "latin-kristoforidhi",
+		"link": {
+			"bksh": "libra112!HASH66a4"
+		},
+		"lect": "gheg",
+		"genre": "primer"
+	},
+	{
+		"title": "Fyletja e arbënore",
+		"author": "Demetrio Camarda",
+		"og-author": "Dora d'Istria",
+		"year": 1867,
+		"location": "Livorno",
+		"publisher": "P. Vannini",
+		"pages": 88,
+		"script": "latin",
+		"link": {
+			"bksh": "libra112!HASH0151"
+		},
+		"lect": "tosk"
+	},
+	{
+		"title": "Psalltiri",
+		"author": "Konstantin Kristoforidhi",
+		"location": "Istanbul",
+		"publisher": "A. H. Boyagian",
+		"year": 1868,
+		"pages": 122,
+		"religion": "christian-protestant",
+		"script": "greek",
+		"link": {
+			"bksh": "libra1!HASHa2e4"
+		},
+		"lect": "tosk",
+		"genre": "religious"
+	},
+	{
+		"title": "Elifba",
+		"author": "Daut Boriçi",
+		"location": "Istanbul",
+		"pages": 34,
+		"year": 1869,
+		"script": "arabic",
+		"religion": "muslim",
+		"link": {
+			"bksh": "libra042!HASH9c99"
+		},
+		"genre": "primer"
+	},
+	{
+		"title": "Historia e shenjtesë shkonjë ndë gjuhë gegënishte",
+		"author": "Konstantin Kristoforidhi",
+		"year": 1870,
+		"location": "Istanbul",
+		"publisher": "A. H. Boyagian",
+		"pages": 136,
+		"script": "latin-kristoforidhi",
+		"religion": "christian-protestant",
+		"link": {
+			"bksh": "libra112!HASH0115"
+		},
+		"lect": "gheg",
+		"genre": "religious"
+	},
+	{
+		"title": "O e amla zemra",
+		"author": false,
+		"year": 1870,
+		"location": "Shkodër",
+		"publisher": "Jesuit College",
+		"pages": 22,
+		"script": "latin-catholic",
+		"religion": "christian-catholic",
+		"link": {
+			"bksh": "libra112!HASH01a9"
+		},
+		"lect": "gheg"
+	},
+	{
+		"title": "Raccolda di canti popolari e rapsodie di poemi albanesi",
+		"author": "Giuseppe Jubany",
+		"year": 1871,
+		"location": "Trieste",
+		"publisher": "Lloyd",
+		"pages": 116,
+		"add-langs": "it",
+		"script": "latin",
+		"link": {
+			"bksh": "libra112!HASH6394"
+		}
+	},
+	{
+		"title": "Dhiata e re e zotit edhe shëlbyesit t'unë Iesu Krishtit",
+		"author": "Konstantin Kristoforidhi",
+		"pages": 491,
+		"location": "Istanbul",
+		"publisher": "A. H. Boyagian",
+		"script": "latin-kristoforidhi",
+		"religion": "christian-protestant",
+		"link": {
+			"bksh": "libra112!HASH0181!7d55fa1b"
+		},
+		"lect": "gheg",
+		"genre": "religious"
+	},
+	{
+		"title": "Istoria e shkronjësë shënjtëruarë ndë gjuhë toskërishte",
+		"author": "Konstantin Kristoforidhi",
+		"location": "Istanbul",
+		"publisher": "A. H. Boyagian",
+		"pages": 143,
+		"year": 1872,
+		"script": "greek",
+		"religion": "christian-protestant",
+		"lect": "tosk",
+		"link": {
+			"bksh": "libra1!HASH01f8!34b4cc6d"
+		},
+		"genre": "religious"
+	},
+	{
+		"title": "Dhiata e re ndë gjuhë gegënishte",
+		"author": "Konstantin Kristoforidhi",
+		"year": 1872,
+		"lect": "gheg",
+		"location": "Istanbul",
+		"publisher": "A. H. Boyagian",
+		"script": "latin-kristoforidhi",
+		"pages": 491,
+		"link": {
+			"bksh": "libra112!HASH0181!7d55fa1b"
+		}
+	},
+	{
+		"title": "Psalteri ndë gjuhë gegënishte",
+		"author": "Konstantin Kristoforidhi",
+		"year": 1872,
+		"location": "Istanbul",
+		"pages": 126,
+		"publisher": "A. H. Boyagian",
+		"script": "latin-kristoforidhi",
+		"religion": "christian-protestant",
+		"lect": "gheg",
+		"link": {
+			"bksh": ["libra112!HASH0181!7b5bfa1f", "libra112!HASH0181!7d55fa1b"]
+		},
+		"genre": "religious"
+	},
+	{
+		"title": "Scanderbeccu i pafaan",
+		"author": "Girolamo de Rada",
+		"year": 1872,
+		"location": "Corigliano Calabro",
+		"publisher": "Tipografia Albanese",
+		"pages": 199,
+		"lect": "tosk-calabria-macchia",
+		"add-langs": "it",
+		"link": {
+			"bksh": "libra112!HASH6634"
+		},
+		"genre": "poetry"
+	},
+	{
+		"title": "Poesie 3. Scanderbeccu i pa faan. Storie del secolo XV",
+		"author": "Girolamo de Rada",
+		"year": 1873,
+		"location": "Corigliano Calabro",
+		"publisher": "Tipografia Albanese",
+		"script": "latin",
+		"link": {
+			"bksh": "libra1!HASH2398"
+		},
+		"genre": "poetry"
+	},
+	{
+		"title": "T' verteta e' paa-sosme kalzue",
+		"author": false,
+		"original-author": "Alfonso de' Liguori",
+		"publisher": "Propaganda Fide",
+		"location": "Rome",
+		"year": 1873,
+		"pages": 302,
+		"script": "latin-catholic",
+		"religion": "christian-catholic",
+		"link": {
+			"bksh": "libra1!HASH01f8!35decc72"
+		},
+		"genre": "religious"
+	},
+	{
+		"title": "Fjaltor nga tre gjuha",
+		"author": "Gjorgji Pulevski",
+		"year": 1875,
+		"add-langs": ["mk", "ota"],
+		"script": "cyrillic",
+		"pages": 178,
+		"link": {
+			"mdz": "bsb11320986"
+		}
+	},
+	{
+		"title": "Dotrina e Kërshten",
+		"author": "Enjell Radoja",
+		"year": 1876,
+		"location": "Shkodër",
+		"publisher": "Jesuit College",
+		"full-title": {
+			"lang": "sq",
+			"text": "Dtrina e Kerscten\nME MSIME E ME SPIEGHIME\nCI I ƐGOΞ E I MLOΞ SCCIȢP\nDOM EGNELL RADOJA\nPRIFT I ARCIDIÒCESIT SCHKODRS"
+		},
+		"religion": "christian-catholic",
+		"script": "latin-catholic",
+		"pages": 252,
+		"link": {
+			"bksh": "libra1!HASH0109!ef3cd448"
+		},
+		"genre": "religious"
+	},
+	{
+		"title": "Dottrina Cristiana ridotta in compendio per uso dell'archidiocesi di Scopia",
+		"full-title": [
+			{
+				"lang": "it",
+				"text": "Dottrina Cristiana\nRIDOTTA IN COMPENDIO\nPER USO\nDELL'ARCHIDIOCESI\nDI\nSCOPIA\nDA\nF. D. B. M. O. M. A."
+			},
+			{
+				"lang": "sq",
+				"text": "Dotrina e Kscten\nMLEΞUN N' PAK FIAL\nPER HȢƐMET\nT' ARKIDIECESIT\nE\nSCKUPS\nPREI\nF. D. B. M. O. M. A"
+			}
+		],
+		"author": "F. D. B. M. O. M. A.",
+		"year": 1877,
+		"location": "Shkodër",
+		"publisher": "C. P. A.",
+		"add-langs": "it",
+		"pages": 144,
+		"religion": "christian-catholic",
+		"script": "latin-catholic",
+		"link": {
+			"bksh": "libra1!HASH014d!8be3771a"
+		},
+		"genre": "religious"
+	},
+	{
+		"title": "Pelasgika. Shqip apla alfavitar",
+		"author": "Vasil Dhimitër Ruso",
+		"year": 1877,
+		"location": "Bucharest",
+		"pages": 104,
+		"script": "greek",
+		"link": {
+			"bksh": "libra042!HASH013f"
+		}
+	},
+	{
+		"title": "Bëleta shqypëtare",
+		"author": "Thimi Mitko",
+		"year": 1878,
+		"publisher": "Xenofontos N. Salti",
+		"location": "Alexandria",
+		"full-title": [
+			{
+				"lang": "el",
+				"text": "ΑΛΒΑΝΙΚΗ ΜΕΛΙΣΣΑ"
+			},
+			{
+				"lang": "sq",
+				"text": "Βηλϳεττα Σςκϳυπητᾶρε"
+			}
+		],
+		"pages": 223,
+		"script": "greek",
+		"add-langs": "el",
+		"link": {
+			"bksh": "libra112!HASH0139!b9c99d1e"
+		}
+	},
+	{
+		"title": "Shenjti ungjill pas Mattheut",
+		"author": "Konstantin Kristoforidhi",
+		"year": 1878,
+		"location": "Istanbul",
+		"publisher": "A. H. Boyagian",
+		"pages": 92,
+		"lect": "gheg",
+		"link": {
+			"bksh": "libra112!HASH0181!855bfa13"
+		},
+		"religion": "christian-protestant",
+		"genre": "religious"
+	},
+	{
+		"title": "Abetarja e Stambollit",
+		"full-title": "Alfabetare e Gluhësë Shqip",
+		"year": 1879,
+		"author": false,
+		"location": "Istanbul",
+		"publisher": "A. Zelici",
+		"script": "latin-frasheri",
+		"pages": 136,
+		"link": {
+			"bksh": "libra1!HASH01ce"
+		}
+	},
+	{
+		"title": "To t' lutana e do kang qi knohen n' kongregacion t' Zojs Nunciats",
+		"year": 1879,
+		"full-title": "DO T' LUTANA\nE DO KÂNGH\nCI KNOHEN\nN' CONGREGAZION\nT' ƐOIS NUNZIATS",
+		"location": "Shkodër",
+		"publisher": "Jesuit College",
+		"script": "latin-catholic",
+		"pages": 80,
+		"link": {
+			"bksh": "libra112!HASH0181!810bfa1c"
+		}
+	},
+	{
+		"title": "Kanonizmë e Shoqërisë të shtypuri shkronja shqip",
+		"author": false,
+		"location": "Istanbul",
+		"publisher": "A. Zelici",
+		"year": 1879,
+		"script": "latin-frasheri",
+		"pages": 16,
+		"link": {
+			"bksh": "libra112!HASH6a38"
+		}
+	},
+	{
+		"title": "Elementi grammaticali della lingua albanese compilati",
+		"author": "Giacomo Jungg",
+		"year": 1881,
+		"location": "Shkodër",
+		"publisher": "Zoja e Papërlyeme",
+		"pages": 112,
+		"script": "latin-catholic",
+		"add-langs": "it",
+		"link": {
+			"bksh": "libra112!HASH9d45"
+		}
+	},
+	{
+		"title": "Abavatar arbëror",
+		"author": "Anastas Kullurioti",
+		"location": "Athens",
+		"publisher": "Zër' i Arbërisë",
+		"year": 1882,
+		"pages": 164,
+		"add-langs": "el",
+		"link": {
+			"bksh": "libra112!HASH0181!851ffa0b"
+		},
+		"genre": "primer",
+		"script": "greek"
+	},
+	{
+		"title": "Abetare e gjuhëshë shqip",
+		"author": "Sami Frashëri",
+		"publisher": "Drita",
+		"location": "Bucharest",
+		"pages": 78,
+		"year": 1886,
+		"link": {
+			"bksh": "libra042!HASH0100"
+		},
+		"script": "latin-frasheri"
+	},
+	{
+		"title": "Bagëti e Bujqësija",
+		"author": "Naim Frashëri",
+		"year": 1886,
+		"location": "Bucharest",
+		"publisher": "Drita",
+		"script": "latin-frasheri",
+		"pages": 23,
+		"link": {
+			"bksh": "libra1!HASH01c5",
+			"ws": "Bagëti_e_Bujqësija.djvu",
+			"gb": "Ia9N2xY-Uc0C"
+		}
+	},
+	{
+		"title": "T' mledhunit e Dotrins Kshten",
+		"og-author": "A. Ferrari",
+		"author": "Ndre Logoreci",
+		"year": 1886,
+		"script": "latin-catholic",
+		"pages": 269,
+		"link": {
+			"ao": "LOGORECI.pdf"
+		}
+	},
+	{
+		"title": "E këndimit çunavet. Këndonjëtoreja",
+		"author": "Naim Frashëri",
+		"volumes": [
+			{
+				"volume": 1,
+				"pages": 55,
+				"link": {
+					"bksh": "libra1!HASH0181!891bfa03"
+				}
+			},
+			{
+				"volume": 2,
+				"pages": 52,
+				"link": {
+					"bksh": "libra1!HASH0181!8123fa13!e74f36de"
+				}
+			}
+		],
+		"year": 1886,
+		"script": "latin-frasheri",
+		"location": "Bucharest",
+		"publisher": "Drita"
+	},
+	{
+		"title": "Istori e përgjithëshme për mësonjëtoret të para",
+		"author": "Naim Frashëri",
+		"year": 1886,
+		"location": "Bucharest",
+		"publisher": "Drita",
+		"script": "latin-frasheri",
+		"pages": 116,
+		"link": {
+			"bksh": "libra1!HASH8442"
+		}
+	},
+	{
+		"title": "Abetarea shqipe",
+		"author": "Jovani Risto Lazit Terova",
+		"year": 1887,
+		"location": "Bucharest",
+		"publisher": "D. Cucu",
+		"link": {
+			"bksh": ["libra112!HASH0164", "libra1!HASHa2e1!5e21ba51"]
+		},
+		"script": "latin",
+		"pages": 56,
+		"genre": "primer"
+	},
+	{
+		"title": "Kulshedra e shpirtit zblue t' riive",
+		"author": "Giacomo Jungg",
+		"year": 1887,
+		"location": "Shkodër",
+		"publisher": "Zoja e Papërlyeme",
+		"script": "latin-catholic",
+		"pages": 104,
+		"link": {
+			"bksh": "libra1!HASHd168"
+		}
+	},
+	{
+		"title": "Dheshkronjë",
+		"author": "Sami Frashëri",
+		"year": 1888,
+		"location": "Bucharest",
+		"publisher": "Dituria",
+		"pages": 158,
+		"script": "latin-frasheri",
+		"link": {
+			"bksh": "libra1!HASH89ce!349835d1"
+		}
+	},
+	{
+		"title": "Dituritë për mësonjëtoret të para",
+		"author": "Naim Frashëri",
+		"year": 1888,
+		"location": "Bucharest",
+		"publisher": "Dituria",
+		"pages": 212,
+		"script": "latin-frasheri",
+		"link": {
+			"bksh": "libra1!HASH0181!7d21fa1b"
+		}
+	},
+	{
+		"title": "Kanonizmë. Komiteti i shqiptarëve për lirin' e Shqipërisë",
+		"author": false,
+		"pages": 8,
+		"year": 1888,
+		"script": "latin-frasheri",
+		"link": {
+			"bksh": "libra1!HASH0105"
+		}
+	},
+	{
+		"title": "Erveheja",
+		"author": ["Muhamet Çami", "Hajfar Argjirokastri", "Jani Vreto"],
+		"script": "latin-frasheri",
+		"editions": [
+			{
+				"edition": 1,
+				"year": 1888,
+				"location": "Bucharest",
+				"publisher": "Dituria",
+				"pages": 40,
+				"link": {
+					"bksh": "libra1!HASH014d!8f3621b7"
+				}
+			},
+			{
+				"edition": 2,
+				"year": 1910,
+				"location": "Thessaloniki",
+				"publisher": "Mbrothësia",
+				"pages": 42,
+				"link": {
+					"bksh": "libra112!HASH074a"
+				}
+			}
+		]
+	},
+	{
+		"title": "Jeta e sh' Gnon Berchmans t' Shoqnis Jezu Krishtit",
+		"author": "Ndre Mjeda",
+		"year": 1889,
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"script": "latin-catholic",
+		"pages": 150,
+		"link": {
+			"bksh": "libra112!HASH01c5"
+		}
+	},
+	{
+		"title": "Abetare e gjuhëshë shqyp",
+		"author": "Gasper Benusi",
+		"location": "Bucharest",
+		"publisher": "Dituria",
+		"year": 1890,
+		"script": "latin-frasheri",
+		"link": {
+			"bksh": "libra1!HASHa2e2!8ecc6a59"
+		}
+	},
+	{
+		"title": "Mësime",
+		"author": "Naim Frashëri",
+		"year": 1894,
+		"location": "Bucharest",
+		"script": "latin-frasheri",
+		"pages": 126,
+		"link": {
+			"bksh": "libra042!HASH0181"
+		}
+	},
+	{
+		"title": "Abetari i qitun prej Shoqniet t' Bashkimit t' gjuhës shqype",
+		"full-title": {
+			"lang": "sq",
+			"text": "ABETARI\nI CITUN PREI\nShocniet t' bashkimit\nT' GIUHES SHCYPE"
+		},
+		"year": 1895,
+		"script": "latin-bashkimi",
+		"location": "Shkodër",
+		"author": false,
+		"pages": 34,
+		"link": {
+			"bksh": "libra1!HASHa2dd"
+		},
+		"genre": "primer"
+	},
+	{
+		"title": "Gjithësija",
+		"author": "Naim Frashëri",
+		"year": 1895,
+		"pages": 140,
+		"script": "latin-frasheri",
+		"link": {
+			"bksh": "libra1!HASHfb7d!b0b473ff"
+		}
+	},
+	{
+		"title": "Abecedario della lingua albanese",
+		"author": "Girolamo de Rada",
+		"location": "Corigliano Calabro",
+		"publisher": "Popolano",
+		"add-langs": "it",
+		"year": 1896,
+		"pages": 8,
+		"genre": "primer",
+		"script": "latin-greek"
+	},
+	{
+		"title": "Arbënorve t' kërshten t' grishun festuer",
+		"author": "Leonardo de Martino",
+		"year": 1896,
+		"script": "latin-catholic",
+		"location": "Shkodër",
+		"full-title": [
+			{
+				"lang": "sq",
+				"text": "ARBENORVE T' KERSCTEN\nT' GRISCIUN FESTUER\nPER DITEN E KRÊMTE\nT' MREKUΛORES ƐOJE RUƐARE\nPREI POMPEIT\nCI LUTET N' KISC T' FRANCESCAJVE\nTE' ARRA-MAΞE N' SCKODER."
+			},
+			{
+				"lang": "it",
+				"text": "AI CATTOLICI ALBANESI\nINVITO SACRO\nPER FESTEGGIARE SOLENNEMENTE\nLA TAUMATURGA MADONNA\nDEL SSmo. ROSARIO DI POMPEI\nCHE SI VENERA NELLA CHIESA\nDE' FRANCESCANI MINORI OSSERVANTI\nDI ARRA-MADHE IN SCUTARI D'ALBANIA\nOVVERO Inno Popolare\nALBANESE-ITALIANO\nCOMPOSTO A TALE SCOPO DAL MISS. APOST.\nP. Leonardo de Marino M. O.\nItalo-Albanese."
+			}
+		],
+		"pages": 6,
+		"genre": "religious",
+		"religion": "christian-catholic",
+		"link": {
+			"bksh": "libra112!HASH0184!a78baa00"
+		}
+	},
+	{
+		"title": "Disā habere përmī apostollim t' urats",
+		"author": "Domenico Pasi",
+		"year": 1896,
+		"location": "Shkodër",
+		"publisher": "Jesuit College",
+		"genre": "religious",
+		"religion": "christian-catholic",
+		"script": "latin-catholic",
+		"pages": 10,
+		"link": {
+			"bksh": "libra1!HASH8d50"
+		}
+	},
+	{
+		"title": "Letra e zotnis Arqipeshkvit t' Shkodërs Pashko Guerini popullit t' vet",
+		"author": "Pasquale Guerini",
+		"year": 1896,
+		"pages": 7,
+		"script": "latin-catholic",
+		"link": {
+			"bksh": "libra112!HASH0181!7d65fa1b"
+		}
+	},
+	{
+		"title": "Iliadhë e Omirit. Këndë e parë",
+		"author": "Naim Frashëri",
+		"og-author": "Homer",
+		"script": "latin-frasheri",
+		"editions": [
+			{
+				"edition": 1,
+				"year": 1896,
+				"location": "Bucharest",
+				"publisher": "Dituria",
+				"pages": 76,
+				"link": {
+					"bksh": "libra1!HASH210a"
+				}
+			},
+			{
+				"edition": 2,
+				"year": 1912,
+				"location": "Korçë",
+				"publisher": "Korça",
+				"pages": 80,
+				"link": {
+					"bksh": "libra112!HASH0144"
+				}
+			}
+		]
+	},
+	{
+		"title": "Carme nuziale",
+		"author": "Domenico Antonio Marchese",
+		"year": 1898,
+		"pages": 11,
+		"location": "Naples",
+		"publisher": "Gennare & Morano",
+		"script": "latin-greek",
+		"genre": "poetry",
+		"link": {
+			"bksh": "libra112!HASH9b79"
+		}
+	},
+	{
+		"title": "Istori' e Skenderbeut",
+		"author": "Naim Frashëri",
+		"year": 1898,
+		"location": "Bucharest",
+		"publisher": "Dituria",
+		"pages": 309,
+		"script": "latin-frasheri",
+		"link": {
+			"bksh": "libra1!HASH197d"
+		}
+	},
+	{
+		"title": "Abetar i gjuhës shqip",
+		"full-title": [
+			{
+				"lang": "sq",
+				"text": "ABETAR I GHUHES SHQIP"
+			},
+			{
+				"lang": "ota",
+				"text": "الفبای لسان آرناؤدی"
+			}
+		],
+		"year": 1899,
+		"pages": 64,
+		"location": "Bruxelles",
+		"publisher": "Përlindja e Shqiptarëve",
+		"link": {
+			"bksh": "libra112!HASH0181!914bf9fb"
+		}
+	},
+	{
+		"title": "Histori e Dhiatësë Vietërë",
+		"author": "Kristo Negovani",
+		"year": 1899,
+		"location": "Bucharest",
+		"publisher": "Dituria",
+		"script": "latin-frasheri",
+		"pages": 65,
+		"link": {
+			"bksh": "libra112!HASH9249"
+		}
+	},
+	{
+		"title": "Istori e Shqipërisë",
+		"author": "Naim Frashëri",
+		"year": 1899,
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"script": "latin-frasheri",
+		"pages": 43,
+		"link": {
+			"bksh": "libra1!HASH8b45!94884dfc"
+		}
+	},
+	{
+		"title": "Abetare e gjuhësë shqip ndë të folë Gegënisht",
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"script": "latin-frasheri",
+		"year": 1900,
+		"pages": 16,
+		"link": {
+			"bksh": "libra042!HASH0124"
+		},
+		"genre": "primer"
+	},
+	{
+		"title": "Canti popolari dell'Albania",
+		"author": "Giuseppe Schirò",
+		"year": 1901,
+		"location": "Palermo",
+		"publisher": "Fratelli Marsala",
+		"script": "latin",
+		"pages": 78,
+		"add-langs": "it",
+		"link": {
+			"bksh": "libra1!HASH0187"
+		}
+	},
+	{
+		"title": "Baba-Tomorri. Vjersha",
+		"author": "Andon Zako Çajupi",
+		"editions": [
+			{
+				"edition": 1,
+				"year": 1902,
+				"location": "Cairo",
+				"script": "latin-bashkimi",
+				"pages": 190,
+				"link": {
+					"bksh": "libra1!HASHa2e2!0621b7b1"
+				}
+			},
+			{
+				"edition": 2,
+				"year": 1935,
+				"location": "Tirana",
+				"publisher": "Gutenberg",
+				"scipt": "latin-standard",
+				"pages": 194,
+				"link": {
+					"bksh": "libra1!HASHd871"
+				}
+			}
+		]
+	},
+	{
+		"title": "Abetare shqip",
+		"edition": 2,
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"year": 1902,
+		"script": "latin-frasheri",
+		"link": {
+			"bksh": "libra042!HASH0183"
+		},
+		"genre": "primer"
+	},
+	{
+		"title": "Dëshira e vërtitë e Shqipëtarëvet",
+		"author": "Naim Frashëri",
+		"year": 1904,
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"script": "latin-frasheri",
+		"pages": 20,
+		"link": {
+			"bksh": "libra1!HASHe528"
+		}
+	},
+	{
+		"title": "Ghaku",
+		"author": "Milo Duçi",
+		"year": 1904,
+		"location": "Rome",
+		"pages": 48,
+		"script": "latin",
+		"link": {
+			"bksh": "libra1!HASHb037"
+		}
+	},
+	{
+		"title": "Lexikon tis alvanikis glossis",
+		"author": "Konstantin Kristoforidhi",
+		"year": 1904,
+		"location": "Athens",
+		"publisher": "P. D. Sakellarios",
+		"script": "greek-latin",
+		"pages": 502,
+		"link": {
+			"bksh": "libra112!HASH018e"
+		}
+	},
+	{
+		"title": "Këndime për shkollë të para të Shqypënisë",
+		"author": "Ndre Mjeda",
+		"location": "Vienna",
+		"editions": [
+			{
+				"edition": 1,
+				"script": "latin-kristoforidhi",
+				"year": 1904,
+				"volumes": [
+					{
+						"volume": 1,
+						"pages": 140,
+						"link": {
+							"bksh": "libra112!HASH01b8"
+						}
+					},
+					{
+						"volume": 2,
+						"pages": 140,
+						"link": {
+							"bksh": "libra112!HASH017d!ad69fa03"
+						}
+					}
+				]
+			},
+			{
+				"edition": 2,
+				"script": "latin-standard",
+				"volumes": [
+					{
+						"volume": 1,
+						"pages": 116,
+						"year": 1915,
+						"link": {
+							"bksh": "libra112!HASH01a7"
+						}
+					},
+					{
+						"volume": 2,
+						"pages": 132,
+						"year": 1910,
+						"link": {
+							"bksh": "libra1!HASH01fc!a7eb1bda"
+						}
+					},
+					{
+						"volume": 3,
+						"year": 1911,
+						"pages": 206,
+						"link": {
+							"bksh": "libra1!HASHe862"
+						}
+					}
+				]
+			},
+			{
+				"edition": 3,
+				"script": "latin-standard",
+				"volumes": [
+					{
+						"volume": 1,
+						"pages": 119,
+						"link": {
+							"bksh": "libra042!HASH013b"
+						}
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "Abetari për msojtore filltare t' Shqypnīs",
+		"author": false,
+		"year": 1905,
+		"location": "Naples",
+		"publisher": "Tocco & Salvietti",
+		"script": "latin-bashkimi",
+		"pages": 83,
+		"genre": "primer",
+		"link": {
+			"bksh": "libra1!HASHa2df!3d7717a9"
+		}
+	},
+	{
+		"title": "Knnime t' para për msojtore filltare t' Shqypnīs",
+		"volume": 2,
+		"location": "Naples",
+		"publisher": "Tocco & Salvietti",
+		"script": "latin-bashkimi",
+		"pages": 96,
+		"link": {
+			"bksh": "libra112!HASH017d!a35ffa17"
+		},
+		"year": 1905
+	},
+	{
+		"title": "Kënka e sprasme e Balës",
+		"author": "Gavril Dara",
+		"year": 1906,
+		"location": "Catanzaro",
+		"publisher": "G. Caliò",
+		"pages": 277,
+		"add-langs": "it",
+		"script": "latin",
+		"link": {
+			"bksh": "libra1!HASHa2df!e621bfb1"
+		}
+	},
+	{
+		"title": "Ânxat e Parnasit",
+		"author": "Gjergj Fishta",
+		"year": 1907,
+		"location": "Sarajevo",
+		"publisher": "Bosn. Post",
+		"script": "latin-bashkimi",
+		"pages": 67,
+		"link": {
+			"bksh": "libra1!HASH0181!7f15fa18"
+		}
+	},
+	{
+		"title": "Besa a fea e shqiptarëvet të vjetër",
+		"author": "Llazar Siljani",
+		"year": 1907,
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"script": "latin-frasheri",
+		"pages": 78,
+		"link": {
+			"bksh": "libra112!HASH017d"
+		}
+	},
+	{
+		"title": "Dy vjersha gegënisht",
+		"author": ["Pashko Vasa", "M... Çerdhes Petriti"],
+		"year": 1907,
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"script": "latin-frasheri",
+		"pages": 15,
+		"link": {
+			"bksh": "libra112!HASH0183"
+		}
+	},
+	{
+		"title": "Hristomathi",
+		"author": "(një mëmëdhetari)",
+		"year": 1907,
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"pages": 317,
+		"script": "latin-frasheri",
+		"link": {
+			"bksh": ["libra112!HASH017d!ad61fa03", "libra042!HASH017d"]
+		}
+	},
+	{
+		"title": "Kënkë të shënjtëruara për falëtoret shqipe",
+		"author": "Gjergj Qiriazi",
+		"year": 1907,
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"pages": 109,
+		"script": "latin-frasheri",
+		"link": {
+			"bksh": "libra1!HASH01f8!3408cc6f"
+		}
+	},
+	{
+		"title": "Kodiku i Kieutit",
+		"full-title": {
+			"lang": "it",
+			"text": "CANTI\nPOPOLARI ALBANESI\nDELLE COLONIE D'ITALIA\nPUBBLICATI DA UN MANOSCRITTO DELLA PRIMA METÀ DEL SECOLO XVIII\nCON TRADUZIONE IUXTALINEARE\nINTRODUZIONE, NOTE E UN FACSIMILE IN AUTOTIPIA\nDA\nMICHELE MARCHIANÒ"
+		},
+		"author": ["Michele Marchianò"],
+		"year": 1908,
+		"location": "Foggia",
+		"publisher": "F. P. de Nido",
+		"script": "latin-greek",
+		"pages": 94,
+		"link": {
+			"bksh": "libra1!HASH01b0"
+		}
+	},
+	{
+		"title": "Abetare toskërisht",
+		"author": false,
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"year": 1908,
+		"link": {
+			"bksh": "libra042!HASH0141"
+		},
+		"pages": 16,
+		"script": "latin-frasheri",
+		"genre": "primer"
+	},
+	{
+		"title": "Abeja shqip",
+		"location": "Istanbul",
+		"year": 1908,
+		"pages": 38,
+		"script": "arabic",
+		"link": {
+			"bksh": "libra042!HASH0183!e6ff9a61"
+		},
+		"genre": "primer"
+	},
+	{
+		"title": "Abetare gegënisht",
+		"author": false,
+		"edition": 2,
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"year": 1908,
+		"pages": 16,
+		"link": {
+			"bksh": "libra042!HASH01aa"
+		},
+		"genre": "primer",
+		"script": "latin-frasheri"
+	},
+	{
+		"title": "Kanonizma e Klubit të Gjirokastrës \"Drita\"",
+		"author": false,
+		"location": "Gjirokastër",
+		"year": 1908,
+		"pages": 16,
+		"script": "latin-frasheri",
+		"link": {
+			"bksh": "libra1!HASH01cd!0354c3ec"
+		}
+	},
+	{
+		"title": "Fletore e bektashinjet",
+		"author": "Naim Frashëri",
+		"edition": 2,
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"script": "latin-frasheri",
+		"pages": 32,
+		"link": {
+			"bksh": "libra1!HASH0181!7f11fa20"
+		}
+	},
+	{
+		"title": "Fjaluer i rī i shqypes",
+		"full-title": {
+			"lang": "sq",
+			"text": "FIALUER\ni Rii i Shcypés\nPerbâam\nPréie Shocniiét t' Bashkimit"
+		},
+		"location": "Shkodër",
+		"publisher": "Zoja e Papërlyeme",
+		"year": 1908,
+		"script": "latin-bashkimi",
+		"pages": 538,
+		"link": {
+			"bksh": "libra112!HASH0179"
+		}
+	},
+	{
+		"title": "Abetare toskërisht",
+		"edition": 4,
+		"location": "Thessaloniki",
+		"script": "latin-frasheri",
+		"publisher": "Mbrothësia",
+		"year": 1909,
+		"link": {
+			"bksh": "libra042!HASH01d6"
+		},
+		"pages": 16,
+		"genre": "primer",
+		"lect": "tosk"
+	},
+	{
+		"title": "E puthura",
+		"author": "Mihal Grameno",
+		"year": 1909,
+		"location": "Thessaloniki",
+		"publisher": "Mbrothësia",
+		"full-title": {
+			"lang": "sq",
+			"text": "E PUTHURA\nROMAN DRAMATIK"
+		},
+		"script": "latin-frasheri",
+		"pages": 32,
+		"link": {
+			"bksh": "libra1!HASH0110!8837da06"
+		}
+	},
+	{
+		"title": "Gramatika shqyp",
+		"full-title": {
+			"lang": "sq",
+			"text": "Gramatika\nShqyp\nQi perdorohet\nN' Seminarë e n' Mbësoitore\nt' Sh' Françesk Saverit\nn' Shkoder"
+		},
+		"location": "Shkodër",
+		"publisher": "Zoja e Papërlyeme",
+		"year": 1909,
+		"script": "latin-standard",
+		"pages": 172,
+		"link": {
+			"bksh": "libra1!HASHa2e1"
+		}
+	},
+	{
+		"title": "Hidhërimet e zëmërës",
+		"author": "Namik Delvina",
+		"year": 1909,
+		"location": "Thessaloniki",
+		"publisher": "Mbrothësia",
+		"full-title": {
+			"lang": "sq",
+			"text": "HIDHËRIMET E\nZËMËRËS\n(SHKRUAR PËRPARA LIRISË)\nKATRË VJERSHA KOMBIARE\nPREJ\nN. S. DELVINA"
+		},
+		"script": "latin-frasheri",
+		"pages": 32,
+		"link": {
+			"bksh": "libra1!HASHfde6"
+		}
+	},
+	{
+		"title": "Këngat shqipe",
+		"author": "Sakoli",
+		"volume": 1,
+		"year": 1909,
+		"location": "Thessaloniki",
+		"publisher": "Mbrothësia",
+		"script": "latin-frasheri",
+		"pages": 64,
+		"link": {
+			"bksh": "libra112!HASH0181!8321fa0f"
+		}
+	},
+	{
+		"title": "Kish' e Perëndisë",
+		"author": "Thomas Griffith",
+		"year": 1909,
+		"location": "Manastir",
+		"publisher": "Bashkimi i Kombit",
+		"script": "latin-frasheri",
+		"pages": 16,
+		"link": {
+			"bksh": "libra1!HASHb98d"
+		}
+	},
+	{
+		"title": "Librë e shërbesave të shënta të kishës orthodokse",
+		"author": "Fan Noli",
+		"year": 1909,
+		"location": "Boston",
+		"script": "latin-standard",
+		"pages": 244,
+		"link": {
+			"bksh": "libra1!HASH014d!8eaecc5a"
+		}
+	},
+	{
+		"title": "Dashurija e mëmëdheut",
+		"full-title": {
+			"lang": "sq",
+			"text": "DASHURIJA\nE\nMËMËDHEUT\nTHJATRO ME TETË PAMJE"
+		},
+		"author": "Namik Delvina",
+		"location": "Thessaloniki",
+		"publisher": "Mbrothësia",
+		"pages": 128,
+		"link": {
+			"bksh": "libra112!HASH0181!8d11f9fc"
+		}
+	},
+	{
+		"title": "Abetare gegënisht",
+		"year": 1910,
+		"author": false,
+		"edition": 4,
+		"location": "Thessaloniki",
+		"publisher": "Mbrothësia",
+		"link": {
+			"bksh": "libra042!HASH01a3"
+		},
+		"genre": "primer",
+		"script": "latin-frasheri",
+		"lect": "gheg"
+	},
+	{
+		"title": "Agimi i gjytetnīs",
+		"author": "Shtjefën Gjeçovi",
+		"year": 1910,
+		"location": "Shkodër",
+		"publisher": "Nikai",
+		"script": "latin-standard",
+		"pages": 89,
+		"link": {
+			"bksh": "libra1!HASHa2e0!95771249"
+		}
+	},
+	{
+		"title": "Arithmetikë praktike për shkollat e para",
+		"author": "Kristo Dako",
+		"year": 1910,
+		"location": "Elbasan",
+		"publisher": "L. Nosi",
+		"script": "latin-standard",
+		"pages": 192,
+		"link": {
+			"bksh": "libra1!HASH014d!8cb221b7"
+		}
+	},
+	{
+		"title": "Dhiata e-re ndë të folë Toskënisht",
+		"full-title": {
+			"lang": "sq",
+			"text": "DHIATA E-RE\ne Zotit edhe Shpëtimtarit t' ënë\nJISU KRISHT\nKthyerë prej Elinishtesë\nShqip\nNdë të folë Toskënisht"
+		},
+		"location": "Manastir",
+		"publisher": "Bashkimi i Kombit",
+		"year": 1910,
+		"script": "latin-standard",
+		"pages": 765,
+		"link": {
+			"bksh": "libra112!HASH0184!9991aa1b"
+		}
+	},
+	{
+		"title": "Gramatikë e gjuhës shqipe",
+		"full-title": {
+			"lang": "sq",
+			"text": "GRAMATIKË\nE\nGJUHËS SHQIPE\nPër shkollat e MESME edhe të LARTRAT.\nPREJ\nThanas V. Floqit,\nDrejtorit të shkollës shqipe në Korçë."
+		},
+		"author": "Thanas Floqi",
+		"location": "Korçë",
+		"publisher": "Korça",
+		"year": 1910,
+		"pages": 16,
+		"script": "latin-frasheri",
+		"link": {
+			"bksh": "libra112!HASH0180!9f85b210"
+		}
+	},
+	{
+		"title": "Grammatichetta della lingua albanese ad uso dei principianti",
+		"author": "Antonio Bussetti",
+		"year": 1910,
+		"location": "Shkodër",
+		"publisher": "Zoja e Papërlyeme",
+		"pages": 72,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra112!HASH0160!c395f1c7"
+		}
+	},
+	{
+		"title": "Këndime për rështatë filltare",
+		"author": "Mithat Frashëri",
+		"year": 1910,
+		"location": "Thessaloniki",
+		"publisher": "Mbrothësia",
+		"script": "latin-frasheri",
+		"pages": 24,
+		"link": {
+			"bksh": "libra1!HASH01c7"
+		}
+	},
+	{
+		"title": "Këndime për shkollat e para",
+		"author": "Mithat Frashëri",
+		"year": 1910,
+		"location": "Thessaloniki",
+		"publisher": "Mbrothësia",
+		"script": "latin-frasheri",
+		"pages": 97,
+		"link": {
+			"bksh": "libra112!HASH4c26"
+		}
+	},
+	{
+		"title": "Kopësht Malsori",
+		"author": "Josif Bageri",
+		"year": 1910,
+		"location": "Sofia",
+		"publisher": "Vitosha",
+		"pages": 80,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra1!HASH01db!1b86088b"
+		}
+	},
+	{
+		"title": "Letër baritore",
+		"author": "Jak Serreqi",
+		"year": 1910,
+		"script": "latin-standard",
+		"pages": 12,
+		"location": "Shkodër",
+		"link": {
+			"bksh": "libra112!HASH0122"
+		}
+	},
+	{
+		"title": "Abetare për shkolla fillore meshkujsh e femnash",
+		"edition": 1,
+		"author": ["Papakristo Dhimitër", "Lef Nosi"],
+		"location": "Manastir",
+		"publisher": "Tregëtare Nërkombëtare",
+		"year": 1911,
+		"link": {
+			"bksh": "libra1!HASH01f8!df621f17"
+		},
+		"script": "latin-frasheri",
+		"pages": 86,
+		"lect": "gheg"
+	},
+	{
+		"title": "Abetareja Shqip rrieshtuarë në gjuhë të-përbashkëme",
+		"author": "Simon Shuteriqi",
+		"year": 1911,
+		"location": "Manastir",
+		"publisher": "Tregëtare Nërkombëtare",
+		"genre": "primer",
+		"script": ["latin-standard", "latin-frasheri"],
+		"link": {
+			"bksh": "libra112!HASH01e9!e27d3287"
+		},
+		"pages": 62
+	},
+	{
+		"title": "Cilët janë shqipëtarët?",
+		"author": "Kristo Dako",
+		"year": 1911,
+		"location": "Manastir",
+		"publisher": "Tregëtare Nërkombëtare",
+		"script": "latin-frasheri",
+		"pages": 37,
+		"link": {
+			"bksh": "libra1!HASH017f"
+		}
+	},
+	{
+		"title": "Elifba shqip",
+		"author": "Rexhep Voka",
+		"year": 1911,
+		"location": "Istanbul",
+		"publisher": "Mahmuf Bey Matbaasi",
+		"pages": 21,
+		"script": "arabic",
+		"link": {
+			"bksh": "libra042!HASH01ab"
+		}
+	},
+	{
+		"title": "Jetë-shkrimi i Konstandin Kristoforidhit",
+		"author": "Simon Shuteriqi",
+		"year": 1911,
+		"location": "Manastir",
+		"publisher": "Tregëtare Nërkombëtare",
+		"script": "latin-frasheri",
+		"pages": 29,
+		"link": {
+			"bksh": "libra112!HASH017d!a165fa1b"
+		}
+	},
+	{
+		"title": "Abeja shqip",
+		"location": "Istanbul",
+		"pages": 22,
+		"year": 1912,
+		"script": "arabic",
+		"genre": "primer",
+		"link": {
+			"bksh": "libra112!HASH01bb"
+		}
+	},
+	{
+		"title": "Abetari i gjuhës shqipe",
+		"author": false,
+		"year": 1912,
+		"location": "Athens",
+		"script": "latin",
+		"link": {
+			"bksh": "libra042!HASH011e"
+		},
+		"genre": "primer",
+		"pages": 62
+	},
+	{
+		"title": "Abetare toshkërisht",
+		"edition": 6,
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"year": 1912,
+		"pages": 16,
+		"link": {
+			"bksh": "libra112!HASH55f8"
+		},
+		"script": "latin-frasheri",
+		"genre": "primer"
+	},
+	{
+		"title": "Abetari i vogël shqyp",
+		"author": false,
+		"year": 1912,
+		"location": "Shkodër",
+		"publisher": "Nikai",
+		"pages": 29,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra112!HASH0184!a391aa07"
+		}
+	},
+	{
+		"title": "Abetari për fmit qi mësojnë shqip-italisht",
+		"author": false,
+		"year": 1912,
+		"location": "Milano",
+		"publisher": "Antonio Vallardi",
+		"add-langs": "it",
+		"script": "latin-standard",
+		"pages": 64,
+		"link": {
+			"bksh": "libra1!HASHdfde"
+		}
+	},
+	{
+		"title": "Dheshkronja pas programit të mësonjëtorevet të para",
+		"author": "Mithat Frashëri",
+		"year": 1912,
+		"location": "Istanbul",
+		"publisher": "Shty. e Shtatit",
+		"script": "latin-frasheri",
+		"pages": 92,
+		"link": {
+			"bksh": "libra112!HASH0160"
+		}
+	},
+	{
+		"title": "Endra e lote. Vjersha",
+		"author": "Asdren",
+		"year": 1912,
+		"location": "Bucharest",
+		"publisher": "Gutenberg",
+		"pages": 248,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra1!HASH0181!7d53fa1b"
+		}
+	},
+	{
+		"title": "Kanonizma e shoqëris së djelmurisë shqiptare \"Vëllazëria\"",
+		"location": "Korçë",
+		"publisher": "Korça",
+		"year": 1912,
+		"pages": 8,
+		"script": "latin-frasheri",
+		"link": {
+			"bksh": "libra112!HASHcd00"
+		}
+	},
+	{
+		"title": "Katiqism i vogël",
+		"author": false,
+		"year": 1912,
+		"location": "Manastir",
+		"publisher": "Tregëtare Nërkombëtare",
+		"script": "latin-standard",
+		"pages": 56,
+		"link": {
+			"bksh": "libra112!HASH8b43"
+		}
+	},
+	{
+		"title": "Këndime pas programit të mësonjëtorevet të para",
+		"author": "Mithat Frashëri",
+		"year": 1912,
+		"location": "Istanbul",
+		"publisher": "Shty. e Shtatit",
+		"script": "latin-frasheri",
+		"pages": 86,
+		"link": {
+			"bksh": "libra1!HASH01f8!34b6cc6c"
+		}
+	},
+	{
+		"title": "Libër dashurie",
+		"author": "Zejnel Qamil Frashërit",
+		"year": 1912,
+		"location": "Korçë",
+		"publisher": "Korça",
+		"pages": 15,
+		"script": "latin-frasheri",
+		"link": {
+			"bksh": "libra1!HASH61c2"
+		}
+	},
+	{
+		"title": "Këndimet për çunat",
+		"author": "Diogjen Harito",
+		"location": "Athens",
+		"script": "latin",
+		"year": 1912,
+		"volumes": [
+			{
+				"volume": 1,
+				"title": "Këndimet e para për çunat",
+				"pages": 103,
+				"link": {
+					"bksh": "libra1!HASHa80e"
+				}
+			},
+			{
+				"volume": 2,
+				"title": "Këndimet e dyta për çunat",
+				"pages": 143,
+				"link": {
+					"bksh": "libra1!HASH0184!a18faa0b"
+				}
+			},
+			{
+				"volume": 3,
+				"title": "Këndimet e treta për çunat",
+				"pages": 148,
+				"link": {
+					"bksh": "libra1!HASHdd5f"
+				}
+			}
+		]
+	},
+	{
+		"title": "Abetari i vogël shqyp",
+		"author": "Ndoc Nikaj",
+		"year": 1914,
+		"location": "Shkodër",
+		"publisher": "Nikai",
+		"pages": 40,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra042!HASHd86c"
+		}
+	},
+	{
+		"title": "Abetar",
+		"author": "Mati Logoreci",
+		"year": 1914,
+		"location": "Vlorë",
+		"publisher": "G. Direttore",
+		"link": {
+			"bksh": "libra042!HASH0139"
+		},
+		"pages": 92,
+		"genre": "primer",
+		"script": "latin-standard"
+	},
+	{
+		"title": "Abetareja shqipe",
+		"author": "Jusuf Agjahu",
+		"year": 1914,
+		"publisher": "Korça",
+		"location": "Korçë",
+		"pages": 14,
+		"link": {
+			"bksh": "libra042!HASH0182"
+		},
+		"script": "latin-standard"
+	},
+	{
+		"title": "Abetari për msojtore filltare t' Shqypnīs",
+		"author": "Ndoc Nikaj",
+		"year": 1914,
+		"location": "Shkodër",
+		"publisher": "Nikai",
+		"script": "latin-standard",
+		"pages": 112,
+		"link": {
+			"bksh": "libra042!HASH0181!7d53fa1b"
+		}
+	},
+	{
+		"title": "Çastja financjare n' Shqypnī",
+		"full-title": [
+			{
+				"lang": "sq",
+				"text": "ÇASTJA FINANCJARE N' SHQYPNII"
+			},
+			{
+				"lang": "it",
+				"text": "LA QUESTIONE FINANZIARIA IN ALBANIA"
+			}
+		],
+		"add-langs": "it",
+		"author": "Terenc Toçi",
+		"year": 1914,
+		"location": "Shkodër",
+		"pages": 22,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra1!HASH5a2d"
+		}
+	},
+	{
+		"title": "Historija e shêjte për shkolla të para të Shqypënisë",
+		"edition": 3,
+		"author": "Ndre Mjeda",
+		"year": 1915,
+		"pages": 67,
+		"location": "(Vienna)",
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra1!HASHdf6f"
+		}
+	},
+	{
+		"title": "Canti Albanesi (Ridda)",
+		"author": "Bernardo Bilotta",
+		"year": 1916,
+		"location": "Castrovillari",
+		"publisher": "V. Macrini",
+		"script": "latin-greek",
+		"pages": 10,
+		"link": {
+			"bksh": "libra112!HASH2408"
+		}
+	},
+	{
+		"title": "Këngët shqipe në mërgim",
+		"location": "Constanța",
+		"year": 1916,
+		"publisher": "Albania",
+		"pages": 64,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra1!HASH01c4"
+		}
+	},
+	{
+		"title": "Deutsch-albanesischen Feldwörterbuch",
+		"edition": 2,
+		"location": "Vienna",
+		"publisher": "L. W. Seidel",
+		"author": false,
+		"pages": 96,
+		"script": "latin",
+		"add-langs": "de",
+		"link": {
+			"bksh": "libra1!HASHa2e5"
+		}
+	},
+	{
+		"title": "Historië e Ali Pashë Tepelenës, i mbiemëruar \"Luan' i Shqipërisë\"",
+		"author": "Ilo Mitkë Qafëzezi",
+		"year": 1917,
+		"location": "Bucharest",
+		"publisher": "D. C. Ionescu",
+		"edition": 1,
+		"script": "latin-standard",
+		"pages": 172,
+		"genre": "history",
+		"link": {
+			"bksh": "libra1!HASH01c8"
+		}
+	},
+	{
+		"title": "Juvenilia",
+		"author": "Ndre Mjeda",
+		"script": "latin-standard",
+		"editions": [
+			{
+				"edition": 1,
+				"year": 1917,
+				"location": "Vienna",
+				"publisher": "Gj. N. Vernay",
+				"pages": 79,
+				"link": {
+					"bksh": "libra1!HASH01bf!ddf2d976"
+				}
+			},
+			{
+				"edition": 2,
+				"year": 1928,
+				"location": "Shkodër",
+				"publisher": "Zoja e Papërlyeme",
+				"pages": 103,
+				"link": {
+					"bksh": "libra1!HASH01f0"
+				}
+			}
+		]
+	},
+	{
+		"title": "Abetare e re për shkolla fillore t' ulta djelmsh e vajzash",
+		"author": "Shefqet Daiu",
+		"year": 1919,
+		"location": "Elbasan",
+		"publisher": "Elbasani",
+		"pages": 40,
+		"script": "latin",
+		"genre": "primer",
+		"link": {
+			"bksh": "libra042!HASH01a7!82edae0f"
+		}
+	},
+	{
+		"title": "Abetare kombëtare shqip",
+		"author": false,
+		"location": "Vlorë",
+		"publisher": "Shtyp. Italiane",
+		"year": 1920,
+		"script": "latin-standard",
+		"pages": 56,
+		"genre": "primer",
+		"link": {
+			"bksh": "libra112!HASH01a7!8addae07"
+		}
+	},
+	{
+		"title": "Histori e Shqipërisë",
+		"author": "Kosta Çekrezi",
+		"year": 1920,
+		"location": "Boston",
+		"publisher": "Dielli",
+		"script": "latin-vatra",
+		"pages": 208,
+		"link": {
+			"bksh": "libra1!HASHa050"
+		}
+	},
+	{
+		"title": "Libër i parë apo abetar për shkolla fillore të Shqypnis",
+		"author": "Gaspër Beltoja",
+		"year": 1921,
+		"location": "Shkodër",
+		"publisher": "Nikaj",
+		"script": "latin-standard",
+		"pages": 56,
+		"link": {
+			"bksh": "libra042!HASH01a7!80edae13"
+		}
+	},
+	{
+		"title": "Abetare per shkollë fillestare të Shqypnís",
+		"lect": "gheg",
+		"author": false,
+		"year": 1923,
+		"location": "Shkodër",
+		"publisher": "Zoja e Papërlyeme",
+		"pages": 54,
+		"script": "latin-standard",
+		"genre": "primer",
+		"link": {
+			"bksh": "libra042!HASH0a75"
+		}
+	},
+	{
+		"title": "Histori e teqes së Melçanit",
+		"author": "Feim Hamdi Bitincka",
+		"year": 1925,
+		"edition": 1,
+		"location": "Korçë",
+		"publisher": "Dhori Koti",
+		"pages": 48,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra112!HASH8067"
+		}
+	},
+	{
+		"title": "Konvencion midis shtetit shqiptar the Standard Old Compaty of New York për të kryer studime",
+		"author": false,
+		"location": "Tirana",
+		"year": 1925,
+		"pages": 17,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra112!HASH01e9!f2fd5cc4"
+		}
+	},
+	{
+		"title": "Kryengritja shqiptare",
+		"author": "Mihal Grameno",
+		"year": 1925,
+		"location": "Vlorë",
+		"publisher": "G. Direttore",
+		"script": "latin-standard",
+		"pages": 204,
+		"link": {
+			"bksh": "libra1!HASH8b45!94a869fc"
+		}
+	},
+	{
+		"title": "Konvencion",
+		"author": false,
+		"pages": 29,
+		"add-langs": "fr",
+		"year": 1925,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra112!HASH01f5"
+		}
+	},
+	{
+		"title": "Këngët e Litorit",
+		"author": "Giuseppe Schirò",
+		"year": 1926,
+		"location": "Palermo",
+		"publisher": "Fr. Lugaro",
+		"add-langs": "it",
+		"pages": 32,
+		"script": "latin",
+		"link": {
+			"bksh": "libra1!HASH0181!8755fa07"
+		}
+	},
+	{
+		"title": "Fjalim i mbajtur prey Kryetarir për inaugurimin e Selis së Durrësit",
+		"full-title": [
+			{
+				"lang": "sq",
+				"text": "FJALIM\nI MBAJTUR PREJ KRYETARIT\nPËR INAUGURIMIN E SELIS SË DURRËSIT"
+			},
+			{
+				"lang": "it",
+				"text": "DISCORSO\nPRONUNCIATO DAL PRESIDENTE\nPER L?INAUGURAZIONE DELLA SEDE\nDI DURAZZO"
+			}
+		],
+		"year": 1928,
+		"author": "Mario Alberti",
+		"publisher": "Stamles",
+		"location": "Durrës",
+		"pages": 8,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra1!HASH01bf!f377b349"
+		}
+	},
+	{
+		"title": "Bilbil i prillit. Abetare për bijat mbesimtare",
+		"author": "Abdullah Sëmblaku",
+		"year": 1929,
+		"script": "latin-standard",
+		"pages": 40,
+		"location": "Korçë",
+		"publisher": "Dhori Koti",
+		"link": {
+			"bksh": "libra042!HASH01a7"
+		}
+	},
+	{
+		"title": "Gjaja e Malësorvet. Hieja e Tomorrit",
+		"author": "Konstantin Kristoforidhi",
+		"year": 1930,
+		"location": "Korçë",
+		"publisher": "Peppo & Marko",
+		"script": "latin-standard",
+		"pages": 28,
+		"link": {
+			"bksh": "libra1!HASH0181!7f1bfa1f"
+		}
+	},
+	{
+		"title": "Kommentar i kodit civil. Sendet, zotënimi dhe modifikimet e tija",
+		"publisher": "Ministria e Drejtësisë",
+		"year": 1931,
+		"location": "Tirana",
+		"script": "latin-standard",
+		"pages": 344,
+		"link": {
+			"bksh": "libra1!HASH01a1"
+		}
+	},
+	{
+		"title": "Kanuni i Lekë Dukagjinit",
+		"author": "Shtjefën Gjeçovi",
+		"year": 1933,
+		"location": "Shkodër",
+		"publisher": "Shtyp. Françeskane",
+		"script": "latin-standard",
+		"pages": 180,
+		"link": {
+			"bksh": "libra1!HASH0ea3"
+		}
+	},
+	{
+		"title": "E vërteta mbi Shqipninë dhe shqiptarët. Stum historik",
+		"author": "Pashko Vasa",
+		"year": 1935,
+		"location": "Tirana",
+		"publisher": "Tirana",
+		"script": "latin-standard",
+		"pages": 126,
+		"link": {
+			"bksh": "libra1!HASH01fe!ff7391d4"
+		}
+	},
+	{
+		"title": "Burr' i Dheut",
+		"full-title": "Burr' i Dheut\nTragjedi me vjersha\nE NDARË NDË 5 PAMJE",
+		"author": "Andon Zako Çajupi",
+		"year": 1937,
+		"location": "Cairo",
+		"publisher": "Sofokli Çapi",
+		"script": "latin-standard",
+		"pages": 80,
+		"link": {
+			"bksh": "libra1!HASH371b!7f9be7c3"
+		}
+	},
+	{
+		"title": "Lahuta e Malcis",
+		"author": "Gjergj Fishta",
+		"year": 1937,
+		"location": "Shkodër",
+		"publisher": "Shtyp. Françeskane",
+		"pages": 511,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra1!HASH01f8!3560cc6a"
+		}
+	},
+	{
+		"title": "Katalog i ekspozitës dokumentore të Rilindjes Kombëtare",
+		"author": false,
+		"location": "Tirana",
+		"pages": 50,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra1!HASH0181!8f1ff9ff"
+		}
+	},
+	{
+		"title": "Fjalim i mbajtun prej kryetarit shkelqesis së tij sen. A. Mosconi pë inaugurimin e Selis së re në Tiranë",
+		"author": "Antonio Mosconi",
+		"year": 1938,
+		"location": "Rome",
+		"publisher": "F. Damasso",
+		"pages": 13,
+		"script": "latin-standard",
+		"add-langs": "it",
+		"link": {
+			"bksh": "libra1!HASH0102"
+		}
+	},
+	{
+		"title": "Lidhje q' i përkasin relacionit mbi fabrikën e çementos së shkodrës",
+		"author": false,
+		"year": 1938,
+		"location": "Shkodër",
+		"pages": 44,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra112!HASH7331"
+		}
+	},
+	{
+		"title": "Gjergj Fishta, nën kujdesin e revistës \"Shkëndija\"",
+		"author": "Filip Fishta",
+		"location": "Tirana",
+		"year": 1941,
+		"script": "latin-standard",
+		"pages": 7,
+		"link": {
+			"bksh": "libra112!HASH016d"
+		}
+	},
+	{
+		"title": "Arbëresht në Siqeli",
+		"author": "Rosolino Petrotta",
+		"year": 1941,
+		"location": "Tirana",
+		"publisher": "Ministria e Arsimit",
+		"add-langs": "it",
+		"script": "latin-standard",
+		"pages": 183,
+		"full-title": [
+			{
+				"lang": "sq",
+				"text": "Arbëresht në Siqeli"
+			},
+			{
+				"lang": "it",
+				"text": "Gli Albanesi in Sicilia"
+			}
+		],
+		"link": {
+			"bksh": "libra1!HASH0184"
+		}
+	},
+	{
+		"title": "Elifba shqip",
+		"author": false,
+		"script": "arabic",
+		"pages": 34,
+		"genre": "primer",
+		"link": {
+			"bksh": "libra042!HASH01fe"
+		}
+	},
+	{
+		"title": "Elifba shqip",
+		"author": "Shaban Mulla",
+		"pages": 63,
+		"script": "arabic",
+		"genre": "primer",
+		"link": {
+			"bksh": "libra112!HASH01f3"
+		}
+	},
+	{
+		"title": "Kënka e S. Frankiskut",
+		"author": false,
+		"script": "latin-greek",
+		"pages": 10,
+		"link": {
+			"bksh": "libra1!HASHa389"
+		}
+	}
+]

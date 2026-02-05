@@ -1,10 +1,59 @@
 <head>
 <title>Catholic alphabet</title>
 <link rel="stylesheet" href="style.css">
+<style>
+	.cyrillic {
+		font-family: "Monomakh Unicode", "Noto Serif";
+	}
+	figure {
+		text-align: center;
+	}
+</style>
 </head>
 <body>
 <h1>Catholic alphabet</h1>
-I present forms from various works written in the Catholic alphabet, also known as Old Shkodran. The works are
+<h2>Overview</h2>
+<p>
+	What we proceed to call the Albanian Catholic alphabet symbols are four symbols that were used in Albanian literature written in the Latin script from the earliest work of literature in the language (1555) till the onset of the 20th century (1904).
+</p>
+<p>
+	The symbols in question are
+	<ol>
+		<li>⟨Ξ ξ⟩, which stood for <i>dh</i>, and when written double ⟨Ξξ ξξ⟩ stood for <i>th</i></li>
+		<li>⟨Ȣ ȣ⟩, which stood for <i>y</i></li>
+		<li>⟨Ɛ ɛ⟩, which stood for <i>z</i></li>
+		<li>⟨Λ λ⟩, which stood for <i>ll</i></li>
+	</ol>
+</p>
+<p>
+	All works written with these symbols were written by Catholics, and almost all of them were written for religious purposes, hence the label. All of the books written in the alphabet published in the 17th–18th centuries were printed in Italy, most commonly by Propaganda Fide in Rome, while in the 19th centuries a good number of works using these symbols began to be printed by the Jesuits of the Xaverian College in Shkodër, which is why, within that context, the alphabet is also known as "Old Shkodran". The alphabet fell out of use gradually after the creation of the Bashkimi alphabet (1895), which got rid of these symbols for a much cheaper to print in pure Latin orthography.
+</p>
+<p>
+	The three earliest symbols, ⟨ξ⟩, ⟨ɛ⟩ and ⟨ȣ⟩, most likely descend from Serbian Old Cyrillic ⟨<span class="cyrillic">ѯ</span>⟩, ⟨<span class="cyrillic">з</span>⟩ and ⟨<span class="cyrillic">ꙋ</span>⟩, while the ⟨λ⟩ only appears from Bogdani (1685) onwards and is taken directly from Greek. The orthography employed in these various works is not uniform over time, but these symbols are shared.
+</p>
+<p>
+	Most symbols can already be well represented with existing codepoints: ⟨Λ λ⟩ as the Greek U+039B ~ U+03BB, ⟨Ȣ ȣ⟩ as the Latin U+0222 ~ U+0223, and ⟨Ɛ ɛ⟩ as Latin U+0190 ~ U+025B, as well as the additional symbols only in Buzuku, ⟨ћ⟩ as U+045B, ⟨Ʒ ʒ⟩ as U+01B7 ~ U+0292 and the ⟨cz⟩ ligature as U+00E7. Conversely, currently Greek ⟨Ξ ξ⟩ is used to encode the symbol in lack of a better alternative, but we consider this misleading both visually and semantically. Even if that were likely its ultimate origin, it was perceived as a distinct letter, and over time acquired a stable and distinct shape, not going above the x-height in its lowercase form, and in the latest publications gaining a circular bowl shape in its uppercase form. Some works using the symbols also have some text in Greek, which would make the idea of simply entrusting the issue to the typeface non-trivial to implement. We propose the addition of two new codepoints for it.
+</p>
+<p>
+	We also propose to add annotation to the existing <small>LATIN SMALL LETTER OPEN E</small> and its capital form mentioning its use as Albanian <i>z</i>.
+</p>
+<h2>Gallery</h2>
+<figure>
+	<img src="img/cath/discussion/1555-buzuku-31r-hl.png" style="width:auto">
+	<figcaption>Buzuku (1555), folio 31r. Highlighted only ⟨ξ⟩ and ⟨ɛ⟩ which are the focus of the proposal.</figcaption>
+</figure>
+<figure>
+	<img src="img/cath/discussion/1685-bogdani-nt-141-hl.png" style="width:auto">
+	<img src="img/cath/discussion/1685-bogdani-nt-146-hl.png" style="width:auto">
+	<figcaption>Bogdani (1685), volume 2, page 141 (left) and page 146 (right), showing how while ⟨λ⟩ looks identical in the Albanian and Greek portions, the Albanian ⟨ξ⟩ and Greek ⟨ξ⟩ look very different.</figcaption>
+</figure>
+<figure>
+	<img src="img/cath/discussion/1685-bogdani-nt-alphabet.png" style="height: 25em; width: auto">
+	<img src="img/cath/discussion/1895-bashkimi-6.png" style="height: 25em; width: auto">
+	<figcaption>Left, one of the last pages of Bogdani (1685), volume 2, calling ⟨ξ⟩ <i>ethe</i>, ⟨λ⟩ <i>λuλa</i>, ⟨ɛ⟩ <i>se</i> and ⟨ȣ⟩ <i>eu</i>. Also note the position in the alphabetical order matches Greek ⟨θ⟩ rather than ⟨ξ⟩. Right, <i>Abetari i qitun prej Shoqniet t' Bashkimit t' gjuhës shqype</i> (1895), page 6, comparing the new proposed orthography with the old symbols.</figcaption>
+</figure>
+<h2>Primary sources</h2>
+I present forms from various works written in the Catholic alphabet.
 <ul>
 	<li>Gjon Buzuku (1555), <i>Meshari</i>, manuscript in the Vatican Library</li>
 	<li>Pjetër Budi (1618), <i>Dottrina Christiana</i>, Rome: B. Zannetti</li>
@@ -19,7 +68,6 @@ I present forms from various works written in the Catholic alphabet, also known 
 	<li><i>Pesmdhet biseda t' Shejtit sh' Leonard prej Porto Maurizio</i> (1900), Shkodër: Typ. Immacolatae Concept. B. M. V.</li>
 	<li><i>Smuetorja e Austri-Hungaris</i> (1904), Shkodër</li>
 </ul>
-Buzuku's (1555) orthography cannot be categorised as Catholic alphabet, as unlike the others it doesn't use Italian digraphs and has some more symbols. However the Catholic alphabet inherited its letters from this northern Albanian tradition (of which no other work aside from Buzuku survives), so from an encoding perspective they are treated together. The later works use more or less the same orthography, with varying choices on how to spell <i>ë</i> (always however a relatively basic Latin character already in Unicode, hence not treated here). The letter ⟨λ⟩ is introduced by Bogdani (1685), earlier works use ⟨l⟩ or ⟨ll⟩. The first work to show casing variants for these letters is the <i>Kuvendi</i> (1706). The reason why some letters forms are not in the table is for linguistical reasons, not typographical, <i>y</i> and <i>ll</i> are very rare word-initially, so I couldn't find them in the works.
 <h2>Table with comparisons</h2>
 <table>
 	<tr>
@@ -179,19 +227,23 @@ Buzuku's (1555) orthography cannot be categorised as Catholic alphabet, as unlik
 	</tr>
 	<tr>
 		<td><img src="img/cath/1555-buzuku/gj-01.png"></td>
-		<td>Cyrillic ћ.</td>
+		<td>⟨ћ⟩ <small>CYRILLIC SMALL LETTER TSHE</small></td>
 	</tr>
 	<tr>
 		<td><img src="img/cath/1555-buzuku/x-lc.png"></td>
-		<td>Latin ʒ.</td>
+		<td>⟨ʒ⟩ <small>LATIN SMALL LETTER EZH</small></td>
 	</tr>
 	<tr>
 		<td><img src="img/cath/1555-buzuku/x-uc.png"></td>
-		<td>Latin Ʒ.</td>
+		<td>⟨Ʒ⟩ <small>LATIN CAPITAL LETTER EZH</small></td>
+	</tr>
+	<tr>
+		<td><img src="img/cath/1555-buzuku/c-01.png"></td>
+		<td>⟨ç⟩ <small>LATIN SMALL LETTER C WITH CEDILLA</small></td>
 	</tr>
 </table>
+The last symbol, which stands for <i>c</i>, is included here because has been occasionally incorrectly transcribed as ⟨ƹ⟩ <small>LATIN SMALL LETTER EZH REVERSED</small>. Considering it most likely stands for a ligature of ⟨cz⟩, I believe the best option is to spell it as a normal Latin ⟨ç⟩. The use of ⟨ꝣ⟩ <small>LATIN SMALL LETTER VISIGOTHIC Z</small> could also be justified, but is not necessary.
 <h2>Remarks on encoding</h2>
-We can encode <i>ll</i> as Greek Λ λ, <i>y</i> as Latin Ȣ ȣ, and <i>z</i> as Latin Ɛ ɛ, but while <i>dh</i> is currently often transcribed as Greek Ξ ξ, that's a pretty long stretch both semantically and visually. I propose the addition of new codepoints for it. I also propose to add annotation to the existing <small>LATIN SMALL LETTER OPEN E</small> and its capital form mentioning its use as Albanian <i>z</i>.
 <h3>New codepoints</h3>
 <table>
 	<tr>
@@ -200,11 +252,11 @@ We can encode <i>ll</i> as Greek Λ λ, <i>y</i> as Latin Ȣ ȣ, and <i>z</i> as
 	</tr>
 	<tr>
 		<td><img src="img/cath/1887-jungg/dh-lc.png"></td>
-		<td>LATIN SMALL LETTER OLD ALBANIAN DH</td>
+		<td>LATIN SMALL LETTER ALBANIAN XI</td>
 	</tr>
 	<tr>
 		<td><img src="img/cath/1887-jungg/dh-uc.png"></td>
-		<td>LATIN CAPITAL LETTER OLD ALBANIAN DH</td>
+		<td>LATIN CAPITAL LETTER ALBANIAN XI</td>
 	</tr>
 </table>
 <h2>Secondary sources</h2>

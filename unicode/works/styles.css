@@ -1,0 +1,35 @@
+body {
+	font-family: "Gentium Plus", "Gentium", serif;
+	margin: 2rem;
+}
+
+.item, .edition:not(:last-child) {
+	border-bottom: 1px solid #ddd;
+	padding: 1rem 0;
+}
+
+.edition:not(:last-child) {
+	border-bottom: 1px solid #ddd;
+	margin: 0;
+	padding: 0;
+}
+
+.title {
+	font-weight: bold; font-size: 1.1rem;
+}
+
+.field {
+	display: block;
+}
+
+.label {
+	color: #555;
+}
+
+a.ext {
+	text-decoration: none;
+}
+
+dl {
+	margin: 0;
+}
