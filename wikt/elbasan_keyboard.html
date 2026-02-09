@@ -23,35 +23,43 @@ const DIAERESIS = "¨";
 const PSILE_OXEIA = "῎";
 const DASEIA_OXEIA = "῞";
 
+const OVERLINE = '\u0305';
+
 function dothing(element) {
+	let previous_cursor_position = element.selectionStart;
+	let previous_textarea_length = element.value.length;
 	element.value = element.value
 
-		.toLowerCase()
+		.replace(/\d\d\.\d\d\n/g, '')
+
+		.replace(/12/g, 'Ι' + OVERLINE + 'Β' + OVERLINE)
+		.replace(/30/g, 'Λ' + OVERLINE)
+		.replace(/_/g, OVERLINE)
 
 		// ACCENTS
-		.replace(/&o;/g, OXEIA)
-		.replace(/&b;/g, BAREIA)
-		.replace(/&p;/g, PSILE)
-		.replace(/&d;/g, DASEIA)
-		.replace(/&u;/g, DIAERESIS)
-		.replace(/&do;/g, DASEIA_OXEIA)
-		.replace(/&po;/g, PSILE_OXEIA)
+		.replace(/\//g, OXEIA)
+		.replace(/\\/g, BAREIA)
+		.replace(/\)/g, PSILE)
+		.replace(/\(/g, DASEIA)
+		.replace(/:/g, DIAERESIS)
+		.replace(DASEIA + OXEIA, DASEIA_OXEIA)
+		.replace(PSILE + OXEIA, PSILE_OXEIA)
 
 		// OTHER MARKS
-		.replace(/\./g, "·")
+		.replace(/[\.,]/g, "·")
 
 		// DIAGRAPHS
-		.replace(/𐔐l/g, "𐔑") // ll
-		.replace(/𐔙r/g, "𐔚") // rr
+		.replace(/(𐔐|l)l/g, "𐔑") // ll
+		.replace(/(𐔙|r)r/g, "𐔚") // rr
 		.replace(/𐔄=/g, "𐔅") // nd, d=
-		.replace(/𐔊j/g, "𐔋") // gj
-		.replace(/𐔄h/g, "𐔆") // dh
-		.replace(/𐔛h/g, "𐔜") // sh
-		.replace(/𐔝h/g, "𐔞") // th
-		.replace(/𐔣h/g, "𐔤") // zh
-		.replace(/𐔡h/g, "𐔃") // xh = ç
+		.replace(/(𐔊|g)j/g, "𐔋") // gj
+		.replace(/(𐔄|d)h/g, "𐔆") // dh
+		.replace(/(𐔛|s)h/g, "𐔜") // sh
+		.replace(/(𐔝|t)h/g, "𐔞") // th
+		.replace(/(𐔣|z)h/g, "𐔤") // zh
+		.replace(/(𐔡|x)h/g, "𐔃") // xh = ç
 		.replace(/𐔓=/g, "𐔔") // ñ
-		.replace(/𐔓j/g, "𐔕") // nj
+		.replace(/(𐔓|n)j/g, "𐔕") // nj
 
 		// GREEK SOUNDS
 		.replace(/𐔊h/g, "𐔥") // gh
@@ -88,6 +96,8 @@ function dothing(element) {
 		.replace(/x/g, "𐔡")
 		.replace(/y/g, "𐔢")
 		.replace(/z/g, "𐔣")
+
+	element.selectionEnd = element.selectionStart = previous_cursor_position + element.value.length - previous_textarea_length;
 }
 </script>
 </body>

@@ -103,14 +103,14 @@ function formatLect(lect) {
 }
 
 const scripts = {
-	"latin": "pure Latin",
+	"latin": "pure Latin (unspecified)",
 	"latin-bashkimi": "Latin (Bashkimi)",
 	"latin-catholic": "Latin with Catholic symbols",
-	"latin-greek": "Latin with Greek letters",
+	"latin-greek": "Latin with Greek letters (unspecified)",
 	"latin-frasheri": "Latin (Frashëri)",
 	"latin-standard": "Latin (standard)",
-	"greek": "pure Greek",
-	"greek-latin": "Greek with Latin letters",
+	"greek": "pure Greek (unspecified)",
+	"greek-latin": "Greek with Latin letters (unspecified)",
 	"vithkuqi": "Vithkuqi",
 	"elbasan": "Elbasan",
 	"arabic": "Perso-Arabic",
