@@ -20,3 +20,7 @@ td, th {
 body {
 	font-family: "Gentium Plus", "Gentium", serif;
 }
+
+figure {
+	text-align: center;
+}

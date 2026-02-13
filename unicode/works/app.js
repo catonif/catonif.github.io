@@ -111,6 +111,7 @@ const scripts = {
 	"latin-standard": "Latin (standard)",
 	"greek": "pure Greek (unspecified)",
 	"greek-latin": "Greek with Latin letters (unspecified)",
+	"latin-agimi": "Latin (Agimi)",
 	"vithkuqi": "Vithkuqi",
 	"elbasan": "Elbasan",
 	"arabic": "Perso-Arabic",
