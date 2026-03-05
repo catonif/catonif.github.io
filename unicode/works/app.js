@@ -115,17 +115,29 @@ const scripts = {
 	"vithkuqi": "Vithkuqi",
 	"elbasan": "Elbasan",
 	"arabic": "Perso-Arabic",
+	"latin-vatra": "Latin (Vatra association)",
+	"latin-kristoforidhi": "Latin (Kristoforidhi)",
+	"greek-kristoforidhi": "Greek (Kristoforidhi)",
+	"latin-meyer": "Latin (Meyer)",
+	"cyrillic": "Cyrillic",
 }
 
 function renderItem(work, not_required) {
 	let ret = "";
 	function missingData(field) {
-		console.warn(`No ${field} for object ${JSON.stringify(work)}.`);
+		if (
+			!not_required[field]
+			&& work.kind !== "travel"
+			&& !work.volumes
+			&& !work.editions
+		) {
+			console.warn(`No ${field} for object ${JSON.stringify(work)}.`);
+		}
 	}
 	// Title.
 	if (work.title) {
 		ret += `<div class="title">${work.title}</div>`;
-	} else if (!not_required.title) {
+	} else {
 		missingData("title");
 	}
 	// Meta.
@@ -140,16 +152,18 @@ function renderItem(work, not_required) {
 	}
 	// Author.
 	if (work.author === false) {
-		ret += `<div class="field">anonymous</div>`;
+		// ret += `<div class="field">anonymous</div>`;
 	} else if (work.author) {
 		ret += `<div class="field"><span class="label">Author:</span> ${utilSep(work.author)}</div>`;
-	} else if (!not_required.author) {
+	} else {
 		missingData("author");
 	}
 	// Year.
-	if (work.year) {
+	if (work.year === false) {
+		// say "undated"?
+	} else if (work.year) {
 		ret += `<div class="field"><span class="label">Year:</span> ${utilSep(work.year)}</div>`;
-	} else if (!work.editions && !work.volumes && !not_required.year) {
+	} else {
 		missingData("year");
 	}
 	// Editions.
@@ -182,7 +196,7 @@ function renderItem(work, not_required) {
 	// Pages.
 	if (work.pages) {
 		ret += `<div class="field"><span class="label">Pages:</span> ${work.pages}</div>`;
-	} else if (!work.volumes && !work.editions) {
+	} else {
 		missingData("pages");
 	}
 	// Links.

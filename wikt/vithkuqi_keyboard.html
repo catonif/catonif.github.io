@@ -11,10 +11,12 @@
 <body>
 <h1>Vithkuqi script keyboard</h1>
 <textarea type="text" oninput="dothing(this)" class="Vith" style="width:100%;height: 100px;" spellcheck="false" autofocus></textarea><br>
-The key ⟨w W⟩ gives <span class="Vith">𐖦 𐕿</span>. The other are as you would expect them.
+Use ⟨jj⟩ to get <span class="Vith">𐖦 𐕿</span>. The other are as you would expect them. ⟨w⟩ is an allowed alias for ⟨ë⟩.
 <script>
 
 function dothing(element) {
+	let previous_cursor_position = element.selectionStart;
+	let previous_textarea_length = element.value.length;
 	element.value = element.value
 
 		.replace(/'/g, '’')
@@ -39,6 +41,14 @@ function dothing(element) {
 		// alias, xh → ç
 		.replace(/𐖹h/g, '𐖛')
 		.replace(/𐖒[Hh]/g, '𐕴')
+
+		.replace(/𐖡j/g, '𐖡𐖦')
+		.replace(/𐕺j/g, '𐕺𐖦')
+		.replace(/𐕺J/g, '𐕺𐕿')
+
+		.replace(/𐖧j/g, '𐖦')
+		.replace(/𐖀[Jj]/g, '𐕿')
+
 		
 		.replace(/a/g, '𐖗')
 		.replace(/A/g, '𐕰')
@@ -52,9 +62,9 @@ function dothing(element) {
 		.replace(/D/g, '𐕵')
 		.replace(/e/g, '𐖞')
 		.replace(/E/g, '𐕷')
-		.replace(/ë/g, '𐖟')
+		.replace(/[ëw]/g, '𐖟')
 		.replace(/𐖟=/g, '𐕸')
-		.replace(/Ë/g, '𐕸')
+		.replace(/[ËW]/g, '𐕸')
 		.replace(/f/g, '𐖠')
 		.replace(/F/g, '𐕹')
 		.replace(/g/g, '𐖡')
@@ -94,10 +104,9 @@ function dothing(element) {
 		.replace(/y/g, '𐖻')
 		.replace(/Y/g, '𐖔')
 		.replace(/z/g, '𐖼')
-		.replace(/Z/g, '𐖕')
+		.replace(/Z/g, '𐖕');
 
-		.replace(/w/g, '𐖦')
-		.replace(/W/g, '𐕿')
+	element.selectionEnd = element.selectionStart = previous_cursor_position + element.value.length - previous_textarea_length;
 }
 </script>
 </body>

@@ -98,6 +98,7 @@ const convert = {
 	["é"]: "\u0306", // breve (βραχύ)
 	["*"]: "\u0304", // macron (μακρόν)
 	["§"]: "\u032F", // semi-vowel mark
+	["Q"]: "\u0307", // dot above
 	// secret
 	["ì"]: "ϳ", // greek yot, U+03F3
 	["^"]: "Ϳ", // greek capital yot, U+037F
@@ -124,7 +125,10 @@ function dothing(element) {
 			["\u0345"]: "ͺ",
 			["\u0306"]: "˘",
 			["\u0304"]: "¯",
+			["\u032F"]: "\u0330", // tilde below
 		})[y] ?? y)
+		.replace(/\u0330\u032F/g, "\u0331") // macron below
+		.replace(/ου=/g, "ȣ") // ου ligature
 	if (do_nfc) str = str.normalize("NFD");
 	str = str
 		.replace(/([\u0301\u0300\u0342])([\u0308\u0313\u0314])/g, "$2$1")
