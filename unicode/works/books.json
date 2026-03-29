@@ -9,7 +9,8 @@
 		"lect": "gheg",
 		"add-langs": "la",
 		"link": {
-			"bksh": "antikua1!HASH69c1"
+			"bksh": "antikua1!HASH69c1",
+			"unishk": 513
 		}
 	},
 	{
@@ -129,7 +130,8 @@
 		"lect": "gheg",
 		"link": {
 			"gb": "bPsyiJ9FSb8C",
-			"bksh": "antikua1!HASH016b"
+			"bksh": "antikua1!HASH016b",
+			"unishk": 519
 		}
 	},
 	{
@@ -148,7 +150,8 @@
 		"lect": "gheg",
 		"link": {
 			"bksh": "antikua1!HASHae44",
-			"gb": "uaPDzYVUiMcC"
+			"gb": "uaPDzYVUiMcC",
+			"unishk": 516
 		}
 	},
 	{
@@ -328,6 +331,13 @@
 				"link": {
 					"bksh": ["libra1!HASH01f8!34bd7717", "libra112!HASH01d4"]
 				}
+			},
+			{
+				"edition": 4,
+				"author": "Enjëll Radoja",
+				"link": {
+					"unishk": 506
+				}
 			}
 		],
 		"add-langs": [
@@ -409,7 +419,8 @@
 		"lect": "tosk-calabria-sangiorgio",
 		"religion": "christian-catholic",
 		"link": {
-			"bksh": "antikua1!HASH0cf4"
+			"bksh": "antikua1!HASH0cf4",
+			"unishk": 501
 		}
 	},
 	{
@@ -599,7 +610,7 @@
 		"pages": 52,
 		"link": {
 			"unishk": "747",
-			"bksh": "Veqilharxhi - Ëvetar (1845).djvu"
+			"ws": "Veqilharxhi - Ëvetar (1845).djvu"
 		}
 	},
 	{
@@ -1346,7 +1357,7 @@
 		}
 	},
 	{
-		"title": "Kempis, o sikur kalxojn t' dīshmit",
+		"title": "Kempis, o sikur kalxojn t' dijshmit",
 		"full-title": {
 			"text": "KEMPIS\nO\nSIKUR KALZOIN T' DIISCMIT\nGIOVANNI GERSEN\nT' PERGHIAAMIT E JEƐU KRISCTIT\nKΞΞȢE SCHJȢP\nPREI\nP. TOMS MARCOZZIT M. O.\nMiss. Ap.",
 			"lang": "sq"
@@ -1740,6 +1751,15 @@
 		}
 	},
 	{
+		"title": "Shahiri Elierz",
+		"script": "latin-catholic",
+		"pages": 34,
+		"year": 1887,
+		"link": {
+			"unishk": 548
+		}
+	},
+	{
 		"title": "Dituritë për mësonjëtoret të para",
 		"author": "Naim Frashëri",
 		"year": 1888,
@@ -1924,6 +1944,22 @@
 		"script": "latin",
 		"link": {
 			"bksh": "libra112!HASHb6cd"
+		}
+	},
+	{
+		"title": "T' përgjamit e Zojs Bekume",
+		"full-title": {
+			"lang": "sq",
+			"text": "T' PERGHJAMIT\nE\nƐOJS BĒKUME\nKΞΞȢE SCCȢP\nPREJ NNREK MJEDS GEƐUIT SCKODRAN"
+		},
+		"year": 1892,
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"author": "Ndre Mjeda",
+		"script": "latin-catholic",
+		"pages": 103,
+		"link": {
+			"unishk": 550
 		}
 	},
 	{
@@ -4354,6 +4390,18 @@
 		}
 	},
 	{
+		"title": "Shqipria më 1927",
+		"author": "T. Selenica",
+		"year": 1928,
+		"location": "Tirana",
+		"publisher": "Tirana",
+		"script": "latin-standard",
+		"pages": 780,
+		"link": {
+			"unishk": 518
+		}
+	},
+	{
 		"title": "Bilbil i prillit. Abetare për bijat mbesimtare",
 		"author": "Abdullah Sëmblaku",
 		"year": 1929,
@@ -4558,7 +4606,8 @@
 		"pages": 511,
 		"script": "latin-standard",
 		"link": {
-			"bksh": "libra1!HASH01f8!3560cc6a"
+			"bksh": "libra1!HASH01f8!3560cc6a",
+			"unishk": 508
 		}
 	},
 	{
@@ -4617,7 +4666,8 @@
 		"pages": 50,
 		"script": "latin-standard",
 		"link": {
-			"bksh": "libra1!HASH0181!8f1ff9ff"
+			"bksh": "libra1!HASH0181!8f1ff9ff",
+			"unishk": 504
 		}
 	},
 	{
