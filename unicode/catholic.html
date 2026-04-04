@@ -56,7 +56,7 @@
 	The letter ⟨ȣ⟩ appears in Buzuku (1555) standing for both /u/ and /y/, just like ⟨u⟩ could. In all the following works, ⟨u⟩ stood for /u/ while ⟨ȣ⟩ for /y/. It derives from Bosnian Cyrillic <i>uk</i> ⟨<span class="cyrillic">ꙋ</span>⟩, which simply stood for /u/. In the 1618–1621 editions of Budi’s works the letter has the top closed, with a shape identical to the digit 8. From the 18th century onwards, the lower-case form stands below the x-height. It should be encoded as ⟨Ȣ⟩ ~ ⟨ȣ⟩ U+0222 ~ U+0223 <small>LATIN CAPITAL ~ SMALL LETTER OU</small>.
 </p>
 <p>
-	The letter ⟨ɛ⟩ is attested in all works regularly standing for /z/. It derives from a mirrored Bosnian Cyrillic <i>zemlja</i> ⟨<span class="cyrillic">з</span>⟩. Many works also employ it in the digraph ⟨ɛc⟩ for <i>zh</i> /ʒ/, as a parallel to the Italian-based ⟨sc⟩ for <i>sh</i> /ʃ/. It should be encoded as ⟨Ɛ⟩ ~ ⟨ɛ⟩ U+0190 ~ U+025B <small>LATIN CAPITAL ~ SMALL LETTER OPEN E</small>, which matches the letter visually in both casing forms. We propose to annotate the codepoint to document this usage, which is otherwise not well described by the Unicode name. The Cyrillic codepoint ⟨Ԑ⟩ ~ ⟨ԑ⟩ U+0510 ~ U+0511 <small>CYRILLIC CAPITAL ~ SMALL LETTER REVERSED ZE</small> is only closer in name, as it is merely the Latin epsilon adopted into Cyrillic as a vowel letter, so we would be mixing scripts with no benefit.
+	The letter ⟨ɛ⟩ is attested in all works regularly standing for /z/. It derives from a mirrored Bosnian Cyrillic <i>zemlja</i> ⟨<span class="cyrillic">з</span>⟩. Many works also employ it in the digraph ⟨ɛc⟩ or ⟨ɛg⟩ for <i>zh</i> /ʒ/, as a parallel to the Italian-based ⟨sc⟩ for <i>sh</i> /ʃ/. It should be encoded as ⟨Ɛ⟩ ~ ⟨ɛ⟩ U+0190 ~ U+025B <small>LATIN CAPITAL ~ SMALL LETTER OPEN E</small>, which matches the letter visually in both casing forms. We propose to annotate the codepoint to document this usage, which is otherwise not well described by the Unicode name. The Cyrillic codepoint ⟨Ԑ⟩ ~ ⟨ԑ⟩ U+0510 ~ U+0511 <small>CYRILLIC CAPITAL ~ SMALL LETTER REVERSED ZE</small> is only closer in name, as it is merely the Latin epsilon adopted into Cyrillic as a vowel letter, so we would be mixing scripts with no benefit.
 </p>
 <p>
 	The letter ⟨λ⟩ is first attested in Bogdani (1685), and is the only letter of the orthography to be borrowed directly from Greek, rather than through Bosnian Cyrillic. We encode it straightforwardly as ⟨Λ⟩ ~ ⟨λ⟩ U+039B ~ U+03BB <small>GREEK CAPITAL ~ SMALL LETTER LAMDA</small>, which is a perfect match both visually and semantically.
@@ -68,7 +68,10 @@
 	There is another character exclusive of Buzuku, descending from Bosnian Cyrillic <i>vedi</i> ⟨<span class="cyrillic">в</span>⟩, resembling a white square (for the Bosnian Cyrillic letter, see § Gallery). It occurs 15 times in total, only found in the word <i>û</i> “hunger” (whence modern standard Albanian <i>uri</i>), possibly standing for /w/ or similar (see Çabej 1968: 49, Genesin & Matzinger 2019: 109f., Demiraj 2025: 7). In two occations the word is spelt without the character, as ⟨vu⟩ and ⟨ȣnii⟩. Whatever precise phoneme the letter stood for was already marginal in Buzuku’s times and died out presumably shortly after, and as such the letter is not found in any other author. Given that Buzuku does not make casing distinction for any of the non-Latin letters, this letter only ever appears lower-case. Visually, the issue could be avoided by using ⟨□⟩ U+25A1 <small>WHITE SQUARE</small>, which however is a symbol rather than a letter and fails to recognise the Bosnian Cyrillic origin. The best option seems to be the Cyrillic codepoint for ⟨в⟩ U+0432 <small>CYRILLIC SMALL LETTER VE</small>, as the transcription on the TITUS project by Wolfgang Hock does, with the downside of visually misleading.
 </p>
 <p>
-	Buzuku employs a tailed ⟨ʒ⟩ for <i>x</i> /d͡z/, which is to be encoded as ⟨Ʒ ʒ⟩ as U+01B7 ~ U+0292 <small>LATIN CAPITAL ~ SMALL LETTER EZH</small>. He also adopts a ⟨cz⟩ ligature standing for <i>c</i> /t͡s/. We suggest the codepoint ⟨ç⟩ U+00E7 <small>LATIN SMALL LETTER C WITH CEDILLA</small>.
+	Buzuku employs a tailed ⟨ʒ⟩ for <i>x</i> /d͡z/, which is to be encoded as ⟨Ʒ ʒ⟩ as U+01B7 ~ U+0292 <small>LATIN CAPITAL ~ SMALL LETTER EZH</small>. (See gallery for origin discussion.)
+</p>
+<p>
+	He also adopts a ⟨<span clas="misencoded">cz</span>⟩ symbol for <i>c</i> /t͡s/. Typographically, the glyph was achieved by rotating the ⟨ʒ⟩, however semantically it was supposed to stand for the ⟨ç⟩, following Venetian tradition of using ⟨ç⟩ for /t͡s/ (Fergusson 2007: 77). We suggest the codepoint ⟨ç⟩ U+00E7 <small>LATIN SMALL LETTER C WITH CEDILLA</small>.
 </p>
 <h2>Gallery</h2>
 <figure>
@@ -93,11 +96,11 @@
 </figure>
 <figure>
 	<img src="img/cath/discussion/1882-marcozzi-34.png" style="width:auto; height:7em">
-	<figcaption>Marcozzi (1882: 34). This work is an exceptional case, where the round-based variant is used for lowercase in the case of voiceless <i>th</i>, while the flat-based variant is employed for the voiced <i>dh</i>. Given that the main point of differentiation is still whether the letter is single or double, the round-based variant can be considered a contextual variant.</figcaption>
+	<figcaption>Marcozzi (1882: 34). This work is an exceptional case, where the round-based variant is used for lowercase in the case of voiceless <i>th</i>, while the flat-based variant is employed for the voiced <i>dh</i>. Given that the main point of differentiation is still whether the letter is single or double, the round-based variant can be considered a contextual variant. (Image source: BKSH)</figcaption>
 </figure>
 <figure>
 	<img src="img/cath/discussion/1895-bashkimi-8.png" style="width:auto; height:7em">
-	<figcaption><i>Bashkimi</i> primer (1895: 8). An instance of cursive ⟨<span class="misencoded">ξ</span>⟩, appearing like a striked <i>z</i> with a hook.</figcaption>
+	<figcaption><i>Bashkimi</i> primer (1895: 8). An instance of cursive ⟨<span class="misencoded">ξ</span>⟩, appearing like a striked <i>z</i> with a hook. (Image source: BKSH)</figcaption>
 </figure>
 <figure>
 	<img src="img/cath/discussion/1870-crasnich.png" style="height:7em; width:auto">
@@ -107,6 +110,22 @@
 	<img src="img/cath/discussion/vjed-01.png" style="height:10em; width:auto">
 	<img src="img/cath/discussion/vjed-02.jpg" style="height:10em; width:auto">
 	<figcaption>Excerpts of Bosnian literature. Left, the Charter of Ban Kulin (1189). Right, Matija Divković (1611), <i>Nauk krstjanski</i>. The usage of the characteristic Bosnian shape of ⟨<span class="cyrillic">в</span>⟩ are highlighted. (Image source: Wikimedia Commons)</figcaption>
+</figure>
+<figure>
+	<img src="img/cath/discussion/1618-budi-180a-hl.png" style="width:auto">
+	<img src="img/cath/discussion/1618-budi-194a-hl.png" style="width:auto">
+	<figcaption>Budi (1618: 184a) on a single occasion, uses a particular five-pointed symbol to represend <i>zh</i> /ʒ/. In every other occasion, he uses ⟨X⟩ (here for example, p. 194a, in the same sentence <i>gjithë zhyem e pëgām</i>). Due to the rarity of the glyph, we do not request a codepoint for it. The dingbat U+273F <small>BLACK FLORETTE</small> ✿ or any other ad hoc encoding could be employed. (Image source: BKSH)</figcaption>
+</figure>
+<figure>
+	<img src="img/cath/discussion/1555-buzuku-11v-hl.png" style="width: auto;">
+	<figcaption>Buzuku (1555: 11v). Other glyphs used in the text, not dissimilarly to other texts of the time, are ⟨ſ⟩ (in orange), ⟨ꝛ⟩ (in yellow) and ⟨ꝺ⟩ (in blue), for which our recommendations are U+017F <small>LATIN SMALL LETTER LONG S</small>, U+A75B <small>LATIN SMALL LETTER R ROTUNDA</small> and U+A77A <small>LATIN SMALL LETTER INSULAR D</small> respectively. These are graphical variant which do not differ in value from the coexisting ⟨s⟩, ⟨r⟩ and ⟨d⟩. (Image source: BKSH)</figcaption>
+</figure>
+<figure>
+	<img src="img/cath/discussion/1561-carthusiense-5v-hl.png" style="width: auto; height: 7em">
+	<img src="img/cath/discussion/1555-buzuku-108r-hl.png" style="width: auto; height: 7em"><br>
+	<img src="img/cath/discussion/1555-buzuku-97r-hl.png" style="width: auto; height: 7em">
+	<img src="img/cath/discussion/1555-buzuku-31v-hl.png" style="width: auto; height: 7em">
+	<figcaption>In Northern Italian Gothic, which Buzuku's Missal is printed in, the ⟨ʒ⟩ was simply the usual shape of the letter ⟨z⟩, see for example <i>euangeliʒas</i> from the <i>Missale Carthusiense</i> (1561, f. 5v), published in Pavia (Image source: Bayerische Staatsbibliothek). The same can be said of the letter in Buzuku (f. 108r in top-right), however we find to different glyphs for the uppercase form: ⟨Ʒ⟩, with 15 occurrences, and ⟨Z⟩ with 5 occurrences. These are graphical variants and do not differ in value, here are given folios 97r and 31v, in the same sentence <i>e hini ëndë shtëpī e Xakarisë</i>. Lowercase ⟨z⟩ without the loop is never attested, against the 217 attestations of ⟨ʒ⟩. To keep the graphical distinction of the uppercase forms, our recommendation is to use U+0292 <small>LATIN SMALL LETTER EZH</small> for the lowercase form as well rather than U+007A <small>LATIN SMALL LETTER Z</small>. (Image source: BKSH)</figcaption>
 </figure>
 <h2>Table with comparisons</h2>
 These are some conveniently gathered images of the four main Catholic symbols throughout the centuries. The sources they are taken from are below. All are from BKSH, except for the letter of the elders of Gashi, from Wikimedia Commons.
@@ -326,6 +345,7 @@ Annotate ⟨ɛ⟩ U+025B <small>LATIN SMALL LETTER OPEN E</small> to mention its
 <ul>
 	<li>Demiraj, Bardhyl (2025). “Ndikimi gjuhësor-kulturor sllav në ‘Mesharin’ e Gjon Buzukut — një narrativ shkencor-filologjik.”, <i>Studime Filologjike</i>, 2, pp. 5–56</li>
 	<li>Çabej, Eqrem (1968). <i>«Meshari» i Gjon Buzukut (1555). Botim kritik</i>, volume 1, Tirana</li>
+	<li>Ferguson, Ronnie (2007). <i>A linguistic history of Venice</i>. Florence: L. S. Olschki</li>
 	<li>Rrota, Justin (1936). <i>Për historin e alfabetit shqyp. Pasqyra e shembuj për shkolla të mjesme</i>, Shkodër: Shtyp. Françeskane</li>
 	<li>Skendi, Stavro (1960). <i>History of the Albanian Alphabet: A Case of Complex Cultural and Political Development</i>, in <i>Südost-Forschungen, 29</i>, Munich, pp. 263–284</li>
 	<li>Genesin, Monica; Matzinger, Joachim (2019). “Albania Settentrionale Crocevia Adriatico. Influenze Slavo-Meridionali e Italiane in Due Opere a Carattere Religioso.” in <i>Mediterranean Language Review</i>, vol. 26, pp. 107–24</li>
@@ -352,7 +372,7 @@ For each, only the first edition is considered. Does not include works of lesser
 	<li>Francesco Rossi da Montalto (1866), <i>Vocabolario italiano-epirotico</i>, Rome: Propaganda Fide, 953 pp.</li>
 	<li>Francesco Rossi da Montalto (1866), <i>Regole grammaticali della lingua albanese</i>, Rome: Propaganda Fide, 349 pp.</li>
 	<li><i>Msime t’ nevojshme për më dasht Jezu Krishtin</i> (1870). Rome: Propaganda Fide, 258 pp.</li>
-	<li><i>T’ verteta e’ paa-sosme kalzue</i> (1873). Rome: Propaganda Fide, 302 pp.</li>
+	<li><i>T’ vërteta t’ pasosme</i> (1873). Rome: Propaganda Fide, 302 pp.</li>
 	<li>Francesco Rossi da Montalto (1875), <i>Vocabolario della lingua epirotica-italiana</i>, Rome: Propaganda Fide, 1400 pp.</li>
 	<li>Enjëll Radoja (1876), <i>Dotrina e Kërshten</i>. Shkodër: Catholic College Press, 252 pp.</li>
 	<li>D. B. (1877), <i>Dottrina Cristiana ridotta in compendio per uso dell’archidiocesi di Scopia</i>. Shkodër: Catholic College Press, 144 pp.</li>
