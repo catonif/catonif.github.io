@@ -4,7 +4,7 @@
 	<style>
 		figure img {
 			width: auto;
-			height: 7em;
+			height: 6em;
 		}
 
 		body {
@@ -23,15 +23,21 @@
 </head>
 <body>
 	<h1>Remarks on Vithkuqi script</h1>
+	The following remarks arose from a close examination of the original corpus in the Vithkuqi script, written by the inventor of the script himself.
+	<ul>
+		<li>Naum Veqilharxhi (1844), ⟨𐕹𐖮𐖱𐖵 𐖥 𐖴𐖨𐖷𐖱𐖵𐖟𐖱 𐖞 𐖥 𐖯𐖟𐖱𐖜𐖮𐖱𐖴𐖥𐖫 𐖟𐖸𐖞𐖵𐖗𐖱 𐖴𐖰𐖥𐖯⟩ <i>Fort i shkurtër e i përdorshim ëvetar shqip</i> = Νέον ἀλβανικὸν ἀλφαβητάριον, ἤτοι τὰ νῦν πρῶτον νεοφανῆ ἀλβανικὰ στοιχεῖα γραμμάτων, Vithkuq, pp. 8, with most running text in Greek. Images given here are from a scan by the Albanian National Library (BKSH).</li>
+		<li>Naum Veqilharxhi (1845), ⟨𐖠𐖗𐖱𐖞 𐖥 𐖱𐖥 𐖟𐖸𐖞𐖵𐖗𐖱 𐖴𐖰𐖥𐖯 𐖯𐖟𐖱 𐕵𐖧𐖞𐖩𐖫 𐖅𐖥𐖳𐖫𐖟𐖵𐖮𐖱𐖟⟩ <i>Fare i ri ëvetar shqip për Djelm Nismëtorë</i>, Vithkuq, pp. 51, all running text in Albanian, with some glosses in Greek also written in the Vithkuqi script. Images given here are from a scan</li>
+	</ul>
+	Shortly after, between 1846 and 1849, Naum Veqilharxhi died. No other work is known to have been written in the script. All following sporadic uses of the script, which the previous proposals greatly relied upon, are secondary and do not faithfully represent the original works.
 	<h2>1. The semivocalic mark</h2>
 	<p>
-		The semivocalic mark (called σημεῖον τοῦ ἡμιφώνου in the 1844 primer and <i>shënimi gjusmëzëesë</i> in the 1845 one) resembles a Latin <i>s</i>, and is described as a mark for semivowels. It is only ever found on ⟨𐖥⟩ <i>i</i>, and <span class="check">exclusively</span> in the sequence ⟨𐖡𐖦⟩ <i>gj</i> and, at the end of a word, ⟨𐖧𐖦⟩ <i>j</i>. Veqilharxhi did not consider ⟨𐖦⟩ to be a separate letter of the alphabet, as he never includes it in alphabet lists. In contrast, he often provides the semivocalic mark as a stand-alone symbol as he explains the alphabet. Nevertheless, ⟨𐖦⟩ has already been encoded as a precomposed letter, under the confusing name <small>VITHKUQI SMALL LETTER IJE</small> (U+105A6), together with an unattested uppercase counterpart. A separate codepoint for the stand-alone symbol is required to properly digitise the instances in which he explains the mark's function. We propose a new non-combining codepoint <small>VITHKUQI SEMIVOCALIC MARK</small> (U+105BE). We furthermore recommend the addition of an annotation to <small>LETTER IJE</small> (U+105A6, U+1057F) mentioning a corrected name <small>LETTER I WITH SEMIVOCALIC MARK</small>.
+		The semivocalic mark (called σημεῖον τοῦ ἡμιφώνου in the 1844 primer and <i>shënimi gjusmëzëesë</i> in the 1845 one) resembles a Latin <i>s</i>, and is described as a mark for semivowels. It is only ever found on ⟨𐖥⟩ <i>i</i>, itself exclusively in the sequences ⟨𐖡𐖦⟩ <i>gj</i>, ⟨𐖧𐖦⟩ <i>j</i> or, less commonly, ⟨𐖰𐖦⟩ <i>q</i>. Veqilharxhi did not consider ⟨𐖦⟩ to be a separate letter of the alphabet, as he never includes it in alphabet lists. In contrast, he often provides the semivocalic mark as a stand-alone symbol as he explains the alphabet. Nevertheless, ⟨𐖦⟩ has already been encoded as a precomposed letter, under the confusing name <small>VITHKUQI SMALL LETTER IJE</small> (U+105A6), together with an unattested uppercase counterpart. A separate codepoint for the stand-alone symbol is required to properly digitise the instances in which he explains the mark's function. We propose a new non-combining codepoint <small>VITHKUQI SEMIVOCALIC MARK</small> (U+105BE). We furthermore recommend the addition of an annotation to <small>LETTER IJE</small> (U+105A6, U+1057F) mentioning a corrected name <small>LETTER I WITH SEMIVOCALIC MARK</small>.
 	</p>
 	<figure>
 		<img src="img/vith/imifonon/1844-3-hl.png">
 		<img src="img/vith/imifonon/1844-6-hl.png">
 		<img src="img/vith/imifonon/1845-14-hl.png">
-		<figcaption>Veqilharxhi (1844: 3, 6; 1845: 14).</figcaption>
+		<figcaption>Veqilharxhi (1844: 3, 6; 1845: 14), instances of the stand-alone mark, as its function is explained.</figcaption>
 	</figure>
 	<h2>2. Uppercase canonical shapes</h2>
 	<p>
@@ -49,7 +55,7 @@
 		Its lack of attestation is not due to the limitedness of the corpus, but due to its impossibility to ever occur. The letter, following orthographical rules, can never occur word-initially, and the script, emulating handwriting, has unsurprisingly no attested instance of all-capital text: even title pages and section headers follow usual capitalisation rules.
 	</p>
 	<p>
-		We are not interested in recommending any action regarding this and accept its inclusion for structural or presentational reasons, but given the unexpected centrality of this letter in our proposal, we find it necessary to briefly cover the topic, to let it be known that anything about the letter, from its existence to its proposed shape, is conjectural. For example, assuming its existence, it is not unlikely that following how Greek diacritics behave, the semivocalic mark could have actually moved to the left of the letter rather than being kept above it, making such an alternative shape equally as valid as the putative shape we are currently proposing with the mark vertically on top.
+		We are not interested in recommending any action regarding this and accept its inclusion for structural or presentational reasons, but given the unexpected centrality of this letter in our proposal, we found it necessary to briefly cover the topic, to let it be known that anything about the letter, from its existence to its proposed shape, is conjectural. For example, assuming its existence, it is not unlikely that following how Greek diacritics behave, the semivocalic mark could have actually moved to the left of the letter rather than being kept above it, making such an alternative shape equally as valid as the putative shape we are currently proposing.
 	</p>
 	<h2>5. The <i>ghama</i> (UTN)</h2>
 	<p>
