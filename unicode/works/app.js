@@ -209,8 +209,8 @@ function renderItem(work, not_required) {
 				formatter: id => "https://bibliotekadigjitale.bksh.al/?view=ImageView&manifest=https%3A%2F%2Fbibliotekadigjitale.bksh.al%2Fiiif%2FManifester%2FIIIF%2F" + id.replace(/!/g, '%21') + ".dir"
 			},
 			{
-				key: "unishk",
-				display: "UNISHK",
+				key: "adsh",
+				display: "ADSH",
 				formatter: id => "https://adsh.unishk.edu.al/items/show/" + id
 			},
 			{
@@ -237,6 +237,11 @@ function renderItem(work, not_required) {
 				key: "ao",
 				display: "Albanian Orthodox",
 				formatter: id => "https://albanianorthodox.com/wp-content/uploads/" + id
+			},
+			{
+				key: "gallica",
+				display: "Gallica",
+				formatter: id => "gallica.bnf.fr/ark:/12148/" + id
 			},
 			{
 				key: "url",

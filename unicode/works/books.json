@@ -10,7 +10,7 @@
 		"add-langs": "la",
 		"link": {
 			"bksh": "antikua1!HASH69c1",
-			"unishk": 513
+			"adsh": 513
 		}
 	},
 	{
@@ -87,7 +87,8 @@
 				"pages": 206,
 				"link": {
 					"bksh": "libra112!HASH0184",
-					"gb": "OC9WAAAAcAAJ"
+					"gb": "OC9WAAAAcAAJ",
+					"legrand": 292
 				}
 			}
 		],
@@ -131,7 +132,7 @@
 		"link": {
 			"gb": "bPsyiJ9FSb8C",
 			"bksh": "antikua1!HASH016b",
-			"unishk": 519
+			"adsh": 519
 		}
 	},
 	{
@@ -151,7 +152,7 @@
 		"link": {
 			"bksh": "antikua1!HASHae44",
 			"gb": "uaPDzYVUiMcC",
-			"unishk": 516
+			"adsh": 516
 		}
 	},
 	{
@@ -171,7 +172,18 @@
 		"link": {
 			"bksh": "antikua1!HASH01d9",
 			"gb": "PJP7gP1p-JAC"
-		}
+		},
+		"editions": [
+			{
+				"author": "Bardhyl Demiraj",
+				"location": "Shkodër",
+				"publisher": "Botime Françeskane",
+				"year": 2008,
+				"link": {
+					"mdz": "bsb00088113"
+				}
+			}
+		]
 	},
 	{
 		"title": "Cuneus Prophetarum",
@@ -321,7 +333,7 @@
 				"pages": 46,
 				"link": {
 					"bksh": "antikua1!HASH01a6!cf0165d0",
-					"unishk": "21"
+					"adsh": "21"
 				}
 			},
 			{
@@ -329,14 +341,15 @@
 				"year": 1868,
 				"pages": 166,
 				"link": {
-					"bksh": ["libra1!HASH01f8!34bd7717", "libra112!HASH01d4"]
+					"bksh": ["libra1!HASH01f8!34bd7717", "libra112!HASH01d4"],
+					"legrand": 291
 				}
 			},
 			{
 				"edition": 4,
 				"author": "Enjëll Radoja",
 				"link": {
-					"unishk": 506
+					"adsh": 506
 				}
 			}
 		],
@@ -364,7 +377,7 @@
 		"script": "latin-catholic",
 		"link": {
 			"gb": "CMwGAAAAQAAJ",
-			"unishk": 10
+			"adsh": 10
 		}
 	},
 	{
@@ -420,7 +433,7 @@
 		"religion": "christian-catholic",
 		"link": {
 			"bksh": "antikua1!HASH0cf4",
-			"unishk": 501
+			"adsh": 501
 		}
 	},
 	{
@@ -452,6 +465,31 @@
 		"link": {
 			"ws": "Eisagogiki-Didaskalia.pdf"
 		}
+	},
+	{
+		"title": "Fjalor i Marko Boçarit",
+		"year": 1809,
+		"author": "Marko Boçari",
+		"link": {
+			"gallica": "btv1b110002087"
+		},
+		"editions": [
+			{
+				"year": 1926,
+				"author": "Mithat Frashëri",
+				"location": "Tiranë",
+				"publisher": "Kristo Luarasi",
+				"link": {
+					"mdz": "bsb00156375"
+				}
+			},
+			{
+				"title": "Το ελληνο-αλβανικόν λεξικόν του Μάρκου Μπότσαρη",
+				"year": 1980,
+				"author": "Tito Jochalas",
+				"location": "Athens"
+			}
+		]
 	},
 	{
 		"title": "A Journey Through Albania and Other Provinces of Turkey",
@@ -487,7 +525,8 @@
 				"atgAAAAAYAAJ",
 				"xXWrH3mFWKIC",
 				"-rO56FMGi8wC"
-			]
+			],
+			"legrand": 164
 		}
 	},
 	{
@@ -498,10 +537,11 @@
 				"edition": 1,
 				"year": 1827,
 				"location": "Corfu",
-				"publisher": "Diokiseos",
+				"publisher": "Dioikiseos",
 				"pages": 839,
 				"link": {
-					"gb": "Z80GAAAAQAAJ"
+					"gb": "Z80GAAAAQAAJ",
+					"legrand": 165
 				}
 			},
 			{
@@ -511,7 +551,18 @@
 				"publisher": "Ch. Nicholaidis Filadelfeus",
 				"pages": 843,
 				"link": {
-					"bksh": "libra112!HASH017f"
+					"bksh": "libra112!HASH017f",
+					"legrand": 239
+				}
+			},
+			{
+				"title": "Τὸ κατὰ Ματθαῖον εὐαγγέλιον τοῦ κυρίου καὶ σωτῆρος ἡμῶν Ἰσοῦ Χριστοῦ, δίγλωττον, ἁπλοελληνικὸν καὶ ἀλβανιτικόν",
+				"year": 1824,
+				"location": "Corfu",
+				"publish": "Dioikiseos",
+				"pages": 188,
+				"link": {
+					"legrand": 161
 				}
 			}
 		],
@@ -546,6 +597,17 @@
 		"pages": 36,
 		"link": {
 			"ws": "Catechismo di San Basile (1834).djvu"
+		}
+	},
+	{
+		"author": "J. Ritter von Xylander",
+		"year": 1835,
+		"title": "Die Sprache der Albanesen oder Schkipetaren",
+		"location": "Frankfurt",
+		"publisher": "Andreáischen Buchhandlung",
+		"link": {
+			"gb": "RvtJAAAAcAAJ",
+			"legrand": 179
 		}
 	},
 	{
@@ -584,7 +646,8 @@
 		"pages": 68,
 		"script": "latin-greek",
 		"link": {
-			"gb": "rWJlAAAAcAAJ"
+			"gb": "rWJlAAAAcAAJ",
+			"legrand": 192
 		},
 		"lect": "tosk-calabria-macchia"
 	},
@@ -609,8 +672,9 @@
 		"script": "vithkuqi",
 		"pages": 52,
 		"link": {
-			"unishk": "747",
-			"ws": "Veqilharxhi - Ëvetar (1845).djvu"
+			"adsh": "747",
+			"ws": "Veqilharxhi - Ëvetar (1845).djvu",
+			"legrand": 200
 		}
 	},
 	{
@@ -626,7 +690,8 @@
 					"gb": [
 						"HLUCAAAAQAAJ",
 						"XUhXAAAAcAAJ"
-					]
+					],
+					"legrand": 198
 				}
 			},
 			{
@@ -635,7 +700,8 @@
 				"pages": 288,
 				"link": {
 					"bksh": "libra1!HASH014d",
-					"gb": "po8_AAAAcAAJ"
+					"gb": "po8_AAAAcAAJ",
+					"legrand": 230
 				}
 			},
 			{
@@ -643,7 +709,8 @@
 				"year": 1873,
 				"pages": 296,
 				"link": {
-					"gb": "9mAHeZKgkokC"
+					"gb": "9mAHeZKgkokC",
+					"legrand": 330
 				}
 			}
 		],
@@ -667,7 +734,8 @@
 					"text": "RUGA E PARRISIT\nCALZUEM KERSCTÈNVET ARBNIIS\nPER P. VINCÈNZIT BASILE\nT' SCIOCHNÌET JESUS.\n"
 				},
 				"link": {
-					"gb": "TwBPAAAAcAAJ"
+					"gb": "TwBPAAAAcAAJ",
+					"legrand": 201
 				}
 			},
 			{
@@ -686,17 +754,90 @@
 		"lect": "gheg-shkodër"
 	},
 	{
-		"title": "Poesie albanesi 2",
+		"title": "Poesie albanesi",
 		"author": "Girolamo de Rada",
-		"year": 1847,
-		"location": "Naples",
-		"publisher": "Fibreno",
 		"lect": "tosk-calabria-macchia",
-		"pages": 352,
-		"script": "latin-greek",
-		"link": {
-			"gb": "ahF6ljvB1UEC"
-		}
+		"add-langs": "it",
+		"genre": "poetry",
+		"editions": [
+			{
+				"script": "latin-greek",
+				"publisher": "Fibreno",
+				"location": "Naples",
+				"year": 1847,
+				"volumes": [
+					{
+						"volume": 1,
+						"pages": 136,
+						"link": {
+							"gb": "bt5WvNuYgyoC",
+							"legrand": 209
+						}
+					},
+					{
+						"volume": 2,
+						"pages": 352,
+						"note": "1848 according to Legrand",
+						"link": {
+							"gb": "ahF6ljvB1UEC",
+							"legrand": 210
+						}
+					}
+				]
+			},
+			{
+				"location": "Corigliano Calabro",
+				"publisher": "Tipografia Albanese",
+				"link": {
+					"legrand": 323
+				},
+				"script": "latin",
+				"volumes": [
+					{
+						"volume": 1,
+						"title": "Canti di Milosao, figlio del despota di Scutari",
+						"pages": 144,
+						"year": 1873,
+						"note": "Ce tome premier contient les Canti di Milosao, figlio del despota di Scutari (troisième édition). Aux pages 11-12: Lettre de Girolamo de Rada à son père Michel de Rada, datée de Naples 20 seprembre 1839, avec cette note: Questa lettera è estratta dalla edizione del 1840, soppressa dalla censura."
+					},
+					{
+						"title": "Scanderbeccu i pa faan. Storie del secolo XV",
+						"volume": 2,
+						"year": 1872,
+						"pages": 199,
+						"link": {
+							"bksh": "libra112!HASH6634"
+						},
+						"note": "Contien le commencement de Scanderbeccu i pa faan. Storie del secolo XV"
+					},
+					{
+						"volume": 3,
+						"link": {
+							"bksh": "libra1!HASH2398"
+						},
+						"pages": 176,
+						"note": "Suite de Scanderbeccu"
+					},
+					{
+						"volume": 4,
+						"year": 1873,
+						"pages": 176,
+						"link": {
+							"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Scanderbeccu%20i%20pa-faan_1873_II.pdf"
+						},
+						"note": "Suite de Scanderbeccu"
+					},
+					{
+						"volume": 5,
+						"location": "Naples",
+						"publisher": "Francesco Mormile",
+						"year": 1877,
+						"pages": 192,
+						"note": "Fin de Scanderbeccu"
+					}
+				]
+			}
+		]
 	},
 	{
 		"title": "Albanesische Studien",
@@ -708,8 +849,24 @@
 		"pages": 800,
 		"link": {
 			"gb": "OG9cAAAAcAAJ",
-			"unishk": [40, 296],
-			"mdz": ["bsb10589473", "bsb10589474"]
+			"adsh": [40, 296],
+			"mdz": ["bsb10589473", "bsb10589474"],
+			"legrand": 219
+		}
+	},
+	{
+		"title": "Krështeu i shëjtëruorë",
+		"author": "Antonio Santori",
+		"year": 1855,	
+		"location": "Naples",
+		"publisher": "Gaetano Nobile",
+		"pages": 228,
+		"full-title": {
+			"lang": "sq",
+			"text": "Cryshtèu i shỳityrùory me ty θỳnnuryn e percalhèssavet çy lhipsen ca dhitta gkiθ gnerìu po ty truhet t'îny Zhotti; josè Lhussat mec mundh gkegket me myy divoziòn Mesha, e ty mundh kasset i ntrèkkury gnerìu e i pastrùory ndhy shỳitet Sacramènte ty Scamalìis e ty Cunchìmit; me Nyntòret e Shtat Crymytevet ty Shyn Maries; Javyn e Shỳityrùome, me Curòryzhyn e Lhavòmavet ty esu Crìshtit, e me Urtyrîny ty Cryshtère mby serpòs. Marrura ca za lhìvyre shpirtulhòre lhitalìre e prièrrura mby gkugyn alhbyrèshe ca vlau Ntôny Santori ca Pizzilhía"
+		},
+		"link": {
+			"legrand": 223
 		}
 	},
 	{
@@ -724,7 +881,8 @@
 				"pages": 148,
 				"script": "latin-greek",
 				"link": {
-					"gb": "YyxGAAAAcAAJ"
+					"gb": "YyxGAAAAcAAJ",
+					"legrand": 226
 				}
 			},
 			{
@@ -744,7 +902,8 @@
 		"location": "Rome",
 		"publisher": "Propaganda Fide",
 		"link": {
-			"gb": "NogDzjkq440C"
+			"gb": "NogDzjkq440C",
+			"legrand": 258
 		},
 		"lect": "gheg-shkodër",
 		"religion": "christian-catholic",
@@ -782,7 +941,8 @@
 		"script": "latin-catholic",
 		"link": {
 			"onb": "107003FF",
-			"gb": "6CNpAAAAcAAJ"
+			"gb": "6CNpAAAAcAAJ",
+			"legrand": 259
 		}
 	},
 	{
@@ -796,7 +956,8 @@
 			"text": "MOJ' I MAJIT\nSCIUGURUM ƐOIS BEKÙEME\nDIVOZIÒN\nJ DIFTUUM SCCIȢPTARVET\nPREI P. GAITANIT BRUSCHI\nJ SCIOCNIIS JEƐUS\nMiescter n' Collèg t' Sccȣpniis\nNnen Hȣcem t' Scêitit At Pap\nn' Sckoder.\n"
 		},
 		"link": {
-			"gb": ["xeoIAuwOpi8C", "_7RgAAAAcAAJ"]
+			"gb": ["xeoIAuwOpi8C", "_7RgAAAAcAAJ"],
+			"legrand": 266
 		},
 		"genre": "religious",
 		"script": "latin-catholic",
@@ -826,7 +987,8 @@
 				"year": 1866,
 				"pages": 420,
 				"link": {
-					"bksh": "libra112!HASH0157"
+					"bksh": "libra112!HASH0157",
+					"legrand": 272
 				}
 			},
 			{
@@ -834,7 +996,8 @@
 				"year": 1872,
 				"pages": 288,
 				"link": {
-					"bksh": "libra112!HASH8b45"
+					"bksh": "libra112!HASH8b45",
+					"legrand": 320
 				}
 			}
 		],
@@ -842,22 +1005,6 @@
 		"religion": "christian-protestant",
 		"lect": "gheg",
 		"genre": "religious"
-	},
-	{
-		"title": "Abetar shqip",
-		"author": "Konstantin Kristoforidhi",
-		"year": 1866,
-		"note": "1872 according to UNISHK",
-		"location": "(Istanbul)",
-		"publisher": "(A. H. Boyagian)",
-		"pages": 33,
-		"script": "latin-kristoforidhi",
-		"link": {
-			"bksh": "libra112!HASH66a4",
-			"unishk": 5
-		},
-		"lect": "gheg",
-		"genre": "primer"
 	},
 	{
 		"title": "Vocabolario italiano-epirotico",
@@ -876,7 +1023,8 @@
 			"gb": [
 				"pfEGAAAAQAAJ",
 				"MNFEAAAAcAAJ"
-			]
+			],
+			"legrand": 280
 		}
 	},
 	{
@@ -900,7 +1048,8 @@
 				"MftJAAAAcAAJ",
 				"wOIGAAAAQAAJ",
 				"R3wCAAAAQAAJ"
-			]
+			],
+			"legrand": 278
 		}
 	},
 	{
@@ -913,7 +1062,8 @@
 		"pages": 88,
 		"script": "latin",
 		"link": {
-			"bksh": "libra112!HASH0151"
+			"bksh": "libra112!HASH0151",
+			"legrand": 284
 		},
 		"lect": "tosk"
 	},
@@ -927,10 +1077,34 @@
 		"religion": "christian-protestant",
 		"script": "greek-kristoforidhi",
 		"link": {
-			"bksh": "libra1!HASHa2e4"
+			"bksh": "libra1!HASHa2e4",
+			"legrand": 296
 		},
 		"lect": "tosk",
 		"genre": "religious"
+	},
+	{
+		"title": "Il Vangelo di S. Matteo - Piana de' Greci",
+		"full-title": {
+			"lang": "it",
+			"text": "Il Vangelo di S. Matteo, tradotto dal testo greco nel dialetto albanese di Piana de' Greci in Sicilia da un nativo di questo luogo. Riveduto e corretto da Don Demetrio Camarda, autore della Grammatologia albanese"
+		},
+		"author": ["Anonymous", "Demetrio Camarda"],
+		"year": 1868,
+		"location": "London",
+		"pages": 116,
+		"link": {
+			"legrand": 294
+		}
+	},
+	{
+		"title": "Περι του αλβανικου αλφαβητου",
+		"year": 1868,
+		"note": "SP 3 4-19",
+		"link": {
+			"gb": "0mU0AQAAMAAJ",
+			"legrand": 295
+		}
 	},
 	{
 		"title": "Elifba",
@@ -955,7 +1129,9 @@
 		"script": "latin-kristoforidhi",
 		"religion": "christian-protestant",
 		"link": {
-			"bksh": "libra112!HASH0115"
+			"bksh": "libra112!HASH0115",
+			"gb": "wJEs_ab1qXEC",
+			"legrand": 307
 		},
 		"lect": "gheg",
 		"genre": "religious"
@@ -988,7 +1164,8 @@
 		"year": 1870,
 		"pages": 258,
 		"link": {
-			"bksh": "libra1!HASHa2e0!9021bd09"
+			"bksh": "libra1!HASHa2e0!9021bd09",
+			"legrand": 309
 		}
 	},
 	{
@@ -1004,7 +1181,8 @@
 				"year": 1870,
 				"pages": 38,
 				"link": {
-					"gb": "Ad5EAAAAcAAJ"
+					"gb": "Ad5EAAAAcAAJ",
+					"mdz": "bsb10524228"
 				}
 			},
 			{
@@ -1019,10 +1197,28 @@
 						"dvc_AQAAMAAJ",
 						"HypTAAAAcAAJ",
 						"3i7mAAAAMAAJ"
-					]
+					],
+					"mdz": "bsb10989413"
+				}
+			},
+			{
+				"volume": 3,
+				"title": "Die Form entlehnter Verba in Albanischen und einigen anderen Sprachen",
+				"link": {
+					"mdz": "bsb10989414"
 				}
 			}
 		]
+	},
+	{
+		"title": "A Dora D'Istria. Gli albanesi",
+		"author": "Demetrio Camarda",
+		"year": 1870,
+		"location": "Livorno",
+		"publisher": "G. Fabbreschi",
+		"link": {
+			"gb": "1_rSKPtrETEC"
+		}
 	},
 	{
 		"title": "Raccolda di canti popolari e rapsodie di poemi albanesi",
@@ -1035,7 +1231,34 @@
 		"script": "latin",
 		"link": {
 			"bksh": "libra112!HASH6394",
-			"gb": "TMtLAAAAYAAJ"
+			"gb": "TMtLAAAAYAAJ",
+			"legrand": 315
+		}
+	},
+	{
+		"title": "Abetar shqip",
+		"author": "Konstantin Kristoforidhi",
+		"year": 1872,
+		"location": "Istanbul",
+		"publisher": "A. H. Boyagian",
+		"pages": 33,
+		"script": "latin-kristoforidhi",
+		"link": {
+			"bksh": "libra112!HASH66a4",
+			"adsh": 5,
+			"legrand": 317
+		},
+		"lect": "gheg",
+		"genre": "primer"
+	},
+	{
+		"title": "Alfavitar Shqip",
+		"author": "Konstantin Kristoforidhi",
+		"pages": 32,
+		"note": "Probablement imprimé à Constantinople et à l'imprimerie de Boyagian, en 1872",
+		"script": "greek-kristoforidhi",
+		"link": {
+			"legrand": 318
 		}
 	},
 	{
@@ -1049,7 +1272,8 @@
 		"religion": "christian-protestant",
 		"lect": "tosk",
 		"link": {
-			"bksh": "libra1!HASH01f8!34b4cc6d"
+			"bksh": "libra1!HASH01f8!34b4cc6d",
+			"legrand": 321
 		},
 		"genre": "religious"
 	},
@@ -1069,7 +1293,8 @@
 		"pages": 491,
 		"link": {
 			"bksh": "libra112!HASH0181!7d55fa1b",
-			"gb": "xIU4AAAAMAAJ"
+			"gb": "xIU4AAAAMAAJ",
+			"legrand": 319
 		}
 	},
 	{
@@ -1083,52 +1308,56 @@
 		"religion": "christian-protestant",
 		"lect": "gheg",
 		"link": {
-			"bksh": ["libra112!HASH0181!7b5bfa1f", "libra112!HASH0181!7d55fa1b"]
+			"bksh": ["libra112!HASH0181!7b5bfa1f", "libra112!HASH0181!7d55fa1b"],
+			"legrand": 324
 		},
 		"genre": "religious"
 	},
 	{
-		"title": "Poesie 2. Scanderbeccu i pafaan",
-		"author": "Girolamo de Rada",
-		"year": 1872,
-		"location": "Corigliano Calabro",
-		"publisher": "Tipografia Albanese",
-		"pages": 199,
-		"lect": "tosk-calabria-macchia",
-		"script": "latin",
-		"add-langs": "it",
-		"link": {
-			"bksh": "libra112!HASH6634"
-		},
-		"genre": "poetry"
-	},
-	{
-		"title": "Poesie 3. Scanderbeccu i pa faan",
-		"author": "Girolamo de Rada",
-		"year": 1873,
-		"location": "Corigliano Calabro",
-		"publisher": "Tipografia Albanese",
-		"script": "latin",
-		"pages": 176,
-		"link": {
-			"bksh": "libra1!HASH2398"
-		},
-		"genre": "poetry"
-	},
-	{
-		"title": "T' verteta e' paa-sosme kalzue",
+		"title": "T' vërteta t' pasosme",
 		"author": false,
 		"og-author": "Alfonso de' Liguori",
 		"publisher": "Propaganda Fide",
 		"location": "Rome",
-		"year": 1873,
-		"pages": 302,
+		"full-title": {
+			"lang": "sq",
+			"text": "T' VERTETA T' PAA-SOSME\nKALZUE PREI\nSCEITIT ALFONSO M. DE' LIGUORI\nE DO DIVOZIONE\nE MSIME TIERA\nKΞΞȢE N' FIAL E N' GHIÙ ARBNORE\nPREI GNI\nMESCTARIT SCODRAN"
+		},
+		"editions": [
+			{
+				"year": 1867,
+				"pages": 302,
+				"link": {
+					"gb": "5PROpt31p_cC",
+					"legrand": 288
+				}
+			},
+			{
+				"year": 1873,
+				"pages": 302,
+				"link": {
+					"bksh": "libra1!HASH01f8!35decc72"
+				}
+			}
+		],
 		"script": "latin-catholic",
 		"religion": "christian-catholic",
-		"link": {
-			"bksh": "libra1!HASH01f8!35decc72"
-		},
 		"genre": "religious"
+	},
+	{
+		"title": "Urat për me u dhan",
+		"year": 1867,
+		"author": "Tommaso Marcozzi",
+		"full-title": {
+			"lang": "sq",
+			"text": "URAT\nPER MEU ΞΞAN\nNANN DIT PARA FESTÈS\nT' SCEITIT SC' FRANCESCK\nKΞΞȢE SC-CIȢP PREI LTINIT\nPREI\nP. TOM MARCOZZIT\nFRANCESCKAN"
+		},
+		"location": "Rome",
+		"publisher": "Propaganda Fide",
+		"link": {
+			"gb": "vOCwMyNFso0C",
+			"legrand": 289
+		}
 	},
 	{
 		"title": "Vocabolario della lingua epirotica-italiana",
@@ -1149,7 +1378,8 @@
 				"V-ExAQAAMAAJ",
 				"eGCyEhTrxE8C",
 				"GzRoAAAAcAAJ"
-			]
+			],
+			"legrand": 347
 		}
 	},
 	{
@@ -1238,7 +1468,8 @@
 		"script": "greek",
 		"add-langs": "el",
 		"link": {
-			"bksh": "libra112!HASH0139!b9c99d1e"
+			"bksh": "libra112!HASH0139!b9c99d1e",
+			"legrand": 361
 		}
 	},
 	{
@@ -1275,7 +1506,8 @@
 		"pages": 136,
 		"link": {
 			"bksh": "libra1!HASH01ce",
-			"unishk": 1
+			"adsh": 1,
+			"legrand": 373
 		}
 	},
 	{
@@ -1303,6 +1535,16 @@
 		}
 	},
 	{
+		"title": "Shënjti ungjill pas Markut ndë gluhë toskërishte",
+		"year": 1879,
+		"author": "Konstantin Kristoforidhi",
+		"location": "Istanbul",
+		"publisher": "A. H. Boyagian",
+		"link": {
+			"legrand": 394
+		}
+	},
+	{
 		"title": "Katër ungjijtë ndë gluhë toksërishte",
 		"full-title": [
 			{
@@ -1324,7 +1566,8 @@
 		"year": 1879,
 		"pages": 423,
 		"link": {
-			"bksh": "libra112!HASH0180!a5a7b203"
+			"bksh": "libra112!HASH0180!a5a7b203",
+			"legrand": 395
 		}
 	},
 	{
@@ -1336,7 +1579,8 @@
 		"script": "greek-kristoforidhi",
 		"pages": 188,
 		"link": {
-			"bksh": "libra112!HASH0181!8755fa07"
+			"bksh": "libra112!HASH0181!8755fa07",
+			"legrand": 409
 		}
 	},
 	{
@@ -1393,7 +1637,8 @@
 		"pages": 164,
 		"add-langs": "el",
 		"link": {
-			"bksh": "libra112!HASH0181!851ffa0b"
+			"bksh": "libra112!HASH0181!851ffa0b",
+			"anemi": "metadata-312-0000116.tkl"
 		},
 		"genre": "primer",
 		"script": "greek"
@@ -1420,6 +1665,19 @@
 		"location": ["Turin", "Rome"],
 		"link": {
 			"gb": ["ZGk-AAAAYAAJ", "TVtDAAAAYAAJ"]
+		}
+	},
+	{
+		"title": "Grammatikē tēs Albanikēs glōssēs kata tēn Toskikēn dialekton",
+		"author": "Konstantin Kristoforidhi",
+		"script": "greek-kristoforidhi",
+		"year": 1882,
+		"add-langs": "el",
+		"pages": 165,
+		"location": "Istanbul",
+		"publisher": "A. H. Boyagian",
+		"link": {
+			"mdz": "bsb11504052"
 		}
 	},
 	{
@@ -1756,7 +2014,7 @@
 		"pages": 34,
 		"year": 1887,
 		"link": {
-			"unishk": 548
+			"adsh": 548
 		}
 	},
 	{
@@ -1881,7 +2139,7 @@
 				"year": 1897,
 				"pages": 181,
 				"link": {
-					"unishk": "28"
+					"adsh": "28"
 				}
 			}
 		]
@@ -1959,7 +2217,7 @@
 		"script": "latin-catholic",
 		"pages": 103,
 		"link": {
-			"unishk": 550
+			"adsh": 550
 		}
 	},
 	{
@@ -2345,7 +2603,7 @@
 		"pages": 16,
 		"link": {
 			"bksh": "libra042!HASH0124",
-			"unishk": 11
+			"adsh": 11
 		},
 		"genre": "primer"
 	},
@@ -2466,7 +2724,7 @@
 		"pages": 45,
 		"script": "latin-bashkimi",
 		"link": {
-			"unishk": "22"
+			"adsh": "22"
 		}
 	},
 	{
@@ -3123,7 +3381,7 @@
 		"pages": 16,
 		"link": {
 			"bksh": "libra042!HASH01a3",
-			"unishk": 14
+			"adsh": 14
 		},
 		"genre": "primer",
 		"script": "latin-frasheri",
@@ -3295,7 +3553,7 @@
 		"year": 1911,
 		"link": {
 			"bksh": "libra1!HASH01f8!df621f17",
-			"unishk": 34
+			"adsh": 34
 		},
 		"script": "latin-frasheri",
 		"pages": 86,
@@ -3742,7 +4000,7 @@
 		"author": false,
 		"link": {
 			"bksh": "libra042!HASH01a9",
-			"unishk": 13
+			"adsh": 13
 		}
 	},
 	{
@@ -4039,7 +4297,7 @@
 		"pages": 138,
 		"script": "latin-standard",
 		"link": {
-			"unishk": 35
+			"adsh": 35
 		}
 	},
 	{
@@ -4093,7 +4351,7 @@
 		"publisher": "Nikaj",
 		"pages": 100,
 		"link": {
-			"unishk": "27"
+			"adsh": "27"
 		}
 	},
 	{
@@ -4109,7 +4367,7 @@
 		"author": false,
 		"pages": 119,
 		"link": {
-			"unishk": 16
+			"adsh": 16
 		}
 	},
 	{
@@ -4143,7 +4401,7 @@
 				"pages": 56,
 				"link": {
 					"bksh": "libra042!HASH01a7!80edae13",
-					"unishk": 8
+					"adsh": 8
 				}
 			},
 			{
@@ -4151,7 +4409,7 @@
 				"title": "Libër i dytë për shkolla fillore të shqypnis",
 				"pages": 86,
 				"link": {
-					"unishk": 18
+					"adsh": 18
 				}
 			}
 		]
@@ -4201,7 +4459,7 @@
 		"location": "Constanța",
 		"publisher": "Albania",
 		"link": {
-			"unishk": 349
+			"adsh": 349
 		}
 	},
 	{
@@ -4239,7 +4497,7 @@
 		"script": "latin-standard",
 		"pages": 61,
 		"link": {
-			"unishk": "23"
+			"adsh": "23"
 		}
 	},
 	{
@@ -4252,7 +4510,7 @@
 		"pages": 112,
 		"script": "latin-standard",
 		"link": {
-			"unishk": 17
+			"adsh": 17
 		}
 	},
 	{
@@ -4336,7 +4594,7 @@
 		"pages": 36,
 		"script": "latin-standard",
 		"link": {
-			"unishk": 12
+			"adsh": 12
 		}
 	},
 	{
@@ -4364,7 +4622,7 @@
 		"script": "latin-standard",
 		"pages": 63,
 		"link": {
-			"unishk": 351
+			"adsh": 351
 		}
 	},
 	{
@@ -4398,7 +4656,19 @@
 		"script": "latin-standard",
 		"pages": 780,
 		"link": {
-			"unishk": 518
+			"adsh": 518
+		}
+	},
+	{
+		"title": "Shpërblimi i gjaksis. Dramë në tre akte",
+		"author": "Kostandin Kotte",
+		"year": 1929,
+		"location": "Zadar",
+		"publisher": "E. de Schönfled",
+		"script": "latin-standard",
+		"pages": 108,
+		"link": {
+			"mdz": "bsb00133798"
 		}
 	},
 	{
@@ -4450,7 +4720,7 @@
 		"pages": 61,
 		"script": "latin-standard",
 		"link": {
-			"unishk": 30
+			"adsh": 30
 		}
 	},
 	{
@@ -4474,7 +4744,7 @@
 		"location": "Shkodër",
 		"publisher": "Zoja e Papërlyeme",
 		"link": {
-			"unishk": "20"
+			"adsh": "20"
 		}
 	},
 	{
@@ -4607,7 +4877,7 @@
 		"script": "latin-standard",
 		"link": {
 			"bksh": "libra1!HASH01f8!3560cc6a",
-			"unishk": 508
+			"adsh": 508
 		}
 	},
 	{
@@ -4667,7 +4937,7 @@
 		"script": "latin-standard",
 		"link": {
 			"bksh": "libra1!HASH0181!8f1ff9ff",
-			"unishk": 504
+			"adsh": 504
 		}
 	},
 	{
@@ -4839,7 +5109,7 @@
 				"publisher": "Gutenberg",
 				"pages": 84,
 				"link": {
-					"unishk": 45
+					"adsh": 45
 				}
 			},
 			{

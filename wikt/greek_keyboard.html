@@ -4,6 +4,11 @@
 <title>Polytonic Greek keyboard</title>
 <style>
 
+p {
+	margin: .5em 0;
+	text-indent: 1em;
+}
+
 :root {
 	--greek_font: "Gentium Plus"
 }
@@ -49,7 +54,18 @@ font: <input type="text" value="Gentium Plus" oninput="set_font(this.value)"/> �
 auto NFC: <input type="checkbox" oninput="do_nfc = !do_nfc"/><br>
 <hr>
 <table id="keyboardlayout"></table>
-The letter <span class="input">q</span> gives <span class="Grek">· ⁖ ⁘</span> if pressed the right amount of times. The apostrophe <span class="input">'</span> can similarly yield the numerical symbols <span class="Grek">ʹ ͵</span> when typed multiple times. Diacritics are encoded as combining by default, because I think it eases the editing process (i.e. backspacing only removes one diacritic, and I often get them wrong). If you disagree, tick the checkbox. The copy button always normalises to NFC the text that is copied into the clipboard anyways. Typing a diacritic twice makes it full space instead of combining. I recommend the font Gentium Plus, or Gentium. If you have to deal with macrons and breves then I suggest SBL Greek. If you want this to work offline you can simply download the HTML.
+<p>
+	The key <span class="input">q</span> gives ⟨<span class="Grek">· ⁖ ⁘</span>⟩ if pressed the right amount of times. Similarly, the key <span class="input">§</span> can give ⟨<span class="Grek">◌̯ ◌̰ ◌̱</span>⟩. The keys <span class="input">ì</span> and <span class="input">^</span> give ⟨<span class="Grek">ϳ</span>⟩ and ⟨<span class="Grek">Ϳ</span>⟩ respectively. The apostrophe <span class="input">'</span> can similarly yield the numerical symbols ⟨<span class="Grek">ʹ ͵</span>⟩ when typed multiple times.
+</p>
+<p>
+	Diacritics are encoded as combining by default, rather that in precombined forms, because I think it eases the editing process (i.e. backspacing only removes one diacritic, and I often get them wrong). If you disagree, tick the checkbox. The copy button always normalises to NFC the text that is copied into the clipboard anyways. Typing a diacritic twice makes it full space instead of combining.
+</p>
+<p>
+	Type <span class="input">g=</span> for ⟨<span class="Grek">ϝ</span>⟩, <span class="input">ou=</span> for ⟨<span class="Grek">ȣ</span>⟩, <span class="input">st=</span> for ⟨<span class="Grek">ϛ</span>⟩, <span class="input">h=</span> for ⟨<span class="Grke">ͱ</span>⟩, <span class="input">b=</span> for ⟨<span class="Grke">ϐ</span>⟩ and <span class="input">p=</span> for ⟨<span class="Grke">ϖ</span>⟩, and their uppercase counterparts if present.
+</p>
+<p>
+	I recommend the font Gentium or Noto Sans for good coverage. If you have to deal with macrons and breves then I suggest SBL Greek. If you want this to work offline you can simply download the HTML.
+</p>
 <script>
 
 const textinput = document.getElementById("input")
@@ -129,6 +145,15 @@ function dothing(element) {
 		})[y] ?? y)
 		.replace(/\u0330\u032F/g, "\u0331") // macron below
 		.replace(/ου=/g, "ȣ") // ου ligature
+		.replace(/π=/g, "ϖ")
+		.replace(/β=/g, "ϐ")
+		.replace(/γ=/g, "ϝ")
+		.replace(/στ=/g, "ϛ")
+		.replace(/Ο[Υυ]=/g, "Ȣ")
+		.replace(/Γ=/g, "Ϝ")
+		.replace(/Σ[Ττ]=/g, "Ϛ")
+		.replace(/η=/g, "ͱ")
+		.replace(/Η=/g, "Ͱ")
 	if (do_nfc) str = str.normalize("NFD");
 	str = str
 		.replace(/([\u0301\u0300\u0342])([\u0308\u0313\u0314])/g, "$2$1")
