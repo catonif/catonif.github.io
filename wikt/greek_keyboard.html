@@ -139,11 +139,12 @@ function dothing(element) {
 			["\u0313"]: "᾽", // actually a κορωνίς (0x1FBD) instead of the ψιλή (0x1FBD)
 			["\u0314"]: "῾",
 			["\u0345"]: "ͺ",
-			["\u0306"]: "˘",
+			["\u0306"]: "\u0311", // inverted breve
 			["\u0304"]: "¯",
 			["\u032F"]: "\u0330", // tilde below
 		})[y] ?? y)
 		.replace(/\u0330\u032F/g, "\u0331") // macron below
+		.replace(/\u0311\u0306/g, "˘")
 		.replace(/ου=/g, "ȣ") // ου ligature
 		.replace(/π=/g, "ϖ")
 		.replace(/β=/g, "ϐ")

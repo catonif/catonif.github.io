@@ -556,7 +556,7 @@
 				}
 			},
 			{
-				"title": "Τὸ κατὰ Ματθαῖον εὐαγγέλιον τοῦ κυρίου καὶ σωτῆρος ἡμῶν Ἰσοῦ Χριστοῦ, δίγλωττον, ἁπλοελληνικὸν καὶ ἀλβανιτικόν",
+				"title": "Τὸ κατὰ Ματθαῖον εὐαγγέλιον τοῦ κυρίου καὶ σωτῆρος ἡμῶν Ἰσοῦ Χριστοῦ, δίγλωττον, ἁπλοελληνικὸν καὶ ἀλβανιτικόν",
 				"year": 1824,
 				"location": "Corfu",
 				"publish": "Dioikiseos",
@@ -863,7 +863,7 @@
 		"pages": 228,
 		"full-title": {
 			"lang": "sq",
-			"text": "Cryshtèu i shỳityrùory me ty θỳnnuryn e percalhèssavet çy lhipsen ca dhitta gkiθ gnerìu po ty truhet t'îny Zhotti; josè Lhussat mec mundh gkegket me myy divoziòn Mesha, e ty mundh kasset i ntrèkkury gnerìu e i pastrùory ndhy shỳitet Sacramènte ty Scamalìis e ty Cunchìmit; me Nyntòret e Shtat Crymytevet ty Shyn Maries; Javyn e Shỳityrùome, me Curòryzhyn e Lhavòmavet ty esu Crìshtit, e me Urtyrîny ty Cryshtère mby serpòs. Marrura ca za lhìvyre shpirtulhòre lhitalìre e prièrrura mby gkugyn alhbyrèshe ca vlau Ntôny Santori ca Pizzilhía"
+			"text": "Cryshtèu i shỳityrùory me ty θỳnnuryn e percalhèssavet çy lhipsen ca dhitta gkiθ gnerìu po ty truhet t'îny Zhotti; josè Lhussat mec mundh gkegket me myy divoziòn Mesha, e ty mundh kasset i ntrèkkury gnerìu e i pastrùory ndhy shỳitet Sacramènte ty Scamalìis e ty Cunchìmit; me Nyntòret e Shtat Crymytevet ty Shyn Maries; Javyn e Shỳityrùome, me Curòryzhyn e Lhavòmavet ty esu Crìshtit, e me Urtyrîny ty Cryshtère mby serpòs. Marrura ca za lhìvyre shpirtulhòre lhitalìre e prièrrura mby gkugyn alhbyrèshe ca vlau Ntôny Santori ca Pizzilhía"
 		},
 		"link": {
 			"legrand": 223
@@ -1481,7 +1481,7 @@
 			},
 			{
 				"lang": "sq",
-				"text": "Σ̈Ε̰Ν̇ΤΙ ȢΝΓ̇Ι͂Λ ΠΑΣ ΜΑΤΘΕȢΤ\nΚΕ̰ΘΥΕΡΕ̰ ΠΡΕΪ ΓΡΕΚ̇ΙΣ̈ΤΕΣΕ̰ ΒΙΕΤΕ̰ΡΕ̰\nΣ̈Κ̇ΙΠ\nνdε̰ γλ̇ȣ́χ̇ε̰ Τοσκε̰ρίσ̈τε.",
+				"text": "Σ̈Ε̰Ν̇ΤΙ ȢΝΓ̇Ι͂Λ ΠΑΣ ΜΑΤΘΕȢΤ\nΚΕ̰ΘΥΕΡΕ̰ ΠΡΕΪ ΓΡΕΚ̇ΙΣ̈ΤΕΣΕ̰ ΒΙΕΤΕ̰ΡΕ̰\nΣ̈Κ̇ΙΠ\nνdε̰ γλ̇ȣ́χ̇ε̰ Τοσκε̰ρίσ̈τε.",
 				"norm": "Shenjti ungjill pas Mattheut. Këthyerë prej greqishtesë vietërë shqip ndë gluhë Toskërishte."
 			}
 		],
@@ -1506,7 +1506,7 @@
 		"pages": 136,
 		"link": {
 			"bksh": "libra1!HASH01ce",
-			"adsh": 1,
+			"adsh": 3,
 			"legrand": 373
 		}
 	},
@@ -1625,7 +1625,8 @@
 		"script": "latin",
 		"pages": 184,
 		"link": {
-			"gb": "L_0NAAAAYAAJ"
+			"gb": ["L_0NAAAAYAAJ", "deMGAAAAQAAJ"],
+			"adsh": 1110
 		}
 	},
 	{
@@ -1678,6 +1679,14 @@
 		"publisher": "A. H. Boyagian",
 		"link": {
 			"mdz": "bsb11504052"
+		}
+	},
+	{
+		"title": "Studi filologici svolti con la lingua pelasgo-albanese",
+		"author": "Stanislao Marchianò",
+		"year": 1882,
+		"link": {
+			"adsh": 458
 		}
 	},
 	{
@@ -1979,7 +1988,8 @@
 		"add-langs": "fr",
 		"pages": 169,
 		"link": {
-			"gb": "EKcUm28TjKMC"
+			"gb": "EKcUm28TjKMC",
+			"adsh": 750
 		}
 	},
 	{
@@ -2006,6 +2016,18 @@
 		"script": "latin-frasheri",
 		"link": {
 			"bksh": "libra1!HASH89ce!349835d1"
+		}
+	},
+	{
+		"title": "Abetare e gjuhës shqip",
+		"author": "Sami Frashëri",
+		"year": 1888,
+		"publisher": "Dituria",
+		"location": "Bucharest",
+		"script": "latin-frasheri",
+		"pages": 84,
+		"link": {
+			"adsh": 737
 		}
 	},
 	{
@@ -2053,7 +2075,8 @@
 		"script": "latin-meyer",
 		"link": {
 			"gb": "brfk0NiwGZMC",
-			"mdz": ["bsb11646259", "bsb00133888"]
+			"mdz": ["bsb11646259", "bsb00133888"],
+			"adsh": 354
 		}
 	},
 	{
@@ -2116,7 +2139,8 @@
 		"year": 1890,
 		"script": "latin-frasheri",
 		"link": {
-			"bksh": "libra1!HASHa2e2!8ecc6a59"
+			"bksh": "libra1!HASHa2e2!8ecc6a59",
+			"adsh": 735
 		}
 	},
 	{
@@ -2208,7 +2232,7 @@
 		"title": "T' përgjamit e Zojs Bekume",
 		"full-title": {
 			"lang": "sq",
-			"text": "T' PERGHJAMIT\nE\nƐOJS BĒKUME\nKΞΞȢE SCCȢP\nPREJ NNREK MJEDS GEƐUIT SCKODRAN"
+			"text": "T' PERGHJAMIT\nE\nƐOJS BĒKUME\nKΞΞȢE SCCȢP\nPREJ NNREK MJEDS GEƐUIT SCKODRAN"
 		},
 		"year": 1892,
 		"location": "Rome",
@@ -2255,7 +2279,8 @@
 		"author": false,
 		"pages": 34,
 		"link": {
-			"bksh": "libra1!HASHa2dd"
+			"bksh": "libra1!HASHa2dd",
+			"adsh": 446
 		},
 		"genre": "primer"
 	},
@@ -2300,6 +2325,17 @@
 		"script": "latin-frasheri",
 		"link": {
 			"bksh": "libra1!HASHa2e3!e2cc6509"
+		}
+	},
+	{
+		"title": "Kurzgefasstes Handbuch der nordalbanesischen Sprache",
+		"year": 1896,
+		"author": "Julius Pisko",
+		"add-langs": "de",
+		"location": "Vienna",
+		"publisher": "Alfred Hölder",
+		"link": {
+			"adsh": 357
 		}
 	},
 	{
@@ -2486,6 +2522,16 @@
 		}
 	},
 	{
+		"title": "La questione albanese. Scritti vari",
+		"author": "Anselmo Lorecchio",
+		"year": 1898,
+		"location": "Catanzaro",
+		"publisher": "Tipografia Economica",
+		"link": {
+			"adsh": 356
+		}
+	},
+	{
 		"title": "T' nnollunat e Shqypnis",
 		"author": "Tefë Curani",
 		"editions": [
@@ -2584,7 +2630,7 @@
 	},
 	{
 		"title": "Shqipëria. Ç'ka qënë, ç'është e ç'do të bëhetë?",
-		"author": "Naim Frashëri",
+		"author": "Sami Frashëri",
 		"year": 1899,
 		"location": "Bucharest",
 		"publisher": "Dituria",
@@ -2659,6 +2705,16 @@
 		"add-langs": "it",
 		"link": {
 			"bksh": "libra1!HASH0187"
+		}
+	},
+	{
+		"title": "Abetari për shkolla filltare t' Shqypnīs",
+		"year": 1901,
+		"volume": 1,
+		"pages": 41,
+		"script": "latin-bashkimi",
+		"link": {
+			"adsh": 1901
 		}
 	},
 	{
@@ -2756,7 +2812,8 @@
 		"year": 1904,
 		"location": "Athens",
 		"publisher": "P. D. Sakellarios",
-		"script": "greek-latin",
+		"script": "greek-kristoforidhi",
+		"add-langs": "el",
 		"pages": 502,
 		"link": {
 			"bksh": "libra112!HASH018e"
@@ -3642,7 +3699,7 @@
 		"full-title": [
 			{
 				"lang": "sq",
-				"text": "Ushtrime giûhet\nSHQYP-ITALIAN\nprei\nG. BENUSSIT"
+				"text": "Ushtrime giûhet\nSHQYP-ITALIAN\nprei\nG. BENUSSIT"
 			},
 			{
 				"lang": "it",
@@ -3655,7 +3712,7 @@
 				"full-title": [
 					{
 						"lang": "sq",
-						"text": "T' mbledhunit e disaa falve t' nevoishme me xânë giûhen shqype e taliane"
+						"text": "T' mbledhunit e disaa falve t' nevoishme me xânë giûhen shqype e taliane"
 					},
 					{
 						"lang": "it",
@@ -3673,7 +3730,7 @@
 				"full-title": [
 					{
 						"lang": "sq",
-						"text": "T' mbledhunit e disaa bisedve t' nevoishme me xânë giûhen shqype e taliane."
+						"text": "T' mbledhunit e disaa bisedve t' nevoishme me xânë giûhen shqype e taliane."
 					},
 					{
 						"lang": "it",
@@ -3891,7 +3948,7 @@
 		"year": 1912,
 		"location": "Manastir",
 		"publisher": "Tregëtare Nërkombëtare",
-		"script": "latin-frasheri",
+		"script": "latin-standard",
 		"pages": 75,
 		"link": {
 			"bksh": "libra1!HASHe6e5"
@@ -3912,7 +3969,7 @@
 	},
 	{
 		"title": "Nastradin Hoxha",
-		"author": "Mihal Xoxxë",
+		"author": "Mihal Hoxhë",
 		"year": 1912,
 		"location": "Korçë",
 		"publisher": "Korça",
@@ -4510,7 +4567,7 @@
 		"pages": 112,
 		"script": "latin-standard",
 		"link": {
-			"adsh": 17
+			"adsh": [17, 451]
 		}
 	},
 	{
@@ -4561,7 +4618,7 @@
 		}
 	},
 	{
-		"title": "Vallja e parrîzit",
+		"title": "Vallja e parrîzit",
 		"author": "Gjergj Fishta",
 		"year": 1925,
 		"location": "Shkodër",
@@ -4664,7 +4721,7 @@
 		"author": "Kostandin Kotte",
 		"year": 1929,
 		"location": "Zadar",
-		"publisher": "E. de Schönfled",
+		"publisher": "E. de Schönfled",
 		"script": "latin-standard",
 		"pages": 108,
 		"link": {
@@ -5133,6 +5190,1526 @@
 		"script": "latin-standard",
 		"link": {
 			"bksh": "libra1!HASH0181!7d57fa1b"
+		}
+	},
+	{
+		"title": "Rivista Adriatike",
+		"script": "latin-vatra",
+		"add-langs": "en",
+		"location": "Boston",
+		"note": "Pages are of only the Albanian part.",
+		"volumes": [
+			{
+				"volume": 1,
+				"volumes": [
+					{
+						"volume": 1,
+						"year": 1918,
+						"date": "1918-09",
+						"pages": 10,
+						"link": {
+							"bksh": "periodik!HASH8255"
+						}
+					},
+					{
+						"volume": 2,
+						"year": 1918,
+						"date": "1918-10",
+						"pages": 8,
+						"link": {
+							"bksh": "periodik!HASH8255!8ccdd5e5"
+						}
+					},
+					{
+						"volume": 3,
+						"year": 1918,
+						"date": "1918-11",
+						"pages": 14,
+						"link": {
+							"bksh": "periodik!HASH8255!8ccdd5e6"
+						}
+					},
+					{
+						"volume": 4,
+						"year": 1918,
+						"date": "1918-12",
+						"pages": 0,
+						"link": {
+							"bksh": "periodik!HASH8255!8ccdd5e7"
+						}
+					},
+					{
+						"volume": "5–6",
+						"pages": 0,
+						"year": 1919,
+						"date": "1919-02",
+						"link": {
+							"bksh": "periodik!HASH015b"
+						}
+					},
+					{
+						"volume": 7,
+						"year": 1919,
+						"pages": 10,
+						"date": "1919-03",
+						"link": {
+							"bksh": "periodik!HASH82fd"
+						}
+					},
+					{
+						"volume": 8,
+						"year": 1919,
+						"date": "1919-04",
+						"pages": 10,
+						"link": {
+							"bksh": "periodik!HASH82fd!8ccdd5e9"
+						}
+					},
+					{
+						"volume": 9,
+						"year": 1919,
+						"date": "1919-05",
+						"pages": 14,
+						"link": {
+							"bksh": "periodik!HASH82fd!8ccdd5ea"
+						}
+					},
+					{
+						"volume": 10,
+						"year": 1919,
+						"date": "1919-06",
+						"pages": 16,
+						"link": {
+							"bksh": "periodik!HASH82fd!8ccdd68c"
+						}
+					},
+					{
+						"volume": 11,
+						"year": 1919,
+						"date": "1919-07",
+						"pages": 16,
+						"link": {
+							"bksh": "periodik!HASH82fd!8ccdd68d"
+						}
+					},
+					{
+						"volume": 12,
+						"year": 1919,
+						"date": "1919-08",
+						"pages": 10,
+						"link": {
+							"bksh": "periodik!HASH82fd!8ccdd68d!f75ab94a"
+						}
+					}
+				]
+			},
+			{
+				"volume": 2,
+				"year": 1919,
+				"volumes": [
+					{
+						"volume": 1,
+						"pages": 0,
+						"date": "1919-09",
+						"link": {
+							"bksh": "periodik!HASH82fd!8d75d5e5"
+						}
+					},
+					{
+						"volume": 2,
+						"pages": 0,
+						"date": "1919-10",
+						"link": {
+							"bksh": "periodik!HASH82fd!8d75d5e5!f75ab94a"
+						}
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "Adriatiku",
+		"location": "Korçë",
+		"script": "latin-standard",
+		"volumes": [
+			{
+				"volume": 1,
+				"volumes": [
+					{
+						"volume": 2,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-07",
+						"link": {
+							"bksh": "periodik!HASH013b"
+						}
+					},
+					{
+						"volume": 3,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-08",
+						"link": {
+							"bksh": "periodik!HASH3bd7"
+						}
+					},
+					{
+						"volume": 4,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-10",
+						"add-langs": "fr",
+						"link": {
+							"bksh": "periodik!HASH013b!d8be8be6"
+						}
+					},
+					{
+						"volume": 5,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-11",
+						"link": {
+							"bksh": "periodik!HASH3bd9"
+						}
+					},
+					{
+						"volume": 6,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-12",
+						"link": {
+							"bksh": "periodik!HASH013b!dace8be6"
+						}
+					},
+					{
+						"volume": 7,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-13",
+						"link": {
+							"bksh": "periodik!HASH3bdb"
+						}
+					},
+					{
+						"volume": 8,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-15",
+						"link": {
+							"bksh": "periodik!HASH013b!dcde8be7"
+						}
+					},
+					{
+						"volume": 9,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-16",
+						"link": {
+							"bksh": "periodik!HASH3bdd"
+						}
+					},
+					{
+						"volume": 10,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-17",
+						"link": {
+							"bksh": "periodik!HASH013c"
+						}
+					},
+					{
+						"volume": 11,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-18",
+						"link": {
+							"bksh": "periodik!HASH3cdd"
+						}
+					},
+					{
+						"volume": 12,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-21",
+						"link": {
+							"bksh": "periodik!HASH013c!deae8c25"
+						}
+					},
+					{
+						"volume": 13,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-22",
+						"link": {
+							"bksh": "periodik!HASH3cdf"
+						}
+					},
+					{
+						"volume": 14,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-23",
+						"link": {
+							"bksh": "periodik!HASH013c!e0be8c26"
+						}
+					},
+					{
+						"volume": 15,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-25",
+						"link": {
+							"bksh": "periodik!HASH3ce1"
+						}
+					},
+					{
+						"volume": 16,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-26",
+						"link": {
+							"bksh": "periodik!HASH013c!e2ce8c26"
+						}
+					},
+					{
+						"volume": 17,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-27",
+						"link": {
+							"bksh": "periodik!HASH3ce3"
+						}
+					},
+					{
+						"volume": 18,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-28",
+						"link": {
+							"bksh": "periodik!HASH013c!e4de8c27"
+						}
+					},
+					{
+						"volume": 19,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-29",
+						"link": {
+							"bksh": "periodik!HASH3ce5"
+						}
+					},
+					{
+						"volume": 20,
+						"pages": 2,
+						"year": 1916,
+						"date": "1916-12-31",
+						"link": {
+							"bksh": "periodik!HASH013d"
+						}
+					},
+					{
+						"volume": 21,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-01",
+						"link": {
+							"bksh": "periodik!HASH0147"
+						}
+					},
+					{
+						"volume": 22,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-02",
+						"link": {
+							"bksh": "periodik!HASH47f6"
+						}
+					},
+					{
+						"volume": 23,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-03",
+						"link": {
+							"bksh": "periodik!HASH0147!f7b6dce5"
+						}
+					},
+					{
+						"volume": 24,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-04",
+						"link": {
+							"bksh": "periodik!HASH47f8"
+						}
+					},
+					{
+						"volume": 25,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-05",
+						"link": {
+							"bksh": "periodik!HASH0147!f9c6dce6"
+						}
+					},
+					{
+						"volume": 26,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-06",
+						"link": {
+							"bksh": "periodik!HASH47fa"
+						}
+					},
+					{
+						"volume": 27,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-07",
+						"link": {
+							"bksh": "periodik!HASH0147!fbd6dce6"
+						}
+					},
+					{
+						"volume": 28,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-10",
+						"link": {
+							"bksh": "periodik!HASH47fc"
+						}
+					},
+					{
+						"volume": 29,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-11",
+						"link": {
+							"bksh": "periodik!HASH0147!fde6dce7"
+						}
+					},
+					{
+						"volume": 30,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-12",
+						"link": {
+							"bksh": "periodik!HASH48fc"
+						}
+					},
+					{
+						"volume": 31,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-13",
+						"link": {
+							"bksh": "periodik!HASH0148"
+						}
+					},
+					{
+						"volume": 32,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-15",
+						"link": {
+							"bksh": "periodik!HASH48fe"
+						}
+					},
+					{
+						"volume": 33,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-16",
+						"link": {
+							"bksh": "periodik!HASH0148!ffb6dd25"
+						}
+					},
+					{
+						"volume": 34,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-17",
+						"link": {
+							"bksh": "periodik!HASH4900"
+						}
+					},
+					{
+						"volume": 35,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-18",
+						"link": {
+							"bksh": "periodik!HASH0149"
+						}
+					},
+					{
+						"volume": 36,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-20",
+						"link": {
+							"bksh": "periodik!HASH4902"
+						}
+					},
+					{
+						"volume": 37,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-22",
+						"link": {
+							"bksh": "periodik!HASH0149!03d6dd26"
+						}
+					},
+					{
+						"volume": 38,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-23",
+						"link": {
+							"bksh": "periodik!HASH4904"
+						}
+					},
+					{
+						"volume": 39,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-24",
+						"link": {
+							"bksh": "periodik!HASH0149!05e6dd27"
+						}
+					},
+					{
+						"volume": 40,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-25",
+						"link": {
+							"bksh": "periodik!HASH4a04"
+						}
+					},
+					{
+						"volume": 41,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-29",
+						"link": {
+							"bksh": "periodik!HASH014a"
+						}
+					},
+					{
+						"volume": 42,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-01-30",
+						"link": {
+							"bksh": "periodik!HASH4a06"
+						}
+					},
+					{
+						"volume": 43,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-02-01",
+						"link": {
+							"bksh": "periodik!HASH014a!07b6dd65"
+						}
+					},
+					{
+						"volume": 44,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-02-03",
+						"link": {
+							"bksh": "periodik!HASH4a08"
+						}
+					},
+					{
+						"volume": 45,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-02-06",
+						"link": {
+							"bksh": "periodik!HASH014a!09c6dd66"
+						}
+					},
+					{
+						"volume": 46,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-02-07",
+						"link": {
+							"bksh": "periodik!HASH014a!0bd6dd66"
+						}
+					},
+					{
+						"volume": 47,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-02-07",
+						"link": {
+							"bksh": "periodik!HASH014a!0bd6dd66"
+						}
+					},
+					{
+						"volume": 48,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-02-08",
+						"link": {
+							"bksh": "periodik!HASH4a0c"
+						}
+					},
+					{
+						"volume": 49,
+						"pages": 2,
+						"year": 1917,
+						"date": "1917-02-09",
+						"link": {
+							"bksh": "periodik!HASH014a!0de6dd67"
+						}
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "Diturija",
+		"full-title": {
+			"lang": "sq",
+			"text": "DITURIJA\nE përkohëshme shqip literare dhe diturake\nDEL NJË HERË NW MUAJ"
+		},
+		"volumes": [
+			{
+				"volume": 1,
+				"year": 1909,
+				"script": "latin-frasheri",
+				"volumes": [
+					{
+						"volume": 1,
+						"pages": 22,
+						"date": "1909-01",
+						"link": {
+							"bksh": "periodi1!HASH01c1"
+						}
+					},
+					{
+						"volume": 2,
+						"pages": 18,
+						"date": "1909-02",
+						"link": {
+							"bksh": "periodi1!HASH0181!76cd853a"
+						}
+					},
+					{
+						"volume": 3,
+						"pages": 20,
+						"date": "1909-03",
+						"link": {
+							"bksh": "periodi1!HASH0141"
+						}
+					},
+					{
+						"volume": 4,
+						"date": "1909-04",
+						"pages": 18,
+						"link": {
+							"bksh": "periodi1!HASH0101"
+						}
+					},
+					{
+						"volume": 5,
+						"date": "1909-05",
+						"pages": 18,
+						"link": {
+							"bksh": "periodi1!HASHc176"
+						}
+					},
+					{
+						"volume": 6,
+						"date": "1909-06",
+						"pages": 18,
+						"link": {
+							"bksh": "periodi1!HASH8176"
+						}
+					},
+					{
+						"volume": 7,
+						"date": "1909-07",
+						"pages": 18,
+						"link": {
+							"bksh": "periodi1!HASH4176"
+						}
+					},
+					{
+						"volume": 8,
+						"date": "1909-08",
+						"pages": 18,
+						"link": {
+							"bksh": "periodi1!HASH0176"
+						}
+					},
+					{
+						"volume": "9–10",
+						"date": "1909-10",
+						"pages": 18,
+						"link": {
+							"bksh": "periodi1!HASH6b36"
+						}
+					},
+					{
+						"volume": "11–12",
+						"date": "1909-12",
+						"pages": 18,
+						"link": {
+							"bksh": "periodi1!HASH8fc8"
+						}
+					}
+				]
+			},
+			{
+				"volume": 2,
+				"script": "latin-standard",
+				"year": 1916,
+				"volumes": [
+					{
+						"volume": 1,
+						"date": "1916-06",
+						"pages": 18,
+						"link": {
+							"bksh": "periodi1!HASHefce"
+						}
+					},
+					{
+						"volume": 2,
+						"date": "1916-07",
+						"pages": 18,
+						"link": {
+							"bksh": "periodi1!HASHafce"
+						}
+					},
+					{
+						"volume": 3,
+						"date": "1916-08",
+						"pages": 18,
+						"link": {
+							"bksh": "periodi1!HASH6fce"
+						}
+					}
+				]
+			},
+			{
+				"volume": "2b",
+				"note": "2B is mine to differentiate from 2.",
+				"volumes": [
+					{
+						"volume": 1,
+						"date": "1926-11-01",
+						"year": 1926,
+						"pages": 42,
+						"link": {
+							"bksh": "periodi1!HASH27ce"
+						}
+					},
+					{
+						"volume": 2,
+						"date": "1926-12-01",
+						"year": 1926,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASH01e7"
+						}
+					},
+					{
+						"volume": 3,
+						"date": "1927-01-01",
+						"year": 1927,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASH01ab"
+						}
+					},
+					{
+						"volume": 4,
+						"date": "1927-02-01",
+						"year": 1927,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASH016b!06ed2b7a"
+						}
+					},
+					{
+						"volume": 5,
+						"date": "1927-03-01",
+						"year": 1927,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASH012b"
+						}
+					},
+					{
+						"volume": 6,
+						"date": "1927-04-01",
+						"year": 1927,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASHeb06"
+						}
+					},
+					{
+						"volume": 7,
+						"date": "1927-05-01",
+						"year": 1927,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASHab06"
+						}
+					},
+					{
+						"volume": 8,
+						"date": "1927-06-01",
+						"year": 1927,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASH6b06"
+						}
+					},
+					{
+						"volume": "9–11",
+						"date": "1927-09-01",
+						"year": 1927,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASH8a14"
+						}
+					},
+					{
+						"volume": 12,
+						"date": "1927-10-01",
+						"year": 1927,
+						"pages": 47,
+						"link": {
+							"bksh": "periodi1!HASH01eb"
+						}
+					}
+				]
+			},
+			{
+				"volume": 3,
+				"script": "latin-standard",
+				"volumes": [
+					{
+						"volume": 1,
+						"date": "1927-11",
+						"year": 1927,
+						"page": 44,
+						"link": {
+							"bksh": "periodi1!HASH01ae!41ea3866"
+						}
+					},
+					{
+						"volume": 2,
+						"date": "1927-12",
+						"year": 1927,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASH016e!41ed3866"
+						}
+					},
+					{
+						"volume": 3,
+						"date": "1928-01",
+						"year": 1928,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASH01ae"
+						}
+					},
+					{
+						"volume": 4,
+						"date": "1928-02",
+						"year": 1928,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASH016e"
+						}
+					},
+					{
+						"volume": 5,
+						"date": "1928-03",
+						"year": 1928,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASH012e"
+						}
+					},
+					{
+						"volume": 6,
+						"date": "1928-04",
+						"year": 1928,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASHee3e"
+						}
+					},
+					{
+						"volume": 7,
+						"date": "1928-05",
+						"year": 1928,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASHae3e"
+						}
+					},
+					{
+						"volume": 8,
+						"date": "1928-06",
+						"year": 1928,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASH6e3e"
+						}
+					},
+					{
+						"volume": "9–11",
+						"date": "1928-09",
+						"year": 1928,
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASH01c9"
+						}
+					},
+					{
+						"volume": 12,
+						"date": "1928-10",
+						"year": 1928,
+						"pages": 50,
+						"link": {
+							"bksh": "periodi1!HASH01ee"
+						}
+					}
+				]
+			},
+			{
+				"volume": 4,
+				"script": "latin-standard",
+				"volumes": [
+					{
+						"volume": 2,
+						"year": 1929,
+						"date": "1929-02",
+						"pages": 44,
+						"link": {
+							"bksh": "periodi1!HASH01f1"
+						}
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "Kalendari Korça",
+		"volumes": [
+			{
+				"title": "1910",
+				"year": 1910,
+				"pages": 144,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH0cd4!d4a1a256"
+				}
+			},
+			{
+				"title": "1911",
+				"year": 1910,
+				"pages": 45,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH2cf4!d4a3a256"
+				}
+			},
+			{
+				"title": "1912",
+				"year": 1911,
+				"pages": 268,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH4d14!d4a5a256"
+				}
+			},
+			{
+				"title": "1913",
+				"year": 1912,
+				"pages": 314,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH6d34!d4a7a257"
+				}
+			},
+			{
+				"title": "1916",
+				"year": 1915,
+				"pages": 148,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASHcd94!d4ada257"
+				}
+			},
+			{
+				"title": 1917,
+				"year": 1916,
+				"pages": 20,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASHedb4!d4afa257"
+				}
+			},
+			{
+				"title": "1918",
+				"year": 1917,
+				"pages": 50,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH010d!d4d4b1a2"
+				}
+			},
+			{
+				"title": "1919",
+				"year": 1919,
+				"pages": 36,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH012d!f4d4b3a2"
+				}
+			},
+			{
+				"title": "1920",
+				"year": 1919,
+				"pages": 44,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH2cd4!d6a1a276"
+				}
+			},
+			{
+				"title": "1921",
+				"year": 1920,
+				"pages": 52,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH4cf4!d6a3a276"
+				}
+			},
+			{
+				"title": "1922",
+				"year": 1922,
+				"pages": 52,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH6d14!d6a5a276"
+				}
+			},
+			{
+				"title": "1923",
+				"year": 1923,
+				"pages": 60,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH8d34!d6a7a277"
+				}
+			},
+			{
+				"title": "1924",
+				"year": 1924,
+				"pages": 52,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASHad54!d6a9a277"
+				}
+			},
+			{
+				"title": "1925",
+				"year": 1925,
+				"pages": 52,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASHcd74!d6aba277"
+				}
+			},
+			{
+				"title": "1926",
+				"year": 1926,
+				"pages": 54,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASHed94!d6ada277"
+				}
+			},
+			{
+				"title": "1927",
+				"year": 1927,
+				"pages": 52,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH010d!b4d6afa2"
+				}
+			},
+			{
+				"title": "1928",
+				"year": 1928,
+				"pages": 52,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH012d!d4d6b1a2"
+				}
+			},
+			{
+				"title": "1929",
+				"year": 1929,
+				"pages": 52,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH014d!f4d6b3a2"
+				}
+			},
+			{
+				"title": "1930",
+				"year": 1930,
+				"pages": 51,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH4cd4!d8a1a296"
+				}
+			},
+			{
+				"title": "1931",
+				"year": 1931,
+				"script": "latin-standard",
+				"pages": 52,
+				"link": {
+					"bksh": "periodik!HASH6cf4!d8a3a296"
+				}
+			}
+		]
+	},
+	{
+		"title": "Albania",
+		"script": "latin-konica",
+		"volumes": [
+			{
+				"year": 1897,
+				"volumes": [
+
+				]
+			}
+		]
+	},
+	{
+		"title": "Elçija i Zemrës së Jezu Krishtit",
+		"volumes": [
+			{
+				"year": 1891,
+				"pages": 52,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH3697",
+					"adsh": 468
+				},
+				"note": "Da chiarire sto fatto strano."
+			},
+			{
+				"year": 1892,
+				"pages": 164,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH3698",
+					"adsh": 469
+				}
+			},
+			{
+				"year": 1893,
+				"pages": 146,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH3699",
+					"adsh": 470
+				}
+			},
+			{
+				"year": 1894,
+				"pages": 155,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH369a",
+					"adsh": 471
+				}
+			},
+			{
+				"year": 1895,
+				"pages": 187,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH369b",
+					"adsh": 951
+				}
+			},
+			{
+				"year": 1896,
+				"pages": 164,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH369c",
+					"adsh": 975
+				}
+			},
+			{
+				"year": 1897,
+				"pages": 164,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH369d",
+					"adsh": 474
+				}
+			},
+			{
+				"year": 1898,
+				"pages": 200,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH369e",
+					"adsh": 980
+				}
+			},
+			{
+				"year": 1899,
+				"pages": 246,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH369f",
+					"adsh": 982
+				}
+			},
+			{
+				"year": 1900,
+				"pages": 254,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH012d",
+					"adsh": 477
+				}
+			},
+			{
+				"year": 1901,
+				"pages": 248,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH012d!97cbe7cb",
+					"adsh": 478
+				}
+			},
+			{
+				"year": 1902,
+				"pages": 246,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH012d!98cbe7cf"
+				}
+			},
+			{
+				"year": 1903,
+				"pages": 268,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH012d!99cbe7d3"
+				}
+			},
+			{
+				"year": 1904,
+				"pages": 284,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH012d!9acbe7d7"
+				}
+			},
+			{
+				"year": 1905,
+				"pages": 226,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH012d!9bcbe7db"
+				}
+			},
+			{
+				"year": 1906,
+				"pages": 235,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH012d!9ccbe7df"
+				}
+			},
+			{
+				"year": 1907,
+				"pages": 265,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH012d!9dcbe7e3"
+				}
+			},
+			{
+				"year": 1908,
+				"pages": 377,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH012d!9ecbe7e7"
+				}
+			},
+			{
+				"year": 1909,
+				"pages": 392,
+				"script": "latin-catholic",
+				"link": {
+					"bksh": "periodik!HASH012d!9fcbe7eb"
+				}
+			},
+			{
+				"year": 1910,
+				"pages": 389,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH012e"
+				}
+			},
+			{
+				"year": 1911,
+				"pages": 396,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH012e!97cbebcb"
+				}
+			},
+			{
+				"year": 1912,
+				"pages": 393,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH012e!98cbebcf"
+				}
+			},
+			{
+				"year": 1913,
+				"pages": 396,
+				"script": "latin-standard",
+				"link": {
+					"bksh": "periodik!HASH012e!99cbebd3"
+				}
+			}
+		]
+	},
+	{
+		"title": "Kalendari Kombiar",
+		"volumes": [
+			{
+				"year": 1897,
+				"pages": 56,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH5ba5!91beb76e"
+				}
+			},
+			{
+				"year": 1898,
+				"pages": 82,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH0103!a5926962"
+				}
+			},
+			{
+				"year": 1899,
+				"pages": 168,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH01ab!a593140c"
+				}
+			},
+			{
+				"year": 1900,
+				"pages": 176,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH01b4!65513217"
+				}
+			},
+			{
+				"year": 1901,
+				"pages": 197,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH6c4a!3866cf7e"
+				}
+			},
+			{
+				"year": 1902,
+				"pages": 182,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH0114!4a39117a"
+				}
+			},
+			{
+				"year": 1903,
+				"pages": 172,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH01bc!4a39bc24"
+				}
+			},
+			{
+				"year": 1904,
+				"pages": 165,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH644a!3a66cf76"
+				}
+			},
+			{
+				"year": 1905,
+				"pages": 170,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH010c!4a3b117a"
+				}
+			},
+			{
+				"year": 1906,
+				"pages": 166,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH46ae!5d62da7c"
+				}
+			},
+			{
+				"year": 1907,
+				"pages": 180,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH01f4!294970b7"
+				}
+			},
+			{
+				"year": 1908,
+				"pages": 183,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH7771!61731b91"
+				}
+			},
+			{
+				"year": 1909,
+				"pages": 168,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH01ac!4a3dbc24"
+				}
+			},
+			{
+				"year": 1910,
+				"pages": 167,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH15e7!5952a168"
+				}
+			},
+			{
+				"year": 1911,
+				"pages": 166,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH2e48!db5ac1f2"
+				}
+			},
+			{
+				"year": 1912,
+				"pages": 225,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH46aa!5d62e27c"
+				}
+			},
+			{
+				"year": 1913,
+				"pages": 185,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH5f0b!df6b0306"
+				}
+			},
+			{
+				"year": 1914,
+				"pages": 200,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH776d!61732391"
+				}
+			},
+			{
+				"year": 1915,
+				"pages": 199,
+				"script": "latin-frasheri",
+				"link": {
+					"bksh": "periodik!HASH8fce!e37b441b"
+				}
+			},
+			{
+				"year": 1916,
+				"script": "latin-frasheri",
+				"pages": 90,
+				"link": {
+					"bksh": "periodik!HASHa830!658364a5"
+				}
+			},
+			{
+				"year": 1926,
+				"script": "latin-standard",
+				"pages": 212,
+				"link": {
+					"bksh": "periodik!HASH0109!b26da3ee"
+				}
+			},
+			{
+				"year": 1928,
+				"script": "latin-standard",
+				"pages": 106,
+				"link": {
+					"bksh": "periodik!HASH0124!7e0ac3cc"
+				}
+			}
+		]
+	},
+	{
+		"title": "Kalendar shqyp",
+		"script": "latin-catholic",
+		"year": 1898,
+		"pages": 34,
+		"link": {
+			"bksh": "periodik!HASH0152!e27d435b"
+		}
+	},
+	{
+		"title": "Grammatika ia folmàrmia shcyptáré : e permblédhmé mè pak fiale per perdorim t' fmiivé",
+		"script": "latin-bashkimi",
+		"pages": 73,
+		"link": {
+			"adsh": 449
+		}
+	},
+	{
+		"title": "Oroe permi abetar shqip",
+		"author": "Luigj Gurakuqi",
+		"year": false,
+		"script": "latin-bashkimi",
+		"pages": 23,
+		"link": {
+			"adsh": 453
 		}
 	}
 ]

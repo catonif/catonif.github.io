@@ -1,6 +1,9 @@
 const DATA_URL = "books.json";
 
-const root = document.getElementById("list");
+let root;
+if (typeof document !== 'undefined') {
+	root = document.getElementById("list");
+}
 
 let data;
 
@@ -38,20 +41,22 @@ function searchTransformation(str) {
 		.replace(/ȣ/g, 'y');
 }
 
-fetch(DATA_URL)
-	.then(r => r.json())
-	.then(json => {
-		data = json;
-		data.forEach(work => {
-			work._searchKey = searchTransformation(searchKey(work));
+if (typeof document !== 'undefined') {
+	fetch(DATA_URL)
+		.then(r => r.json())
+		.then(json => {
+			data = json;
+			data.forEach(work => {
+				work._searchKey = searchTransformation(searchKey(work));
+			});
+			renderList();
+		})
+		.catch(err => {
+			root.textContent =
+				"Failed to load data.";
+			console.error(err);
 		});
-		renderList();
-	})
-	.catch(err => {
-		root.textContent =
-			"Failed to load data.";
-		console.error(err);
-	});
+}
 
 function applyToList(list, formatter) {
 	if (typeof(list) === "string" || typeof(list) === "number") {
@@ -102,25 +107,29 @@ function formatLect(lect) {
 	}
 }
 
+/*const scripts = require("./scripts.js").data*/
+
 const scripts = {
-	"latin": "pure Latin (unspecified)",
+	"latin": "Latin (unspecified)",
 	"latin-bashkimi": "Latin (Bashkimi)",
 	"latin-catholic": "Latin with Catholic symbols",
 	"latin-greek": "Latin with Greek letters (unspecified)",
 	"latin-frasheri": "Latin (Frashëri)",
 	"latin-standard": "Latin (standard)",
-	"greek": "pure Greek (unspecified)",
+	"greek": "Greek (unspecified)",
 	"greek-latin": "Greek with Latin letters (unspecified)",
 	"latin-agimi": "Latin (Agimi)",
 	"vithkuqi": "Vithkuqi",
 	"elbasan": "Elbasan",
 	"arabic": "Perso-Arabic",
-	"latin-vatra": "Latin (Vatra association)",
+	"latin-vatra": "Latin (Vatra)",
 	"latin-kristoforidhi": "Latin (Kristoforidhi)",
 	"greek-kristoforidhi": "Greek (Kristoforidhi)",
 	"latin-meyer": "Latin (Meyer)",
 	"cyrillic": "Cyrillic",
 }
+
+exports.data = scripts;
 
 function renderItem(work, not_required) {
 	let ret = "";
