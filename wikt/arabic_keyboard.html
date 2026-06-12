@@ -66,8 +66,8 @@ const convert = {
 	y: 'غ', Y: '\u064C', // dammatan
 	u: 'ع', U: '\u0651', // shadda
 	i: 'ه', I: '\u0652', // sukun
-	o: 'خ',
-	p: 'ح',
+	o: 'خ', O: 'څ',
+	p: 'ح', P: 'ڠ',
 	["è"]: 'ج', ["é"]: 'چ',
 	["+"]: 'چ',
 	////
@@ -75,14 +75,14 @@ const convert = {
 	s: 'س', S: '\u0656', // sub alif
 	d: 'ی', D: 'ئ',
 	f: 'ب', F: 'پ',
-	g: 'ل',
+	g: 'ل', G: 'ڷ',
 	h: 'ا', H: 'آ',
 	j: 'ت', J: 'أ',
 	k: 'ن', K: 'إ',
 	l: 'م', L: 'ٱ',
 	["ò"]: 'ك', ["ç"]: 'ڭ',
 	["à"]: 'گ',
-	["ù"]: 'ڭ',
+	["ù"]: 'ڭ', ['§']: 'ڬ',
 	////
 	z: 'ظ',
 	x: 'ط',
@@ -99,7 +99,7 @@ function dothing(element) {
 	let previous_textarea_length = element.value.length;
 	// Do replacements.
 	let str = element.value
-	str = str.replace(/[A-zè+òàùéç]/g, x => convert[x] ?? x)
+	str = str.replace(/[A-zè+òàùéç§]/g, x => convert[x] ?? x)
 	element.value = str;
 	// Keep cursor still.
 	element.selectionEnd = element.selectionStart = previous_cursor_position + element.value.length - previous_textarea_length;

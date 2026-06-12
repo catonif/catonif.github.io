@@ -467,27 +467,56 @@
 		}
 	},
 	{
-		"title": "Fjalor i Marko Boçarit",
-		"year": 1809,
-		"author": "Marko Boçari",
+		"title": "Ms. BnF Supplément grec",
 		"link": {
-			"gallica": "btv1b110002087"
+			"gallica": "btv1b110002087",
+			"ws": "BnF Supplément grec.djvu"
 		},
-		"editions": [
+		"volumes": [
 			{
-				"year": 1926,
-				"author": "Mithat Frashëri",
-				"location": "Tiranë",
-				"publisher": "Kristo Luarasi",
-				"link": {
-					"mdz": "bsb00156375"
-				}
+				"title": "Fjalor i Marko Boçarit",
+				"year": 1809,
+				"author": "Marko Boçari",
+				"script": "greek",
+				"add-lang": "el",
+				"editions": [
+					{
+						"year": 1926,
+						"author": "Mithat Frashëri",
+						"location": "Tiranë",
+						"publisher": "Kristo Luarasi",
+						"link": {
+							"mdz": "bsb00156375"
+						}
+					},
+					{
+						"title": "Το ελληνο-αλβανικόν λεξικόν του Μάρκου Μπότσαρη",
+						"year": 1980,
+						"author": "Tito Jochalas",
+						"location": "Athens"
+					}
+				]
 			},
 			{
-				"title": "Το ελληνο-αλβανικόν λεξικόν του Μάρκου Μπότσαρη",
-				"year": 1980,
-				"author": "Tito Jochalas",
-				"location": "Athens"
+				"author": "Ioannis Vilaras",
+				"year": 1801,
+				"script": "vellara",
+				"add-lang": "el",
+				"editions": [
+					{
+						"title": "Στοιχεῖα ἑλληνο-ἀλβανικῆς γραμματικῆς καὶ ἑλληνο-ἀλβανικοί διάλογοι. Ἀνέκδοτο ἔργο Ἰωάννη Βηλαρᾶ",
+						"year": 1985,
+						"author": "Tito Jochalas",
+						"location": "Thessaloniki"
+					}
+				]
+			},
+			{
+				"author": "François Pouqueville",
+				"year": 1819,
+				"note": "Surely ante 1819, precise date unknown.",
+				"script": "latin",
+				"add-lang": "fr"
 			}
 		]
 	},
@@ -1115,7 +1144,8 @@
 		"script": "arabic",
 		"religion": "muslim",
 		"link": {
-			"bksh": "libra042!HASH9c99"
+			"bksh": ["libra042!HASH9c99", "libra042!HASH01fe"],
+			"ws": "Elifba e Daut Boriçit (1875).djvu"
 		},
 		"genre": "primer"
 	},
@@ -2015,7 +2045,8 @@
 		"pages": 158,
 		"script": "latin-frasheri",
 		"link": {
-			"bksh": "libra1!HASH89ce!349835d1"
+			"bksh": "libra1!HASH89ce!349835d1",
+			"ws": "Dheshkronjë (1888).djvu"
 		}
 	},
 	{
@@ -5065,17 +5096,6 @@
 		],
 		"link": {
 			"bksh": "libra1!HASH0184"
-		}
-	},
-	{
-		"title": "Elifba shqip",
-		"author": false,
-		"year": false,
-		"script": "arabic",
-		"pages": 34,
-		"genre": "primer",
-		"link": {
-			"bksh": "libra042!HASH01fe"
 		}
 	},
 	{
