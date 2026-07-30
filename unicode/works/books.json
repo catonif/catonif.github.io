@@ -34,6 +34,7 @@
 				],
 				"pages": 28,
 				"link": {
+					"bksh": "antikua1!HASHed64",
 					"ws": "Embsuame e Chræsteræ (1592).djvu"
 				}
 			},
@@ -467,7 +468,7 @@
 		}
 	},
 	{
-		"title": "Ms. BnF Supplément grec",
+		"title": "Ms. BnF Supplément grec 251",
 		"link": {
 			"gallica": "btv1b110002087",
 			"ws": "BnF Supplément grec.djvu"
@@ -652,7 +653,7 @@
 				"link": {
 					"bksh": "libra1!HASH6714",
 					"gb": "tGJlAAAAcAAJ",
-					"ws": "Index:Canti di Milosao.djvu"
+					"ws": "Canti di Milosao.djvu"
 				}
 			},
 			{
@@ -1648,7 +1649,7 @@
 		}
 	},
 	{
-		"title": "Poesie varie. Parte albanese",
+		"title": "Arpa di un italo-albanese. Poesie varie. Parte albanese",
 		"author": "Leonardo de Martino",
 		"year": 1881,
 		"add-langs": ["it", "fr"],
@@ -1846,7 +1847,8 @@
 		"pages": 78,
 		"year": 1886,
 		"link": {
-			"bksh": "libra042!HASH0100"
+			"bksh": "libra042!HASH0100",
+			"gb": "I31OTR2p_8MC"
 		},
 		"script": "latin-frasheri"
 	},
@@ -1860,7 +1862,7 @@
 		"pages": 23,
 		"link": {
 			"bksh": "libra1!HASH01c5",
-			"ws": "Bagëti_e_Bujqësija.djvu",
+			"ws": "Bagëti e Bujqësija.djvu",
 			"gb": "Ia9N2xY-Uc0C"
 		}
 	},
@@ -1912,7 +1914,8 @@
 		"script": "latin-frasheri",
 		"pages": 128,
 		"link": {
-			"bksh": "libra112!HASH0123"
+			"bksh": "libra112!HASH0123",
+			"gb": "ES5V_VtaHnoC"
 		}
 	},
 	{
@@ -1923,7 +1926,8 @@
 				"volume": 1,
 				"pages": 55,
 				"link": {
-					"bksh": "libra1!HASH0181!891bfa03"
+					"bksh": "libra1!HASH0181!891bfa03",
+					"gb": "hCeKyEkG6FIC"
 				}
 			},
 			{
@@ -2295,7 +2299,8 @@
 		"pages": 34,
 		"script": "latin",
 		"link": {
-			"bksh": "libra112!HASH5dc8"
+			"bksh": "libra112!HASH5dc8",
+			"ws": "Versi lugubri (1894).djvu"
 		}
 	},
 	{
@@ -2440,7 +2445,8 @@
 				"publisher": "Dituria",
 				"pages": 76,
 				"link": {
-					"bksh": "libra1!HASH210a"
+					"bksh": "libra1!HASH210a",
+					"ws": "Iliadhë e Omirit. Këngë e parë (1896).djvu"
 				}
 			},
 			{
@@ -2524,7 +2530,8 @@
 		"script": "latin-frasheri",
 		"pages": 18,
 		"link": {
-			"bksh": "libra1!HASHa2e3!e2cc6509"
+			"bksh": "libra1!HASHa2e3!e2cc6509",
+			"ws": "Kënka lirie (1898).djvu"
 		}
 	},
 	{
@@ -2572,7 +2579,7 @@
 				"script": "latin-catholic",
 				"pages": 154,
 				"link": {
-					"gb": ["A3EuAAAAYAAJ", "T1PtdgLIZ_AC"],
+					"gb": ["A3EuAAAAYAAJ", "T1PtdgLIZ_AC", "KEYWEzd4k04C"],
 					"ws": "T' nnoλunat e Scćȣpniis (1898).djvu"
 				}
 			},
@@ -2759,7 +2766,8 @@
 				"script": "latin-bashkimi",
 				"pages": 190,
 				"link": {
-					"bksh": "libra1!HASHa2e2!0621b7b1"
+					"bksh": "libra1!HASHa2e2!0621b7b1",
+					"ws": "Baba-Tomorri. Vjersha (1902).djvu"
 				}
 			},
 			{
@@ -3089,6 +3097,16 @@
 		"pages": 93,
 		"link": {
 			"bksh": "libra1!HASHa2df"
+		}
+	},
+	{
+		"title": "Viersha trimoshe",
+		"author": "Pietro Scaglione",
+		"year": 1906,
+		"location": "Palermo",
+		"publisher": "Fratelli Marsala",
+		"link": {
+			"gb": "aSxBAAAAYAAJ"
 		}
 	},
 	{
@@ -4035,6 +4053,14 @@
 		}
 	},
 	{
+		"title": "Bibliographie albanaise",
+		"author": ["Emile Legrand", "Henry Guys"],
+		"year": 1912,
+		"link": {
+			"gb": "tzkNAQAAIAAJ"
+		}
+	},
+	{
 		"title": "Këndimet për çunat",
 		"author": "Diogjen Harito",
 		"location": "Athens",
@@ -4102,6 +4128,18 @@
 		"script": "latin-standard",
 		"link": {
 			"bksh": "libra1!HASH0f8e"
+		}
+	},
+	{
+		"title": "Fe e kombësi. Dramë kombëtare",
+		"year": 1914,
+		"author": "Kristo Floqi",
+		"pages": 94,
+		"script": "latin-standard",
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"link": {
+			"gb": "myt413xQc7QC"
 		}
 	},
 	{
@@ -5014,6 +5052,16 @@
 		"script": "latin-standard",
 		"link": {
 			"bksh": "libra112!HASH5a2b"
+		}
+	},
+	{
+		"title": "Kângë popullore blêe i parë kângë popullore gegnishte mledhë",
+		"author": "Vinçenc Prênnushit",
+		"publisher": "D. A. Kajon",
+		"year": 1911,
+		"pages": 172,
+		"link": {
+			"gb": "tCvwMjiVNHMC"
 		}
 	},
 	{
@@ -6731,5 +6779,18 @@
 		"link": {
 			"adsh": 453
 		}
+	},
+	{
+		"title": "Fletorja zyrtare",
+		"volumes": [
+			{
+				"volume": 64,
+				"year": 1938,
+				"date": "1938-08-26",
+				"link": {
+					"ws": "Fletorja Zyrtare nr. 64 (1938.08.26).djvu"
+				}
+			}
+		]
 	}
 ]

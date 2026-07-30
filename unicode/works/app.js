@@ -127,6 +127,7 @@ const scripts = {
 	"greek-kristoforidhi": "Greek (Kristoforidhi)",
 	"latin-meyer": "Latin (Meyer)",
 	"cyrillic": "Cyrillic",
+	"vellara": "Vellara",
 }
 
 exports.data = scripts;
