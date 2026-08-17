@@ -216,7 +216,7 @@ function renderItem(work, not_required) {
 			{
 				key: "bksh",
 				display: "BKSH",
-				formatter: id => "https://bibliotekadigjitale.bksh.al/?view=ImageView&manifest=https%3A%2F%2Fbibliotekadigjitale.bksh.al%2Fiiif%2FManifester%2FIIIF%2F" + id.replace(/!/g, '%21') + ".dir"
+				formatter: id => "https://bibliotekadigjitale.bksh.al/?m=" + id + ".dir"
 			},
 			{
 				key: "adsh",

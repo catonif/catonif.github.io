@@ -133,6 +133,7 @@
 		"link": {
 			"gb": "bPsyiJ9FSb8C",
 			"bksh": "antikua1!HASH016b",
+			"ws": "Speculum confessionis (1621).djvu",
 			"adsh": 519
 		}
 	},
@@ -208,7 +209,8 @@
 							"gb": [
 								"KPZDAAAAcAAJ",
 								"BZ1qtllYrcEC"
-							]
+							],
+							"ws": "Cuneus prophetarum - Vetus testamentum.djvu"
 						}
 					},
 					{
@@ -466,6 +468,14 @@
 		"link": {
 			"ws": "Eisagogiki-Didaskalia.pdf"
 		}
+	},
+	{
+		"title": "Cod. alban. 1",
+		"link": {
+			"mdz": "bsb00130872",
+			"url": "https://ostbib.hypotheses.org/3995"
+		},
+		"add-langs": "it"
 	},
 	{
 		"title": "Ms. BnF Supplément grec 251",
@@ -1670,7 +1680,8 @@
 		"add-langs": "el",
 		"link": {
 			"bksh": "libra112!HASH0181!851ffa0b",
-			"anemi": "metadata-312-0000116.tkl"
+			"anemi": "metadata-312-0000116.tkl",
+			"mdz": "bsb11646258"
 		},
 		"genre": "primer",
 		"script": "greek"
@@ -3135,14 +3146,15 @@
 	},
 	{
 		"title": "Dy vjersha gegënisht",
-		"author": ["Pashko Vasa", "M... Çerdhes Petriti"],
+		"author": [ "Pashko Vasa", "M... Çerdhes Petriti" ],
 		"year": 1907,
 		"location": "Sofia",
 		"publisher": "Mbrothësia",
 		"script": "latin-frasheri",
 		"pages": 15,
 		"link": {
-			"bksh": "libra112!HASH0183"
+			"bksh": "libra112!HASH0183",
+			"ws": "Dy vjersha gegënisht (1907).djvu"
 		}
 	},
 	{
@@ -4930,7 +4942,8 @@
 		"script": "latin-standard",
 		"pages": 180,
 		"link": {
-			"bksh": "libra1!HASH0ea3"
+			"bksh": "libra1!HASH0ea3",
+			"ws": "Kanuni i Lekë Dukagjinit.djvu"
 		}
 	},
 	{
