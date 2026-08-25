@@ -1,0 +1,349 @@
+<head>
+<title>Greek combinations</title>
+<style>
+
+body {
+	font-family: 'Gentium';
+}
+
+td.SBL {
+	font-family: 'SBL Greek';
+}
+
+td img {
+	width: 50px;
+	height: 50px;
+}
+
+td {
+	border: 1px solid black;
+	padding: .5em;
+	text-align: center;
+}
+
+td:has(img) {
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+p {
+	text-indent: 1em;
+}
+</style>
+</head>
+<body>
+<h1>Greek script diacritical combinations</h1>
+<p>
+	This list of combinations is compiled for Greek support by the Gentium font. For a greater amount of test-cases and less common combinations, confer the <a href="https://titus.uni-frankfurt.de/unicode/unicsel/grkomb.htm">similar list from the TITUS project with 457 combinations</a>. Install the fonts <i>Gentium</i> and <i>SBL Greek</i> for the intended display of this page.
+</p>
+<p>
+	This list covers the few polytonic combinations with the breve that I was able to actually attest in printed pubblications, though a complete support as was made for the macron in v7 is preferrable over only these few attested forms. This kind of support is already present in the fonts <i>SBL Greek</i> and <i>Brill</i>. All possible combinations include <i>alpha|iota|upsilon|Alpha|Iota|Upsilon + breve + [rough|smooth] + [acute|grave]</i> for a total of 48 potential new precomposed forms. <!-- Online projects such as the English Wiktionary employ the breve on all instances of short α, ι and υ, which means all sorts of other diacritics end up above them. Confer the <a href="https://en.wiktionary.org/wiki/Wiktionary:Ancient_Greek_entry_guidelines#Fonts_and_display">Ancient Greek encoding policies on the English Wiktionary</a>. --> <!-- Some combinations I've listed appear decently but still have minor inconsistencies, for example ⟨ᾰͅ⟩ has the iota subscript slightly more to the left than ⟨ᾳ⟩. -->
+</p>
+<p>
+	The list also gives attestations for requesting a properly placed anchor below the iota, to allow for its semivocalic value, the lack of which in Gentium was also lamented in <a href="https://forum.affinity.serif.com/index.php?/topic/182925-combining-diacritical-marks-input/">this forum thread</a>. This is used in various Demotic texts, appearing variously as an inverted breve (<code>032F</code>), a tilde (<code>0330</code>) or straight line (<code>0331</code>). In print text, the iota is also rotated 180° whenever this diacritic is added. Though it is generally omitted in digitisation, it can be contrastive, and needs to be properly transcribed. A Unicode proposal (<a href="https://web.archive.org/web/20060818113335/http://omega.enstb.org/yannis/pdf/amendments2.pdf">Haralambous 2002</a>: § 3.2, pp. 18–19) was made to include both this letter as a precomposed character and another one for the upsilon. The proposal failed. I have never personally encountered the reversed upsilon, so it must not be as common. (From the Unicode mailing list, in 1999, Diamantidis proposed to encode this simply as iota + combining breve below, <a href="https://www.unicode.org/mail-arch/unicode-ml/Archives-Old/UML017/0554.html">see mail</a>.) Granted that this is an issue which may need more investigation, I think the best action as of now is to add the anchor below the iota. The inverted breve below the iota is also used by etymological works of Ancient Greek when reconstructing pre-written forms as well as in Aromanian (in these cases the iota is never found rotated), and in both cases it is extremely contrastive and cannot be overlooked.
+</p>
+<p>
+	This list also includes other miscellaneous obscure combinations found in various text unsupported as of Gentium v7, and gives images for the double-breves sequences (<code>035C</code> and <code>1DFC</code>) whose marks could be raised or the positioning adjusted in some other way.
+</p>
+<h2>List of combinations</h2>
+<table id="table"></table>
+<h2>Bibliography</h2>
+<ul>
+	<li>Beekes, Robert S. P. (2010). <i>Etymological Dictionary of Greek</i>. Leiden/Boston: Brill</li>
+	<li>Christoforidis, Konstantinos (1904). Λεξικὸν τῆς Ἀλβανικῆς γλώσσης. Athens — see on <a href="https://books.google.com/?id=GX8az4neP3QC">Google Books</a></li>
+	<li>Frisk, Hjalmar (1960–1972). <i>Griechisches etymologisches Wörterbuch</i>, 3 vols. Heidelberg: Carl Winter — on the <a href="https://archive.org/details/hjalmar/page/n419/mode/1up">Internet Archive</a></li>
+	<li>Moschopolitis, Daniil (1802). Εἰσαγωγικὴ διδασκαλία — see on <a href="https://wikisource.org/wiki/Index:Eisagogiki-Didaskalia.pdf">Wikisource</a></li>
+	<li>Nikolaidis, Konstantinos (1909). Ετυμολογικόν λεξικόν της Κουτσοβλαχικής γλώσσης. Athens: Π. Δ. Σακελλαρίου — on <a href="https://anemi.lib.uoc.gr/metadata/5/4/3/metadata-01-0000671.tkl">Anemi</a></li>
+	<li>Prokovas, Kostas E. (2006). Λεξικό της Κουτσοβλαχικής του Λιβαδίου Ολύμπου. Λέξεις, ιστορία, παράδοση και λαϊκός πολιτισμός. Thessaloniki
+	<li>Slater, William J. (1969). <i>Lexicon to Pindar</i>, Berlin: Walter de Gruyter — see on <a href="https://books.google.com/books?id=7d0hAAAAQBAJ">Google Books</a> partially, <a href="https://archive.org/details/LEXICONTOPINDAR1969ByWILLIAMJ.SLATER">Internet Archive</a> in bad resolution, and digitised in the <a href="https://logeion.uchicago.edu">ΛΟΓΕΙΟΝ Project</a></li>
+</ul>
+<hr>
+By Catonif, August 2026. catonif.dev@gmail.com
+<script>
+
+const grc = "Ancient Greek";
+const el = "Greek";
+const sq = "Albanian";
+const rup = "Aromanian";
+const mk = "Macedonian";
+
+const data = [
+	{
+		image: "Frisk_vol1_p125_alpha_breve_acute.png",
+		location: "Frisk (1960), vol. 1, p. 125",
+		language: grc,
+		encoding: "ᾰ́",
+	},
+	{
+		image: "Beekes_2010_p119_alpha_breve_acute.png",
+		location: "Beekes (2010), p. 119",
+		language: grc,
+		encoding: "ᾰ́",
+	},
+	{
+		image: "Nikolaidis_1909_p36_apha_breve_acute.png",
+		location: "Nikolaidis (1909), p. 36",
+		language: rup,
+		encoding: "ᾰ́",
+	},
+	{
+		image: "Prokovas_2006_p172_alpha_breve_acute.png",
+		location: "Prokovas (2006), p. 172",
+		language: rup,
+		encoding: "ᾰ́",
+	},
+	{
+		image: "Frisk_vol1_p382_iota_breve_acute.png",
+		location: "Frisk (1960), vol. 1, p. 382",
+		language: grc,
+		encoding: "ῐ́",
+	},
+	{
+		image: "Slater_1969_p133_iota_breve_acute.png",
+		location: "Slater (1969), p. 133",
+		language: grc,
+		encoding: "ῐ́",
+	},
+	{
+		image: "Beekes_2010_p1390_iota_breve_acute.png",
+		location: "Beekes (2010), p. 1390",
+		language: grc,
+		encoding: "ῐ́",
+	},
+	{
+		image: "Prokovas_2006_p174_iota_breve_acute.png",
+		location: "Prokovas (2006), p. 174",
+		language: rup,
+		encoding: "ῐ́",
+	},
+	{
+		image: "Frisk_vol1_p157_upsilon_breve_acute.png",
+		location: "Frisk (1960), vol. 1, p. 157",
+		language: grc,
+		encoding: "ῠ́",
+	},
+	{
+		image: "Beekes_2010_p882_upsilon_breve_acute.png",
+		location: "Beekes (2010), p. 882",
+		language: grc,
+		encoding: "ῠ́",
+	},
+	{
+		image: "Slater_1969_p2_alpha_breve_smooth_acute.png",
+		location: "Slater (1969), p. 2",
+		language: grc,
+		encoding: "ᾰ̓́",
+	},
+	{
+		image: "Slater_1969_p29_alpha_breve_rough_acute.png",
+		location: "Slater (1969), p. 29",
+		language: grc,
+		encoding: "ᾰ̔́",
+	},
+	{
+		image: "Slater_1969_p2_Alpha_breve_smooth.png",
+		location: "Slater (1969), p. 2",
+		language: grc,
+		encoding: "Ᾰ̓",
+	},
+	{
+		image: "Slater_1969_p1_Alpha_breve_smooth_acute.png",
+		location: "Slater (1969), p. 1",
+		language: grc,
+		encoding: "Ᾰ̓́",
+	},
+	{
+		image: "Slater_1969_p247_iota_breve_smooth_acute.png",
+		location: "Slater (1969), p. 247",
+		language: grc,
+		encoding: "ῐ̓́",
+	},
+	{
+		image: "Slater_1969_p243_Iota_breve_smooth.png",
+		location: "Slater (1969), p. 243",
+		language: grc,
+		encoding: "Ῐ̓",
+	},
+	{
+		image: "Slater_1969_p516_upsilon_breve_rough.png",
+		location: "Slater (1969), p. 516",
+		language: grc,
+		encoding: "ῠ̔",
+	},
+	/*{
+		image: "Slater_1969_p1_alpha_breve_iotasub.png",
+		location: "Slater (1969), p. 1",
+		language: grc,
+		encoding: "ᾰͅ",
+	},*/
+	"Macron-breve combinations",
+	{
+		image: "Frisk_vol1_p125_alpha_macron_breve.png",
+		location: "Frisk (1960), vol. 1, p. 125",
+		language: grc,
+		encoding: "ᾱ̆",
+	},
+	{
+		image: "Beekes_2010_p119_alpha_macron_breve.png",
+		location: "Beekes (2010), p. 119",
+		language: grc,
+		encoding: "ᾱ̆",
+	},
+	{
+		image: "Frisk_vol2_p421_iota_macron_breve.png",
+		location: "Frisk (1970), vol. 2, p. 421",
+		language: grc,
+		encoding: "ῑ̆",
+	},
+	{
+		image: "Beekes_2010_p1175_iota_macron_breve.png",
+		location: "Beekes (2010), p. 1175",
+		language: grc,
+		encoding: "ῑ̆",
+	},
+	{
+		image: "Frisk_vol2_p632_upsilon_macron_breve.png",
+		location: "Frisk (1970), vol. 2, p. 632",
+		language: grc,
+		encoding: "ῡ̆",
+	},
+	{
+		image: "Beekes_2010_p1209_upsilon_macron_breve.png",
+		location: "Beekes (2010), p. 1209",
+		language: grc,
+		encoding: "ῡ̆",
+	},
+	"Semivocalic iota",
+	{
+		image: "Beekes_2010_p627_iota_invertedbrevebelow.png",
+		location: "Beekes (2010), p. 627",
+		language: grc,
+		encoding: "ι̯",
+	},
+	{
+		image: "Prokovas_2006_p173_iota_combininginvertedbrevebelow.png",
+		location: "Prokovas (2006), p. 173",
+		language: rup,
+		encoding: "ι̯",
+	},
+	{
+		image: "Kristoforidhi_1904_p92_iota_tildebelow.png",
+		location: "Christoforidis (1904), p. 92",
+		language: el,
+		encoding: "ι̰",
+	},
+	"Rare miscellaneous combinations",
+	{
+		image: "Kristoforidhi_1904_p426_upsilon_macron_tilde.png",
+		location: "Christoforidis (1904), p. 426",
+		language: sq,
+		encoding: "ῡ͂",
+	},
+	{
+		image: "Frisk_vol1_p642_Epsilon_macron.png",
+		location: "Frisk (1960), vol. 1, p. 642",
+		language: grc,
+		encoding: "Ε̄",
+	},
+	{
+		image: "Bekes_2010_p524_Epsilon_macron.png",
+		location: "Beekes (2010), p. 524",
+		language: grc,
+		encoding: "Ε̄",
+	},
+	"Double breves to be adjusted",
+	{
+		image: "Moschopolitis_1802_p1_iota_doublebrevebelow.png",
+		location: "Moschopolitis (1802), p. 1",
+		language: sq,
+		encoding: "ι͜ο"
+	},
+	{
+		image: "Moschopolitis_1802_p5_Iota_smooth_doublebrevebelow.png",
+		location: "Moschopolitis (1802), p. 5",
+		language: mk,
+		encoding: "Ἰ͜ε"
+	},
+	{
+		image: "Moschopolitis_1802_p5_epsilon_doublebrevebelow.png",
+		location: "Moschopolitis (1802), p. 5",
+		language: rup,
+		encoding: "ε͜α",
+	},
+	{
+		image: "Slater_1969_p12_alpha_doublebrevebelow.png",
+		location: "Slater (1969), p. 12",
+		language: grc,
+		encoding: "ἀ͜έ",
+	},
+	{
+		image: "Prokovas_2006_p172_omicron_inverteddoublebrevebelow_upsilon.png",
+		location: "Prokovas (2006), p. 172",
+		language: rup,
+		encoding: "ο᷼υ",
+	},
+];
+
+let inner_str = `
+	<tr>
+		<th>image</th>
+		<th>location</th>
+		<th>language</th>
+		<th>NFC</th>
+		<th>NFD</th>
+		<th>Gentium</th>
+		<th>SBL Greek</th>
+	</tr>
+`;
+
+let rowspan = 0;
+
+data.forEach(example => example.rowspan = 1);
+let last_i = 0;
+for (let i = 1; i < data.length; i++) {
+	if (data[last_i].encoding == data[i].encoding) {
+		data[last_i].rowspan++;
+	} else {
+		last_i = i;
+	}
+}
+
+
+data.forEach(example => {
+	if (typeof (example) === 'string') {
+		inner_str += `<tr><th colspan=7>${example}<th></tr>`;
+	} else {
+		const nfc = example.encoding.normalize("NFC");
+		const nfd = example.encoding.normalize("NFD");
+		let nfc_encoding = [];
+		let nfd_encoding = [];
+		Array.from(nfc).forEach(c => nfc_encoding.push(c.codePointAt(0).toString(16).padStart(4, '0')));
+		Array.from(nfd).forEach(c => nfd_encoding.push(c.codePointAt(0).toString(16).padStart(4, '0')));
+		inner_str +=
+			`<tr>`
+				+ `<td><img src="img/greek/${example.image}"></td>`
+				+ `<td>${example.location}</td>`
+				+ `<td>${example.language}</td>`
+		;
+		if (rowspan == 0) {
+			inner_str +=
+				`<td rowspan=${example.rowspan}><code>${nfc_encoding.join(' ').toUpperCase()}</code></td>`
+				+ `<td rowspan=${example.rowspan}><code>${nfd_encoding.join(' ').toUpperCase()}</code></td>`
+				+ `<td class=Gentium rowspan=${example.rowspan}>${nfd}</td>`
+				+ `<td class=SBL rowspan=${example.rowspan}>${nfd}</td>`
+			;
+			rowspan = example.rowspan - 1;
+		} else {
+			rowspan--;
+		}
+		inner_str += `</tr>`;
+	}
+})
+
+document.getElementById("table").innerHTML = inner_str;
+
+</script>
+</body>
