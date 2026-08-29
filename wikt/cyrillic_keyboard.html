@@ -56,10 +56,8 @@ h1 {
 	This is an online extended Cyrillic keyboard for the Ket language, mainly thought for the Turkish keyboard layout.
 </p>
 <textarea type="text" id="input" oninput="dothing(this)" class="Cyrl" style="width:100%; height: 100px;" spellcheck="false" autofocus></textarea><br>
-<input type="button" onclick="navigator.clipboard.writeText(textinput.value.normalize('NFC'))" value="copy"/> —
 <input type="button" onclick="textinput.value = ''" value="clear"/> —
-font: <input type="text" value="Noto Serif" oninput="set_font(this.value)"/> —
-auto NFC: <input type="checkbox" oninput="do_nfc = !do_nfc"/><br>
+font: <input type="text" value="Noto Serif" oninput="set_font(this.value)"/>
 <hr>
 <table id="keyboardlayout"></table>
 <hr>
@@ -68,35 +66,7 @@ auto NFC: <input type="checkbox" oninput="do_nfc = !do_nfc"/><br>
 </p>
 <script>
 
-const textinput = document.getElementById("input")
-
-const accents = {
-	["."]: "·",
-	["a"]: "\u0301", // acute
-	["c"]: "\u0302", // circumflex
-	["m"]: "\u0304", // macron
-}
-
-textinput.addEventListener("keydown", (event) => {
-	if (event.altKey) {
-		const key = event.key.toLocaleLowerCase();
-		if (accents[key]) {
-			event.preventDefault();
-			const start = textinput.selectionStart;
-			const end = textinput.selectionEnd;
-			const value = textinput.value;
-			textinput.value = value.slice(0, start) + accents[key] + value.slice(end);
-			textinput.selectionStart = textinput.selectionEnd = start + 1;
-		}
-	}
-});
-
-const root_props = document.querySelector(":root")
-function set_font(name) {
-	root_props.style.setProperty("--cyrillic_font", name)
-}
-
-const convert = {
+const one_char_replacements = {
 	A: "А", a: "а",
 	B: "Б", b: "б",
 	V: "В", v: "в",
@@ -131,9 +101,9 @@ const convert = {
 	W: "Щ", w: "щ",
 	X: "Ә", x: "ә",
 	Ü: "Э", ü: "э",
-}
+};
 
-const convert_double = [
+const two_char_replacements = [
 	["ьo", "ё"],
 	["ьu", "ю"],
 	["ьa", "я"],
@@ -149,7 +119,36 @@ const convert_double = [
 	["ы=", "и"],
 	["и=", "ы"],
 	["ц=", "ч"],
-]
+];
+
+const alt_key_combinations = {
+	["."]: "·",
+	["a"]: "\u0301", // acute
+	["c"]: "\u0302", // circumflex
+	["g"]: "\u0300", // grave
+	["m"]: "\u0304", // macron
+};
+
+const textinput = document.getElementById("input")
+
+textinput.addEventListener("keydown", (event) => {
+	if (event.altKey) {
+		const key = event.key.toLocaleLowerCase();
+		if (alt_key_combinations[key]) {
+			event.preventDefault();
+			const start = textinput.selectionStart;
+			const end = textinput.selectionEnd;
+			const value = textinput.value;
+			textinput.value = value.slice(0, start) + alt_key_combinations[key] + value.slice(end);
+			textinput.selectionStart = textinput.selectionEnd = start + 1;
+		}
+	}
+});
+
+const root_props = document.querySelector(":root")
+function set_font(name) {
+	root_props.style.setProperty("--cyrillic_font", name)
+}
 
 function dothing(element) {
 	// Set values to keep cursor still.
@@ -157,13 +156,13 @@ function dothing(element) {
 	let previous_textarea_length = element.value.length;
 	// Do replacements.
 	let str = element.value;
-	convert_double.forEach(element => {
+	two_char_replacements.forEach(element => {
 		str = str
 			.replace(new RegExp(element[0], 'g'), element[1])
 			.replace(new RegExp(element[0], 'gi'), element[1].toUpperCase())
 	});
 	str = str
-		.replace(/[A-zçğöışüÇĞÖİŞÜ]/g, x => convert[x] ?? x)
+		.replace(/[A-zçğöışüÇĞÖİŞÜ]/g, x => one_char_replacements[x] ?? x)
 		.replace(/#/g, '');
 	element.value = str;
 	// Keep cursor still.
@@ -178,7 +177,7 @@ function load_table() {
 		{ lowercase: "zxcvbnmöç", uppercase: "ZXCVBNMÖÇ" },
 	];
 	function str_thing(char) {
-		let convert_char = convert[char]
+		let convert_char = one_char_replacements[char]
 		if (convert_char) {
 			if (/[\u0300-\u0345]/.test(convert_char)) convert_char = "◌" + convert_char
 			return `
@@ -206,12 +205,12 @@ function load_table() {
 
 function load_list() {
 	let options = [];
-	convert_double.forEach(element => {
+	two_char_replacements.forEach(element => {
 		options.push(`<span class=input>${element[0]}</span> for <span class=Cyrl>${element[1]}</span>`);
 	});
 	document.getElementById("keyboardlist").innerHTML = options.join(', ');
 	let alt_options = [];
-	Object.entries(accents).forEach(element => {
+	Object.entries(alt_key_combinations).forEach(element => {
 		let show = element[1];
 		if (/[\u0300-\u0305]/.test(show)) {
 			show = "◌" + show;
