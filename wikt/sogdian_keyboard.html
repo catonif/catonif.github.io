@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Sogdian keyboard</title>
+<style>
+
+p {
+	margin: .5em 0;
+	text-indent: 1em;
+}
+
+:root {
+	--sogdian_font: "Noto Sans Sogdian"
+}
+
+body {
+	font-family: "Gentium";
+}
+
+.input {
+	font-style: italic;
+	color: blue;
+}
+
+.Sogd {
+	font-family: var(--sogdian_font);
+	direction: rtl;
+}
+
+table, td {
+	text-align: center;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.unused {
+	color: gray;
+}
+
+.key {
+	white-space: nowrap;
+}
+
+h1 {
+	margin: 0;
+}
+
+</style>
+</head>
+<body onload="loadtable()">
+<h1>Sogdian keyboard</h1>
+This is an online Sogdian keyboard.
+<textarea type="text" id="input" oninput="dothing(this)" class="Sogd" style="width:100%; height: 100px;" spellcheck="false" autofocus></textarea><br>
+<input type="button" onclick="navigator.clipboard.writeText(textinput.value.normalize('NFC'))" value="copy"/> —
+<input type="button" onclick="textinput.value = ''" value="clear"/> —
+font: <input type="text" value="Noto Sans Sogdian" oninput="set_font(this.value)"/> —
+auto NFC: <input type="checkbox" oninput="do_nfc = !do_nfc"/><br>
+<hr>
+<table id="keyboardlayout"></table>
+<script>
+
+const textinput = document.getElementById("input")
+
+const root_props = document.querySelector(":root")
+function set_font(name) {
+	root_props.style.setProperty("--sogdian_font", name)
+}
+
+let do_nfc = false
+
+const convert = {
+	a: "𐼰", // ʾ
+	b: "𐼱", // β
+	g: "𐼲", // γ
+	h: "𐼳", // h
+	w: "𐼴", // w
+	z: "𐼵", // z
+	x: "𐼶", // x
+	y: "𐼷", // y
+	k: "𐼸", // k
+	d: "𐼹", // δ
+	m: "𐼺", // m
+	n: "𐼻", // n
+	s: "𐼼", // s
+	q: "𐼽", // ʿ
+	p: "𐼾", // p
+	c: "𐼿", // c
+	r: "𐽀", // r
+	S: "𐽁", // š
+	t: "𐽂", // t
+	f: "𐽃", // f
+	l: "𐽄", // l
+	X: "𐽅", // š
+}
+
+const translit = {
+	a: "ʾ",
+	b: "β",
+	g: "γ",
+	h: "h",
+	w: "w",
+	z: "z",
+	x: "x",
+	y: "y",
+	k: "k",
+	d: "δ",
+	m: "m",
+	n: "n",
+	s: "s",
+	q: "ʿ",
+	p: "p",
+	c: "c",
+	r: "r",
+	S: "š",
+	t: "t",
+	f: "f",
+	l: "l",
+	X: "š",
+}
+
+function dothing(element) {
+	// Set values to keep cursor still.
+	let previous_cursor_position = element.selectionStart;
+	let previous_textarea_length = element.value.length;
+	// Do replacements.
+	let str = element.value
+	str = str.replace(/[A-z]/g, x => convert[x] ?? x)
+	element.value = str;
+	// Keep cursor still.
+	element.selectionEnd = element.selectionStart = previous_cursor_position + element.value.length - previous_textarea_length;
+}
+
+function loadtable() {
+	let str = "";
+	const itlayout = [
+		{ lowercase: "qwertyuiop", uppercase: "QWERTYUIOP" },
+		{ lowercase: "asdfghjkl", uppercase: "ASDFGHJKL" },
+		{ lowercase: "zxcvbnm", uppercase: "ZXCVBNM" },
+	];
+	function str_thing(char) {
+		let convert_char = convert[char]
+		if (convert_char) {
+			if (/[\u0300-\u0345]/.test(convert_char)) convert_char = "◌" + convert_char
+			return `
+				<span class=input>${char}</span>
+				<span class=Sogd>${convert_char}</span>
+				<span class=translit>${translit[char]}</span>
+			`;
+		} else {
+			return '<span class="input unused">' + char + "</span>"
+		}
+	}
+	for (let i = 0; i < itlayout.length; i++) {
+		str += "<tr>";
+		if (i > 0) {
+			str += "<td colspan=" + i + "></td>"
+		}
+		for (let j = 0; j < itlayout[i].lowercase.length; j++) {
+			const lowercase_char = itlayout[i].lowercase.charAt(j);
+			const uppercase_char = itlayout[i].uppercase.charAt(j);
+			str += "<td class=key colspan=2>" + str_thing(uppercase_char) + "<br>" + str_thing(lowercase_char) + "</td>";
+		}
+		str += "</tr>";
+	}
+	document.getElementById("keyboardlayout").innerHTML = str;
+}
+
+</script>
+</body>
+<footer><hr>By Catonif, August 2026. <a href="..">Homepage</a>. catonif.dev@gmail.com</footer>
