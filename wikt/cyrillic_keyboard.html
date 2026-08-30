@@ -89,17 +89,17 @@ const one_char_replacements = {
 	T: "Т", t: "т",
 	U: "У", u: "у",
 	H: "Х", h: "х",
-	Q: "Ъ", q: "ъ",
+	W: "Ъ", w: "ъ",
 	I: "Ы", ı: "ы",
 	["'"]: "ʼ",
+	x: "ʼ",
 	J: "Ж", j: "ж",
 	Z: "З", z: "з",
 	Ş: "Ш", ş: "ш",
 	F: "Ф", f: "ф",
-	C: "Ц", c: "ц",
+	// C: "Ц", c: "ц",
 	Ç: "Ч", ç: "ч",
-	W: "Щ", w: "щ",
-	X: "Ә", x: "ә",
+	C: "Ә", c: "ә",
 	Ü: "Э", ü: "э",
 };
 
@@ -118,6 +118,7 @@ const two_char_replacements = [
 	["з=", "ж"],
 	["ы=", "и"],
 	["и=", "ы"],
+	["т=", "ц"],
 	["ц=", "ч"],
 ];
 
@@ -163,7 +164,7 @@ function dothing(element) {
 			.replace(new RegExp(element[0], 'gi'), element[1].toUpperCase())
 	});
 	str = str
-		.replace(/[A-zçğöışüÇĞÖİŞÜ]/g, x => one_char_replacements[x] ?? x)
+		.replace(/[A-zçğöışüÇĞÖİŞÜ']/g, x => one_char_replacements[x] ?? x)
 		.replace(/#/g, '');
 	element.value = str;
 	// Keep cursor still.
