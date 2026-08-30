@@ -127,6 +127,7 @@ const alt_key_combinations = {
 	["c"]: "\u0302", // circumflex
 	["g"]: "\u0300", // grave
 	["m"]: "\u0304", // macron
+	["b"]: "\u0306", // breve
 };
 
 const textinput = document.getElementById("input")
@@ -212,7 +213,7 @@ function load_list() {
 	let alt_options = [];
 	Object.entries(alt_key_combinations).forEach(element => {
 		let show = element[1];
-		if (/[\u0300-\u0305]/.test(show)) {
+		if (/[\u0300-\u0306]/.test(show)) {
 			show = "◌" + show;
 		}
 		alt_options.push(`<span class=input>ALT + ${element[0]}</span> for <span class=Cyrl>${show}</span>`);
