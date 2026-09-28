@@ -380,6 +380,7 @@
 		"script": "latin-catholic",
 		"link": {
 			"gb": "CMwGAAAAQAAJ",
+			"mdz": "bsb10524227",
 			"adsh": 10
 		}
 	},
@@ -538,6 +539,16 @@
 		"year": 1813,
 		"link": {
 			"gb": "V7U5AQAAMAAJ"
+		}
+	},
+	{
+		"author": "Johann Adolph Erdmann Schmidt",
+		"title": "Neugriechischer Dollmetscher, nebst türkischem und albanischem",
+		"year": 1822,
+		"location": "Leipzig",
+		"publisher": "Ernst Klein's literarischem Comtoir",
+		"link": {
+			"mdz": "bsb11762259"
 		}
 	},
 	{
@@ -741,6 +752,7 @@
 				"link": {
 					"bksh": "libra1!HASH014d",
 					"gb": "po8_AAAAcAAJ",
+					"mdz": "bsb10389093",
 					"legrand": 230
 				}
 			},
@@ -1017,6 +1029,29 @@
 		"genre": "linguistic"
 	},
 	{
+		"author": "Demetrio Camarda",
+		"year": "1864",
+		"title": "Saggio di grammatologia comparata sulla lingua albanese",
+		"location": "Livorno",
+		"publisher": "E. Vignozzi & Co.",
+		"link":{
+			"gb": "OfEGAAAAQAAJ",
+			"mdz": "bsb10589076"
+		}
+	},
+	{
+		"author": "Demetrio Camarda",
+		"title": "Appendice al saggio di grammatologia comparata sulla lingua albanese",
+		"pages": 344,
+		"link": {
+			"mdz": "bsb10589075",
+			"gb": "syYTAAAAYAAJ"
+		},
+		"location": "Prato",
+		"publisher": "F. Alberghetti & Co.",
+		"genre": "linguistic"
+	},
+	{
 		"title": "Katër ungjilat e zotit ndë gjuhë gegënishte",
 		"author": "Konstantin Kristoforidhi",
 		"location": "Istanbul",
@@ -1089,6 +1124,7 @@
 				"wOIGAAAAQAAJ",
 				"R3wCAAAAQAAJ"
 			],
+			"mdz": "bsb10589079",
 			"legrand": 278
 		}
 	},
@@ -1274,6 +1310,16 @@
 			"bksh": "libra112!HASH6394",
 			"gb": "TMtLAAAAYAAJ",
 			"legrand": 315
+		}
+	},
+	{
+		"title": "Grammatica della lingua albanese. Prima parte",
+		"author": "Giuseppe de Rada",
+		"location": "Florence",
+		"publisher": "Tipografia dell'Associazione",
+		"year": 1871,
+		"link": {
+			"mdz": "bsb10811007"
 		}
 	},
 	{
@@ -1511,7 +1557,18 @@
 		"link": {
 			"bksh": "libra112!HASH0139!b9c99d1e",
 			"legrand": 361
-		}
+		},
+		"editions": [
+			{
+				"editions": 2,
+				"year": 1924,
+				"location": "Vienna",
+				"publisher": "Rabeck",
+				"link": {
+					"mdz": "bsb00133799"
+				}
+			}
+		]
 	},
 	{
 		"title": "Shenjti ungjill pas Mattheut ndë gluhë toskërishte",
@@ -1859,7 +1916,8 @@
 		"year": 1886,
 		"link": {
 			"bksh": "libra042!HASH0100",
-			"gb": "I31OTR2p_8MC"
+			"gb": "I31OTR2p_8MC",
+			"mdz": ["bsb11856666", "bsb11856665"]
 		},
 		"script": "latin-frasheri"
 	},
@@ -1874,7 +1932,8 @@
 		"link": {
 			"bksh": "libra1!HASH01c5",
 			"ws": "Bagëti e Bujqësija.djvu",
-			"gb": "Ia9N2xY-Uc0C"
+			"gb": "Ia9N2xY-Uc0C",
+			"mdz": "bsb11897748"
 		}
 	},
 	{
@@ -1901,7 +1960,8 @@
 		"pages": 176,
 		"link": {
 			"bksh": "libra112!HASH01f7",
-			"gb": "3n59nfyuafgC"
+			"gb": "3n59nfyuafgC",
+			"mdz": "bsb11856672"
 		}
 	},
 	{
@@ -1913,7 +1973,8 @@
 		"pages": 168,
 		"script": "latin-frasheri",
 		"link": {
-			"bksh": "libra112!HASH011e"
+			"bksh": "libra112!HASH011e",
+			"mdz": "bsb00137264"
 		}
 	},
 	{
@@ -1926,7 +1987,8 @@
 		"pages": 128,
 		"link": {
 			"bksh": "libra112!HASH0123",
-			"gb": "ES5V_VtaHnoC"
+			"gb": "ES5V_VtaHnoC",
+			"mdz": "bsb11856667"
 		}
 	},
 	{
@@ -1938,14 +2000,16 @@
 				"pages": 55,
 				"link": {
 					"bksh": "libra1!HASH0181!891bfa03",
-					"gb": "hCeKyEkG6FIC"
+					"gb": "hCeKyEkG6FIC",
+					"mdz": "bsb11856668"
 				}
 			},
 			{
 				"volume": 2,
 				"pages": 52,
 				"link": {
-					"bksh": "libra1!HASH0181!8123fa13!e74f36de"
+					"bksh": "libra1!HASH0181!8123fa13!e74f36de",
+					"mdz": "bsb11856669"
 				}
 			}
 		],
@@ -1964,7 +2028,8 @@
 		"pages": 116,
 		"link": {
 			"bksh": "libra1!HASH8442",
-			"gb": "RzNJ3_5yOrYC"
+			"gb": "RzNJ3_5yOrYC",
+			"mdz": "bsb11856670"
 		}
 	},
 	{
@@ -1980,7 +2045,8 @@
 		"script": "latin-frasheri",
 		"pages": 96,
 		"link": {
-			"gb": "lfBIMvkr9XgC"
+			"gb": "lfBIMvkr9XgC",
+			"mdz": "bsb11856671"
 		}
 	},
 	{
@@ -2253,6 +2319,18 @@
 		]
 	},
 	{
+		"author": "Gustav Meyer",
+		"title": "Etymologisches Wörterbuch der albanesischen Sprache",
+		"location": "Strasbourg",
+		"publisher": "Karl J. Trübner",
+		"year": "1891",
+		"link": {
+			"doi": "10.1515/9783111562261",
+			"gb": "OWKJ1dKKi-MC",
+			"mdz": ["bsb11845914", "bsb11646944", "bsb11646260"]
+		}
+	},
+	{
 		"title": "Qëndrimi i shoqërisë shqiptarëvet \"Drita\"",
 		"full-title": [
 			{
@@ -2350,7 +2428,8 @@
 				"F-90gyCjrFEC",
 				"HzYEUQVTtm8C",
 				"ZTXaUEIHLUQC"
-			]
+			],
+			"mdz": "bsb11646257"
 		}
 	},
 	{
@@ -2382,7 +2461,8 @@
 		"location": "Vienna",
 		"publisher": "Alfred Hölder",
 		"link": {
-			"adsh": 357
+			"adsh": 357,
+			"mdz": "bsb11814598"
 		}
 	},
 	{
@@ -2395,6 +2475,16 @@
 		"pages": 8,
 		"genre": "primer",
 		"script": "latin-greek"
+	},
+	{
+		"title": "Manuale di letteratura albanese",
+		"author": "Alberto Straticò",
+		"year": 1896,
+		"publisher": "Ulrico Hoepli",
+		"location": "Milan",
+		"link": {
+			"mdz": ["bsb00133872", "bsb11810114"]
+		}
 	},
 	{
 		"title": "Arbënorve t' kërshten t' grishun festuer",
@@ -2686,7 +2776,8 @@
 		"script": "latin-frasheri",
 		"pages": 96,
 		"link": {
-			"bksh": "libra1!HASH0181!8b1ffa07"
+			"bksh": "libra1!HASH0181!8b1ffa07",
+			"mdz": "bsb00148271"
 		}
 	},
 	{
@@ -3131,7 +3222,19 @@
 		"pages": 67,
 		"link": {
 			"bksh": "libra1!HASH0181!7f15fa18"
-		}
+		},
+		"editions": [
+			{
+				"title": "Anzat e Parnasit",
+				"year": 1928,
+				"location": "Shkodër",
+				"publisher": "Shtyp. Françeskane",
+				"edition": 2,
+				"link": {
+					"mdz": "bsb00133808"
+				}
+			}
+		]
 	},
 	{
 		"title": "Besa a fea e shqiptarëvet të vjetër",
@@ -3284,7 +3387,8 @@
 		"script": "latin-frasheri",
 		"pages": 856,
 		"link": {
-			"bksh": "libra1!HASHd86a"
+			"bksh": "libra1!HASHd86a",
+			"mdz": "bsb00148259"
 		}
 	},
 	{
@@ -3312,7 +3416,8 @@
 		"script": "latin-bashkimi",
 		"pages": 538,
 		"link": {
-			"bksh": "libra112!HASH0179"
+			"bksh": "libra112!HASH0179",
+			"mdz": "bsb00133812"
 		}
 	},
 	{
@@ -3740,20 +3845,55 @@
 		}
 	},
 	{
-		"title": "Ungjilli pas joanit ndë të folë toskënisht",
-		"author": "(Konstantin Kristoforidhi)",
-		"full-title": {
-			"lang": "sq",
-			"text": "UNGJILLI\nPAS JOANIT\nKthyerë prej Elinishtesë\nShqip\nNdë të folë Toskënisht"
-		},
-		"year": 1911,
-		"location": "Manastir",
-		"publisher": "Tregëtare Nërkombëtare",
-		"pages": 79,
+		"title": "Dhiata e-re e Zotit edhe Shpëtimtarit t'ënë Jisu Krisht kthyerë prej elinishtesë shqip ndë të folë toskënisht",
 		"script": "latin-standard",
-		"link": {
-			"bksh": "libra112!HASH0181!8945fa04"
-		}
+		"volumes": [
+			{
+				"title": "Ungjilli pas Mattheut",
+				"location": "Manastir",
+				"publisher": "Bashkimi i Kombit",
+				"pages": 96,
+				"year": 1910,
+				"link": {
+					"mdz": "bsb00148265"
+				}
+			},
+			{
+				"title": "Ungjilli pas Markut",
+				"location": "Manastir",
+				"publisher": "Bashkimi i Kombit",
+				"year": 1909,
+				"pages": 64,
+				"link": {
+					"mdz": "bsb00148266"
+				}
+			},
+			{
+				"title": "Ungjilli pas Llukajt",
+				"location": "Manastir",
+				"publisher": "Tregëtare Nërkombëtare",
+				"year": 1910,
+				"pages": 106,
+				"link": {
+					"mdz": "bsb00148267"
+				}
+			},
+			{
+				"title": "Ungjilli pas Joanit",
+				"full-title": {
+					"lang": "sq",
+					"text": "UNGJILLI\nPAS JOANIT\nKthyerë prej Elinishtesë\nShqip\nNdë të folë Toskënisht"
+				},
+				"year": 1911,
+				"location": "Manastir",
+				"publisher": "Tregëtare Nërkombëtare",
+				"pages": 79,
+				"link": {
+					"bksh": "libra112!HASH0181!8945fa04",
+					"mdz": "bsb00148268"
+				}
+			}
+		]
 	},
 	{
 		"title": "Ushtrime giuhët shqyp-italian",
@@ -4259,7 +4399,8 @@
 		"pages": 293,
 		"add-langs": "it",
 		"link": {
-			"bksh": "libra1!HASH014d!91397704"
+			"bksh": "libra1!HASH014d!91397704",
+			"mdz": "bsb00133871"
 		}
 	},
 	{
@@ -4332,7 +4473,7 @@
 		"year": 1916,
 		"author": "Angelo Leotti",
 		"location": "Milan",
-		"publisher": "U. Hoepli",
+		"publisher": "Ulrico Hoepli",
 		"pages": 425,
 		"script": "latin",
 		"link": {
@@ -4398,6 +4539,15 @@
 		"publisher": "Popolano",
 		"pages": 23,
 		"script": "latin"
+	},
+	{
+		"title": "Memorandum përmbi Shqypënië",
+		"author": "Wilhelm I",
+		"year": 1917,
+		"pages": 80,
+		"link": {
+			"mdz": "bsb00133817"
+		}
 	},
 	{
 		"title": "Juvenilia",
@@ -4566,6 +4716,17 @@
 		}
 	},
 	{
+		"title": "Kundrështarët e Prikës: komedi me një akt",
+		"author": "Kristo Floqit",
+		"location": "Tirana",
+		"publisher": "Tirana",
+		"year": 1922,
+		"pages": 83,
+		"link": {
+			"mdz": "bsb00133796"
+		}
+	},
+	{
 		"title": "Mbrojtje e minoriteteve në Shqipëni",
 		"author": "Fan Noli",
 		"year": 1922,
@@ -4599,6 +4760,26 @@
 		"publisher": "Albania",
 		"link": {
 			"adsh": 349
+		}
+	},
+	{
+		"title": "Ilirët",
+		"author": ["Karl Patsch", "Karl Gurakuqi"],
+		"location": "Tirana",
+		"publisher": "Nikaj",
+		"year": 1923,
+		"link": {
+			"mdz": "bsb00150293"
+		}
+	},
+	{
+		"title": "Zî e mê zî: komedi më një akt",
+		"author": "Kristo Floqi",
+		"year": 1923,
+		"location": "Korçë",
+		"publisher": "Dhori Koti",
+		"link": {
+			"mdz": "bsb00133795"
 		}
 	},
 	{
@@ -4653,6 +4834,17 @@
 		}
 	},
 	{
+		"title": "Ministri Kanditat: komedí me një akt",
+		"author": "Kristo Floqi",
+		"year": 1926,
+		"pages": 40,
+		"location": "Tiranë",
+		"publisher": "Mbrothësia",
+		"link": {
+			"mdz": "bsb00133797"
+		}
+	},
+	{
 		"title": "Histori e teqes së Melçanit",
 		"author": "Feim Hamdi Bitincka",
 		"year": 1925,
@@ -4663,6 +4855,24 @@
 		"script": "latin-standard",
 		"link": {
 			"bksh": "libra112!HASH8067"
+		}
+	},
+	{
+		"title": "Naim Frashëri: një shëmbëll për djalërinë shqipëtare",
+		"year": 1925,
+		"pages": 24,
+		"author": "Safet S. Butka",
+		"link": {
+			"mdz": "bsb00133821"
+		}
+	},
+	{
+		"title": "Gjendja ekonomike e kulturore e Shqipnís në kohën e kalueme",
+		"author": ["Karl Patsch", "Karl Gurakuqi"],
+		"location": "Tirana", "publisher": "Mbrothësija",
+		"year": 1925,
+		"link": {
+			"mdz": "bsb00150294"
 		}
 	},
 	{
@@ -4737,6 +4947,16 @@
 		}
 	},
 	{
+		"title": "Gramatika dhe sindaksa e gjuhës shqipe sidomòs e toskënishtes",
+		"author": "Ilia Dilo Sheperi",
+		"year": 1927,
+		"publisher": "Vlora",
+		"location": "Vlorë",
+		"link": {
+			"mdz": "bsb00133834"
+		}
+	},
+	{
 		"title": "Shë Luigj Gonzaga",
 		"full-title": {
 			"lang": "sq",
@@ -4796,6 +5016,17 @@
 		"pages": 780,
 		"link": {
 			"adsh": 518
+		}
+	},
+	{
+		"author": "Vincenzo Librandi",
+		"title": "Grammatica albanese con le poesie rare di Variboba",
+		"edition": 2,
+		"location": "Milan",
+		"publisher": "Ulrico Hoepli",
+		"year": 1928,
+		"link": {
+			"mdz": "bsb00133870"
 		}
 	},
 	{
@@ -4932,6 +5163,27 @@
 		"pages": 151,
 		"link": {
 			"bksh": "libra1!HASHae57"
+		}
+	},
+	{
+		"title": "Gjeth e lule",
+		"author": "Vinçenc Prennushi",
+		"edition": 2,
+		"location": "Shkodër",
+		"publisher": "Shtyp. Françeskane",
+		"year": 1931,
+		"pages": 178,
+		"link": {
+			"mdz": "bsb00133823"
+		}
+	},
+	{
+		"title": "Lingua albanese (dialetto ghego). Grammatica. Saggi di letteratura. Fraseologia e proverbi",
+		"author": "Fulvio Cordignano",
+		"publisher": "Ulrico Hoepli",
+		"location": "Milan",
+		"link": {
+			"mdz": "bsb00156369"
 		}
 	},
 	{
@@ -6806,5 +7058,12 @@
 				}
 			}
 		]
-	}
+	},
+	{
+		"title": "BSB Cod. alban. 1",
+		"link": {
+			"ws": "BSB Cod. alban. 1.djvu",
+			"mdz": "bsb00130872"
+		}
+	},
 ]
