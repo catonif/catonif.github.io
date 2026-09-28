@@ -79,7 +79,8 @@
 				"year": 1664,
 				"pages": 288,
 				"link": {
-					"bksh": "antikua1!HASH0eb1"
+					"bksh": "antikua1!HASH0eb1",
+					"onb": "107B3335"
 				}
 			},
 			{
@@ -89,6 +90,7 @@
 				"link": {
 					"bksh": "libra112!HASH0184",
 					"gb": "OC9WAAAAcAAJ",
+					"onb": "108CF10B",
 					"legrand": 292
 				}
 			}
@@ -210,6 +212,7 @@
 								"KPZDAAAAcAAJ",
 								"BZ1qtllYrcEC"
 							],
+							"onb": "10B4AFB0",
 							"ws": "Cuneus prophetarum - Vetus testamentum.djvu"
 						}
 					},
@@ -222,6 +225,7 @@
 						"pages": 162,
 						"link": {
 							"bksh": "antikua1!HASH01d9",
+							"onb": "10B4AFC9",
 							"gb": [
 								"wpvP8PWkv_QC",
 								"BZ1qtllYrcEC"
@@ -592,6 +596,7 @@
 				"pages": 839,
 				"link": {
 					"gb": "Z80GAAAAQAAJ",
+					"onb": "10868FD5",
 					"legrand": 165
 				}
 			},
@@ -698,6 +703,7 @@
 		"script": "latin-greek",
 		"link": {
 			"gb": "rWJlAAAAcAAJ",
+			"onb": "10868ED2",
 			"legrand": 192
 		},
 		"lect": "tosk-calabria-macchia"
@@ -712,6 +718,7 @@
 		"religion": "christian-orthodox",
 		"link": {
 			"bksh": "libra040!HASH015e",
+			"onb": "10625DCD",
 			"ws": "Veqilharxhi - Procheiron (1844).djvu"
 		},
 		"lect": "tosk-vithkuq"
@@ -742,6 +749,7 @@
 						"HLUCAAAAQAAJ",
 						"XUhXAAAAcAAJ"
 					],
+					"onb": "108CC966",
 					"legrand": 198
 				}
 			},
@@ -787,6 +795,7 @@
 				},
 				"link": {
 					"gb": "TwBPAAAAcAAJ",
+					"onb": "1042160A",
 					"legrand": 201
 				}
 			},
@@ -955,6 +964,7 @@
 		"publisher": "Propaganda Fide",
 		"link": {
 			"gb": "NogDzjkq440C",
+			"onb": "10725D18",
 			"legrand": 258
 		},
 		"lect": "gheg-shkodër",
@@ -974,6 +984,7 @@
 			"text": "JEƐU CRISCTI\nN' ƐEMER T' MESCTAARIT\nKUITIME T' SCPIRTIT\nCI DO T' KEET MESCTAARI PER GIΞΞZILEN DIT T'MŌIT\nKΞΞȢE SC-CIȢP' PREI\nD. ÈIGNΛ RADOJET\nPRIFT I DIECES' I SCODRS\n"
 		},
 		"link": {
+			"onb": "107D5F3E",
 			"gb": "srwi4N2zdpcC"
 		}
 	},
@@ -1063,6 +1074,7 @@
 				"pages": 420,
 				"link": {
 					"bksh": "libra112!HASH0157",
+					"onb": "10750B34",
 					"legrand": 272
 				}
 			},
@@ -1072,6 +1084,7 @@
 				"pages": 288,
 				"link": {
 					"bksh": "libra112!HASH8b45",
+					"onb": "1059F289",
 					"legrand": 320
 				}
 			}
@@ -1099,6 +1112,7 @@
 				"pfEGAAAAQAAJ",
 				"MNFEAAAAcAAJ"
 			],
+			"onb": "106A557D",
 			"legrand": 280
 		}
 	},
@@ -1124,6 +1138,7 @@
 				"wOIGAAAAQAAJ",
 				"R3wCAAAAQAAJ"
 			],
+			"onb": "10504949",
 			"mdz": "bsb10589079",
 			"legrand": 278
 		}
@@ -1139,6 +1154,7 @@
 		"script": "latin",
 		"link": {
 			"bksh": "libra112!HASH0151",
+			"onb": "10730526",
 			"legrand": 284
 		},
 		"lect": "tosk"
@@ -1154,6 +1170,7 @@
 		"script": "greek-kristoforidhi",
 		"link": {
 			"bksh": "libra1!HASHa2e4",
+			"onb": "1059F292",
 			"legrand": 296
 		},
 		"lect": "tosk",
@@ -1259,6 +1276,7 @@
 				"pages": 38,
 				"link": {
 					"gb": "Ad5EAAAAcAAJ",
+					"onb": "1091C419",
 					"mdz": "bsb10524228"
 				}
 			},
@@ -1275,6 +1293,7 @@
 						"HypTAAAAcAAJ",
 						"3i7mAAAAMAAJ"
 					],
+					"onb": "1091C422",
 					"mdz": "bsb10989413"
 				}
 			},
@@ -1282,7 +1301,8 @@
 				"volume": 3,
 				"title": "Die Form entlehnter Verba in Albanischen und einigen anderen Sprachen",
 				"link": {
-					"mdz": "bsb10989414"
+					"mdz": "bsb10989414",
+					"onb": "1091C43B"
 				}
 			}
 		]
@@ -1294,8 +1314,10 @@
 		"location": "Livorno",
 		"publisher": "G. Fabbreschi",
 		"link": {
-			"gb": "1_rSKPtrETEC"
-		}
+			"gb": "1_rSKPtrETEC",
+			"onb": "107003E6"
+		},
+		"pages": 124
 	},
 	{
 		"title": "Raccolda di canti popolari e rapsodie di poemi albanesi",
@@ -1416,6 +1438,7 @@
 				"pages": 302,
 				"link": {
 					"gb": "5PROpt31p_cC",
+					"onb": "10725D21",
 					"legrand": 288
 				}
 			},
@@ -1466,6 +1489,7 @@
 				"eGCyEhTrxE8C",
 				"GzRoAAAAcAAJ"
 			],
+			"onb": "1066213D",
 			"legrand": 347
 		}
 	},
@@ -1738,6 +1762,7 @@
 		"link": {
 			"bksh": "libra112!HASH0181!851ffa0b",
 			"anemi": "metadata-312-0000116.tkl",
+			"onb": "131CE7ED",
 			"mdz": "bsb11646258"
 		},
 		"genre": "primer",
@@ -2001,6 +2026,7 @@
 				"link": {
 					"bksh": "libra1!HASH0181!891bfa03",
 					"gb": "hCeKyEkG6FIC",
+					"onb": "1324ADBC",
 					"mdz": "bsb11856668"
 				}
 			},
@@ -2376,7 +2402,8 @@
 		"script": "latin-frasheri",
 		"pages": 126,
 		"link": {
-			"bksh": ["libra1!HASH0181!8715fa10", "libra042!HASH0181"]
+			"bksh": ["libra1!HASH0181!8715fa10", "libra042!HASH0181"],
+			"onb": "1324ADBD"
 		}
 	},
 	{
@@ -2429,6 +2456,7 @@
 				"HzYEUQVTtm8C",
 				"ZTXaUEIHLUQC"
 			],
+			"onb": "131F016C",
 			"mdz": "bsb11646257"
 		}
 	},
@@ -2645,7 +2673,8 @@
 		"script": "latin-frasheri",
 		"pages": 54,
 		"link": {
-			"bksh": "libra1!HASHa2e3!e2cc6509"
+			"bksh": "libra1!HASHa2e3!e2cc6509",
+			"onb": "1324ADBF"
 		}
 	},
 	{
@@ -2681,6 +2710,7 @@
 				"pages": 154,
 				"link": {
 					"gb": ["A3EuAAAAYAAJ", "T1PtdgLIZ_AC", "KEYWEzd4k04C"],
+					"onb": "1322CDBD",
 					"ws": "T' nnoλunat e Scćȣpniis (1898).djvu"
 				}
 			},
@@ -2740,7 +2770,9 @@
 		"script": "latin-frasheri",
 		"pages": 43,
 		"link": {
-			"bksh": ["libra1!HASH8b45!94884dfc", "libra1!HASHa2e3!e2cc6509"]
+			"bksh": ["libra1!HASH8b45!94884dfc", "libra1!HASHa2e3!e2cc6509"],
+			"ws": "Istori e Shqipërisë (1889).djvu",
+			"onb": "1324ADBE"
 		}
 	},
 	{
@@ -2907,7 +2939,8 @@
 		"pages": 6,
 		"script": "latin-frasheri",
 		"link": {
-			"bksh": "libra1!HASH0181!8d1bfa03"
+			"bksh": "libra1!HASH0181!8d1bfa03",
+			"ws": "Shqipëria (1902).djvu"
 		}
 	},
 	{
@@ -3388,6 +3421,7 @@
 		"pages": 856,
 		"link": {
 			"bksh": "libra1!HASHd86a",
+			"ws": "Valët e detit (1908).djvu",
 			"mdz": "bsb00148259"
 		}
 	},
@@ -7065,5 +7099,5 @@
 			"ws": "BSB Cod. alban. 1.djvu",
 			"mdz": "bsb00130872"
 		}
-	},
+	}
 ]
