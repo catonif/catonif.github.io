@@ -80,6 +80,7 @@
 				"pages": 288,
 				"link": {
 					"bksh": "antikua1!HASH0eb1",
+					"mdz": "bsb00108178",
 					"onb": "107B3335"
 				}
 			},
@@ -175,7 +176,9 @@
 		"script": "latin-catholic",
 		"link": {
 			"bksh": "antikua1!HASH01d9",
-			"gb": "PJP7gP1p-JAC"
+			"gb": "PJP7gP1p-JAC",
+			"mdz": "bsb10589074",
+			"onb": "10310AB8"
 		},
 		"editions": [
 			{
@@ -213,6 +216,7 @@
 								"BZ1qtllYrcEC"
 							],
 							"onb": "10B4AFB0",
+							"mdz": "bsb10326506",
 							"ws": "Cuneus prophetarum - Vetus testamentum.djvu"
 						}
 					},
@@ -226,6 +230,7 @@
 						"link": {
 							"bksh": "antikua1!HASH01d9",
 							"onb": "10B4AFC9",
+							"mdz": "bsb10326507",
 							"gb": [
 								"wpvP8PWkv_QC",
 								"BZ1qtllYrcEC"
@@ -358,6 +363,15 @@
 				"link": {
 					"adsh": 506
 				}
+			},
+			{
+				"author": "Bardhyl Demiraj",
+				"year": 2012,
+				"location": "Shkodër",
+				"publisher": "Botime Françeskane",
+				"link": {
+					"mdz": "bsb00088679"
+				}
 			}
 		],
 		"add-langs": [
@@ -412,7 +426,17 @@
 			"gb": "ELUCAAAAQAAJ",
 			"ws": "Breve compendio della dottrina cristiana.djvu"
 		},
-		"lect": "gheg"
+		"lect": "gheg",
+		"editions": [
+			{
+				"author": "Bardhyl Demiraj",
+				"location": "Prishtinë",
+				"year": 2006,
+				"link": {
+					"mdz": "bsb00088108"
+				}
+			}
+		]
 	},
 	{
 		"title": "Elbasan Gospel manuscript",
@@ -520,7 +544,7 @@
 				"add-lang": "el",
 				"editions": [
 					{
-						"title": "Στοιχεῖα ἑλληνο-ἀλβανικῆς γραμματικῆς καὶ ἑλληνο-ἀλβανικοί διάλογοι. Ἀνέκδοτο ἔργο Ἰωάννη Βηλαρᾶ",
+						"title": "Στοιχεῖα ἑλληνο-ἀλβανικῆς γραμματικῆς καὶ ἑλληνο-ἀλβανικοί διάλογοι. Ἀνέκδοτο ἔργο Ἰωάννη Βηλαρᾶ",
 						"year": 1985,
 						"author": "Tito Jochalas",
 						"location": "Thessaloniki"
@@ -546,13 +570,31 @@
 		}
 	},
 	{
+		"title": "Researches in Greece",
+		"author": "William Martin-Leake",
+		"year": 1814,
+		"location": "London",
+		"publisher": "John Booth",
+		"link": {
+			"onb": "10001AC4"
+		}
+	},
+	{
 		"author": "Johann Adolph Erdmann Schmidt",
 		"title": "Neugriechischer Dollmetscher, nebst türkischem und albanischem",
 		"year": 1822,
 		"location": "Leipzig",
 		"publisher": "Ernst Klein's literarischem Comtoir",
 		"link": {
-			"mdz": "bsb11762259"
+			"mdz": ["bsb11762259", "bsb10585493"]
+		}
+	},
+	{
+		"title": "Vergleichungstafeln der Europäischen Stamm-Sprachen und Süd-, West-Asiatischer",
+		"author": "various",
+		"year": 1822,
+		"link": {
+			"onb": "1033DDEE"
 		}
 	},
 	{
@@ -596,6 +638,7 @@
 				"pages": 839,
 				"link": {
 					"gb": "Z80GAAAAQAAJ",
+					"mdz": "bsb11284309",
 					"onb": "10868FD5",
 					"legrand": 165
 				}
@@ -663,6 +706,7 @@
 		"publisher": "Andreáischen Buchhandlung",
 		"link": {
 			"gb": "RvtJAAAAcAAJ",
+			"mdz": "bsb10589080",
 			"legrand": 179
 		}
 	},
@@ -679,6 +723,7 @@
 				"link": {
 					"bksh": "libra1!HASH6714",
 					"gb": "tGJlAAAAcAAJ",
+					"onb": "10868FCC",
 					"ws": "Canti di Milosao.djvu"
 				}
 			},
@@ -796,7 +841,8 @@
 				"link": {
 					"gb": "TwBPAAAAcAAJ",
 					"onb": "1042160A",
-					"legrand": 201
+					"legrand": 201,
+					"ws": "Ruga e Parrisit (1845).djvu"
 				}
 			},
 			{
@@ -832,6 +878,7 @@
 						"pages": 136,
 						"link": {
 							"gb": "bt5WvNuYgyoC",
+							"mdz": "bsb10047796",
 							"legrand": 209
 						}
 					},
@@ -841,6 +888,7 @@
 						"note": "1848 according to Legrand",
 						"link": {
 							"gb": "ahF6ljvB1UEC",
+							"mdz": "bsb10047797",
 							"legrand": 210
 						}
 					}
@@ -943,6 +991,7 @@
 				"script": "latin-greek",
 				"link": {
 					"gb": "YyxGAAAAcAAJ",
+					"onb": ["10A99266", "10540F3F"],
 					"legrand": 226
 				}
 			},
@@ -954,6 +1003,15 @@
 			}
 		],
 		"lect": "tosk-southgreece"
+	},
+	{
+		"title": "Hieronymi de Rada carmina italoalbanica quinque",
+		"author": ["Girolamo de Rada", "Heinrich Christoph Gottlieb Stier"],
+		"year": 1856,
+		"pages": 56,
+		"link": {
+			"onb": "106DCAFB"
+		}
 	},
 	{
 		"title": "Udha e shejtës kryq e tjera pun' t' divoçme",
@@ -1020,6 +1078,7 @@
 		},
 		"link": {
 			"gb": ["xeoIAuwOpi8C", "_7RgAAAAcAAJ"],
+			"onb": "107D5F25",
 			"legrand": 266
 		},
 		"genre": "religious",
@@ -1331,6 +1390,7 @@
 		"link": {
 			"bksh": "libra112!HASH6394",
 			"gb": "TMtLAAAAYAAJ",
+			"onb": "10663855",
 			"legrand": 315
 		}
 	},
@@ -1403,6 +1463,8 @@
 		"link": {
 			"bksh": "libra112!HASH0181!7d55fa1b",
 			"gb": "xIU4AAAAMAAJ",
+			"onb": "1059F289",
+			"mdz": "bsb10999383",
 			"legrand": 319
 		}
 	},
@@ -1455,7 +1517,7 @@
 		"genre": "religious"
 	},
 	{
-		"title": "Urat për me u dhan",
+		"title": "Urat për me u than",
 		"year": 1867,
 		"author": "Tommaso Marcozzi",
 		"full-title": {
@@ -1464,8 +1526,11 @@
 		},
 		"location": "Rome",
 		"publisher": "Propaganda Fide",
+		"script": "latin-catholic",
+		"pages": 82,
 		"link": {
 			"gb": "vOCwMyNFso0C",
+			"onb": "107D5F47",
 			"legrand": 289
 		}
 	},
@@ -1489,7 +1554,10 @@
 				"eGCyEhTrxE8C",
 				"GzRoAAAAcAAJ"
 			],
-			"onb": "1066213D",
+			"onb": [
+				"1066213D",
+				"1091C51C"
+			],
 			"legrand": 347
 		}
 	},
@@ -1580,6 +1648,7 @@
 		"add-langs": "el",
 		"link": {
 			"bksh": "libra112!HASH0139!b9c99d1e",
+			"mdz": "bsb11378008",
 			"legrand": 361
 		},
 		"editions": [
@@ -1615,6 +1684,16 @@
 		"script": "greek",
 		"link": {
 			"bksh": ["libra1!HASH0590", "libra112!HASH0181!855bfa13"]
+		}
+	},
+	{
+		"title": "Manuel de la langue chkipe ou albanaise",
+		"author": "August Dozon",
+		"year": 1878,
+		"location": "Paris",
+		"publisher": "Ernest Leroux",
+		"link": {
+			"mdz": "bsb11390373"
 		}
 	},
 	{
@@ -1693,6 +1772,15 @@
 		}
 	},
 	{
+		"title": "Analyse de la langue albanaise",
+		"author": "Louis Benloew",
+		"year": 1879,
+		"location": "Paris",
+		"link": {
+			"onb": "117D7F88"
+		}
+	},
+	{
 		"title": "Të bërëtë edhe të dalëtë ndë gluhë toskërishte",
 		"author": "Konstantin Kristoforidhi",
 		"year": 1880,
@@ -1752,6 +1840,18 @@
 		}
 	},
 	{
+		"title": "Zur albanischen Sprachenkunde",
+		"year": 1881,
+		"author": "Jan Urban Jarník",
+		"publisher": "F. A. Brockhaus",
+		"location": "Leipzig",
+		"pages": 51,
+		"link": {
+			"onb": ["131CEC0D", "131D314F"],
+			"mdz": "bsb00133884"
+		}
+	},
+	{
 		"title": "Abavatar arbëror",
 		"author": "Anastas Kullurioti",
 		"location": "Athens",
@@ -1762,7 +1862,7 @@
 		"link": {
 			"bksh": "libra112!HASH0181!851ffa0b",
 			"anemi": "metadata-312-0000116.tkl",
-			"onb": "131CE7ED",
+			"onb": [ "131CE7ED", "131CF0FC" ],
 			"mdz": "bsb11646258"
 		},
 		"genre": "primer",
@@ -1986,6 +2086,7 @@
 		"link": {
 			"bksh": "libra112!HASH01f7",
 			"gb": "3n59nfyuafgC",
+			"onb": "1324ADBA",
 			"mdz": "bsb11856672"
 		}
 	},
@@ -2117,7 +2218,7 @@
 			"lang": "fr",
 			"title": "GRAMMAIRE ALBANAISE.\nÀ L'USAGE DE CEUX QUI DÉSIRENT APPRENDRE\nCETTE LANGUE SANS L'AIDE\nD'UN MAÎTRE."
 		},
-		"author": "P. W.",
+		"author": "Pashko Vasa",
 		"location": "London",
 		"publisher": "Trübner & co.",
 		"year": 1887,
@@ -2126,6 +2227,7 @@
 		"pages": 169,
 		"link": {
 			"gb": "EKcUm28TjKMC",
+			"onb": "131F148A",
 			"adsh": 750
 		}
 	},
@@ -2214,7 +2316,8 @@
 		"link": {
 			"gb": "brfk0NiwGZMC",
 			"mdz": ["bsb11646259", "bsb00133888"],
-			"adsh": 354
+			"adsh": 354,
+			"onb": "1324AD5C"
 		}
 	},
 	{
@@ -2266,6 +2369,17 @@
 		"pages": 157,
 		"link": {
 			"bksh": "libra1!HASHa2de"
+		}
+	},
+	{
+		"title": "Canti popolari albanesi tradizionali nel Mezzogiorno d'Italia",
+		"author": "Demetrio de Grazia",
+		"year": 1889,
+		"location": "Noto",
+		"publisher": "Fr. Zammit",
+		"pages": 270,
+		"link": {
+			"onb": "131F9853"
 		}
 	},
 	{
@@ -2353,7 +2467,13 @@
 		"link": {
 			"doi": "10.1515/9783111562261",
 			"gb": "OWKJ1dKKi-MC",
-			"mdz": ["bsb11845914", "bsb11646944", "bsb11646260"]
+			"mdz": [
+				"bsb11845914",
+				"bsb11646944",
+				"bsb11646260",
+				"bsb00105124"
+			],
+			"onb": "132300A3"
 		}
 	},
 	{
@@ -2456,7 +2576,7 @@
 				"HzYEUQVTtm8C",
 				"ZTXaUEIHLUQC"
 			],
-			"onb": "131F016C",
+			"onb": ["131F016C", "1323AE4E"],
 			"mdz": "bsb11646257"
 		}
 	},
@@ -2490,7 +2610,8 @@
 		"publisher": "Alfred Hölder",
 		"link": {
 			"adsh": 357,
-			"mdz": "bsb11814598"
+			"mdz": ["bsb11814598", "bsb00133885"],
+			"onb": "131FCDFD"
 		}
 	},
 	{
@@ -2511,7 +2632,8 @@
 		"publisher": "Ulrico Hoepli",
 		"location": "Milan",
 		"link": {
-			"mdz": ["bsb00133872", "bsb11810114"]
+			"mdz": ["bsb00133872", "bsb11810114"],
+			"onb": "1321B54B"
 		}
 	},
 	{
@@ -2686,7 +2808,8 @@
 		"script": "latin-frasheri",
 		"pages": 347,
 		"link": {
-			"bksh": "libra1!HASH01b1!d8e02e26"
+			"bksh": "libra1!HASH01b1!d8e02e26",
+			"onb": "1324ADC1"
 		}
 	},
 	{
@@ -2771,7 +2894,7 @@
 		"pages": 43,
 		"link": {
 			"bksh": ["libra1!HASH8b45!94884dfc", "libra1!HASHa2e3!e2cc6509"],
-			"ws": "Istori e Shqipërisë (1889).djvu",
+			"ws": "Istori e Shqipërisë (1899).djvu",
 			"onb": "1324ADBE"
 		}
 	},
@@ -2880,7 +3003,19 @@
 		}
 	},
 	{
-		"title": "Abetari për shkolla filltare t' Shqypnīs",
+		"title": "Naim Be Frashëri",
+		"year": 1901,
+		"author": "Mithat Frashëri",
+		"location": "Sofia",
+		"publisher": "Mbrothësia",
+		"pages": 38,
+		"script": "latin-frasheri",
+		"link": {
+			"mdz": "bsb12068704"
+		}
+	},
+	{
+		"title": "Abetari për shkolla filltare t' Shqypnīs",
 		"year": 1901,
 		"volume": 1,
 		"pages": 41,
@@ -2991,6 +3126,7 @@
 		"pages": 502,
 		"link": {
 			"bksh": "libra112!HASH018e",
+			"mdz": "bsb00133791",
 			"gb": "GX8az4neP3QC"
 		}
 	},
@@ -3345,6 +3481,15 @@
 		"pages": 94,
 		"link": {
 			"bksh": "libra1!HASH01b0"
+		}
+	},
+	{
+		"title": "Grammatik der albanesischen Sprache",
+		"author": "Pekmezi",
+		"location": "Vienna",
+		"year": 1908,
+		"link": {
+			"mdz": "bsb00133879"
 		}
 	},
 	{
@@ -3802,6 +3947,15 @@
 		}
 	},
 	{
+		"title": "Malcorve — \u2067مالیسورلر!\u2069",
+		"add-langs": "ota",
+		"pages": 1,
+		"link": {
+			"ws": "Malcorve (1911).jpg",
+			"onb": "1109073F"
+		}
+	},
+	{
 		"title": "Abetare për shkolla fillore meshkujsh e femnash",
 		"edition": 1,
 		"author": "Papakristo Dhimitër",
@@ -4016,6 +4170,72 @@
 		"pages": 14,
 		"link": {
 			"bksh": "libra112!HASH0188"
+		}
+	},
+	{
+		"title": "Psalltiri ndë të folë toskërisht",
+		"author": false,
+		"year": 1911,
+		"location": "Manastir",
+		"publisher": "Tregëtare Nërkombëtare",
+		"script": "latin-frasheri",
+		"pages": 189,
+		"link": {
+			"bksh": "libra112!HASH0181!7f21fa17"
+		}
+	},
+	{
+		"title": "Vocabolario italiano-albanese",
+		"author": "Antonio Busetti",
+		"year": 1911,
+		"location": "Shkodër",
+		"publisher": "Zoja e Papërlyeme",
+		"link": {
+			"mdz": "bsb00133737"
+		}
+	},
+	{
+		"title": "Kângë popullore gegnishte",
+		"author": "Vinçenc Prennushi",
+		"year": 1911,
+		"location": "Sarajevo",
+		"publisher": "Daniel A. Kajon",
+		"link": {
+			"mdz": "bsb00133838"
+		}
+	},
+	{
+		"title": "Moji i Qershorit",
+		"location": "Shkodër",
+		"publisher": "Zoja e Papërlyeme",
+		"year": 1911,
+		"script": "latin-standard",
+		"author": "Enjëll Sereqi",
+		"pages": 320,
+		"link": {
+			"bksh": "libra112!HASH4bb1"
+		}
+	},
+	{
+		"title": "Msime popullore për më ju ruejt kolerës",
+		"author": false,
+		"year": 1911,
+		"location": "Shkodër",
+		"publisher": "Nikaj",
+		"pages": 8,
+		"script": "latin-standard",
+		"link": {
+			"bksh": "libra112!HASH5a2b"
+		}
+	},
+	{
+		"title": "Kângë popullore blêe i parë kângë popullore gegnishte mledhë",
+		"author": "Vinçenc Prênnushit",
+		"publisher": "D. A. Kajon",
+		"year": 1911,
+		"pages": 172,
+		"link": {
+			"gb": "tCvwMjiVNHMC"
 		}
 	},
 	{
@@ -4305,6 +4525,35 @@
 		}
 	},
 	{
+		"author": "Karl Steinmetz",
+		"title": "Albanisches Not-Wörterbuch (nordalbanischer Dialekt)",
+		"year": 1913,
+		"location": "Sarajevo",
+		"publisher": "Verlag von J. Studnička & Co.",
+		"link": {
+			"mdz": "bsb00133882"
+		}
+	},
+	{
+		"title": "Становници Града Скадра! — Venali t sheherit t Shkoders!",
+		"year": 1913,
+		"pages": 1,
+		"link": {
+			"ws": "Становници Града Скадра (1913).jpg",
+			"onb": "11090748"
+		}
+	},
+	{
+		"title": "Albanesische Grammatik im südgegischen Dialekt (Durazzo, Elbassan, Tirana)",
+		"author": "Gustav Weigand",
+		"year": 1913,
+		"location": "Leipzig",
+		"publisher": "Johann Ambrosius Barth",
+		"link": {
+			"mdz": "bsb00118474"
+		}
+	},
+	{
 		"title": "Sprachführer zur schnellen Erlernung der albanischen Sprache",
 		"author": ["Gjergj Pekmezi", "Hilë Mosi", "Franz Manek"],
 		"year": 1913,
@@ -4327,6 +4576,16 @@
 		"publisher": "Mbrothësia",
 		"link": {
 			"gb": "myt413xQc7QC"
+		}
+	},
+	{
+		"title": "Albaner! — Shqypëtare!",
+		"add-langs": "de",
+		"year": 1914,
+		"pages": 1,
+		"link": {
+			"ws": "Albaner (1914).jpg",
+			"onb": "11090773"
 		}
 	},
 	{
@@ -4353,6 +4612,16 @@
 		"pages": 92,
 		"genre": "primer",
 		"script": "latin-standard"
+	},
+	{
+		"title": "Albanesisch-deutsches und deutsch-albanesisch wörterbuch",
+		"author": "Gustav Weigand",
+		"year": 1914,
+		"location": "Leipzig",
+		"publisher": "Johann Ambrosius Barth",
+		"link": {
+			"mdz": "bsb00118331"
+		}
 	},
 	{
 		"title": "Abetareja shqipe",
@@ -4459,6 +4728,16 @@
 		"script": "latin-standard",
 		"link": {
 			"bksh": "libra1!HASHdf6f"
+		}
+	},
+	{
+		"title": "Арбанаси! — Shqipëtarë! — \u2067آرناؤدلر!\u2069",
+		"year": 1915,
+		"pages": 1,
+		"add-langs": ["sh", "ota"],
+		"link": {
+			"ws": "Shqipëtarë (1915).jpg",
+			"onb": "111327A2"
 		}
 	},
 	{
@@ -5076,6 +5355,15 @@
 		}
 	},
 	{
+		"title": "Gruaja. Librë për gratë dhe për burratë",
+		"author": "Mithat Frashëri",
+		"location": "Tirana",
+		"year": 1929,
+		"link": {
+			"mdz": "bsb00133828"
+		}
+	},
+	{
 		"title": "Bilbil i prillit. Abetare për bijat mbesimtare",
 		"author": "Abdullah Sëmblaku",
 		"year": 1929,
@@ -5137,6 +5425,16 @@
 		"pages": 28,
 		"link": {
 			"bksh": "libra1!HASH0181!7f1bfa1f"
+		}
+	},
+	{
+		"title": "Shqipnija para dy shekujsh",
+		"author": [ "Evlija Çelebi", "Salih Vuçiterni" ],
+		"year": 1930,
+		"location": "Tirana",
+		"publisher": "Shkodra",
+		"link": {
+			"mdz": "bsb00133804"
 		}
 	},
 	{
@@ -5316,52 +5614,6 @@
 		"pages": 6,
 		"link": {
 			"bksh": "libra1!HASH015d!acda513e"
-		}
-	},
-	{
-		"title": "Psalltiri ndë të folë toskërisht",
-		"author": false,
-		"year": 1911,
-		"location": "Manastir",
-		"publisher": "Tregëtare Nërkombëtare",
-		"script": "latin-frasheri",
-		"pages": 189,
-		"link": {
-			"bksh": "libra112!HASH0181!7f21fa17"
-		}
-	},
-	{
-		"title": "Moji i Qershorit",
-		"location": "Shkodër",
-		"publisher": "Zoja e Papërlyeme",
-		"year": 1911,
-		"script": "latin-standard",
-		"author": "Enjëll Sereqi",
-		"pages": 320,
-		"link": {
-			"bksh": "libra112!HASH4bb1"
-		}
-	},
-	{
-		"title": "Msime popullore për më ju ruejt kolerës",
-		"author": false,
-		"year": 1911,
-		"location": "Shkodër",
-		"publisher": "Nikaj",
-		"pages": 8,
-		"script": "latin-standard",
-		"link": {
-			"bksh": "libra112!HASH5a2b"
-		}
-	},
-	{
-		"title": "Kângë popullore blêe i parë kângë popullore gegnishte mledhë",
-		"author": "Vinçenc Prênnushit",
-		"publisher": "D. A. Kajon",
-		"year": 1911,
-		"pages": 172,
-		"link": {
-			"gb": "tCvwMjiVNHMC"
 		}
 	},
 	{
@@ -6369,7 +6621,7 @@
 						"volume": 1,
 						"date": "1927-11",
 						"year": 1927,
-						"page": 44,
+						"pages": 44,
 						"link": {
 							"bksh": "periodi1!HASH01ae!41ea3866"
 						}
@@ -7098,6 +7350,127 @@
 		"link": {
 			"ws": "BSB Cod. alban. 1.djvu",
 			"mdz": "bsb00130872"
+		}
+	},
+	{
+		"title": "Nachrichten N. 603–618",
+		"year": 1917,
+		"link": {
+			"onb": "1002137C"
+		}
+	},
+	{
+		"title": "Disa shënime gjuhësore për historín e motshme të Shqipëtarëvet",
+		"author": "Norbert Jokl",
+		"pages": 9,
+		"link": {
+			"onb": ["100398BD", "1324C48C"]
+		}
+	},
+	{
+		"title": "Naim Be Frashëri e pasurimi i gjuhës shqipe",
+		"year": 1926,
+		"pages": 49,
+		"link": {
+			"onb": ["1000D948", "1324C48B"]
+		}
+	},
+	{
+		"title": "Catasto veneto di Scutari e Registrum concessionum 1416–1417",
+		"author": "Fulvio Cordignano",
+		"location": "Rome",
+		"publisher": "Tipografia poliglotta\"Cuore di Maria\"",
+		"volumes": [
+			{
+				"title": "Catasto veneto di Scutari",
+				"volume": 1
+			},
+			{
+				"title": "Registrum concessionum",
+				"volume": 2,
+				"year": 1942,
+				"link": {
+					"mdz": "bsb00156372"
+				}
+			}
+		]
+	},
+	{
+		"title": "Refleksione. Kritikë (letrare), analiza dhe mendime",
+		"author": "Krist Maloki",
+		"year": 2005,
+		"location": "Prishtinë",
+		"publisher": "Shtëpia Botuese \"Faik Konica\"",
+		"link": {
+			"mdz": "bsb00147458"
+		}
+	},
+	{
+		"title": "Dëshmitar kohe. Dom Zef Ramaj (1882–1914), famullitar dhe mësues në Shkup",
+		"author": "Albert Ramaj",
+		"year": 2014,
+		"link": {
+			"mdz": "bsb00147455"
+		}
+	},
+	{
+		"title": "Stublla im Kosovo. Die Geschichte, die Schule und das Kryptochristentum der Karadakregion",
+		"author": "Albert Ramaj",
+		"year": 2008,
+		"link": {
+			"mdz": "bsb00147456"
+		}
+	},
+	{
+		"title": "Gjak i shprishur. Studime filologjike arbëreshe",
+		"author": "Bardhyl Demiraj",
+		"year": 2016,
+		"location": "Tirana",
+		"link": {
+			"mdz": "bsb00112484"
+		}
+	},
+	{
+		"title": "Shqiptar",
+		"author": "Bardhyl Demiraj",
+		"year": 2010,
+		"link": {
+			"mdz": "bsb00088680"
+		}
+	},
+	{
+		"title": "Jeta dhe trashëgimia e Gjon P. Nikollë Kazazit",
+		"year": 2013,
+		"author": "Bardhyl Demiraj",
+		"publisher": "Botime Françeskane",
+		"location": "Shkodër",
+		"link": {
+			"mdz": "bsb00088110"
+		}
+	},
+	{
+		"title": "Sistemi i numerimit të gjuhës shqipe",
+		"author": "Bardhyl Demiraj",
+		"year": 1997,
+		"location": "Tirana",
+		"link": {
+			"mdz": "bsb00088109"
+		}
+	},
+	{
+		"title": "Албанский тоскский говор села Лешня (краина Скрапар)",
+		"year": 2002,
+		"author": ["Xhelal Ylli", "Андрей Н. Соболев"],
+		"link": {
+			"mdz": "bsb00056179"
+		}
+	},
+	{
+		"title": "Албанский гегский говор села Мухурр (краина Дибыр)",
+		"year": 2003,
+		"author": ["Xhelal Ylli", "Андрей Н. Соболев"],
+		"link": {
+			"mdz": "bsb00056171"
 		}
 	}
 ]
