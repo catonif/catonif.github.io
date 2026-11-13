@@ -658,7 +658,7 @@
 				"title": "Τὸ κατὰ Ματθαῖον εὐαγγέλιον τοῦ κυρίου καὶ σωτῆρος ἡμῶν Ἰσοῦ Χριστοῦ, δίγλωττον, ἁπλοελληνικὸν καὶ ἀλβανιτικόν",
 				"year": 1824,
 				"location": "Corfu",
-				"publish": "Dioikiseos",
+				"publisher": "Dioikiseos",
 				"pages": 188,
 				"link": {
 					"legrand": 161
@@ -713,27 +713,18 @@
 	{
 		"title": "Canti di Milosao",
 		"author": "Girolamo de Rada",
-		"editions": [
-			{
-				"edition": 1,
-				"year": 1836,
-				"location": "Naples",
-				"publisher": "Guttemberg",
-				"pages": 96,
-				"link": {
-					"bksh": "libra1!HASH6714",
-					"gb": "tGJlAAAAcAAJ",
-					"onb": "10868FCC",
-					"ws": "Canti di Milosao.djvu"
-				}
-			},
-			{
-				"edition": 2,
-				"year": 1847,
-				"location": "Naples",
-				"publisher": "Fibreno"
-			}
-		],
+		"year": 1836,
+		"location": "Naples",
+		"publisher": "Guttemberg",
+		"pages": 96,
+		"link": {
+			"bksh": "libra1!HASH6714",
+			"gb": "tGJlAAAAcAAJ",
+			"onb": "10868FCC",
+			"ws": "Canti di Milosao.djvu",
+			"ia": "milosao-1836",
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Milosao%201836.pdf"
+		},
 		"script": "latin-greek",
 		"add-langs": "it",
 		"dialects": "tosk-calabria-macchia"
@@ -741,16 +732,32 @@
 	{
 		"title": "Canti di Serafina Thopia",
 		"author": "Girolamo de Rada",
-		"year": 1843,
-		"location": "Naples",
-		"publisher": "D. Capasso",
-		"pages": 68,
+		"editions": [
+			{
+				"year": 1839,
+				"location": "Naples",
+				"publisher": "Tipografia Bolziana",
+				"pages": 65,
+				"link": {
+					"ia": "serafina-thopia-1839",
+					"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/S.%20Thopia%20'39.pdf"
+				}
+			},
+			{
+				"year": 1843,
+				"location": "Naples",
+				"publisher": "D. Capasso",
+				"pages": 68,
+				"link": {
+					"gb": "rWJlAAAAcAAJ",
+					"onb": "10868ED2",
+					"ia": "serafina-thopia-1843",
+					"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/S.%20Thopia%20'43.pdf",
+					"legrand": 192
+				}
+			}
+		],
 		"script": "latin-greek",
-		"link": {
-			"gb": "rWJlAAAAcAAJ",
-			"onb": "10868ED2",
-			"legrand": 192
-		},
 		"lect": "tosk-calabria-macchia"
 	},
 	{
@@ -861,6 +868,18 @@
 		"lect": "gheg-shkodër"
 	},
 	{
+		"title": "I Numidi",
+		"note": "Solo la traduzione italiana, l'originale albanese non c'è.",
+		"author": "Girolamo de Rada",
+		"location": "Naples",
+		"publisher": "Tipografia dell'Urania",
+		"year": 1846,
+		"link": {
+			"ia": "i-numidi-1846",
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/I%20Numidi.pdf"
+		}
+	},
+	{
 		"title": "Poesie albanesi",
 		"author": "Girolamo de Rada",
 		"lect": "tosk-calabria-macchia",
@@ -871,25 +890,39 @@
 				"script": "latin-greek",
 				"publisher": "Fibreno",
 				"location": "Naples",
-				"year": 1847,
 				"volumes": [
 					{
 						"volume": 1,
 						"pages": 136,
+						"year": 1847,
 						"link": {
-							"gb": "bt5WvNuYgyoC",
+							"gb": [ "bt5WvNuYgyoC", "hTnJWioVqb0C" ],
 							"mdz": "bsb10047796",
-							"legrand": 209
+							"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Milosao%201847.pdf",
+							"ia": "milosao-1847"
 						}
 					},
 					{
 						"volume": 2,
 						"pages": 352,
-						"note": "1848 according to Legrand",
+						"year": 1847,
 						"link": {
 							"gb": "ahF6ljvB1UEC",
 							"mdz": "bsb10047797",
-							"legrand": 210
+							"ia": "albania-1460-1485",
+							"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Albania%201460_1485.pdf"
+						}
+					},
+					{
+						"volume": 2,
+						"location": "Napoli",
+						"publisher": "Fibreno",
+						"year": 1848,
+						"pages": "142–542",
+						"link": {
+							"ia": "albania-1460-1848",
+							"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Storie%20d'Albania.pdf",
+							"legrand": 209
 						}
 					}
 				]
@@ -907,7 +940,11 @@
 						"title": "Canti di Milosao, figlio del despota di Scutari",
 						"pages": 144,
 						"year": 1873,
-						"note": "Ce tome premier contient les Canti di Milosao, figlio del despota di Scutari (troisième édition). Aux pages 11-12: Lettre de Girolamo de Rada à son père Michel de Rada, datée de Naples 20 seprembre 1839, avec cette note: Questa lettera è estratta dalla edizione del 1840, soppressa dalla censura."
+						"note": "Ce tome premier contient les Canti di Milosao, figlio del despota di Scutari (troisième édition). Aux pages 11-12: Lettre de Girolamo de Rada à son père Michel de Rada, datée de Naples 20 seprembre 1839, avec cette note: Questa lettera è estratta dalla edizione del 1840, soppressa dalla censura.",
+						"link": {
+							"ia": "milosao-1873",
+							"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Milosao%201873.pdf"
+						}
 					},
 					{
 						"title": "Scanderbeccu i pa faan. Storie del secolo XV",
@@ -915,14 +952,20 @@
 						"year": 1872,
 						"pages": 199,
 						"link": {
-							"bksh": "libra112!HASH6634"
+							"bksh": "libra112!HASH6634",
+							"gb": "Yhjsl4alo9UC",
+							"ia": "scanderbeccu-i-pa-faan-1",
+							"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Scanderbeccu%20i%20pa-faan_1872.pdf"
 						},
 						"note": "Contien le commencement de Scanderbeccu i pa faan. Storie del secolo XV"
 					},
 					{
 						"volume": 3,
 						"link": {
-							"bksh": "libra1!HASH2398"
+							"bksh": "libra1!HASH2398",
+							"gb": "og9sZLrEYIkC",
+							"ia": "scanderbeccu-i-pa-faan-2",
+							"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Scanderbeccu%20i%20pa-faan_1873.pdf"
 						},
 						"pages": 176,
 						"note": "Suite de Scanderbeccu"
@@ -932,6 +975,8 @@
 						"year": 1873,
 						"pages": 176,
 						"link": {
+							"gb": "AH5hJDiI8SMC",
+							"ia": "scanderbeccu-i-pa-faan-3",
 							"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Scanderbeccu%20i%20pa-faan_1873_II.pdf"
 						},
 						"note": "Suite de Scanderbeccu"
@@ -942,7 +987,42 @@
 						"publisher": "Francesco Mormile",
 						"year": 1877,
 						"pages": 192,
-						"note": "Fin de Scanderbeccu"
+						"note": "Fin de Scanderbeccu",
+						"link": {
+							"gb": "HIVcMHaD4ssC",
+							"ia": "scanderbeccu-i-pa-faan-4",
+							"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Scanderbeccu%20i%20pa-faan_1877.pdf"
+						}
+					},
+					{
+						"volume": 6,
+						"location": "Naples",
+						"publisher": "Francesco Mormile",
+						"year": 1884,
+						"pages": 189,
+						"link": {
+							"ia": "scanderbeccu-i-pa-faan-5",
+							"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Scanderbeccu%20i%20pa-faan_1884.pdf"
+						}
+					}
+				]
+			},
+			{
+				"volumes": [
+					{
+						"volume": 2,
+						"title": "Uno specchio di umano transito",
+						"location": "Naples",
+						"publisher": "Tipogr. Editr. F. di Gennaro & A. Morano",
+						"year": 1898,
+						"pages": 137,
+						"link": {
+							"ia": [
+								"uno-specchio-di-umano-transito-1898",
+								"uno-specchio-di-umano-transito-1898_2"
+							],
+							"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Uno%20specchio%20d'umano%20transito.pdf"
+						}
 					}
 				]
 			}
@@ -955,13 +1035,37 @@
 		"location": "Jena",
 		"publisher": "F. Mauke",
 		"script": "greek-latin",
-		"pages": 800,
-		"link": {
-			"gb": "OG9cAAAAcAAJ",
-			"adsh": [40, 296],
-			"mdz": ["bsb10589473", "bsb10589474"],
-			"legrand": 219
-		}
+		"volumes": [
+			{
+				"volume": 1,
+				"pages": 347,
+				"link": {
+					"gb": "OG9cAAAAcAAJ",
+					"adsh": 40,
+					"onb": "1045C1D6",
+					"legrand": 219
+				}
+			},
+			{
+				"volume": 2,
+				"pages": 169,
+				"link": {
+					"gb": "OG9cAAAAcAAJ",
+					"adsh": 296,
+					"mdz": "bsb10589473",
+					"onb": "1045C1CD"
+				}
+			},
+			{
+				"volume": 3,
+				"pages": 241,
+				"link": {
+					"gb": "OG9cAAAAcAAJ",
+					"mdz": "bsb10589474",
+					"onb": "1045C1B4"
+				}
+			}
+		]
 	},
 	{
 		"title": "Krështeu i shëjtëruorë",
@@ -1010,7 +1114,19 @@
 		"year": 1856,
 		"pages": 56,
 		"link": {
-			"onb": "106DCAFB"
+			"onb": "106DCAFB",
+			"gb": "kBppAAAAcAAJ"
+		}
+	},
+	{
+		"title": "Principi di estetica",
+		"author": "Girolamo de Rada",
+		"year": 1861,
+		"location": "Naples",
+		"publisher": "Fratelli de Angelis",
+		"link": {
+			"ia": "principii-di-estetica-1861",
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Principi%20di%20estetica.pdf"
 		}
 	},
 	{
@@ -1094,19 +1210,31 @@
 		"year": 1864,
 		"add-langs": "bg",
 		"link": {
-			"gb": "dorshkri!HASH01bc"
+			"bksh": "dorshkri!HASH01bc"
 		},
 		"genre": "linguistic"
 	},
 	{
 		"author": "Demetrio Camarda",
-		"year": "1864",
+		"year": 1864,
 		"title": "Saggio di grammatologia comparata sulla lingua albanese",
 		"location": "Livorno",
 		"publisher": "E. Vignozzi & Co.",
 		"link":{
 			"gb": "OfEGAAAAQAAJ",
 			"mdz": "bsb10589076"
+		}
+	},
+	{
+		"title": "Antichità della nazione albanese e sua affinità con gli elleni e i latini",
+		"author": "Girolamo de Rada",
+		"year": 1864,
+		"location": "Naples",
+		"publisher": "Stamperia dell'Industria",
+		"link": {
+			"gb": "xuWzahMtk0AC",
+			"ia": "antichita-della-nazione-albanese-1864",
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Antichita%20della%20Nazione%20Albanese.pdf"
 		}
 	},
 	{
@@ -1152,6 +1280,24 @@
 		"religion": "christian-protestant",
 		"lect": "gheg",
 		"genre": "religious"
+	},
+	{
+		"title": "Rapsodie d'un poema albanese raccolte nelle colonie del napoletano",
+		"author": "Girolamo de Rada",
+		"year": 1866,
+		"location": "Florence",
+		"publisher": "Federigo Bencini",
+		"pages": 106,
+		"link": {
+			"gb": [
+				"AEsAAAAAcAAJ",
+				"C7EB2Q8WWNkC",
+				"0CYYCNSNZNcC",
+				"qQc6TtAP5rEC"
+			],
+			"ia": "rapsodie-d-un-poema-albanese-1866",
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Rapsodie%20d'un%20poema%20albanese.pdf"
+		}
 	},
 	{
 		"title": "Vocabolario italiano-epirotico",
@@ -1395,13 +1541,18 @@
 		}
 	},
 	{
-		"title": "Grammatica della lingua albanese. Prima parte",
+		"title": "Grammatica della lingua albanese",
 		"author": "Giuseppe de Rada",
 		"location": "Florence",
 		"publisher": "Tipografia dell'Associazione",
-		"year": 1871,
+		"year": 1870,
 		"link": {
-			"mdz": "bsb10811007"
+			"mdz": "bsb10811007",
+			"ia": [
+				"grammatica-della-lingua-albanese-1870",
+				"grammatica-della-lingua-albanese-1870_2"
+			],
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Grammatica%20della%20lingua%20albanese.pdf"
 		}
 	},
 	{
@@ -1480,6 +1631,7 @@
 		"lect": "gheg",
 		"link": {
 			"bksh": ["libra112!HASH0181!7b5bfa1f", "libra112!HASH0181!7d55fa1b"],
+			"mdz": "bsb10999385",
 			"legrand": 324
 		},
 		"genre": "religious"
@@ -1643,17 +1795,26 @@
 				"text": "Βηλϳεττα Σςκϳυπητᾶρε"
 			}
 		],
-		"pages": 223,
 		"script": "greek",
 		"add-langs": "el",
-		"link": {
-			"bksh": "libra112!HASH0139!b9c99d1e",
-			"mdz": "bsb11378008",
-			"legrand": 361
-		},
+		"volumes": [
+			{
+				"volume": 1,
+				"pages": 223,
+				"link": {
+					"bksh": "libra112!HASH0139!b9c99d1e",
+					"mdz": "bsb11378008",
+					"gb": [ "9exK_bFAgdcC", "pYUCAAAAQAAJ" ],
+					"legrand": 361
+				}
+			},
+			{
+				"volume": 2
+			}
+		],
 		"editions": [
 			{
-				"editions": 2,
+				"edition": 2,
 				"year": 1924,
 				"location": "Vienna",
 				"publisher": "Rabeck",
@@ -1746,7 +1907,7 @@
 		}
 	},
 	{
-		"title": "Katër ungjijtë ndë gluhë toksërishte",
+		"title": "Katër ungjijtë ndë gluhë toskërishte",
 		"full-title": [
 			{
 				"lang": "el",
@@ -1914,6 +2075,20 @@
 		}
 	},
 	{
+		"title": "Quanto di libertà e di ottimo vivere sia nello stato rappresentativo",
+		"author": "Girolamo de Rada",
+		"year": 1882,
+		"location": "Naples",
+		"publisher": "Gennaro de Angelis e figlio",
+		"link": {
+			"ia": [
+				"quanto-di-liberta-e-di-ottimo-vivere-1882",
+				"quanto-di-liberta-e-di-ottimo-vivere-1882_2"
+			],
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Quanto%20di%20libert%C3%A0%20e%20di%20ottimo%20vivere.pdf"
+		}
+	},
+	{
 		"title": "Rapsodie Nazionali",
 		"author": "Girolamo de Rada",
 		"year": 1883,
@@ -1922,7 +2097,9 @@
 		"pages": 248,
 		"add-langs": "it",
 		"link": {
-			"bksh": "libra1!HASH01c6!e1729b57"
+			"bksh": "libra1!HASH01c6!e1729b57",
+			"ia": "rapsodie-nazionali",
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Rapsodie%20nazionali.pdf"
 		}
 	},
 	{
@@ -2379,7 +2556,20 @@
 		"publisher": "Fr. Zammit",
 		"pages": 270,
 		"link": {
-			"onb": "131F9853"
+			"onb": "131F9853",
+			"ia": "canti-popolari-albanesi-1889",
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Sofonisba.pdf"
+		}
+	},
+	{
+		"title": "I canti popolari albanesi e i miei critici",
+		"author": "Demetrio de Grazia",
+		"year": 1889,
+		"location": "Noto",
+		"publisher": "Fr. Zammit",
+		"pages": 20,
+		"link": {
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Sofonisba.pdf"
 		}
 	},
 	{
@@ -2463,7 +2653,7 @@
 		"title": "Etymologisches Wörterbuch der albanesischen Sprache",
 		"location": "Strasbourg",
 		"publisher": "Karl J. Trübner",
-		"year": "1891",
+		"year": 1891,
 		"link": {
 			"doi": "10.1515/9783111562261",
 			"gb": "OWKJ1dKKi-MC",
@@ -2474,6 +2664,17 @@
 				"bsb00105124"
 			],
 			"onb": "132300A3"
+		}
+	},
+	{
+		"title": "Sofonisba",
+		"author": "Girolamo de Rada",
+		"location": "Napoli",
+		"publisher": "A. Bellisario & C. — R. Tipografia De Angelis",
+		"year": 1891,
+		"link": {
+			"ia": "sofonisba-1891",
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Sofonisba.pdf"
 		}
 	},
 	{
@@ -2515,6 +2716,17 @@
 		}
 	},
 	{
+		"title": "Conferenze sull'antichità della lingua albanese e grammatica della medesima",
+		"author": "Girolamo de Rada",
+		"year": 1893,
+		"location": "Naples",
+		"publisher": "Francesco Mormile",
+		"link": {
+			"ia": "conferenze-sull-antichita-della-lingua-albanese-1893",
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Conferenze%20sull'antichit%C3%A0%20della%20lingua%20albanese.pdf"
+		}
+	},
+	{
 		"title": "Mësime",
 		"author": "Naim Frashëri",
 		"year": 1894,
@@ -2537,6 +2749,23 @@
 		"link": {
 			"bksh": "libra112!HASH5dc8",
 			"ws": "Versi lugubri (1894).djvu"
+		}
+	},
+	{
+		"title": "Caratteri e grammatica della lingua albanese",
+		"author": "Girolamo de Rada",
+		"year": 1894,
+		"location": "Corigliano Calabro",
+		"publisher": "Stabilimento Tipo-Litografico del \"Popolano\"",
+		"pages": 100,
+		"link": {
+			"ia": [
+				"caratteri-e-grammatica-della-lingua-albanese",
+				"caratteri-e-grammatica-della-lingua-albanese-1",
+				"caratteri-e-grammatica-della-lingua-albanese-1894"
+			],
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Caratteri%20e%20grammatica%20della%20lingua%20albanese.pdf",
+			"gb": "TSmfwEh6qqMC"
 		}
 	},
 	{
@@ -2623,7 +2852,11 @@
 		"year": 1896,
 		"pages": 8,
 		"genre": "primer",
-		"script": "latin-greek"
+		"script": "latin-greek",
+		"link": {
+			"ia": "abecedario-della-lingua-albanese-1896",
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Abecedario.pdf"
+		}
 	},
 	{
 		"title": "Manuale di letteratura albanese",
@@ -2684,6 +2917,17 @@
 		}
 	},
 	{
+		"title": "Antologia albanese tradotta fedelmente in italiano",
+		"author": "Girolamo de Rada",
+		"year": 1896,
+		"location": "Naples",
+		"publisher": "Stabilimento Tipo-Stereotipo del Cav. A. Morano",
+		"link": {
+			"ia": "antologia-albanese-1896",
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Antologia%20albanese.pdf"
+		}
+	},
+	{
 		"title": "Iliadhë e Omirit. Këndë e parë",
 		"author": "Naim Frashëri",
 		"og-author": "Homer",
@@ -2723,6 +2967,45 @@
 		"genre": "poetry",
 		"link": {
 			"bksh": "libra112!HASH9b79"
+		}
+	},
+	{
+		"title": "Autobiologia",
+		"author": "Girolamo de Rada",
+		"volumes": [
+			{
+				"volume": 1,
+				"publisher": "F. Principe",
+				"location": "Cosenza",
+				"year": 1898,
+				"pages": 28
+			},
+			{
+				"volume": 2,
+				"publisher": "Gennaro & A. Morano",
+				"location": "Naples",
+				"year": 1899,
+				"pages": 24
+			},
+			{
+				"volume": 3,
+				"publisher": "Gennaro & A. Morano",
+				"location": "Naples",
+				"year": 1899,
+				"pages": 20
+			},
+			{
+				"volume": 4,
+				"publisher": "F. Principe",
+				"location": "Cosenza",
+				"year": 1898,
+				"pages": 24
+			}
+		],
+		"link": {
+			"ia": "autobiologia",
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Autobiologia.pdf",
+			"gb": "VkY0AAAAIAAJ"
 		}
 	},
 	{
@@ -2882,6 +3165,21 @@
 		"pages": 65,
 		"link": {
 			"bksh": "libra112!HASH9249"
+		}
+	},
+	{
+		"title": "Caratteri della lingua albanese e suoi monumenti nell'età preistorica",
+		"author": "Girolamo de Rada",
+		"year": 1899,
+		"location": "Catanzaro",
+		"publisher": "Giuseppe Caliò",
+		"pages": 13,
+		"link": {
+			"ia": [
+				"caratteri-della-lingua-albanese-1899",
+				"caratteri-della-lingua-albanese-1899_2"
+			],
+			"url": "http://www.albanologia.unical.it/GirolamoDeRada/opere%20deradiane/a%20stampa/Caratteri%20della%20lingua%20albanese.pdf"
 		}
 	},
 	{
@@ -3093,6 +3391,16 @@
 		}
 	},
 	{
+		"title": "Poemi albanesi",
+		"author": ["Girolamo de Rada", "Michele Marchianò"],
+		"year": 1903,
+		"location": "Trani",
+		"publisher": "Vecchi",
+		"link": {
+			"gb": "soYNAAAAYAAJ"
+		}
+	},
+	{
 		"title": "Dëshira e vërtitë e Shqipëtarëvet",
 		"author": "Naim Frashëri",
 		"year": 1904,
@@ -3272,7 +3580,9 @@
 		"add-langs": "it",
 		"script": "latin",
 		"link": {
-			"bksh": "libra1!HASHa2df!e621bfb1"
+			"bksh": "libra1!HASHa2df!e621bfb1",
+			"ia": "kenka-e-sprasme-e-bales",
+			"ws": "Kënka e spràsme e Balës (1906).djvu"
 		}
 	},
 	{
@@ -3451,7 +3761,8 @@
 		"pages": 109,
 		"script": "latin-frasheri",
 		"link": {
-			"bksh": "libra1!HASH01f8!3408cc6f"
+			"bksh": "libra1!HASH01f8!3408cc6f",
+			"ia": "kenke-te-shenjteruara-per-faletoret-shqipe-g.-d.-qirias-1906"
 		}
 	},
 	{
@@ -5754,6 +6065,14 @@
 		}
 	},
 	{
+		"title": "Kange popullore shqipe. Canti popolari albanesi",
+		"year": 1940,
+		"pages": 47,
+		"link": {
+			"ia": "CantiPopolariAlbanesi"
+		}
+	},
+	{
 		"title": "Shkrimtarët shqiptare",
 		"year": 1941,
 		"script": "latin-standard",
@@ -5810,6 +6129,160 @@
 		"script": "latin-standard",
 		"link": {
 			"bksh": "libra1!HASH0181!7d57fa1b"
+		}
+	},
+	{
+		"title": "Origjina e familjes prones private dhe shtetit",
+		"year": 1948,
+		"author": "Friedrich Engels",
+		"location": "Tirana",
+		"publisher": "Instituti i Shkencave",
+		"pages": 190,
+		"link": {
+			"polona": "e9ba0c0b-a790-4a4f-8e21-aab9543af991"
+		}
+	},
+	{
+		"author": "Lenin",
+		"title": "Karl Marks. Tri burimet dhe tri pjesët ntegrante të markizmit. Markizmë dhe revizionizmë. Fatët historikë të doktrinës së Karl Marksit",
+		"year": 1948,
+		"location": "Tirana",
+		"publisher": "Instituti i Studimeve",
+		"pages": 70,
+		"link": {
+			"polona": "17c12ffc-79f7-4b4d-b81d-437c93457b6b"
+		}
+	},
+	{
+		"title": "Puna me mëditje dhe kapitali",
+		"author": "Karl Marx",
+		"year": 1948,
+		"location": "Tirana",
+		"publisher": "Instituti i Shkencave",
+		"pages": 55,
+		"link": {
+			"polona": "308af6a5-2f80-4697-9560-3158ae46f5cf"
+		}
+	},
+	{
+		"title": "Zhvillimi i socjalizmit nga utopija në shkencë",
+		"author": "Friedrich Engels",
+		"year": 1948,
+		"location": "Tirana",
+		"publisher": "Instituti i Studimeve",
+		"pages": 84,
+		"link": {
+			"polona": "8709b7b8-d695-43a2-99f5-d8b2ddc52f0a"
+		}
+	},
+	{
+		"title": "Mëditja, çmimi ahe fitimi",
+		"author": "Karl Marx",
+		"year": 1948,
+		"location": "Tirana",
+		"publisher": "Instituti i Studimeve",
+		"pages": 96,
+		"link": {
+			"polona": "923e5ba6-7c89-4328-b95a-3488e1e74560"
+		}
+	},
+	{
+		"title": "Gramatika shqipe",
+		"author": "Cipo Kostaq",
+		"year": 1949,
+		"location": "Tirana",
+		"publisher": "Instituti i Shkencave",
+		"pages": 192,
+		"link": {
+			"polona": "8c250f3c-b1e9-45fe-81dd-244bb7122659"
+		}
+	},
+	{
+		"title": "Ludwig Feuerbach dhe mbarimi i filozofisë klasike gjermane",
+		"author": "Friedrich Engels",
+		"year": 1949,
+		"location": "Tirana",
+		"publisher": "Instituti i Shkencave",
+		"pages": 63,
+		"link": {
+			"polona": "cd1b8360-d3e5-45c8-80a2-e7b06e4b0e4b"
+		}
+	},
+	{
+		"title": "Për historin' e \"lidhjes së komunistëve\". Marksi dhe \"gazeta e re renane\". Thirje e komitetit qendror lidhjes së komunistëve",
+		"author": "Friedrich Engels",
+		"year": 1949,
+		"location": "Tirana",
+		"publisher": "Instituti i Shkencave",
+		"pages": 65,
+		"link": {
+			"polona": "38abaf89-1644-496f-9465-bc8d1ecd5d03"
+		}
+	},
+	{
+		"title": "Një hap përpara dy hapa prapa (Kriza në partinë tonë)",
+		"author": "Lenin",
+		"year": 1949,
+		"location": "Tirana",
+		"publisher": "Instituti i Shkencave",
+		"pages": 111,
+		"link": {
+			"polona": "3a6dd239-5558-4dc9-b5bf-e525624f07c6"
+		}
+	},
+	{
+		"title": "Revolucioni proletar dhe renegati Kautsky",
+		"author": "Lenin",
+		"year": 1949,
+		"location": "Tirana",
+		"publisher": "Instituti i Shkencave",
+		"pages": 97,
+		"link": {
+			"polona": "5f1b02a7-23cd-4412-99e4-b52c10b038ff"
+		}
+	},
+	{
+		"title": "Imperjalizmi. Faza më e lartë a kapitalizmit",
+		"author": "Lenin",
+		"year": 1949,
+		"location": "Tirana",
+		"publisher": "Instituti i Shkencave",
+		"pages": 168,
+		"link": {
+			"polona": "6c65b018-220c-4931-a97d-c966b14a9de6"
+		}
+	},
+	{
+		"title": "C'të bëjmë? Probleme të ngutëshme të lëvizjes sonë",
+		"author": "Lenin",
+		"year": 1949,
+		"location": "Tirana",
+		"publisher": "Instituti i Shkencave",
+		"pages": 156,
+		"link": {
+			"polona": "ac4cba72-542b-4324-8e4d-441c82907ebe"
+		}
+	},
+	{
+		"title": "Shteti dhe revolucjoni",
+		"author": "Lenin",
+		"year": 1949,
+		"location": "Tirana",
+		"publisher": "Instituti i Shkencave",
+		"pages": 150,
+		"link": {
+			"polona": "027f2083-d8b2-414d-84a7-644aa6ac044e"
+		}
+	},
+	{
+		"title": "Quo vadis...?",
+		"author": "Henryk Sienkiewicz",
+		"year": 1967,
+		"location": "Prishtinë",
+		"publisher": "Rilindja",
+		"pages": 391,
+		"link": {
+			"polona": "942e0604-8685-4a37-9e92-9c32793bbf88"
 		}
 	},
 	{

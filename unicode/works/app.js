@@ -239,6 +239,16 @@ function renderItem(work, not_required) {
 				formatter: id => "https://books.google.com?id=" + id
 			},
 			{
+				key: "gallica",
+				display: "Gallica",
+				formatter: id => "gallica.bnf.fr/ark:/12148/" + id
+			},
+			{
+				key: "polona",
+				display: "Polona",
+				formatter: id => "https://polona.pl/preview/" + id
+			},
+			{
 				key: "ws",
 				display: "Wikisource",
 				formatter: id => "https://wikisource.org/wiki/Index:" + id
@@ -247,11 +257,6 @@ function renderItem(work, not_required) {
 				key: "ao",
 				display: "Albanian Orthodox",
 				formatter: id => "https://albanianorthodox.com/wp-content/uploads/" + id
-			},
-			{
-				key: "gallica",
-				display: "Gallica",
-				formatter: id => "gallica.bnf.fr/ark:/12148/" + id
 			},
 			{
 				key: "url",
